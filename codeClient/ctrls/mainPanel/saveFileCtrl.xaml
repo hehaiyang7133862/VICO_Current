@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.saveFileCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="1080" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="1000" Width="1080" Name="cvsMain" MouseUp="cvsMain1_MouseUp" MouseMove="cvsMain1_MouseMove">
+        <Label Height="1000" Width="1080" Name="lbBg" MouseDown="lbBg_MouseDown" />
+        <Canvas Height="450" Width="450" Name="cvsGrp" Canvas.Top="170" Canvas.Left="190" Background="Silver" >
+            <!--<Image Height="500" Width="500" Source="/Program;component/png/OBJ_29_33_blackButtonPress_100.png" />-->
+            <Border BorderBrush="Silver" BorderThickness="5" Canvas.Left="0" Canvas.Top="57" Height="311" Name="bdMain" Width="450">
+                    <!--<my2:cvsPanel h="302" x:Name="cvsFile" w="430" Background="LightBlue"/>-->
+                <Canvas Name="cvsFile" Height="302" Width="430" Background="LightBlue" />
+            </Border>
+            <Button Canvas.Left="348" Canvas.Top="402" Content="{DynamicResource lanKey2104}" Height="40" Name="btnSelect" Width="93" Click="btnSelect_Click" />
+            <Button Canvas.Left="12" Canvas.Top="404" Content="{DynamicResource lanKey1024}" Height="39" Name="btnLocal" Width="81" Click="btnLocal_Click" />
+            <Button Canvas.Left="111" Canvas.Top="404" Content="{DynamicResource lanKey2103}" Height="39" Name="btnUPan" Width="81" Click="btnUPan_Click" />
+            <Label Canvas.Left="10" Canvas.Top="372" Content="{DynamicResource lanKey1023}" Height="28" Name="label1" />
+            <Image Height="30" Width="362" Canvas.Top="369" Canvas.Left="80" Source="/Program;component/png/OBJ_13_1_ButtonbaseActive_V1.1.png" Stretch="Fill" />
+            <Label Canvas.Left="81" Canvas.Top="370" Content="Label" Height="30" Name="lbFileName" Width="362" VerticalContentAlignment="Center" MouseDown="lbFileName_MouseDown" />
+            <Label Canvas.Left="0" Canvas.Top="4" Content="{DynamicResource lanKey2105}" Height="28" Name="label2" Width="450" HorizontalContentAlignment="Center"  MouseDown="bdMain_MouseDown"/>
+            <Border BorderBrush="Silver" BorderThickness="1" Canvas.Left="10" Canvas.Top="29" Height="32" Name="bdPath" CornerRadius="5"  Background="#FF4A6E6F" Width="430"  >
+                <Label Content=".\" Name="lbPath" Height="30" Width="420" VerticalContentAlignment="Center"/>
+            </Border>
+        </Canvas>
+        <my:confirmCtrl Canvas.Left="0" Canvas.Top="0" x:Name="confirmPanel" />
+    </Canvas>
+
+</UserControl>

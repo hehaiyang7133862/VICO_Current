@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.loadFromUsbCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="1920" Width="1080" Name="cvsMain">
+        <Rectangle Height="1920" Width="1080" Name="recBg" Fill="Black" Opacity="0.6" MouseDown="recBg_MouseDown" />
+        <my:btnFunc1 Canvas.Left="297" Canvas.Top="492"   x:Name="btnCurUser" dis="user" mouseUpHandle="btnCurUser_MouseUp" />
+        <Canvas Height="237" Name="cvsUsers" Width="180" Canvas.Left="297" Canvas.Top="532">
+            <Label Canvas.Left="4" Canvas.Top="62" Content="Label" Height="28" Name="lbUser" Width="156" />
+        </Canvas>
+        <my:btnCtrl Canvas.Left="775" Canvas.Top="493" x:Name="btnCtrl1" dis="生成" MouseUp="btnCtrl1_MouseUp" />
+        <my:btnFunc1 Canvas.Left="532" Canvas.Top="494" x:Name="btnUsb" dis="user" mouseUpHandle="btnUsb_MouseUp" />
+        <Canvas Canvas.Left="532" Canvas.Top="534" Height="237" Name="cvsUsb" Width="180">
+            <Label Canvas.Left="4" Canvas.Top="62" Content="Label" Height="28"  />
+        </Canvas>
+    </Canvas>
+</UserControl>

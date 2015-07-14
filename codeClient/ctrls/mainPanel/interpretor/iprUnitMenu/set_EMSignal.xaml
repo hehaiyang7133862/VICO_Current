@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.set_EMSignal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas>
+        <my:activeErr1Ctrl Canvas.Left="493" Canvas.Top="223" x:Name="activeErr1Ctrl1" Visibility="Hidden" />
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="10" x:Name="btn1" dis="{DynamicResource ipr_setEmSignal_MoldClose}" mouseUp="btn1_MouseUp" />
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="50" x:Name="btn2" dis="{DynamicResource ipr_setEmSignal_MoldSafety}" mouseUp="btn2_MouseUp" />
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="90" x:Name="btn3" dis="{DynamicResource ipr_setEmSignal_EjectorBWD}" mouseUp="btn3_MouseUp" />
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="130" x:Name="btn4" dis="{DynamicResource ipr_setEmSignal_EjectorFWD}" mouseUp="btn4_MouseUp" />
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="170" x:Name="btn5" dis="{DynamicResource ipr_setEmSignal_CoreBWD}" mouseUp="btn5_MouseUp" />
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="210" x:Name="btn6" dis="{DynamicResource ipr_setEmSignal_CoreFWD}" mouseUp="btn6_MouseUp" />
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="250" x:Name="btn7" dis="{DynamicResource ipr_setEmSignal_MoldOpen}" mouseUp="btn7_MouseUp" />
+        <Canvas Name="cvsState" Canvas.Top="10" Canvas.Left="206">
+            <my:btnFunc1 x:Name="btnDA0" dis="{DynamicResource lanKey2993}" mouseUp="btnDA0_MouseUp"/>
+            <my:btnFunc1 x:Name="btnDA1" dis="{DynamicResource lanKey2992}" mouseUp="btnDA1_MouseUp" Canvas.Top="40" />
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.ExportProgressCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Border Height="300" Width="500" CornerRadius="8" Background="White" ClipToBounds="True" BorderBrush="Transparent">
+        <Canvas>
+            <Label Canvas.Left="20" Canvas.Top="0" Height="50" Width="180" Content="{DynamicResource lanKey2190}" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <Label Name="lbValue" Canvas.Right="40" Canvas.Top="0" Height="50" Width="60" Content="00" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+            <Label Canvas.Right="20" Canvas.Top="0" Height="50" Width="60" Content="%" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+            <my:ProcessBar2 Canvas.Left="20" Canvas.Top="50" x:Name="pValue" pHeight="4" pWidth="460" Value="0"/>
+            <ListBox Canvas.Left="20" Canvas.Top="80" Height="160" Width="460" Name="log" BorderThickness="0">
+            </ListBox>
+            <Label Canvas.Left="250" Canvas.Bottom="-1" Height="49" Width="249" Content="{DynamicResource lanKey648}" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+               Name="btnConfirm" MouseUp="btnConfirm_MouseUp"/>
+            <Line Canvas.Left="0" Canvas.Top="70" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" X2="500" />
+            <Line Canvas.Left="0" Canvas.Top="250" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" X2="500" />
+            <Line Canvas.Left="250" Canvas.Top="250" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" Y2="50" />
+        </Canvas>
+    </Border>
+</UserControl>

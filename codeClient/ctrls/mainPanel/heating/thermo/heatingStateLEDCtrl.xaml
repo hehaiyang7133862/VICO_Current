@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.heatingStateLEDCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="9" d:DesignWidth="38">
+    <Canvas>
+        <Image  Source="/Program;component/png/OBJ_15_11_HeatCrystalGrayShort_V0.0.png" Name="heating"/>
+        <Image  Source="/Program;component/png/OBJ_15_11_HeatCrystalRedShort_V0.0.png" Name="imgHeatingOn"/>
+    </Canvas>
+</UserControl>

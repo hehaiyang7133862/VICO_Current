@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.set_carriagebwd"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas>
+        <!--<Canvas Canvas.Left="10" Canvas.Top="10" Height="286" Width="180">
+            <my:btnFunc1 Canvas.Top="0" MouseDown="btn1_MouseDown" mouseUpHandle="btn1_MouseUp" x:Name="btn1" dis="{DynamicResource lanKey277}" />
+            <my:btnFunc1 Canvas.Top="40" MouseDown="btn2_MouseDown" mouseUpHandle="btn2_MouseUp" x:Name="btn2" dis="{DynamicResource lanKey2057}" />
+            <my:btnFunc1 Canvas.Top="80" MouseDown="btn3_MouseDown" mouseUpHandle="btn3_MouseUp" x:Name="btn3" dis="{DynamicResource lanKey2058}" />
+        </Canvas>
+        <TabControl Background="{x:Null}" BorderBrush="{x:Null}" Canvas.Left="213" Canvas.Top="4" Height="290" Name="tbValue" Padding="0" Width="580">
+            <TabItem Height="0" Name="menu_1">
+                <Canvas Width="580">
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Name="menu_pos">
+                <Canvas Width="580">
+                    <Canvas Canvas.Left="0" Canvas.Top="0" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" FontFamily="Michroma" FontSize="18" x:Name="btnPD" dis="1.3 ton" MouseDown="btnPD_MouseDown" mouseUpHandle="btnPD_MouseUp" />
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Name="menu_prs">
+                <Canvas Width="580">
+                    <Canvas Canvas.Left="0" Canvas.Top="0" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" FontFamily="Michroma" FontSize="18" x:Name="btnPA" dis="1.3 ton" MouseDown="btnPA_MouseDown" mouseUpHandle="btnPA_MouseUp" />
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+        </TabControl>-->
+        <my:activeErr1Ctrl Canvas.Left="493" Canvas.Top="223" x:Name="activeErr1Ctrl1" Visibility="Hidden"/>
+    </Canvas>
+</UserControl>

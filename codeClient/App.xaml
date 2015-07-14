@@ -1,0 +1,283 @@
+﻿<Application x:Class="nsVicoClient.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             ShutdownMode="OnMainWindowClose"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="lan/lanCN.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <sys:String x:Key="IprFileName">NewProject.ipr</sys:String>
+            <sys:String x:Key="CurUserName">null</sys:String>
+            
+            <Style x:Key="rightItem" TargetType="{x:Type TabItem}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabItem}">
+                            <Grid>
+                                <Border x:Name="bd"  BorderBrush="Gray" Height="68" Width="68"  BorderThickness="0" CornerRadius="7" Margin="16,0,16,22">
+                                    <Border.Background>
+                                        <ImageBrush  Stretch="Uniform" ImageSource="/Program;component/png/OBJ_4_33_SideBut_V0.0.png" />
+                                    </Border.Background>
+                                    <ContentPresenter ContentSource="Header"    VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0"/>
+                                </Border>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter TargetName="bd" Property="Background" >
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="/Program;component/png/OBJ_4_33_SideBut2.png" Stretch="Uniform"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                                <Trigger Property="IsMouseOver" Value="True"/>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <sys:String x:Key="lan">EN</sys:String>
+
+            <BitmapImage x:Key="BtnDownBg" UriSource="png/OBJ_13_0_ButtonbaseRelease_V1.2.png" />
+            <BitmapImage x:Key="BtnConfirmBg" UriSource="png/OBJ_13_0_ButtonbaseRelease_V1.5.png" />
+            <BitmapImage x:Key="BtnSaveBg" UriSource="png/OBJ_13_0_ButtonbaseRelease_V1.6.png" />
+            <BitmapImage x:Key="BtnDelBg" UriSource="png/OBJ_13_0_ButtonbaseRelease_V1.3.png" />
+
+            <BitmapImage x:Key="imgA" UriSource="png/OBJ_21_1_Alarm_V0.0.png" />
+            <BitmapImage x:Key="imgM" UriSource="png/OBJ_21_2_ValueEnter_V0.0.png" />
+            <BitmapImage x:Key="imgS" UriSource="png/OBJ_21_3_SystemInfo_V0.0.png" />
+            <BitmapImage x:Key="imgL" UriSource="png/OBJ_21_4_Access_V0.0.png" />
+
+            <sys:String x:Key="lenUnitKey" x:Shared="false">[mm]</sys:String>
+            <sys:String x:Key="speedUnitKey" x:Shared="false">[mm/s]</sys:String>
+            <sys:String x:Key="accelerationUnitKey" x:Shared="false">[mm/s²]</sys:String>
+            <sys:String x:Key="tempUnitKey" x:Shared="false">[℃]</sys:String>
+            <sys:String x:Key="forceUnitKey" x:Shared="false">[ton]</sys:String>
+            <sys:String x:Key="pressUnitKey" x:Shared="false">[Mpa]</sys:String>
+            <sys:String x:Key="perUnitKey" x:Shared="false">[%]</sys:String>
+            
+            <sys:String x:Key="lenUnitNullKey" x:Shared="false">mm</sys:String>
+            <sys:String x:Key="speedUnitNullKey" x:Shared="false">mm/s</sys:String>
+            <sys:String x:Key="accelerationUnitNullKey" x:Shared="false">mm/s²</sys:String>
+            <sys:String x:Key="tempUnitNullKey" x:Shared="false">℃</sys:String>
+            <sys:String x:Key="forceUnitNullKey" x:Shared="false">ton</sys:String>
+            <sys:String x:Key="pressUnitNullKey" x:Shared="false">Mpa</sys:String>
+            <sys:String x:Key="perUnitNullKey" x:Shared="false">%</sys:String>
+            
+            <SolidColorBrush x:Key="lbFore" Color="#FF969696" />
+            <SolidColorBrush x:Key="cvsBg" Color="#FFEAEAEA" />
+            <SolidColorBrush x:Key="lightGreen" Color="#FF34BA16" />
+            <SolidColorBrush x:Key="focusColor" Color="#FF00B4E1" />
+            <SolidColorBrush x:Key="vm_blue" Color="#FF0082C3" />
+            <FontFamily x:Key="vm_num">Verdana</FontFamily>
+            
+            <BitmapImage x:Key="img6" UriSource="png/OBJ_27_18_UnitFor.png" />
+            <BitmapImage x:Key="img7" UriSource="png/OBJ_27_17_UnitBack.png" />
+            <BitmapImage x:Key="img10" UriSource="png/OBJ_27_7_KeyMoldOpen.png" />
+            <BitmapImage x:Key="img11" UriSource="png/OBJ_27_8_KeyMoldClose.png" />
+            <BitmapImage x:Key="img12" UriSource="png/OBJ_27_12_Ejectorback.png" />
+            <BitmapImage x:Key="img13" UriSource="png/OBJ_27_13_EjectorFor.png" />  
+            <BitmapImage x:Key="img18" UriSource="png/OBJ_27_9_KeyInjection.png" />            
+            <BitmapImage x:Key="img19" UriSource="png/OBJ_27_10_Charge.png" />   
+            <BitmapImage x:Key="img20" UriSource="png/OBJ_27_11_Suckback.png" />
+            <BitmapImage x:Key="img21" UriSource="png/OBJ_27_14_CarriageFor.png" /> 
+            <BitmapImage x:Key="img22" UriSource="png/OBJ_27_15_Carriageback.png" />
+            <BitmapImage x:Key="img23" UriSource="png/OBJ_27_25_Air4.png" />            
+            <BitmapImage x:Key="img24" UriSource="png/OBJ_27_25_Air4.png" />   
+            <BitmapImage x:Key="img25" UriSource="png/OBJ_27_25_Air4.png" />            
+            <BitmapImage x:Key="img26" UriSource="png/OBJ_27_25_Air4.png" />            
+            <BitmapImage x:Key="img27" UriSource="png/OBJ_27_25_Air4.png" />             
+            <BitmapImage x:Key="img28" UriSource="png/OBJ_27_25_Air4.png" />  
+            <BitmapImage x:Key="img29" UriSource="png/OBJ_27_25_Air4.png" />            
+            <BitmapImage x:Key="img30" UriSource="png/OBJ_27_25_Air4.png" />   
+            <BitmapImage x:Key="img31" UriSource="png/OBJ_27_25_Air4.png" />            
+            <BitmapImage x:Key="img32" UriSource="png/OBJ_27_25_Air4.png" />            
+            <BitmapImage x:Key="img33" UriSource="png/OBJ_27_25_Air4.png" />             
+            <BitmapImage x:Key="img34" UriSource="png/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="img35" UriSource="png/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="img36" UriSource="png/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="img37" UriSource="png/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="img38" UriSource="png/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="img39" UriSource="png/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="img40" UriSource="png/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="img41" UriSource="png/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="img42" UriSource="png/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="img43" UriSource="png/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="img44" UriSource="png/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="img45" UriSource="png/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="img46" UriSource="png/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="img54" UriSource="png/OBJ_27_53_Nozzle.png" />
+            <BitmapImage x:Key="img62" UriSource="png/OBJ_27_52_tunetabel_neg.png" />
+            <BitmapImage x:Key="img61" UriSource="png/OBJ_27_51_tunetabel_pos.png" />
+
+            <BitmapImage x:Key="kMld007" UriSource="png/Marks/Mark_MoldPos_3_11.png"/>
+            <BitmapImage x:Key="kMld001" UriSource="png/Marks/Mark_CrossPos_3_12.png"/>
+            <BitmapImage x:Key="kMld002" UriSource="png/Marks/Mark_EjePos_3_12.png"/>
+            <BitmapImage x:Key="kMld145" UriSource="png/Marks/Mark_MoldSpeed_3_13.png"/>
+            <BitmapImage x:Key="kMld056" UriSource="png/Marks/Mark_MoldPeakSpeed_3_14.png"/>
+            <BitmapImage x:Key="kMld010" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kMld012" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kMld003" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kMld147" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kMld005" UriSource="png/Marks/Mark_Touque_3_15.png"/>
+            <BitmapImage x:Key="kMld006" UriSource="png/Marks/Mark_PeakTouque_3_16.png"/>
+            <BitmapImage x:Key="kMld055" UriSource="png/Marks/Mark_PeakTouquePos_3_17.png"/>
+            <BitmapImage x:Key="kMld180" UriSource="png/Marks/Mark_MoldUnitSpeed_3_18.png"/>
+            <BitmapImage x:Key="kMld182" UriSource="png/Marks/Mark_MoldUnitPos_3_19.png"/>
+            <BitmapImage x:Key="kMld181" UriSource="png/Marks/Mark_MoldUnitDestPos_3_20.png"/>
+            <BitmapImage x:Key="kMld041" UriSource="png/Marks/Mark_MoldTouchPos_3_21.png"/>
+            <BitmapImage x:Key="kMld062" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kMld060" UriSource="png/Marks/Mark_EjeShake_3_22.png"/>
+            <BitmapImage x:Key="kMld064" UriSource="png/Marks/Mark_PeakTouque_3_16.png"/>
+            <BitmapImage x:Key="kMld066" UriSource="png/Marks/Mark_EjeFWD_3_23.png"/>
+            <BitmapImage x:Key="kMld248" UriSource="png/Marks/Mark_EjeFWD_3_23.png"/>
+            <BitmapImage x:Key="kMld249" UriSource="png/Marks/Mark_PeakTouque_3_16.png"/>
+            <BitmapImage x:Key="kInj153" UriSource="png/Marks/Mark_injVol_3_32.png"/>
+            <BitmapImage x:Key="kInj213" UriSource="png/Marks/Mark_injPressure_3_31.png"/>
+            <BitmapImage x:Key="kInj021" UriSource="png/Marks/Mark_injectionPos_3_6.png"/>
+            <BitmapImage x:Key="kInj045" UriSource="png/Marks/Mark_Peakpressure_3_7.png"/>
+            <BitmapImage x:Key="kInj030" UriSource="png/Marks/Mark_CushionPos_3_8.png"/>
+            <BitmapImage x:Key="kInj031" UriSource="png/Marks/Mark_CushionEndPos_3_9.png"/>
+            <BitmapImage x:Key="kInj029" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kInj024" UriSource="png/Marks/Mark_injectionSpeed_3_1.png"/>
+            <BitmapImage x:Key="kInj025" UriSource="png/Marks/Mark_peakinjectionSpeed_3_2.png"/>
+            <BitmapImage x:Key="kInj027" UriSource="png/Marks/Mark_VPSpeed_3_3.png"/>
+            <BitmapImage x:Key="kInj026" UriSource="png/Marks/Mark_VPPos_3_4.png"/>
+            <BitmapImage x:Key="kInj028" UriSource="png/Marks/Mark_VPPres_3_5.png"/>
+            <BitmapImage x:Key="kInj155" UriSource="png/Marks/Mark_PresbefCharge_3_24.png"/>
+            <BitmapImage x:Key="kInj104" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kInj032" UriSource="png/Marks/Mark_rotespeed_3_25.png"/>
+            <BitmapImage x:Key="kInj412" UriSource="png/Marks/Mark_InjUTouchPos_3_26.png"/>
+            <BitmapImage x:Key="kInj414" UriSource="png/Marks/Mark_InjUTouchForce_3_27.png"/>
+            <BitmapImage x:Key="kInj115" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kInj112" UriSource="png/Marks/Mark_Time_3_10.png"/>
+            <BitmapImage x:Key="kInj413" UriSource="png/Marks/Mark_InjUPos_3_25.png"/>
+            <BitmapImage x:Key="kMld008" UriSource="png/Marks/Mark_ClampForce_3_28.png"/>
+            <BitmapImage x:Key="kSys097" UriSource="png/Marks/Mark_TouquePercent_3_29.png"/>
+
+            <BitmapImage x:Key="picIpr001" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="picIpr002" UriSource="png/IprBlocks/ipr_op22_Moldclose.png" />
+            <BitmapImage x:Key="picIpr003" UriSource="png/IprBlocks/ipr_op21_Moldopen.png" />
+            <BitmapImage x:Key="picIpr004" UriSource="png/IprBlocks/ipr_op26_OPEND.png" />
+            <BitmapImage x:Key="picIpr005" UriSource="png/IprBlocks/ipr_op5_CarrriageFWD.png" />
+            <BitmapImage x:Key="picIpr006" UriSource="png/IprBlocks/ipr_op6_CarrriageBWD.png" />
+            <BitmapImage x:Key="picIpr007" UriSource="png/IprBlocks/ipr_op31_NozzleOpen.png" />
+            <BitmapImage x:Key="picIpr008" UriSource="png/IprBlocks/ipr_op23_Injection.png" />
+            <BitmapImage x:Key="picIpr009" UriSource="png/IprBlocks/ipr_op27_holding.png" />
+            <BitmapImage x:Key="picIpr010" UriSource="png/IprBlocks/ipr_op30_PreRels.png" />
+            <BitmapImage x:Key="picIpr011" UriSource="png/IprBlocks/ipr_op24_SNOW.png" />
+            <BitmapImage x:Key="picIpr012" UriSource="png/IprBlocks/ipr_op29_Presuck.png" />
+            <BitmapImage x:Key="picIpr013" UriSource="png/IprBlocks/ipr_op8_Charge.png" />
+            <BitmapImage x:Key="picIpr014" UriSource="png/IprBlocks/ipr_op25_SUCKBACK.png" />
+            <BitmapImage x:Key="picIpr015" UriSource="png/IprBlocks/ipr_op13_Nozzle.png" />
+            <BitmapImage x:Key="picIpr016" UriSource="png/IprBlocks/ipr_op2_ejectorfor.png" />
+            <BitmapImage x:Key="picIpr017" UriSource="png/IprBlocks/ipr_op2_ejectorshake.png" />
+            <BitmapImage x:Key="picIpr018" UriSource="png/IprBlocks/ipr_op1_ejectorback.png" />
+            <BitmapImage x:Key="picIpr019" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr020" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr021" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr022" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr023" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr024" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr025" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr026" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr027" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr028" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr029" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr030" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="picIpr031" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr032" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr033" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr034" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr035" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr036" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr037" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr038" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr039" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr040" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr041" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr042" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="picIpr043" UriSource="png/IprBlocks/ipr_op14_Valvegate.png" />
+            <BitmapImage x:Key="picIpr044" UriSource="png/IprBlocks/ipr_op14_Valvegate.png" />
+            <BitmapImage x:Key="picIpr045" UriSource="png/IprBlocks/ipr_op14_Valvegate.png" />
+            <BitmapImage x:Key="picIpr046" UriSource="png/IprBlocks/ipr_op14_Valvegate.png" />
+            <BitmapImage x:Key="picIpr047" UriSource="png/IprBlocks/ipr_op15_euromap.png" />
+            <BitmapImage x:Key="picIpr048" UriSource="png/IprBlocks/ipr_op11_Rotate.png" />
+            <BitmapImage x:Key="picIpr049" UriSource="png/IprBlocks/ipr_op11_Rotate.png" />
+
+            <BitmapImage x:Key="imgKeyNullBg" UriSource="png/btn/OBJ_27_45_DuoButtonBack.png" />
+            <BitmapImage x:Key="imgKeyPressed" UriSource="png/btn/OBJ_27_46_Pressed.png" />
+            <BitmapImage x:Key="imgKeyBg_52" UriSource="png/HeadSwitch/OBJ_27_19_MoldHeating.png" />
+            <BitmapImage x:Key="imgKeyActive_52" UriSource="png/HeadSwitch/OBJ_27_19_MoldHeating2.png" />
+            <BitmapImage x:Key="imgKeyBg_14" UriSource="png/HeadSwitch/OBJ_27_20_BarrelHeating.png" />
+            <BitmapImage x:Key="imgKeyActive_14" UriSource="png/HeadSwitch/OBJ_27_20_BarrelHeatingActive.png" />
+            <BitmapImage x:Key="imgKeyBg_53" UriSource="png/HeadSwitch/OBJ_27_42_SecLub.png" />
+            <BitmapImage x:Key="imgKeyActive_53" UriSource="png/HeadSwitch/OBJ_27_42_SecLub_Act.png" />
+            <BitmapImage x:Key="imgKeyBg_8" UriSource="png/HeadSwitch/OBJ_27_43_MainLub.png" />
+            <BitmapImage x:Key="imgKeyActive_8" UriSource="png/HeadSwitch/OBJ_27_43_MainLub_Act.png" />
+            <BitmapImage x:Key="imgKeyBg_100" UriSource="png/HeadSwitch/OBJ_27_44_RobNoRef.png" />
+            <BitmapImage x:Key="imgKeyActive_100" UriSource="png/HeadSwitch/OBJ_27_44_RobNoRef_ACt.png" />
+            <BitmapImage x:Key="imgKeyBg_101" UriSource="png/HeadSwitch/OBJ_27_44_RobRef.png" />
+            <BitmapImage x:Key="imgKeyActive_101" UriSource="png/HeadSwitch/OBJ_27_44_RobRef_Act.png" />
+            <BitmapImage x:Key="imgKeyBg_102" UriSource="png/HeadSwitch/OBJ_27_45_RobOn.png" />
+            <BitmapImage x:Key="imgKeyActive_102" UriSource="png/HeadSwitch/OBJ_27_45_RobOn_Act.png" />
+            <BitmapImage x:Key="imgKeyBg_59" UriSource="png/HeadSwitch/OBJ_27_49_Expump.png" />
+            <BitmapImage x:Key="imgKeyActive_59" UriSource="png/HeadSwitch/OBJ_27_49_Expump_Act.png" />
+            <BitmapImage x:Key="imgKeyBg_60" UriSource="png/HeadSwitch/OBJ_27_50_watervalve.png" />
+            <BitmapImage x:Key="imgKeyActive_60" UriSource="png/HeadSwitch/OBJ_27_50_watervalve_Act.png" />
+
+            <BitmapImage x:Key="imgKeyBg_6" UriSource="png/btn/OBJ_27_18_UnitFor.png" />
+            <BitmapImage x:Key="imgKeyBg_7" UriSource="png/btn/OBJ_27_17_UnitBack.png" />
+            <BitmapImage x:Key="imgKeyBg_10" UriSource="png/btn/OBJ_27_7_KeyMoldOpen.png" />
+            <BitmapImage x:Key="imgKeyBg_11" UriSource="png/btn/OBJ_27_8_KeyMoldClose.png" />
+            <BitmapImage x:Key="imgKeyBg_12" UriSource="png/btn/OBJ_27_12_Ejectorback.png" />
+            <BitmapImage x:Key="imgKeyBg_13" UriSource="png/btn/OBJ_27_13_EjectorFor.png" />
+            <BitmapImage x:Key="imgKeyBg_18" UriSource="png/btn/OBJ_27_9_KeyInjection.png" />
+            <BitmapImage x:Key="imgKeyBg_19" UriSource="png/btn/OBJ_27_10_Charge.png" />
+            <BitmapImage x:Key="imgKeyBg_20" UriSource="png/btn/OBJ_27_11_Suckback.png" />
+            <BitmapImage x:Key="imgKeyBg_21" UriSource="png/btn/OBJ_27_14_CarriageFor.png" />
+            <BitmapImage x:Key="imgKeyBg_22" UriSource="png/btn/OBJ_27_15_Carriageback.png" />
+            <BitmapImage x:Key="imgKeyBg_23" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_24" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_25" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_26" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_27" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_28" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_29" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_30" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_31" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_32" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_33" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_34" UriSource="png/HeadSwitch/OBJ_27_25_Air4.png" />
+            <BitmapImage x:Key="imgKeyBg_35" UriSource="png/HeadSwitch/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="imgKeyBg_36" UriSource="png/HeadSwitch/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="imgKeyBg_37" UriSource="png/HeadSwitch/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="imgKeyBg_38" UriSource="png/HeadSwitch/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="imgKeyBg_39" UriSource="png/HeadSwitch/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="imgKeyBg_40" UriSource="png/HeadSwitch/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="imgKeyBg_41" UriSource="png/HeadSwitch/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="imgKeyBg_42" UriSource="png/HeadSwitch/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="imgKeyBg_43" UriSource="png/HeadSwitch/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="imgKeyBg_44" UriSource="png/HeadSwitch/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="imgKeyBg_45" UriSource="png/HeadSwitch/OBJ_27_30_CoreCIN.png" />
+            <BitmapImage x:Key="imgKeyBg_46" UriSource="png/HeadSwitch/OBJ_27_31_CoreCOUT.png" />
+            <BitmapImage x:Key="imgKeyBg_54" UriSource="png/HeadSwitch/OBJ_27_53_Nozzle.png" />
+            
+            <BitmapImage x:Key="imgKeyBg_61" UriSource="png/HeadSwitch/OBJ_27_51_tunetabel_pos.png" />
+            <BitmapImage x:Key="imgKeyBg_62" UriSource="png/HeadSwitch/OBJ_27_52_tunetabel_neg.png" />
+
+            <BitmapImage x:Key="imgKeyUser_AcessLow" UriSource="png/btn/OBJ_14_8_AcessLow_V0.0.png" />
+            <BitmapImage x:Key="imgKeyUser_AcessWake" UriSource="png/btn/OBJ_14_9_AcessWake_V0.0.png" />
+            <BitmapImage x:Key="imgKeyUser_AcessSleep" UriSource="png/btn/OBJ_14_10_AcessSleepV0.0.png" />
+
+            <BitmapImage x:Key="imgPressNull" UriSource="png/OBJ_27_5_Pressed.png" />
+            <BitmapImage x:Key="imgPressNum" UriSource="png/OBJ_27_5_Pressed2.png" />
+            <BitmapImage x:Key="imgReleaseNull" UriSource="png/OBJ_27_6_Released.png" />
+            <BitmapImage x:Key="imgReleaseNum" UriSource="png/OBJ_27_6_Released2.png" />
+            <BitmapImage x:Key="imgCtrlGreen" UriSource="png/OBJ_27_48_GREEN.png" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.confirmBtn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="80">
+    <Canvas Height="30" Width="80">
+        <Image Height="30" Width="80" Source="/Program;component/png/OBJ_13_1_ButtonbaseActive_V1.2.png" />
+        <Image Height="30" Width="80" Source="/Program;component/png/OBJ_13_0_ButtonbaseRelease_V1.5.png" Name="img"/>
+        <Label Height="30" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey648}"  MouseDown="img_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave"/>
+    </Canvas>
+</UserControl>

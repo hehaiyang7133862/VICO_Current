@@ -1,0 +1,136 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.wait_me"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas>
+        <Canvas Height="286" Width="180" Canvas.Left="13" Canvas.Top="12" >
+            <my:btnFunc1  Canvas.Top="0" x:Name="btn1" dis="{DynamicResource lanKey2049}" MouseDown="btn1_MouseDown" MouseUp="btn1_MouseUp" />
+            <my:btnFunc1  Canvas.Top="40" x:Name="btn2" dis="{DynamicResource lanKey309}" MouseDown="btn2_MouseDown" MouseUp="btn2_MouseUp" />
+            <my:btnFunc1  Canvas.Top="80" x:Name="btn3" dis="{DynamicResource lanKey319}" MouseDown="btn3_MouseDown" MouseUp="btn3_MouseUp" />
+            <my:btnFunc1  Canvas.Top="120" x:Name="btn4" dis="{DynamicResource lanKey1018}" MouseDown="btn4_MouseDown" MouseUp="btn4_MouseUp" />
+            <my:btnFunc1  Canvas.Top="160" x:Name="btn5" dis="{DynamicResource lanKey2075}" MouseDown="btn5_MouseDown" MouseUp="btn5_MouseUp" />
+            <my:btnFunc1  Canvas.Top="200" x:Name="btn6" dis="{DynamicResource lanKey2051}" MouseDown="btn6_MouseDown" MouseUp="btn6_MouseUp" />
+            <my:btnFunc1  Canvas.Top="240" x:Name="btn7" dis="{DynamicResource lanKey285}" MouseDown="btn7_MouseDown" MouseUp="btn7_MouseUp" />
+        </Canvas>
+        <TabControl Canvas.Left="213" Canvas.Top="6" Height="290" Name="tbValue" Width="580" Padding="0" BorderBrush="{x:Null}" Background="{x:Null}">
+            <TabItem Name="menu_digIn" Height="0">
+                <Canvas Width="580">
+                    <my:btnFunc1  Canvas.Top="0" x:Name="btnDE1" dis="{DynamicResource lanKey998}" MouseDown="btnDE1_MouseDown" MouseUp="btnDE1_MouseUp" />
+                    <my:btnFunc1  Canvas.Top="40" x:Name="btnDE2" dis="{DynamicResource lanKey999}" MouseDown="btnDE2_MouseDown" MouseUp="btnDE2_MouseUp" />
+                    <my:btnFunc1  Canvas.Top="80" x:Name="btnDE3"  dis="{DynamicResource lanKey1000}" MouseDown="btnDE3_MouseDown" MouseUp="btnDE3_MouseUp" />
+                    <my:btnFunc1  Canvas.Top="120" x:Name="btnDE4"  dis="{DynamicResource lanKey1001}" MouseDown="btnDE4_MouseDown" MouseUp="btnDE4_MouseUp" />
+                    <!--<Canvas Canvas.Left="199" Canvas.Top="1" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Top="79" x:Name="btnFunc12" dis="大于"  />
+                        <my:btnFunc1 Canvas.Top="119" x:Name="btnFunc13" dis="等于"  />
+                        <my:btnFunc1 Canvas.Top="159" x:Name="btnFunc14" dis="小于"  />
+                    </Canvas>-->
+                    <Canvas Canvas.Left="199" Canvas.Top="-1" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnDA1" dis="{DynamicResource lanKey2993}" MouseDown="btnDA1_MouseDown" MouseUp="btnDA1_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="40" x:Name="btnDA0" dis="{DynamicResource lanKey2992}" MouseDown="btnDA0_MouseDown" MouseUp="btnDA0_MouseUp" />
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+            <TabItem Name="menu_pos" Height="0">
+                <Canvas Width="580">
+                    <my:btnFunc1  Canvas.Top="0" x:Name="btnPE1" dis="{DynamicResource lanKey1007}" MouseDown="btnPE1_MouseDown" MouseUp="btnPE1_MouseUp" />
+                    <my:btnFunc1  Canvas.Top="40" x:Name="btnPE2" dis="{DynamicResource lanKey1008}" MouseDown="btnPE2_MouseDown" MouseUp="btnPE2_MouseUp" />
+                    <my:btnFunc1  Canvas.Top="80" x:Name="btnPE3"  dis="{DynamicResource lanKey1002}" MouseDown="btnPE3_MouseDown" MouseUp="btnPE3_MouseUp" />
+                    <my:btnFunc1  Canvas.Top="160" x:Name="btnPE4"  dis="{DynamicResource lanKey737}" MouseDown="btnPE4_MouseDown" MouseUp="btnPE4_MouseUp" /><!--ipr[18] 第十一位为1 射台才能显示-->
+                    <my:btnFunc1  Canvas.Top="120" x:Name="btnPE5"  dis="{DynamicResource lanKey2052}" MouseDown="btnPE5_MouseDown" MouseUp="btnPE5_MouseUp" />
+                    <Canvas Canvas.Left="199" Canvas.Top="1" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Top="0" x:Name="btnP1" dis="{DynamicResource lanKey2053}" MouseDown="btnP1_MouseDown" MouseUp="btnP1_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="40" x:Name="btnP0" dis="{DynamicResource lanKey2055}" MouseDown="btnP0_MouseDown" MouseUp="btnP0_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="80" x:Name="btnP2" dis="{DynamicResource lanKey2054}" MouseDown="btnP2_MouseDown" MouseUp="btnP2_MouseUp" />
+                    </Canvas>
+                    <Canvas Canvas.Left="398" Canvas.Top="0" Height="156" Width="180">
+                        <!--<my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnPA1" dis="ON" />-->
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="40" x:Name="btnPA" dis="1.3 ton" FontFamily="Michroma" FontSize="18" MouseDown="btnPA_MouseDown" MouseUp="btnPA_MouseUp" />
+                    </Canvas>
+                </Canvas>
+
+            </TabItem>
+            <TabItem Name="menu_NozzleTouch" Height="0">
+                <Canvas Width="580">
+                    <!--<my:btnFunc1  Canvas.Top="120" x:Name="btnN3"  dis="座进到位"/>-->
+                    <!--<Canvas Canvas.Left="199" Canvas.Top="1" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Top="79" x:Name="btnPB1" dis="大于"  />
+                        <my:btnFunc1 Canvas.Top="119" x:Name="btnPB0" dis="等于"  />
+                        <my:btnFunc1 Canvas.Top="159" x:Name="btnPB2" dis="小于"  />
+                    </Canvas>-->
+                    <Canvas Canvas.Left="0" Canvas.Top="0" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnNA1" dis="{DynamicResource lanKey2993}" MouseDown="btnNA1_MouseDown" MouseUp="btnNA1_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="40" x:Name="btnNA0" dis="{DynamicResource lanKey2992}" MouseDown="btnNA0_MouseDown" MouseUp="btnNA0_MouseUp" />
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+            <TabItem Name="menu_ClampForce" Height="0">
+                <Canvas>
+                    <Canvas Canvas.Left="0" Canvas.Top="0" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Top="0" x:Name="btnC1" dis="{DynamicResource lanKey2053}" MouseDown="btnC1_MouseDown" MouseUp="btnC1_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="40" x:Name="btnC0" dis="{DynamicResource lanKey2055}" MouseDown="btnC0_MouseDown" MouseUp="btnC0_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="80" x:Name="btnC2" dis="{DynamicResource lanKey2054}" MouseDown="btnC2_MouseDown" MouseUp="btnC2_MouseUp" />
+                    </Canvas>
+                    <Canvas Canvas.Left="199" Canvas.Top="0" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnCA1" dis="1.3 ton" FontFamily="Michroma" FontSize="18" MouseDown="btnCA1_MouseDown" MouseUp="btnCA1_MouseUp" />
+                        <!--<my:btnFunc1 Canvas.Left="0" Canvas.Top="121" x:Name="btnCC2" dis="OFF" />-->
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+            <TabItem Name="menu_Variables" Height="0">
+                <Canvas>
+                    <Canvas Canvas.Left="0" Canvas.Top="0" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnVE1" dis="{DynamicResource lanKey1003}" MouseDown="btnVE1_MouseDown" MouseUp="btnVE1_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="40" x:Name="btnVE2" dis="{DynamicResource lanKey1004}" MouseDown="btnVE2_MouseDown" MouseUp="btnVE2_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="80" x:Name="btnVE3" dis="{DynamicResource lanKey1005}" MouseDown="btnVE3_MouseDown" MouseUp="btnVE3_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="120" x:Name="btnVE4" dis="{DynamicResource lanKey1006}" MouseDown="btnVE4_MouseDown" MouseUp="btnVE4_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="160" x:Name="btnVE5" dis="{DynamicResource lanKey995}" MouseDown="btnVE5_MouseDown" MouseUp="btnVE5_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="200" x:Name="btnVE6" dis="{DynamicResource lanKey996}" MouseDown="btnVE6_MouseDown" MouseUp="btnVE6_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="240" x:Name="btnVE7" dis="{DynamicResource lanKey997}" MouseDown="btnVE7_MouseDown" MouseUp="btnVE7_MouseUp" />
+                    </Canvas>
+                    <Canvas Canvas.Left="192" Canvas.Top="0" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Top="0" x:Name="btnV1" dis="{DynamicResource lanKey2053}" MouseDown="btnV1_MouseDown" MouseUp="btnV1_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="40" x:Name="btnV0" dis="{DynamicResource lanKey2055}" MouseDown="btnV0_MouseDown" MouseUp="btnV0_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="80" x:Name="btnV2" dis="{DynamicResource lanKey2054}" MouseDown="btnV2_MouseDown" MouseUp="btnV2_MouseUp" />
+                    </Canvas>
+                    <Canvas Canvas.Left="391" Canvas.Top="0" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnVA1" dis="1.3 ton" FontFamily="Michroma" FontSize="18" MouseDown="btnVA1_MouseDown" MouseUp="btnVA1_MouseUp" />
+                        <!--<my:btnFunc1 Canvas.Left="0" Canvas.Top="121" x:Name="btnCC2" dis="OFF" />-->
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+            <TabItem Name="menu_EuromapIn" Height="0">
+                <Canvas>
+                    <Canvas Canvas.Left="0" Canvas.Top="0" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnEE1" dis="{DynamicResource lanKey1010}" MouseDown="btnEE1_MouseDown" MouseUp="btnEE1_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="40" x:Name="btnEE2" dis="{DynamicResource lanKey1011}" MouseDown="btnEE2_MouseDown" MouseUp="btnEE2_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="80" x:Name="btnEE3" dis="{DynamicResource lanKey1012}" MouseDown="btnEE3_MouseDown" MouseUp="btnEE3_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="120" x:Name="btnEE4" dis="{DynamicResource lanKey1013}" MouseDown="btnEE4_MouseDown" MouseUp="btnEE4_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="160" x:Name="btnEE5" dis="{DynamicResource lanKey1014}" MouseDown="btnEE5_MouseDown" MouseUp="btnEE5_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="200" x:Name="btnEE6" dis="{DynamicResource lanKey1015}" MouseDown="btnEE6_MouseDown" MouseUp="btnEE6_MouseUp" />
+                    </Canvas>
+                    <Canvas Canvas.Left="192" Canvas.Top="0" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnEA1" dis="{DynamicResource lanKey2993}" MouseDown="btnEA1_MouseDown" MouseUp="btnEA1_MouseUp" />
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="40" x:Name="btnEA0" dis="{DynamicResource lanKey2992}" MouseDown="btnEA2_MouseDown" MouseUp="btnEA2_MouseUp" />
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+            <TabItem Name="menu_InjectionPressure" Height="0">
+                <Canvas>
+                    <Canvas Canvas.Left="0" Canvas.Top="0" Height="286" Width="180">
+                        <my:btnFunc1 Canvas.Top="0" x:Name="btnI1" dis="{DynamicResource lanKey2053}" MouseDown="btnI1_MouseDown" MouseUp="btnI1_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="40" x:Name="btnI0" dis="{DynamicResource lanKey2055}" MouseDown="btnI0_MouseDown" MouseUp="btnI0_MouseUp" />
+                        <my:btnFunc1 Canvas.Top="80" x:Name="btnI2" dis="{DynamicResource lanKey2054}" MouseDown="btnI2_MouseDown" MouseUp="btnI2_MouseUp" />
+                    </Canvas>
+                    <Canvas Canvas.Left="192" Canvas.Top="0" Height="156" Width="180">
+                        <my:btnFunc1 Canvas.Left="0" Canvas.Top="0" x:Name="btnIA1" dis="1.3 ton" FontFamily="Michroma" FontSize="18" MouseDown="btnIA1_MouseDown" MouseUp="btnIA1_MouseUp" />
+                        <!--<my:btnFunc1 Canvas.Left="0" Canvas.Top="121" x:Name="btnCC2" dis="OFF" />-->
+                    </Canvas>
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <my:activeErr1Ctrl Canvas.Left="493" Canvas.Top="223" x:Name="activeErr1Ctrl1" Visibility="Hidden"/>
+    </Canvas>
+</UserControl>

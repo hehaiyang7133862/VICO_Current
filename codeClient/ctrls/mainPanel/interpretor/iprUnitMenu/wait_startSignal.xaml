@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.wait_startSignal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas>
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="12" x:Name="btn1" dis="{DynamicResource ipr_waitStartSignal_MoldClose}" MouseDown="btn1_MouseDown" mouseUpHandle="btn1_MouseUp"/>
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="52" x:Name="btn2" dis="{DynamicResource ipr_waitStartSignal_MoldOpen}" MouseDown="btn2_MouseDown" mouseUpHandle="btn2_MouseUp"/>
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="92" x:Name="btn3" dis="{DynamicResource ipr_waitStartSignal_EjectorBWD}" MouseDown="btn3_MouseDown" mouseUpHandle="btn3_MouseUp"/>
+        <my:btnFunc1 Canvas.Left="13" Canvas.Top="132" x:Name="btn4" dis="{DynamicResource ipr_waitStartSignal_EjectorFWD}" MouseDown="btn4_MouseDown" mouseUpHandle="btn4_MouseUp"/>
+        <Canvas Name="cvsValue" >
+            <Label Canvas.Left="213" Canvas.Top="12" Content="{DynamicResource ipr_waitStartSignal_TouchCount}" Height="34" Name="label1" Width="180" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <my:btnFunc1 Canvas.Left="213" Canvas.Top="52" x:Name="btnVC" dis="1" MouseDown="btnVC_MouseDown" mouseUpHandle="btnVC_MouseUp"/>
+        </Canvas>
+        <my:activeErr1Ctrl Canvas.Left="493" Canvas.Top="223" x:Name="activeErr1Ctrl1" Visibility="Hidden" />
+    </Canvas>
+</UserControl>

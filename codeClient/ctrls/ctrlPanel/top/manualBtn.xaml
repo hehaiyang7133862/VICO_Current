@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.manualBtn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="73" d:DesignWidth="219">
+    <Canvas Height="73" Width="219" Name="cvsMain" >
+        <Image Height="73" Width="219" Source="/Program;component/png/btn/OBJ_18_2_MachineModeInactiveGray_V0.0.png"/>
+        <Image Height="73" Width="73"  Source="/Program;component/png/btn/OBJ_18_1_MachineModeActiveBlue_V0.0.png" Name="btnManualPress" Visibility="Hidden"/>
+        <Image Height="73" Width="73"  Source="/Program;component/png/btn/OBJ_5_6_ManualSelect_V0.0.png" Name="btnManualActive" Visibility="Hidden"/>
+        <Image Height="73" Width="73"  Source="/Program;component/png/btn/OBJ_5_6_ManualUnselect_V0.0.png" Name="btnManual" MouseDown="btnManual_MouseDown" MouseUp="btnManual_MouseUp" MouseLeave="btnManual_MouseLeave" />
+
+        <Image Height="73" Width="73" Source="/Program;component/png/btn/OBJ_18_3_MachineModeInactiveOrange_V0.0.png" Name="btnSemiAutoPress" Canvas.Left="73" Visibility="Hidden"/>
+        <Image Height="73" Width="73" Source="/Program;component/png/btn/OBJ_5_7_SemiAutoSelect_V0.0.png" Name="btnSemiAutoActive" Canvas.Left="73" Visibility="Hidden"/>
+        <Image Height="73" Width="73" Source="/Program;component/png/btn/OBJ_5_7_SemiAutoUnselect_V0.0.png" Name="btnSemiAuto" Canvas.Left="73" MouseDown="btnSemiAuto_MouseDown" MouseUp="btnSemiAuto_MouseUp" MouseLeave="btnSemiAuto_MouseLeave" />
+
+        <Image Height="73" Width="73" Source="/Program;component/png/btn/OBJ_18_6_MachineModePress_V0.0.png" Name="btnAutoPress" Canvas.Left="146" Visibility="Hidden"/>
+        <Image Height="73" Width="73" Source="/Program;component/png/btn/OBJ_5_8_FullAutoSelect_V0.0.png" Name="btnAutoActive" Canvas.Left="146" Visibility="Hidden"/>
+        <Image Height="73" Width="73" Source="/Program;component/png/btn/OBJ_5_8_FullAutoUnselect_V0.0.png" Name="btnAuto" Canvas.Left="146" MouseDown="btnAuto_MouseDown" MouseUp="btnAuto_MouseUp" MouseLeave="btnAuto_MouseLeave" />
+    </Canvas>
+</UserControl>

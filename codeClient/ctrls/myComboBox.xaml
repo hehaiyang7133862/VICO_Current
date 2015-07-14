@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.myComboBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="220">
+    <Border Name="bdMain" Height="35" Width="220" Background="White" BorderBrush="#FF909090" BorderThickness="1,1,1,1" MouseUp="cvsMain_MouseUp">
+        <Canvas>
+            <my:myTabControl x:Name="tabControl" />
+            <Line Canvas.Right="35" Canvas.Top="0" Y2="33" Stroke="#FF909090" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="False" />
+            <Image Name="down" Height="27" Width="27" Canvas.Right="4" Canvas.Top="3" Source="/Program;component/png/Sign/down4-25.png" />
+            <Image Name="up" Height="27" Width="27" Canvas.Right="4" Canvas.Top="3" Source="/Program;component/png/Sign/up4-25.png" Visibility="Hidden"/>
+        </Canvas>
+    </Border>
+</UserControl>

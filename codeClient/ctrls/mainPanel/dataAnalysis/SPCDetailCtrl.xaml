@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.SPCDetailCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="730" d:DesignWidth="820"
+             xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Name="cvsMain" Height="730" Width="820" Background="White">
+        <Line Y2="730" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <Image Canvas.Top="38" Height="518" Width="820" Source="/Program;component/png/blocks/SPC_Detail.png" Stretch="Fill"/>
+        <Label Name="lbVariableName" Canvas.Left="20" Content="VariableName" FontSize="14" Foreground="#FF444444" FontWeight="Black" Canvas.Top="5" />
+        <Label Canvas.Left="200" Content="Cpk :" FontSize="14" Foreground="#FF444444" FontWeight="Black" Canvas.Top="5" />
+        <Label Name="lbCpk" Canvas.Left="240" Canvas.Top="5" Content="0.00" FontSize="14" Foreground="#FF444444" FontWeight="Black" />
+        <Label Name="lbSampleSize" Canvas.Right="90" Canvas.Top="5" Content="0" FontSize="14" Foreground="#FF444444" FontWeight="Black"/>
+        <Label Canvas.Left="730" Canvas.Top="5" Content="{DynamicResource lanKey2238}" FontSize="14" Foreground="#FF444444" FontWeight="Black"/>
+        <Label Canvas.Left="55" Canvas.Top="34" Content="{DynamicResource lanKey2236}" FontSize="14" Foreground="#444444" FontWeight="Black"/>
+        <Label Canvas.Left="12" Canvas.Top="70" Content="+3σ" FontSize="12" Foreground="#444444" FontWeight="Black"/>
+        <Label Canvas.Left="16" Canvas.Top="261" Content="-3σ" FontSize="12" Foreground="#444444" FontWeight="Black"/>
+        <Label Name="lbUSL" Canvas.Left="717" Canvas.Top="70" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+        <Label Name="lbLSL" Canvas.Left="717" Canvas.Top="261" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+
+        <Canvas Canvas.Left="0" Canvas.Top="82" Name="cvsUclx">
+            <Line X2="710" Canvas.Left="48" Stroke="#FFE17100" StrokeThickness="2" StrokeDashArray="1,1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="5" Canvas.Left="716" Canvas.Top="-2" Stroke="#FFE17100" StrokeThickness="10" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="5" Canvas.Left="758" Canvas.Top="-2" Stroke="#FFE17100" StrokeThickness="10" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Label Name="lbUCLx" Canvas.Left="760" Canvas.Top="-13" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+        </Canvas>
+        <Canvas Canvas.Left="0" Canvas.Top="274" Name="cvsLclx">
+            <Line X2="710" Canvas.Left="48" Stroke="#FFE17100" StrokeThickness="2" StrokeDashArray="1,1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="5" Canvas.Left="716" Canvas.Top="-2" Stroke="#FFE17100" StrokeThickness="10" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="5" Canvas.Left="758" Canvas.Top="-2" Stroke="#FFE17100" StrokeThickness="10" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Label Name="lbLCLx" Canvas.Left="760" Canvas.Top="-13" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+        </Canvas>
+        <Canvas Canvas.Left="0" Canvas.Top="178" Name="cvsXBar">
+            <Line X2="710" Canvas.Left="48" Stroke="#FF007CA5" StrokeThickness="2" StrokeDashArray="1,1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="5" Canvas.Left="716" Canvas.Top="-2" Stroke="#FF007CA5" StrokeThickness="10" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="5" Canvas.Left="758" Canvas.Top="-2" Stroke="#FF007CA5" StrokeThickness="10" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Label Name="lbXBar" Canvas.Left="760" Canvas.Top="-13" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+        </Canvas>
+        <my:CurveControl Canvas.Left="47" Canvas.Top="59" CtrlHeight="240" CtrlWidth="670" x:Name="TrendCurve" IsCurveReverseX="False" IsCurverReverseY="True" CurveColor="#FFCBA533" ClipToBounds="True" />
+        
+        <Canvas Canvas.Top="59" Canvas.Left="48">
+            <Line Canvas.Left="0" Canvas.Top="29" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx25"/>
+            <Line Canvas.Left="0" Canvas.Top="36" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx24"/>
+            <Line Canvas.Left="0" Canvas.Top="43" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx23"/>
+            <Line Canvas.Left="0" Canvas.Top="50" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx22"/>
+            <Line Canvas.Left="0" Canvas.Top="57" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx21"/>
+            <Line Canvas.Left="0" Canvas.Top="64" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx20"/>
+            <Line Canvas.Left="0" Canvas.Top="71" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx19"/>
+            <Line Canvas.Left="0" Canvas.Top="78" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx18"/>
+            <Line Canvas.Left="0" Canvas.Top="85" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx17"/>
+            <Line Canvas.Left="0" Canvas.Top="92" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx16"/>
+            <Line Canvas.Left="0" Canvas.Top="99" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx15"/>
+            <Line Canvas.Left="0" Canvas.Top="106" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx14"/>
+            <Line Canvas.Left="0" Canvas.Top="113" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx13"/>
+            <Line Canvas.Left="0" Canvas.Top="120" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx12"/>
+            <Line Canvas.Left="0" Canvas.Top="127" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx11"/>
+            <Line Canvas.Left="0" Canvas.Top="134" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx10"/>
+            <Line Canvas.Left="0" Canvas.Top="141" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx9"/>
+            <Line Canvas.Left="0" Canvas.Top="148" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx8"/>
+            <Line Canvas.Left="0" Canvas.Top="155" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx7"/>
+            <Line Canvas.Left="0" Canvas.Top="162" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx6"/>
+            <Line Canvas.Left="0" Canvas.Top="169" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx5"/>
+            <Line Canvas.Left="0" Canvas.Top="176" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx4"/>
+            <Line Canvas.Left="0" Canvas.Top="183" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx3"/>
+            <Line Canvas.Left="0" Canvas.Top="190" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx2"/>
+            <Line Canvas.Left="0" Canvas.Top="197" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx1"/>
+            <Line Canvas.Left="0" Canvas.Top="204" X2="0" ClipToBounds="True" Stroke="#FF00C392" StrokeThickness="12" Name="lx0"/>
+        </Canvas>
+
+        <Label Canvas.Left="55" Canvas.Top="295" Content="{DynamicResource lanKey2240}" FontSize="14" Foreground="#444444" FontWeight="Black"/>
+        <Label Name="lbUCLr" Canvas.Left="717" Canvas.Top="330" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+        <Label Name="lbLCLr" Canvas.Left="717" Canvas.Top="474" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+        <Label Name="lbRBar" Canvas.Left="717" Canvas.Top="403" Content="0.00" FontSize="12" Foreground="#FF444444" FontWeight="Black"/>
+        <my:CurveControl Canvas.Left="47" Canvas.Top="320" CtrlHeight="193" CtrlWidth="670" CurveColor="#FFCBA533" IsCurveReverseX="False" IsCurverReverseY="True" x:Name="ControlCurveR" ClipToBounds="True"/>
+        <Label Name="lbStartTime" Canvas.Left="47" Canvas.Top="510" Content="00:00:00" FontSize="14" Foreground="#FF444444" FontWeight="Black"/>
+        <Label Name="lbEndTime" Canvas.Left="647" Canvas.Top="510" Content="00:00:00" FontSize="14" Foreground="#FF444444" FontWeight="Black"/>
+
+        <Label Canvas.Left="20" Canvas.Top="531" Content="{DynamicResource lanKey2243}" FontSize="14" Foreground="#444444" FontWeight="Black"/>
+
+        <Line X2="780" Canvas.Left="20" Canvas.Top="596" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <Line X2="780" Canvas.Left="20" Canvas.Top="636" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <Line X2="780" Canvas.Left="20" Canvas.Top="676" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <Line X2="780" Canvas.Left="20" Canvas.Top="716" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        
+        <Label Canvas.Left="50" Canvas.Top="564" Content="USL" FontSize="14" Foreground="#FF444444" />
+        <Label Name="tbUSL" Canvas.Left="220" Canvas.Top="562" Height="30" Width="100" Content="0.0" FontFamily="Verdana" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" MouseDown="tbUSL_MouseDown" MouseUp="tbUSL_MouseUp" MouseLeave="tbUSL_MouseLeave"/>
+        <Label Name="lbUnitUSL" Canvas.Left="325" Canvas.Top="560" Height="35" Width="100" Content="[null]" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="16" FontFamily="Verdana" />
+        
+        <Label Canvas.Left="430" Canvas.Top="564" Content="LSL" FontSize="14" Foreground="#FF444444" />
+        <Label Name="tbLSL" Canvas.Left="600" Canvas.Top="562" Height="30" Width="100" Content="0.0" FontFamily="Verdana" FontSize="16" VerticalContentAlignment="Center"  HorizontalContentAlignment="Right" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" MouseDown="tbLSL_MouseDown" MouseUp="tbLSL_MouseUp" MouseLeave="tbLSL_MouseLeave" />
+        <Label Name="lbUnitLSL" Canvas.Left="705" Canvas.Top="560" Height="35" Width="100" Content="[null]" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="16" FontFamily="Verdana" />
+        
+        <Label Canvas.Left="50" Canvas.Top="604" Content="{DynamicResource lanKey2245}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="220" Canvas.Top="602" Name="tbSampleSize" Height="30" Width="100" Content="0.0" FontFamily="Verdana" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" MouseDown="tbSampleSize_MouseDown" MouseUp="tbSampleSize_MouseUp" MouseLeave="tbSampleSize_MouseLeave" />
+        <Label Canvas.Left="430" Canvas.Top="604" Content="{DynamicResource lanKey2246}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="600" Canvas.Top="602" Name="tbSamplePeriod" Height="30" Width="100" Content="0.0" FontFamily="Verdana" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" MouseDown="tbSamplePeriod_MouseDown" MouseUp="tbSamplePeriod_MouseUp" MouseLeave="tbSamplePeriod_MouseLeave" />
+        
+        <Label Canvas.Left="50" Canvas.Top="644" Content="{DynamicResource lanKey2247}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="220" Canvas.Top="642" Name="tbStatisticsSampleCount" Height="30" Width="100" Content="0.0" FontFamily="Verdana" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" MouseDown="tbStatisticsSampleCount_MouseDown" MouseUp="tbStatisticsSampleCount_MouseUp" MouseLeave="tbStatisticsSampleCount_MouseLeave" />
+        
+        <Label Canvas.Left="50" Canvas.Top="684" Content="{DynamicResource lanKey2248}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="220" Canvas.Top="682" Name="tbCpkThreshold" Height="30" Width="100" Content="0.0" FontFamily="Verdana" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" MouseDown="tbCpkThreshold_MouseDown" MouseUp="tbCpkThreshold_MouseUp" MouseLeave="tbCpkThreshold_MouseLeave" />
+        <Label Canvas.Left="430" Canvas.Top="684" Content="{DynamicResource lanKey2244}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Right="120" Canvas.Top="682" Name="tbAlarmDelay" Height="30" Width="100" Content="0.0" FontFamily="Verdana" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" MouseDown="tbAlarmDelay_MouseDown" MouseUp="tbAlarmDelay_MouseUp" MouseLeave="tbAlarmDelay_MouseLeave" />
+
+        <Line X2="820" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+    </Canvas>
+</UserControl>

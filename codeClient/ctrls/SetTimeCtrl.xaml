@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.SetTimeCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080">
+    <Canvas Height="1920" Width="1080" Background="Transparent" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp" Name="cvsMain">
+        <Canvas Canvas.Left="0" Canvas.Top="0" Height="380" Width="360" Background="#00000000" Name="cvsBg">
+            <Border Canvas.Left="29" Canvas.Top="29" Height="320" Width="300" CornerRadius="10" BorderBrush="Transparent" BorderThickness="1" Background="White">
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" ShadowDepth="0" BlurRadius="20"></DropShadowEffect>
+                </Border.Effect>
+            </Border>
+            <Grid Name="gMain" Height="320" Width="300" Canvas.Left="30" Canvas.Top="30" Background="Transparent" MouseDown="gMain_MouseDown" MouseMove="gMain_MouseMove" MouseUp="gMain_MouseUp" MouseLeave="gMain_MouseLeave">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Name="lbTitle" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" Padding="20,0,0,0" BorderBrush="#FFD4D4D4" BorderThickness="0,0,0,1" MouseDown="lbTitle_MouseDown">SetTime</Label>
+                <Canvas Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" >
+                    <Label FontSize="48" Canvas.Left="139" Canvas.Top="73">:</Label>
+                    <Label Name="lbNotice" Foreground="Red" FontSize="14" FontWeight="Black" Canvas.Left="60" Canvas.Top="10"></Label>
+                    <Line X2="60" Canvas.Top="49" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="60" />
+                    <Line X2="60" Canvas.Top="49" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Right="60" />
+                    <Label Canvas.Left="71" Canvas.Top="186">Hour</Label>
+                    <Label Canvas.Left="194" Canvas.Top="186">Min</Label>
+                    <Line X2="60" Canvas.Top="180" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="60" />
+                    <Line X2="60" Canvas.Top="180" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Right="60" />
+                    <Canvas Name="cvsMin" Canvas.Right="0" Canvas.Top="50" Height="130" Width="150" Background="Transparent" ClipToBounds="True" MouseDown="cvsMin_MouseDown">
+                        <StackPanel Canvas.Top="-358" Canvas.Right="60" Name="spMin" Width="59">
+                            <Label FontSize="48" FontFamily="CuprumFFU">00</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">01</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">02</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">03</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">04</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">05</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU" Name="lbCurMin">06</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">07</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">08</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">09</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">10</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">11</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">12</Label>
+                        </StackPanel>
+                    </Canvas>
+                    <Canvas Name="cvsHour" Canvas.Left="0" Canvas.Top="50" Height="130" Width="150" Background="Transparent" ClipToBounds="True" MouseDown="cvsHour_MouseDown">
+                        <StackPanel Canvas.Top="-358" Canvas.Left="60" Name="spHour" Width="59">
+                            <Label FontSize="48" FontFamily="CuprumFFU">00</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">02</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">03</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">04</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">05</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">06</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU" Name="lbCurHour">07</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">08</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">09</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">10</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">11</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">12</Label>
+                            <Label FontSize="48" FontFamily="CuprumFFU">13</Label>
+                        </StackPanel>
+                    </Canvas>
+                </Canvas>
+                <Label Name="btnOK" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="0" BorderBrush="#FFD4D4D4" BorderThickness="0,1,1,0" MouseDown="btnOK_MouseDown">OK</Label>
+                <Label Name="btnCancel" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Row="2" Grid.Column="1" BorderBrush="#FFD4D4D4" BorderThickness="0,1,0,0" MouseDown="btnCancel_MouseDown">Cancel</Label>
+            </Grid>
+        </Canvas>
+    </Canvas>
+</UserControl>

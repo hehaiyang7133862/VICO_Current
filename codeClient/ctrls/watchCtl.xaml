@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.watchCtl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="290" Background="#00000000">
+    <Canvas Height="290" HorizontalAlignment="Left" Name="cvsWatch" VerticalAlignment="Top" Width="290" Background="#00000000">
+
+        <!--<Image Source="/Program;component/png/OBJ_12_2_Clock_V0.0.png" />-->
+        <!--<Image  Canvas.Top="173" Canvas.Left="121" Name="imgTimeAm" Source="file:///E:/code/9.20/Program/Program/png/OBJ_12_7_Time_AM_V0.0.png" />
+        <Image  Canvas.Top="173" Canvas.Left="121" Visibility="Hidden" Name="imgTimePm" Source="/Program;component/png/OBJ_12_8_Time_PM_V0.0.png" />-->
+        <Label Canvas.Left="127" Canvas.Top="164" Content="PM" Height="32" Name="lbPmAm" FontSize="18" FontWeight="Normal" FontFamily="Sony Sketch EF" />
+        <Ellipse Canvas.Left="141" Canvas.Top="141" Height="4" Name="ellipse2" Stroke="Black" Width="4" Fill="Black"/>
+        <Line X1="125" Y1="143" X2="250" Y2="143" StrokeThickness="1" Stroke="Black" Name="watchSec" Opacity="0.6" />
+        <Line X1="143" Y1="140" X2="143" Y2="243" StrokeThickness="3" Stroke="#9A3E385A" Name="watchMin"/>
+        <Line X1="143" Y1="140" X2="143" Y2="50" StrokeThickness="5" Stroke="#99000000" Name="watchHour" />
+        <!--<Label Canvas.Left="97" Canvas.Top="310" Content="10:52:45" FontSize="22" Name="lbtmTime" />-->
+       
+    </Canvas>
+
+</UserControl>

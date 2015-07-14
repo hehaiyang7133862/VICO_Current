@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.heatingSpMoldBtnCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="92">
+<Canvas Height="50" Width="92"   MouseDown="lbMain_MouseDown" Name="cvsMain">
+    <TabControl Name="tbMain" Padding="0" TabStripPlacement="Right" BorderThickness="0" Background="{x:Null}" Width="92">
+        <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas Width="92" Height="50" Name="cvsItem0">
+                    <Label  Content="{DynamicResource lanKey2992}" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="lbMain" Width="92" Height="40"/>
+                    <Label Height="10" Width="92" Canvas.Top="40" Background="#FFC8C8C8" Name="lbBg0"/>
+                </Canvas>
+            </TabItem>
+        <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas Width="92" Height="50" Name="cvsItem1">
+                    <Label  Content="{DynamicResource lanKey910}" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="lbMain1"   Width="92" Height="40"  />
+                    <Label Height="10" Width="92" Canvas.Top="40" Background="#FFBf00"  Name="lbBg1"/>
+                </Canvas>
+            </TabItem>
+        <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas Width="92" Height="50" Name="cvsItem2">
+                    <Label  Content="Auto" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="lbMain2"   Width="92" Height="40"  />
+                    <Label Height="10" Width="92" Canvas.Top="40" Background="#00e1b4"   Name="lbBg2"/>
+                </Canvas>
+            </TabItem>
+        <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas Width="92" Height="50" Name="cvsItem3">
+                    <Label  Content="{DynamicResource lanKey298}" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="lbMain3"   Width="92" Height="40" />
+                    <Label Height="10" Width="92" Canvas.Top="40" Background="#00e1b4"   Name="lbBg3"/>
+                </Canvas>
+            </TabItem>
+    </TabControl>
+        
+    </Canvas>
+</UserControl>

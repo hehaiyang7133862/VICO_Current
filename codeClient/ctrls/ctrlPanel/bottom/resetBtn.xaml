@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.resetBtn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="137" d:DesignWidth="137">
+    <Canvas Height="137" Width="137" Name="cvsMain" MouseDown="cvsMain_MouseDown" MouseUp="cvsMain_MouseUp" MouseLeave="cvsMain_MouseLeave">
+        <Image Height="137" Width="137" Source="/Program;component/png/btn/OBJ_6_1_Reset_V0.0.png" Name="btnBg"/>
+        <Image Height="137" Width="137" Source="/Program;component/png/btn/OBJ_6_1_ResetActive_V0.0.png" Name="btnActive" Visibility="Hidden" />
+    </Canvas>
+</UserControl>

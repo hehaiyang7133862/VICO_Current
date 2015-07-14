@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.bdItemPage"
+             FontFamily="Microsoft YaHei"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1335" d:DesignWidth="1068" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="1335" Width="1068" Name="cvsMain" Background="#FFEAEAEA" ClipToBounds="True">
+        <Canvas Name="cvsHead" Height="50" Width="1068" Background="White">
+            <Label Height="50" Width="150" Canvas.Left="40" Content="{DynamicResource lanKey2114}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <Label Height="50" Width="174" Canvas.Left="210" Content="{DynamicResource lanKey001}" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="#FFDEEDEF"/>
+            <Label Height="50" Width="174" Canvas.Left="384" Content="{DynamicResource lanKey2115}" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="#FFDEEDEF"/>
+            <Label Height="50" Width="175" Canvas.Left="558" Content="{DynamicResource lanKey753}" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Background="#FFDEEDEF"/>
+            <Label Height="50" Width="170" Canvas.Left="733" Content="{DynamicResource OI_SetReference}" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Name="btnSetReference" MouseDown="lbSetRefrence_MouseDown"  />
+            <Label Name="lb1" Content="0.0%" FontSize="24" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Height="50" Canvas.Right="684"/>
+            <Label Name="lb2" Content="0.0%" FontSize="24" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Height="50" Canvas.Right="510"/>
+            <Label Name="lb3" Content="0.0%" FontSize="24" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Height="50" Canvas.Right="335"/>
+            <Rectangle Canvas.Right="110" Canvas.Top="0" Height="50" Width="55" Name="recRefresh"  />
+            <Image Canvas.Right="122" Canvas.Top="10" Source="/Program;component/png/Sign/update-32.png" Name="imgRefresh" MouseDown="recRefresh_MouseDown" MouseLeave="recRefresh_MouseLeave" MouseUp="recRefresh_MouseUp" />
+            <Rectangle Height="50" Width="55"  Canvas.Right="55" Canvas.Top="0" Name="recParse"/>
+            <Image Canvas.Right="67" Canvas.Top="10" Source="/Program;component/png/Sign/play-32.png" Name="imgParse" MouseDown="imgParse_MouseDown" MouseLeave="imgParse_MouseLeave" MouseUp="imgParse_MouseUp" />
+            <Image Canvas.Right="67" Canvas.Top="10" Source="/Program;component/png/Sign/pause-32.png" Name="imgRestart" MouseDown="imgRestart_MouseDown" MouseUp="imgRestart_MouseUp" MouseLeave="imgRestart_MouseLeave" />
+            <Image Height="50" Width="55" Canvas.Right="0" Source="/Program;component/png/blocks/Locked_Size_2_1_V00.png"/>
+
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True"/>
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True"/>
+            <Line Canvas.Left="210" Canvas.Top="1" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+            <Line Canvas.Left="384" Canvas.Top="1" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+            <Line Canvas.Left="558" Canvas.Top="1" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+            <Line Canvas.Left="733" Canvas.Top="1" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+            <Line Canvas.Right="164" Canvas.Top="1" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+            <Line Canvas.Right="109" Canvas.Top="1" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+            <Line Canvas.Right="54" Canvas.Top="1" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+        </Canvas>
+        <Canvas Canvas.Top="50" Canvas.Left="0" Height="103" Width="1068" Background="White">
+            <Line X2="205" Canvas.Left="212" Canvas.Top="52" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2"/>
+            <Line X2="640" Canvas.Left="420" Canvas.Top="52" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2"/>
+            <Line Y2="100" Canvas.Left="210" Canvas.Top="2" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2"/>
+            <Line Y2="100" Canvas.Left="418" Canvas.Top="2" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2"/>
+            <Line X2="1068" Canvas.Bottom="0" Stroke="Black" StrokeThickness="2" ClipToBounds="True"/>
+            <Label Height="54" Width="100" Content="{DynamicResource lanKey742}" VerticalContentAlignment="Center" Canvas.Left="40" Canvas.Top="-1" FontSize="18" Foreground="#FF444444"/>
+            <my:VicoLabel objName="Prd268" myHeight="65" Canvas.Top="50" Canvas.Left="-2" myHorizontalAlignment="Right" myFontSize="26" myFontFamily="Verdana" ReadOnly="True" />
+            <Label Height="50" Width="50" Content="s" Canvas.Left="93" Canvas.Top="53" FontSize="26" FontFamily="Verdana" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left"/>
+            <my:VicoLabel objName="Prd269" Canvas.Top="68" Canvas.Left="92" myForeground="#FFE21111" myHorizontalAlignment="Right" myFontFamily="Verdana" ReadOnly="True" />
+            <Label Height="50" Width="50" Content="s" Canvas.Left="186" Canvas.Top="52" FontSize="20" Foreground="#FFE21111" FontFamily="Verdana" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Left"/>
+            <Label Height="30" Width="100" Content="{DynamicResource lanKey402}" FontSize="12" Canvas.Left="217" Canvas.Top="13" Foreground="#FF444444"/>
+            <Label Canvas.Top="1" Canvas.Left="278" FontFamily="Verdana" FontSize="20" Height="50" Width="140" Content="00:00:00" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Name="lbTime"/>
+            <Label Height="30" Width="60" Content="{DynamicResource lanKey024}" HorizontalContentAlignment="Center" Canvas.Left="216" Canvas.Top="69" FontSize="14" Foreground="#FF444444"/>
+            <Label Height="30" Width="71" Content="{DynamicResource lanKey025}" HorizontalContentAlignment="Center" Canvas.Left="283" Canvas.Top="69" FontSize="14" Foreground="#FF444444"/>
+            <Label Height="30" Width="60" Content="{DynamicResource lanKey026}" HorizontalContentAlignment="Center" Canvas.Left="365" Canvas.Top="69" FontSize="14" Foreground="#FF444444"/>
+            <Label Name="lbCurFocus" Height="53" Width="649" Content="" Canvas.Left="419" Canvas.Top="0" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center"/>
+            <Rectangle Name="recCycleTime" Height="11" Width="0" Canvas.Top="84" Canvas.Left="427" Fill="#FF0092C3" Stroke="#FF0092C3" Opacity="0.4"/>
+            <Rectangle Name="recCycleTimeBase" Height="11" Width="10" Canvas.Top="91" Canvas.Left="427" Stroke="#FFE10000" Fill="#FFE10000" Opacity="0.3"/>
+        </Canvas>
+        <StackPanel Name="cvsBars" Canvas.Left="7" Canvas.Top="153">
+        </StackPanel>
+
+        <Canvas Height="1233" Width="600" Canvas.Left="427" Canvas.Top="102" Name="cvsCurValue" MouseDown="cvsCurValue_MouseDown" Background="Transparent" MouseMove="cvsCurValue_MouseMove" MouseUp="cvsCurValue_MouseUp" MouseLeave="cvsCurValue_MouseLeave">
+            <Canvas Name="cvsCursor" Canvas.Left="0" Height="1233" Width="50">
+                <Label Name="lbCursor" Content="0.0" FontSize="18" Canvas.Left="-21" Canvas.Top="-2" />
+                <Line Stroke="#FFFF3CAE" StrokeThickness="2" Y2="1208" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="0" Canvas.Top="25" />
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</UserControl>

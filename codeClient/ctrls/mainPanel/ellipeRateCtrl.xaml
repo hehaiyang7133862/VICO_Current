@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.ellipeRateCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="109" d:DesignWidth="109" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Name="cvsMain" Height="109" Width="109">
+        <Canvas Name="cvsPath">
+            <Path Name="pathBackGround" StrokeThickness="14" Stroke="#FFD0D0D0" Canvas.Left="54" Canvas.Top="54" SnapsToDevicePixels="True">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="0,40">
+                            <ArcSegment x:Name="arcBackGround" Point="0,40" Size="40,40" RotationAngle="0" IsLargeArc="False" SweepDirection="Clockwise" IsStroked="True"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+            <Path Name="pathForeGround" StrokeThickness="14" Stroke="#FF33CDC5" Canvas.Left="54" Canvas.Top="54" SnapsToDevicePixels="True">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathFigure StartPoint="0,40">
+                            <ArcSegment x:Name="arcForeGround" Point="0,40" Size="40,40" RotationAngle="0" IsLargeArc="False" SweepDirection="Clockwise"  IsStroked="True"/>
+                        </PathFigure>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </Canvas>
+        <Image Canvas.Left="0" Canvas.Top="0" Height="109" Width="109" Source="/Program;component/png/OBJ_10_45_RoundMask_V0.0.png" Stretch="Fill" />
+        <Label Canvas.Left="-3" Canvas.Top="26" Content="{DynamicResource lanKey213}" Height="28" Name="lbDis" Width="119" HorizontalContentAlignment="Center" FontSize="14" />
+        <my:VicoLabel Canvas.Left="10" Canvas.Top="44" x:Name="lbValue" myWidth="90" FontSize="26" myForeground="#FF646464" ReadOnly="True"/>
+        <Label Canvas.Left="24" Canvas.Top="72" Content="%"  Height="28" Name="lbUnit" Width="62" HorizontalContentAlignment="Center" Foreground="#FF969696" />
+    </Canvas>
+</UserControl>

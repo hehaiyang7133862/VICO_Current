@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.OStateLED_B"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="25">
+    <Canvas Height="25" Width="25">
+        <TabControl Height="25" Width="25" Name="tbState1" TabStripPlacement="Right" Padding="0" BorderThickness="0" SelectedIndex="0" Background="Transparent">
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <Image  Source="/Program;component/png/OBJ_20_14_RedLedInactive_V0.0.png" />
+                </Canvas>
+            </TabItem>
+            <TabItem  Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <Image  Source="/Program;component/png/OBJ_20_13_RedLedActive_V0.0.png" />
+                </Canvas>
+            </TabItem>
+        </TabControl>
+    </Canvas>
+</UserControl>

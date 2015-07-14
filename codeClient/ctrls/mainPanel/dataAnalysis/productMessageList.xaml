@@ -1,0 +1,183 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.productMessageList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1506" d:DesignWidth="1068" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="1506" Width="1068" Name="cvsMain" Background="#FFEAEAEA">
+        <StackPanel Name="spBack" Height="1506" Width="1068" Background="White">
+            <Canvas Width="1068" Height="150">
+                <Canvas.Background>
+                    <DrawingBrush Stretch="Fill">
+                        <DrawingBrush.Drawing>
+                            <GeometryDrawing>
+                                <GeometryDrawing.Pen>
+                                    <Pen Brush="#FFD4D4D4" Thickness="1"></Pen>
+                                </GeometryDrawing.Pen>
+                                <GeometryDrawing.Geometry>
+                                    <GeometryGroup>
+                                        <LineGeometry StartPoint="0,0" EndPoint="1068,0" />
+                                        <LineGeometry StartPoint="0,49" EndPoint="1068,49" />
+                                        <LineGeometry StartPoint="68,49" EndPoint="68,100" />
+                                        <LineGeometry StartPoint="168,49" EndPoint="168,100" />
+                                        <LineGeometry StartPoint="268,49" EndPoint="268,100" />
+                                        <LineGeometry StartPoint="368,49" EndPoint="368,100" />
+                                        <LineGeometry StartPoint="468,49" EndPoint="468,100" />
+                                        <LineGeometry StartPoint="568,49" EndPoint="568,100" />
+                                        <LineGeometry StartPoint="668,49" EndPoint="668,100" />
+                                        <LineGeometry StartPoint="768,49" EndPoint="768,100" />
+                                        <LineGeometry StartPoint="868,49" EndPoint="868,100" />
+                                        <LineGeometry StartPoint="968,49" EndPoint="968,100" />
+                                        <LineGeometry StartPoint="68,104" EndPoint="68,150" />
+                                        <LineGeometry StartPoint="168,104" EndPoint="168,150" />
+                                        <LineGeometry StartPoint="268,104" EndPoint="268,150" />
+                                        <LineGeometry StartPoint="368,104" EndPoint="368,150" />
+                                        <LineGeometry StartPoint="468,104" EndPoint="468,150" />
+                                        <LineGeometry StartPoint="568,104" EndPoint="568,150" />
+                                        <LineGeometry StartPoint="668,104" EndPoint="668,150" />
+                                        <LineGeometry StartPoint="768,104" EndPoint="768,150" />
+                                        <LineGeometry StartPoint="868,104" EndPoint="868,150" />
+                                        <LineGeometry StartPoint="968,104" EndPoint="968,150" />
+                                    </GeometryGroup>
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingBrush.Drawing>
+                    </DrawingBrush>
+                </Canvas.Background>
+
+                <Line X2="1068" Stroke="#FFC8C8C8" StrokeThickness="1" Canvas.Top="100"/>
+                <Line X2="1068" Stroke="#FFD4D4D4" StrokeThickness="1" Canvas.Top="101"/>
+                <Line X2="1068" Stroke="#FFE8E8E8" StrokeThickness="1" Canvas.Top="102"/>
+                <Line X2="1068" Stroke="#FFBCBCBC" StrokeThickness="2" Canvas.Top="150"/>
+
+                <Label Height="50" Width="150" Canvas.Left="40" Content="{DynamicResource lanKey938}" FontWeight="Bold" FontSize="14" Foreground="#FF0082C3" VerticalContentAlignment="Center"/>
+                <Image Height="50" Width="55" Canvas.Right="0" Source="/Program;component/png/blocks/Locked_Size_2_1_V00.png"/>
+
+                <Label Canvas.Left="68" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey284}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="68" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="[s]" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="168" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey292}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="168" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="[s]" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="268" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey439}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="268" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="[s]" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="368" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey425}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="368" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="468" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey426}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="468" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="568" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey427}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="568" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="[s]" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="668" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey4282}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="668" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="768" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey429}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="768" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="868" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey289}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="868" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Left="968" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey431}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="968" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444"/>
+
+                <Label Canvas.Right="1000" Canvas.Top="111" Width="100" HorizontalContentAlignment="Right" Content="{DynamicResource lanKey022}" FontSize="14" Foreground="#FF444444"/>
+
+                <my:VicoLabel Canvas.Left="68" Canvas.Top="102" objName="Prd027" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset1" Canvas.Left="68" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="168" Canvas.Top="102" objName="Prd034" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset2" Canvas.Left="168" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="268" Canvas.Top="102" objName="Prd041" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset3" Canvas.Left="268" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="368" Canvas.Top="102" objName="Prd048" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset4" Canvas.Left="368" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="468" Canvas.Top="102" objName="Prd055" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset5" Canvas.Left="468" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="568" Canvas.Top="102" objName="Prd062" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset6" Canvas.Left="568" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="668" Canvas.Top="102" objName="Prd069" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset7" Canvas.Left="668" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="768" Canvas.Top="102" objName="Prd076" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset8" Canvas.Left="768" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="868" Canvas.Top="102" objName="Prd083" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset9" Canvas.Left="868" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+                <my:VicoLabel Canvas.Left="968" Canvas.Top="102" objName="Prd090" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
+                <Label Name="lbOffset10" Canvas.Left="968" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
+            </Canvas>
+            <Canvas Name="cvsBack" Height="1250" Width="1068" Background="#FFEAEAEA" ClipToBounds="True" MouseDown="cvsBack_MouseDown" MouseMove="cvsBack_MouseMove" MouseLeave="cvsBack_MouseLeave" MouseUp="cvsBack_MouseUp">
+                <Canvas Name="cvsCurrent" Height="25" Width="1068" Background="#FFD7F0FF" />
+                <StackPanel Name="sPanel" Height="1250" Width="1068" Canvas.Top="0">
+                    <my:prdMsgUnit x:Name="uint0" No="当前"/>
+                    <my:prdMsgUnit x:Name="uint1" No="-1"/>
+                    <my:prdMsgUnit x:Name="uint2" No="-2"/>
+                    <my:prdMsgUnit x:Name="uint3" No="-3"/>
+                    <my:prdMsgUnit x:Name="uint4" No="-4"/>
+                    <my:prdMsgUnit x:Name="uint5" No="-5"/>
+                    <my:prdMsgUnit x:Name="uint6" No="-6"/>
+                    <my:prdMsgUnit x:Name="uint7" No="-7"/>
+                    <my:prdMsgUnit x:Name="uint8" No="-8"/>
+                    <my:prdMsgUnit x:Name="uint9" No="-9"/>
+                    <my:prdMsgUnit x:Name="uint10" No="-10"/>
+                    <my:prdMsgUnit x:Name="uint11" No="-11"/>
+                    <my:prdMsgUnit x:Name="uint12" No="-12"/>
+                    <my:prdMsgUnit x:Name="uint13" No="-13"/>
+                    <my:prdMsgUnit x:Name="uint14" No="-14"/>
+                    <my:prdMsgUnit x:Name="uint15" No="-15"/>
+                    <my:prdMsgUnit x:Name="uint16" No="-16"/>
+                    <my:prdMsgUnit x:Name="uint17" No="-17"/>
+                    <my:prdMsgUnit x:Name="uint18" No="-18"/>
+                    <my:prdMsgUnit x:Name="uint19" No="-19"/>
+                    <my:prdMsgUnit x:Name="uint20" No="-20"/>
+                    <my:prdMsgUnit x:Name="uint21" No="-21"/>
+                    <my:prdMsgUnit x:Name="uint22" No="-22"/>
+                    <my:prdMsgUnit x:Name="uint23" No="-23"/>
+                    <my:prdMsgUnit x:Name="uint24" No="-24"/>
+                    <my:prdMsgUnit x:Name="uint25" No="-25"/>
+                    <my:prdMsgUnit x:Name="uint26" No="-26"/>
+                    <my:prdMsgUnit x:Name="uint27" No="-27"/>
+                    <my:prdMsgUnit x:Name="uint28" No="-28"/>
+                    <my:prdMsgUnit x:Name="uint29" No="-29"/>
+                    <my:prdMsgUnit x:Name="uint30" No="-30"/>
+                    <my:prdMsgUnit x:Name="uint31" No="-31"/>
+                    <my:prdMsgUnit x:Name="uint32" No="-32"/>
+                    <my:prdMsgUnit x:Name="uint33" No="-33"/>
+                    <my:prdMsgUnit x:Name="uint34" No="-34"/>
+                    <my:prdMsgUnit x:Name="uint35" No="-35"/>
+                    <my:prdMsgUnit x:Name="uint36" No="-36"/>
+                    <my:prdMsgUnit x:Name="uint37" No="-37"/>
+                    <my:prdMsgUnit x:Name="uint38" No="-38"/>
+                    <my:prdMsgUnit x:Name="uint39" No="-39"/>
+                    <my:prdMsgUnit x:Name="uint40" No="-40"/>
+                    <my:prdMsgUnit x:Name="uint41" No="-41"/>
+                    <my:prdMsgUnit x:Name="uint42" No="-42"/>
+                    <my:prdMsgUnit x:Name="uint43" No="-43"/>
+                    <my:prdMsgUnit x:Name="uint44" No="-44"/>
+                    <my:prdMsgUnit x:Name="uint45" No="-45"/>
+                    <my:prdMsgUnit x:Name="uint46" No="-46"/>
+                    <my:prdMsgUnit x:Name="uint47" No="-47"/>
+                    <my:prdMsgUnit x:Name="uint48" No="-48"/>
+                    <my:prdMsgUnit x:Name="uint49" No="-49"/>
+                </StackPanel>
+            </Canvas>
+            <Canvas Height="106" Background="#FFDEDEDE">
+                <Line X2="1068" Stroke="#FFBCBCBC" StrokeThickness="12" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Top="0"></Line>
+                <Line X2="1068" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Top="30"></Line>
+                <Line X2="1068" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Top="55"></Line>
+                <Line X2="1068" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Top="80"></Line>
+                <Line X2="1068" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Top="105"></Line>
+                <my:prdMsgUnit x:Name="vMax" Canvas.Top="6" No=""/>
+                <my:prdMsgUnit x:Name="vMin" Canvas.Top="31" No=""/>
+                <my:prdMsgUnit x:Name="vAvg" Canvas.Top="56" No=""/>
+                <my:prdMsgUnit x:Name="vOff" Canvas.Top="81" No=""/>
+
+                <Label Canvas.Right="1002" Canvas.Top="4" Content="{DynamicResource lanKey440}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Right="1002" Canvas.Top="29" Content="{DynamicResource lanKey441}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Right="1002" Canvas.Top="54" Content="{DynamicResource lanKey442}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Right="1002" Canvas.Top="79" Content="{DynamicResource lanKey443}" FontSize="14" Foreground="#FF444444"/>
+            </Canvas>
+        </StackPanel>
+    </Canvas>
+</UserControl>

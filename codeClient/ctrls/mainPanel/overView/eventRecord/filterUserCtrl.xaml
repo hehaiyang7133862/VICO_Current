@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.filterUserCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="55" >
+    <Canvas Name="cvsMain" Height="50" Width="55" MouseDown="cvsMain_MouseDown" MouseUp="cvsMain_MouseUp" MouseLeave="cvsMain_MouseLeave" Background="#00000000">
+        <Label Name="lbBj" Canvas.Left="-200" Canvas.Top="-420" Height="1920" Width="1080" MouseDown="lbBj_MouseDown" Visibility="Hidden"/>
+        <Image Source="/Program;component/png/Sign/checked_user-32.png" Canvas.Left="13" Canvas.Top="11" />
+        <Canvas Canvas.Top="65" Name="cvsUser" Visibility="Hidden" Background="White">
+            <Border Name="brd" Height="200" Width="240" BorderBrush="Black" BorderThickness="1,1,1,1" CornerRadius="2" Background="White" Opacity="0.8" />
+            <StackPanel Canvas.Top="40" Name="cvsView"/>
+            <Line X2="220" Canvas.Left="10" Canvas.Top ="39" Stroke="#FF8C8C8C" StrokeThickness="2" ClipToBounds="True"/>
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.Ejector_Air"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1335" d:DesignWidth="1068" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" >
+    <Canvas Name="cvsBlowing" Height="1335" Width="1068" Background="#FFEAEAEA">
+        <Canvas Name="cvsBlowingHead" Height="50" Width="1068" Background="White">
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Label Canvas.Left="40" Height="50" VerticalContentAlignment="Center" Content="{DynamicResource lanKey016}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            
+            <Canvas Canvas.Right="497" Canvas.Top="10">
+                <Border Height="31" Width="220" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Background="#FFEAEAEA" />
+                <Label Canvas.Top="1" Canvas.Left="0" Content="{DynamicResource lanKey247}" FontSize="14" Foreground="#FF444444"/>
+                <my:lightStateCtrl Canvas.Left="56" Canvas.Top="3" objName="Mld490" dis="1"/>
+                <my:lightStateCtrl Canvas.Left="83" Canvas.Top="3" objName="Mld493" dis="2"/>
+                <my:lightStateCtrl Canvas.Left="110" Canvas.Top="3" objName="Mld496" dis="3"/>
+                <my:lightStateCtrl Canvas.Left="137" Canvas.Top="3" objName="Mld499" dis="4"/>
+                <my:lightStateCtrl Canvas.Left="164" Canvas.Top="3" objName="Mld502" dis="5"/>
+                <my:lightStateCtrl Canvas.Left="191" Canvas.Top="3" objName="Mld505" dis="6"/>
+            </Canvas>
+            <Canvas Canvas.Right="254" Canvas.Top="10">
+                <Border Height="31" Width="220" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Background="#FFEAEAEA"/>
+                <Label Canvas.Top="1" Canvas.Left="0" Content="{DynamicResource lanKey248}" FontSize="14" Foreground="#FF444444"/>
+                <my:lightStateCtrl Canvas.Left="56" Canvas.Top="3" objName="Mld508" dis="7"/>
+                <my:lightStateCtrl Canvas.Left="83" Canvas.Top="3" objName="Mld511" dis="8"/>
+                <my:lightStateCtrl Canvas.Left="110" Canvas.Top="3" objName="Mld514" dis="9"/>
+                <my:lightStateCtrl Canvas.Left="137" Canvas.Top="3" objName="Mld517" dis="10"/>
+                <my:lightStateCtrl Canvas.Left="164" Canvas.Top="3" objName="Mld520" dis="11"/>
+                <my:lightStateCtrl Canvas.Left="191" Canvas.Top="3" objName="Mld523" dis="12"/>
+            </Canvas>
+        </Canvas>
+        <my:airSetUnitCtrl Canvas.Top="555" Canvas.Left="34" objMenu="Mld478" objAct="Mld477" objChk="Mld481" objTm="Mld524" objKeeping="Mld525" objTmSet="Mld479" objKeepingSet="Mld480" Nr="12" />
+        <my:airSetUnitCtrl Canvas.Top="510" Canvas.Left="34" objMenu="Mld471" objAct="Mld470" objChk="Mld474" objTm="Mld521" objKeeping="Mld522" objTmSet="Mld472" objKeepingSet="Mld473" Nr="11" />
+        <my:airSetUnitCtrl Canvas.Top="465" Canvas.Left="34" objMenu="Mld464" objAct="Mld463" objChk="Mld467" objTm="Mld518" objKeeping="Mld519" objTmSet="Mld465" objKeepingSet="Mld466" Nr="10" />
+        <my:airSetUnitCtrl Canvas.Top="420" Canvas.Left="34" objMenu="Mld457" objAct="Mld456" objChk="Mld460" objTm="Mld515" objKeeping="Mld516" objTmSet="Mld458" objKeepingSet="Mld459" Nr="9" />
+        <my:airSetUnitCtrl Canvas.Top="375" Canvas.Left="34" objMenu="Mld450" objAct="Mld449" objChk="Mld453" objTm="Mld512" objKeeping="Mld513" objTmSet="Mld451" objKeepingSet="Mld452" Nr="8" />
+        <my:airSetUnitCtrl Canvas.Top="330" Canvas.Left="34" objMenu="Mld443" objAct="Mld442" objChk="Mld446" objTm="Mld509" objKeeping="Mld510" objTmSet="Mld444" objKeepingSet="Mld445" Nr="7" />
+        <my:airSetUnitCtrl Canvas.Top="285" Canvas.Left="34" objMenu="Mld436" objAct="Mld435" objChk="Mld439" objTm="Mld506" objKeeping="Mld507" objTmSet="Mld437" objKeepingSet="Mld438" Nr="6" />
+        <my:airSetUnitCtrl Canvas.Top="240" Canvas.Left="34" objMenu="Mld429" objAct="Mld428" objChk="Mld432" objTm="Mld503" objKeeping="Mld504" objTmSet="Mld430" objKeepingSet="Mld431" Nr="5" />
+        <my:airSetUnitCtrl Canvas.Top="195" Canvas.Left="34" objMenu="Mld422" objAct="Mld421" objChk="Mld425" objTm="Mld500" objKeeping="Mld501" objTmSet="Mld423" objKeepingSet="Mld424" Nr="4" />
+        <my:airSetUnitCtrl Canvas.Top="150" Canvas.Left="34" objMenu="Mld415" objAct="Mld414" objChk="Mld418" objTm="Mld497" objKeeping="Mld498" objTmSet="Mld416" objKeepingSet="Mld417" Nr="3" />
+        <my:airSetUnitCtrl Canvas.Top="105" Canvas.Left="34" objMenu="Mld408" objAct="Mld407" objChk="Mld411" objTm="Mld494" objKeeping="Mld495" objTmSet="Mld409" objKeepingSet="Mld410" Nr="2" />
+        <my:airSetUnitCtrl Canvas.Top="60" Canvas.Left="34" objMenu="Mld401" objAct="Mld400" objChk="Mld404" objTm="Mld491" objKeeping="Mld492" objTmSet="Mld402" objKeepingSet="Mld403" Nr="1" />
+    </Canvas>
+</UserControl>

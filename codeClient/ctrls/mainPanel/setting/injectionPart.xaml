@@ -1,0 +1,118 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.injectionPart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             xmlns:my="clr-namespace:nsVicoClient.ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="1630" d:DesignWidth="1068">
+    <Canvas Name="cvsBack">
+        <Canvas Name="cvsMain" Canvas.Top="0" Width="1068" Height="1630" ClipToBounds="True" Background="#FFEAEAEA"
+                MouseDown="cvsMain_MouseDown" MouseMove="cvsMain_MouseMove" MouseUp="cvsMain_MouseUp" MouseLeave="cvsMain_MouseLeave">
+            <Canvas Height="50" Width="1068" Background="White">
+                <Label Canvas.Left="40" Canvas.Top="10" Content="{DynamicResource PT_Setting_Injection_Dynamic}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                <Image Canvas.Right="0" Height="50" Width="55" Source="/Program;component/png/blocks/Locked_Size_2_1_V00.png" />
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            </Canvas>
+
+            <Line X2="1068" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Top="51" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+            <Image Canvas.Left="25" Canvas.Top="60" Height="282" Width="1010" Source="/Program;component/png/blocks/InjMoveCurve.png"/>
+            <Label Canvas.Top="70" Canvas.Left="100" Content="{DynamicResource OI_InjectionSketchMap}" FontSize="14"/>
+            <Label Canvas.Top="310" Canvas.Left="300" Content="{DynamicResource MA_Injection}" FontSize="14" FontWeight="Black"/>
+            <Label Canvas.Top="310" Canvas.Left="700" Content="{DynamicResource MA_Holding}" FontSize="14" FontWeight="Black"/>
+
+            <Label Canvas.Top="70" Canvas.Left="915" Content="Vmax" FontSize="14"/>
+            <Label Canvas.Top="95" Canvas.Left="915" Content="{DynamicResource TP_Inj199}" FontSize="14"/>
+            <my:VicoLabel Canvas.Left="915" Canvas.Top="120" myWidth="60" myHorizontalAlignment="Right" FontSize="18" FontFamily="Verdana" ReadOnly="True" UnitVisiable="Visible" objName="Inj199"/>
+            <Label Canvas.Left="915" Canvas.Top="160" Content="Pmax" FontSize="14" />
+            <Label Canvas.Left="915" Canvas.Top="185" Content="{DynamicResource TP_Inj189}" FontSize="14" />
+            <my:VicoLabel Canvas.Left="915" Canvas.Top="210" FontFamily="Verdana" FontSize="18" ReadOnly="True" UnitVisiable="Visible" myHorizontalAlignment="Right" myWidth="60" objName="Inj189" />
+
+            <Line X2="1068" Canvas.Top="360" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="0" />
+            <Label Canvas.Left="40" Canvas.Top="380" Content="[Acc]" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            <Label Canvas.Left="80" Canvas.Top="380" Content="{DynamicResource TP_Inj137}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            <Label Canvas.Left="210" Canvas.Top="380" Content="[DeAcc]" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            <Label Canvas.Left="269" Canvas.Top="380" Content="{DynamicResource TP_Inj138}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            <Label Canvas.Left="380" Canvas.Top="380" Content="[DeHP]" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            <Label Canvas.Left="435" Canvas.Top="380" Content="{DynamicResource TP_Inj138}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            <Line X2="1000" Canvas.Top="410" Stroke="#FFD4D4D4" StrokeThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="34" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="420" myWidth="480" Description="{DynamicResource TP_Inj137}" objName="Inj137" Value2Visiable="Hidden" />
+            <my:VicoSetBar Canvas.Right="54" Canvas.Top="420" myWidth="480" Description="{DynamicResource TP_Inj138}" objName="Inj138" Value2Visiable="Hidden"/>
+            <Label Canvas.Left="64" Canvas.Top="468" Content="{DynamicResource TP_Inj229}" Foreground="#FF444444" FontSize="14" />
+            <my:myComboBox Canvas.Left="654" Canvas.Top="465" Items="CB_Dynamic_0,CB_Dynamic_1" objname="Inj229" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="510" Description="{DynamicResource TP_Inj143}" Value2Visiable="Hidden" myWidth="480" objName="Inj143" />
+
+            <Label Canvas.Left="40" Canvas.Top="560" Content="{DynamicResource OI_InjectionDynamicDataPreset}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+            <Line Canvas.Left="34" Canvas.Top="590" X2="1000" Stroke="#FFD4D4D4" StrokeThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="600" Description="{DynamicResource TP_Inj225}" Value2Visiable="Hidden" myWidth="480" objName="Inj225" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="600" Description="{DynamicResource TP_Inj226}" Value2Visiable="Hidden" myWidth="480" objName="Inj226" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="645" Description="{DynamicResource TP_Inj227}" Value2Visiable="Hidden" myWidth="480" objName="Inj227" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="645" Description="{DynamicResource TP_Inj228}" Value2Visiable="Hidden" myWidth="480" objName="Inj228" />
+
+            <Line Canvas.Left="34" Canvas.Top="725" X2="1000" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="4"/>
+            <Label Canvas.Left="40" Canvas.Top="695" Content="[PIDi]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="84" Canvas.Top="695" Content="{DynamicResource OI_InjectionPID}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="735" Description="{DynamicResource TP_Inj162}" Value2Visiable="Hidden" myWidth="480" objName="Inj162" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="735" Description="{DynamicResource TP_Inj163}" Value2Visiable="Hidden" myWidth="480" objName="Inj163" />
+
+            <Line Canvas.Left="34" X2="1000" Canvas.Top="815" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="4" />
+            <Label Canvas.Left="40" Canvas.Top="785" Content="[PIDh]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="89" Canvas.Top="785" Content="{DynamicResource OI_HoldingPID}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="825" Description="{DynamicResource TP_Inj170}" Value2Visiable="Hidden" myWidth="480" objName="Inj170" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="825" Description="{DynamicResource TP_Inj171}" Value2Visiable="Hidden" myWidth="480" objName="Inj171" />
+
+            <Image Canvas.Left="-20" Canvas.Top="900" Height="282" Width="1010" Source="/Program;component/png/blocks/PressureControlCurve.png" />
+            <Label Canvas.Left="100" Canvas.Top="910" Content="{DynamicResource OI_InjectionSketchMap}" FontSize="14" />
+            <Label Canvas.Left="150" Canvas.Top="1150" Content="{DynamicResource MA_PreviousSuckBack}" FontSize="14" FontWeight="Black" />
+            <Label Canvas.Left="300" Canvas.Top="1150" Content="{DynamicResource MA_PressureRelease}" FontSize="14" FontWeight="Black" />
+            <Label Canvas.Left="500" Canvas.Top="1150" Content="{DynamicResource MA_Plastification}" FontSize="14" FontWeight="Black" />
+            <Label Canvas.Left="770" Canvas.Top="1150" Content="{DynamicResource MA_SuckBack}" FontSize="14" FontWeight="Black" />
+            <Line Canvas.Left="0" Canvas.Top="1200" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFA4A4A4" StrokeThickness="2" X2="1068" />
+
+            <Label Canvas.Left="40" Canvas.Top="1220" Content="[SB__Acc]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="104" Canvas.Top="1220" Content="{DynamicResource TP_Inj141}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="210" Canvas.Top="1220" Content="[SB__Dec]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="276" Canvas.Top="1220" Content="{DynamicResource TP_Inj142}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="380" Canvas.Top="1220" Content="[SB__FLC]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="444" Canvas.Top="1220" Content="{DynamicResource TP_Inj148}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="550" Canvas.Top="1220" Content="[PR__FLC]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="615" Canvas.Top="1220" Content="{DynamicResource TP_Inj147}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Line Canvas.Left="34" Canvas.Top="1250" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="4" X2="1000" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="1260" Description="{DynamicResource TP_Inj141}" Value2Visiable="Hidden" myWidth="480" objName="Inj141" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="1260" Description="{DynamicResource TP_Inj142}" Value2Visiable="Hidden" myWidth="480" objName="Inj142" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="1305" Description="{DynamicResource TP_Inj148}" Value2Visiable="Hidden" myWidth="480" objName="Inj148" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="1305" Description="{DynamicResource TP_Inj147}" Value2Visiable="Hidden" myWidth="480" objName="Inj147" />
+            
+            <Label Canvas.Left="40" Canvas.Top="1355" Content="[P__Acc]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="96" Canvas.Top="1355" Content="{DynamicResource TP_Inj144}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="210" Canvas.Top="1355" Content="[P__Dec]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="267" Canvas.Top="1355" Content="{DynamicResource TP_Inj145}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="380" Canvas.Top="1355" Content="[BP__Acc]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="445" Canvas.Top="1355" Content="{DynamicResource TP_Inj139}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="560" Canvas.Top="1355" Content="[BP__Dec]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="627" Canvas.Top="1355" Content="{DynamicResource TP_Inj140}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Line Canvas.Left="34" Canvas.Top="1385" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="4" X2="1000" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="1395" Description="{DynamicResource TP_Inj144}" Value2Visiable="Hidden" myWidth="480" objName="Inj144" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="1395" Description="{DynamicResource TP_Inj145}" Value2Visiable="Hidden" myWidth="480" objName="Inj145" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="1440" Description="{DynamicResource TP_Inj139}" Value2Visiable="Hidden" myWidth="480" objName="Inj139" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="1440" Description="{DynamicResource TP_Inj140}" Value2Visiable="Hidden" myWidth="480" objName="Inj140" />
+            
+            <Label Canvas.Left="40" Canvas.Top="1490" Content="[PIDbp]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="99" Canvas.Top="1490" Content="{DynamicResource OI_BackPressurePID}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="210" Canvas.Top="1490" Content="[VHmax]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="277" Canvas.Top="1490" Content="{DynamicResource TP_Inj136}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="380" Canvas.Top="1490" Content="[PVmax]" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Label Canvas.Left="444" Canvas.Top="1490" Content="{DynamicResource TP_Inj146}" FontSize="14" FontWeight="Bold" Foreground="#FF0082C3" />
+            <Line Canvas.Left="34" Canvas.Top="1520" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="4" X2="1000" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="1530" Description="{DynamicResource TP_Inj168}" Value2Visiable="Hidden" myWidth="480" objName="Inj168" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="1530" Description="{DynamicResource TP_Inj169}" Value2Visiable="Hidden" myWidth="480" objName="Inj169" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="1576" Description="{DynamicResource TP_Inj136}" Value2Visiable="Hidden" myWidth="480" objName="Inj136" />
+            <my:VicoSetBar Canvas.Left="534" Canvas.Top="1576" Description="{DynamicResource TP_Inj146}" Value2Visiable="Hidden" myWidth="480" objName="Inj146" />
+            <Line Canvas.Left="0" Canvas.Top="870" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFA4A4A4" StrokeThickness="2" X2="1068" />
+        </Canvas>
+    </Canvas>
+</UserControl>

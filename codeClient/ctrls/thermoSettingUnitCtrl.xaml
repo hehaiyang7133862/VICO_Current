@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.thermoSettingUnitCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="42" d:DesignWidth="82">
+    <Border Height="42" Width="82" BorderBrush="Silver" BorderThickness="2" Name="bdMain" >
+    <Canvas Height="42" Width="78" >
+        <Label Content="96" Height="28" HorizontalContentAlignment="Right" Name="lbSer" VerticalAlignment="Top" Canvas.Top="19" Canvas.Right="0" FontWeight="Bold"/>
+        <Label Canvas.Left="-14" Canvas.Top="17" Content="1234" Height="28" Name="lbSetting" Width="63" FontSize="14"  HorizontalContentAlignment="Center"/>
+        <Label Content="525.65" Height="34" Name="lbCur" Width="78" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" Foreground="Red" Canvas.Top="-6" />
+    </Canvas>
+    </Border>
+</UserControl>

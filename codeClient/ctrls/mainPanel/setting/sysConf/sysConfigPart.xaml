@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.sysConfigPart"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1510" d:DesignWidth="1080" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <!--<UserControl.Background>
+        <ImageBrush ImageSource="/Program;component/png/OBJ_15_1_SubTreeMainBack_V0.0.png" Stretch="Uniform" AlignmentX="Left" />
+    </UserControl.Background>-->
+    <Canvas Name="cvsMain" Height="1510" Width="1080">
+        <!--<Image  Source="/Program;component/png/OBJ_15_1_SubTreeMainBack_V0.0.png" Canvas.Top="1" />-->
+        <!--<Image Source="/Program;component/png/OBJ_15_3_SubTreeSecond_V0.0.png" Canvas.Top="606" Name="imgSysConfig" Canvas.Left="983"/>-->
+        <Canvas Canvas.Top="312" Height="161" Name="canvas3" Width="980" Canvas.Left="7">
+            <Label Canvas.Left="117" Canvas.Top="8" Content="{DynamicResource lanKey715}" FontSize="14" Height="28" />
+            <Label Canvas.Left="231" Canvas.Top="8" Content="{DynamicResource lanKey703}" FontSize="14" Foreground="#FF80D4F0" Height="28" />
+            <Line Canvas.Left="58" Canvas.Top="23" Stroke="Black" StrokeThickness="2" X2="50" />
+            <Ellipse Canvas.Left="101" Canvas.Top="18" Fill="Black" Height="10" Width="10" />
+            <my:paramSetUnitCtrl Canvas.Left="58" Canvas.Top="50" objName="Mld225" />
+            <my:paramSetUnitCtrl Canvas.Left="58" Canvas.Top="85" objName="Mld226" />
+            <my:paramSetUnitCtrl Canvas.Left="58" Canvas.Top="120" objName="Mld231" />
+            <my:paramSetUnitCtrl Canvas.Left="518" Canvas.Top="50" objName="Mld232" />
+            <my:paramSetUnitCtrl Canvas.Left="518" Canvas.Top="85" objName="Mld229" />
+            <my:paramSetUnitCtrl Canvas.Left="518" Canvas.Top="120" objName="Mld230" />
+        </Canvas>
+        
+        <Canvas Canvas.Left="7" Canvas.Top="31" Height="280" Name="canvas2" Width="980">
+            <Label Canvas.Left="120" Canvas.Top="8" Content="{DynamicResource lanKey702}" FontSize="14" Height="28" />
+            <Label Canvas.Left="234" Canvas.Top="8" Content="{DynamicResource lanKey703}" FontSize="14" Foreground="#FF80D4F0" Height="28" />
+            <Line Canvas.Left="61" Canvas.Top="23" Stroke="Black" StrokeThickness="2" X2="50" />
+            <Ellipse Canvas.Left="104" Canvas.Top="18" Fill="Black" Height="10" Width="10" />
+            <Label Canvas.Left="520" Canvas.Top="164" Content="{DynamicResource lanKey711}" Height="28" />
+            <my:paramSetUnitCtrl Canvas.Left="60" Canvas.Top="51" objName="Inj207" />
+            <my:paramSetUnitCtrl Canvas.Left="60" Canvas.Top="91" objName="Inj190" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="60" Canvas.Top="127" objName="Inj189" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="60" Canvas.Top="163" objName="Inj188" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="60" Canvas.Top="200" objName="Inj199" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="60" Canvas.Top="235" objName="Inj196" readOnly="True"/>
+
+            <my:paramSetUnitCtrl Canvas.Left="520" Canvas.Top="51" objName="Inj197" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="520" Canvas.Top="91" objName="Inj198" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="520" Canvas.Top="127" objName="Inj146" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="520" Canvas.Top="163" objName="Inj000" />
+            <my:paramSetUnitCtrl Canvas.Left="520" Canvas.Top="200" objName="Inj203" readOnly="True"/>
+            <my:paramSetUnitCtrl Canvas.Left="520" Canvas.Top="235" objName="Inj204" readOnly="True"/>
+        </Canvas>
+        <Canvas Canvas.Top="474" Height="156" Name="canvas4" Width="980" Canvas.Left="7">
+            <Label Canvas.Left="44" Canvas.Top="8" Content="{DynamicResource lanKey722}" FontSize="14" Foreground="#FF80D4F0" Height="28" />
+            <my:paramSetUnitCtrl Canvas.Left="58" Canvas.Top="48" objName="Mld234" />
+            <my:paramSetUnitCtrl Canvas.Left="58" Canvas.Top="82" objName="Mld240" />
+            <my:paramSetUnitCtrl Canvas.Left="58" Canvas.Top="118" objName="Mld239" />
+            <my:paramSetUnitCtrl Canvas.Left="518" Canvas.Top="48" objName="Mld237" />
+            <my:paramSetUnitCtrl Canvas.Left="518" Canvas.Top="82" objName="Mld238" />
+        </Canvas>
+        <Canvas Canvas.Left="7" Canvas.Top="631" Height="410" Name="canvas1" Width="980">
+            <Button Canvas.Left="52" Canvas.Top="9" Content="load &gt; 1" Height="32" Name="btnMoldConf" Width="95"  Click="btnMoldConf_Click" />
+            <Button Canvas.Left="52" Canvas.Top="53" Content="load &gt; 2" Height="32" Name="btnInjConf" Width="95"  Click="btnInjConf_Click"/>
+            <Button Canvas.Left="53" Canvas.Top="96" Content="load &gt; 3" Height="32" Name="btnSysConf" Width="95"  Click="btnSysConf_Click"/>
+            <Button Canvas.Left="53" Canvas.Top="197" Content="load &gt; 5" Height="32" Name="btnMoldScrew" Width="95"  Click="btnMoldScrew_Click"/>
+            <my:progressBarCtrl Canvas.Left="193" Canvas.Top="198" x:Name="progressBarCtrl1" Visibility="Hidden" />
+            <Button Canvas.Left="614" Canvas.Top="9" Content="{DynamicResource Mld536_3}" Height="32" Name="btnMoldSave" Width="95" Click="btnMoldSave_Click" />
+            <Button Canvas.Left="614" Canvas.Top="53" Content="{DynamicResource Mld536_3}" Height="32" Name="btnInjSave" Width="95" Click="btnInjSave_Click" />
+            <Button Canvas.Left="614" Canvas.Top="96" Content="{DynamicResource Mld536_3}" Height="32" Name="btnSysSave" Width="95" Click="btnSysSave_Click" />
+            <Button Canvas.Left="614" Canvas.Top="146" Content="{DynamicResource Mld536_3}" Height="32" Width="95" Click="Button_Click" />
+            <Label Canvas.Left="614" Canvas.Top="199" Content="" Height="28" Name="lbMoldScrewConfig" Visibility="Hidden"/>
+            <Button Canvas.Left="53" Canvas.Top="246" Content="Export" Height="35" Name="btnExport" Width="96" Click="btnExport_Click" />
+            <Button Canvas.Left="53" Canvas.Top="290" Content="Load" Height="35" Name="btnLoad" Width="96" Click="btnLoad_Click" />
+            <my:checkBoxCtrl Canvas.Left="193" Canvas.Top="246" x:Name="cBExportTopWin" />
+            <my:checkBoxCtrl Canvas.Left="482" Canvas.Top="246" x:Name="cBExportKeys" />
+            <my:checkBoxCtrl Canvas.Left="735" Canvas.Top="246" x:Name="cBExportLines" />
+            <my:checkBoxCtrl Canvas.Left="193" Canvas.Top="290" x:Name="cBLoadTopWin" />
+            <my:checkBoxCtrl Canvas.Left="482" Canvas.Top="290" x:Name="cBLoadKeys" />
+            <my:checkBoxCtrl Canvas.Left="735" Canvas.Top="290" x:Name="cBLoadLines" />
+            <Label Canvas.Left="242" Canvas.Top="253" Content="topWin" Height="28"  />
+            <Label Canvas.Left="242" Canvas.Top="295" Content="topWin" Height="28" />
+            <Label Canvas.Left="530" Canvas.Top="253" Content="keys" Height="28"  />
+            <Label Canvas.Left="530" Canvas.Top="295" Content="keys" Height="28" />
+            <Label Canvas.Left="787" Canvas.Top="253" Content="Lines" Height="28"  />
+            <Label Canvas.Left="787" Canvas.Top="295" Content="Lines" Height="28" />
+            <Button Canvas.Left="53" Canvas.Top="146" Content="load &gt; 4" Height="32" Name="button2" Width="95" Click="button2_Click" />
+        </Canvas>
+        <!--<my:saveFileCtrl Canvas.Left="0" Canvas.Top="0" x:Name="saveFileCtrl1" />-->
+    </Canvas>
+</UserControl>

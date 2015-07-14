@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.set_ejectorIN"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas>
+        <my:btnFunc1 Canvas.Left="10" Canvas.Top="10" x:Name="btnFunc0" dis="{DynamicResource lanKey2060}" MouseDown="btnFunc0_MouseDown" MouseUp="btnFunc0_MouseUp" />
+        <my:btnFunc1 Canvas.Left="10" Canvas.Top="50" x:Name="btnFunc1" dis="{DynamicResource lanKey2061}" MouseDown="btnFunc1_MouseDown" MouseUp="btnFunc1_MouseUp" />
+        <my:btnFunc1 Canvas.Left="234" Canvas.Top="10" x:Name="btnOp0" dis="{DynamicResource lanKey2062}" MouseDown="btnOp0_MouseDown" MouseUp="btnOp0_MouseUp" />
+        <my:btnFunc1 Canvas.Left="234" Canvas.Top="50" x:Name="btnOp1" dis="{DynamicResource lanKey2063}" MouseDown="btnOp1_MouseDown" MouseUp="btnOp1_MouseUp" />
+        <Canvas Canvas.Left="435" Canvas.Top="10" Height="249" Name="cvsOp1" Width="353">
+            <my:btnFunc1 Canvas.Left="110" Canvas.Top="0" x:Name="btnPos" dis="100 mm" MouseDown="btnPos_MouseDown" MouseUp="btnPos_MouseUp" />
+            <my:btnFunc1 Canvas.Left="110" Canvas.Top="40" x:Name="btnSpd" dis="100" MouseDown="btnSpd_MouseDown" MouseUp="btnSpd_MouseUp" />
+            <my:btnFunc1 Canvas.Left="110" Canvas.Top="79" x:Name="btnTor" dis="100 Nm" MouseDown="btnTor_MouseDown" MouseUp="btnTor_MouseUp" />
+            <Label Canvas.Left="6" Canvas.Top="4" Content="{DynamicResource lanKey2064}" Height="32" Name="label1" Width="95" />
+            <Label Canvas.Left="6" Canvas.Top="44" Content="{DynamicResource lanKey2065}" Height="32" Name="label2" Width="80" />
+            <Label Canvas.Left="6" Canvas.Top="83" Content="{DynamicResource lanKey2066}" Height="32" Name="label3" Width="80" />
+        </Canvas>
+        <!-- 由ipr[18] 的第1位决定 -->
+        <my:activeErr1Ctrl Canvas.Left="493" Canvas.Top="223" x:Name="activeErr1Ctrl1" Visibility="Hidden"/>
+    </Canvas>
+
+</UserControl>

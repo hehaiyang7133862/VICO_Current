@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.DeleteConfirmCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1335" d:DesignWidth="1068">
+    <Canvas Name="cvsBackground" Height="1335" Width="1068" MouseDown="cvsBackground_MouseDown" >
+        <Border Height="1335" Width="1068" Background="Black" Opacity="0.6"/>
+        <Canvas Canvas.Left="334" Canvas.Top="200" Name="cvsMain" Height="120" Width="400">
+            <Border Canvas.Left="0" Canvas.Top="0" Height="120" Width="400" CornerRadius="8" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Background="White" />
+            <Line Canvas.Left="0" Canvas.Top="70" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" X2="400" />
+            <Line Canvas.Left="200" Canvas.Top="70" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" Y2="50" />
+
+            <Label Canvas.Left="0" Canvas.Top="10" Height="50" Width="380" Content="确定删除?" Margin="20,0,0,0" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"/>
+            <Label Name="lbConfirm"  Canvas.Left="0" Canvas.Top="70" Height="50" Width="200" Content="{DynamicResource lanKey648}" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+               MouseDown="lbConfirm_MouseDown" MouseUp="lbConfirm_MouseUp" />
+            <Label Name="lbCancel" Canvas.Left="200" Canvas.Top="70" Height="50" Width="200" Content="{DynamicResource lanKey1096}" FontSize="18" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+               MouseDown="lbCancel_MouseDown" MouseUp="lbCancel_MouseUp" />
+        </Canvas>
+    </Canvas>
+</UserControl>

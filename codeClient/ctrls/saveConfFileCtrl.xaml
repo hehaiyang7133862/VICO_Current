@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.saveConfFileCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080">
+    <Canvas Name="cvsMain"   Width="1080" Height="1920" >
+        <Label Height="1920" Width="1080" Name="cvsBackPanel"  Background="#FF050505" Opacity="0.7"/>
+
+        <Canvas Canvas.Left="10" Canvas.Top="10">
+            <Image Height="40"  Name="imgClose" Source="/Program;component/png/OBJ_22_12_REDCorss.png" Width="40" MouseDown="imgClose_MouseDown" />
+        </Canvas>
+        <Button Canvas.Left="875" Canvas.Top="90" Content="{DynamicResource lanKey2105}" Height="43" Name="btnLoad" Width="75" Click="btnLoad_Click" />
+        <Canvas Canvas.Left="62" Canvas.Top="90"  Name="cvsBox" Height="1700" Width="764"  ClipToBounds="True">
+            <Canvas Height="1700" Name="cvsValueLst" Width="764" Canvas.Top="0"/>
+        </Canvas>
+        <Label Canvas.Left="878" Canvas.Top="369" Content="1/1"  Name="lbCurPage" Width="72" Foreground="White" FontSize="16" HorizontalContentAlignment="Center"/>
+        <Button Canvas.Left="875" Canvas.Top="295" Content="&lt;&lt;&lt;&lt;" Height="45" Name="btnLeft" Width="75" Click="btnLeft_Click" />
+        <Button Canvas.Left="875" Canvas.Top="423" Content=">>>>" Height="45" Name="btnRight" Width="75" Click="btnRight_Click" />
+        <Label Canvas.Left="62" Canvas.Top="37" Content="Ipr_20130909.ipr" Height="28" Name="lbNewFilename" Foreground="White" Width="293" FontSize="14" MouseDown="lbNewFilename_MouseDown" />
+        <ProgressBar Canvas.Left="336" Canvas.Top="540" Height="25" Name="progressBarShow" Width="422" />
+        <Label Name="lbPerShow" Canvas.Left="767" Canvas.Top="537" Height="30" FontSize="16" Foreground="White" Content="1000"/>
+    </Canvas>
+</UserControl>

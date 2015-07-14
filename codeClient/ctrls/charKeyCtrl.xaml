@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.charKeyCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080">
+    <Canvas  Name="cvsBackPanel"  Width="1080" Height="1920" MouseUp="cvsBackPanel_MouseUp" MouseMove="cvsBackPanel_MouseMove">
+        <Label Name="lbPanelBack" MouseDown="lbPanelBack_MouseDown" Width="1080" Height="1920"/>
+        
+        <Canvas Name="cvsChar" Height="519" Width="1080"  Canvas.Top="229" MouseDown="cvsChar_MouseDown">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Program;component/png/OBJ_19_26_Keyboard_V0.0.png" />
+            </Canvas.Background>
+            <!--<Border Height="54" Width="754" BorderBrush="{x:Null}"  Canvas.Top="47" Canvas.Left="163"  MouseDown="cvsChar_MouseDown">-->
+                <!--<Border.Background>
+                    <ImageBrush ImageSource="/Program;component/png/OBJ_19_26_Keyboard_V0.1.png" />
+                </Border.Background>-->
+                <Label Height="54" Width="754" HorizontalContentAlignment="Center" MouseDown="cvsChar_MouseDown" Name="lbValue" Content="12345" FontSize="25" VerticalContentAlignment="Center" Foreground="#FF646464"  Opacity="0.8" FontWeight="Bold"  Canvas.Top="47" Canvas.Left="163" >
+                    <Label.Background>
+                        <ImageBrush  ImageSource="/Program;component/png/OBJ_19_26_Keyboard_V0.1.png" />
+                    </Label.Background>
+                </Label>
+            <!--</Border>-->
+                <Label Canvas.Left="163" Canvas.Top="9" Content="文件名中不能包含 / \ ? | > &lt; : " Height="40" Name="lbTip" Width="754" VerticalContentAlignment="Center" FontSize="20" Foreground="Orange" Opacity="0"/>
+            <Canvas Canvas.Left="12" Canvas.Top="212" Height="72" Name="canvas1" Width="1054">
+                    <Image Canvas.Left="110" Canvas.Top="1" Name="img_q"  Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="65" Width="66" Opacity="0" MouseDown="img_q_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="183" Canvas.Top="1" Name="img_w" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_w_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="256" Canvas.Top="1" Name="img_e" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_e_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="329" Canvas.Top="1" Name="img_r" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_r_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="403" Canvas.Top="1" Name="img_t" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_t_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="476" Canvas.Top="1" Name="img_y" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_y_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="549" Canvas.Top="1" Name="img_u" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_u_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="623" Canvas.Top="1" Name="img_i" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_i_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="696" Canvas.Top="1" Name="img_o" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_o_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="769" Canvas.Top="1" Name="img_p" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_p_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="989" Canvas.Top="1" Name="img_backlach" Opacity="0" Source="/Program;component/png/OBJ_19_29_Keyboard3Pressed_V0.0.png" Width="66" Height="66" MouseDown="img_backlach_MouseDown" MouseUp="img_MouseUp" Stretch="Fill" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="915" Canvas.Top="0" Height="66" Name="img_rsb" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Width="66" MouseDown="img_rsb_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="842" Canvas.Top="0" Name="img_lsb" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_lsb_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+
+            </Canvas>
+            <Canvas Canvas.Left="12" Canvas.Top="142" Height="70" Name="canvas2" Width="1056" >
+                    <Image  Name="img_1"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="74" Opacity="0" MouseDown="img_1_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_2"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="148" Opacity="0" MouseDown="img_2_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_3"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="221" Opacity="0" MouseDown="img_3_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_4"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="295" Opacity="0" MouseDown="img_4_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_5"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="368" Opacity="0" MouseDown="img_5_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_6"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="441" Opacity="0" MouseDown="img_6_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_7"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="514" Opacity="0" MouseDown="img_7_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_8"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="588" Opacity="0" MouseDown="img_8_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_9"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="660" Opacity="0" MouseDown="img_9_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_0"   Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" Canvas.Top="0" Canvas.Left="734" Opacity="0" MouseDown="img_0_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image  Name="img_back" Source="/Program;component/png/OBJ_19_28_Keyboard2Pressed_V0.0.png" Height="63" Width="103" Canvas.Top="0" Canvas.Left="953" Opacity="0" MouseDown="img_back_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image  Name="img_wave" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png"  Opacity="0"  Canvas.Left="1" Canvas.Top="0" Height="66" Width="66" MouseDown="img_wave_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                    <Image Canvas.Left="881" Canvas.Top="0" Height="66" Name="img_eq" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Width="66" MouseDown="img_eq_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="808" Canvas.Top="0" Height="66" Name="img_ln" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Width="66" MouseDown="img_ln_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+            </Canvas>
+            <Canvas Canvas.Left="12" Canvas.Top="283" Height="72" Name="canvas3" Width="1062">
+                <Image Canvas.Left="6" Canvas.Top="5" Name="img_capsOff" Opacity="1" Source="/Program;component/png/OBJ_19_36_Keyboardrelase_V0.0.png" Height="27" Width="27"   />
+                <Image Canvas.Left="6" Canvas.Top="5" Name="img_capsOn" Opacity="1" Source="/Program;component/png/OBJ_19_36_KeyboardPressed_V0.0.png" Height="27" Width="27"   />
+
+                <Image Canvas.Left="1" Canvas.Top="0" Name="img_caps" Opacity="0" Source="/Program;component/png/OBJ_19_29_Keyboard3Pressed_V0.0.png" Height="66" Width="122" MouseDown="img_caps_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+
+                <Image Canvas.Left="129" Canvas.Top="0" Name="img_a" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_a_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="203" Canvas.Top="0" Name="img_s" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_s_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="275" Canvas.Top="0" Name="img_d" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_d_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="349" Canvas.Top="0" Name="img_f" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_f_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="422" Canvas.Top="0" Name="img_g" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_g_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="496" Canvas.Top="0" Name="img_h" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_h_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="569" Canvas.Top="0" Name="img_j" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_j_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="642" Canvas.Top="0" Name="img_k" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_k_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="715" Canvas.Top="0" Name="img_l" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_l_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="935" Canvas.Top="0" Name="img_enter" Opacity="0" Source="/Program;component/png/OBJ_19_29_Keyboard3Pressed_V0.0.png" Height="66" Width="120" MouseDown="img_enter_MouseDown" MouseUp="img_MouseUp" Stretch="Fill" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="789" Canvas.Top="0" Name="img_colon" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_colon_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="862" Canvas.Top="0" Name="img_abs" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_abs_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+
+            </Canvas>
+            <Canvas Canvas.Left="12" Canvas.Top="354" Height="72" Name="canvas4" Width="1062">
+                <Image Canvas.Left="166" Canvas.Top="1" Name="img_z" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_z_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="239" Canvas.Top="1" Name="img_x" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_x_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="313" Canvas.Top="1" Name="img_c" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_c_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="386" Canvas.Top="1" Name="img_v" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_v_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="459" Canvas.Top="1" Name="img_b" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_b_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="533" Canvas.Top="1" Name="img_n" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_n_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="606" Canvas.Top="1" Name="img_m" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_m_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="679" Canvas.Top="1" Name="img_comma" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_comma_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="752" Canvas.Top="1" Name="img_fs" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="66" Width="66" MouseDown="img_fs_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Canvas.Left="6" Canvas.Top="5" Name="img_shiftLOff" Opacity="1" Source="/Program;component/png/OBJ_19_36_Keyboardrelase_V0.0.png" Height="27" Width="27"   />
+                <Image Canvas.Left="6" Canvas.Top="5" Name="img_shiftLOn" Opacity="1" Source="/Program;component/png/OBJ_19_36_KeyboardPressed_V0.0.png" Height="27" Width="27"   />
+                <Image Canvas.Left="2" Canvas.Top="0" Name="img_shiftL" Opacity="0" Source="/Program;component/png/OBJ_19_28_Keyboard2Pressed_V0.0.png" Height="66" Width="157" MouseDown="img_shiftL_MouseDown" MouseUp="img_MouseUp" Stretch="Fill" MouseLeave="img_MouseLeave" />
+
+                <Image Canvas.Left="826" Canvas.Top="0" Height="66" Name="img_dg" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Width="66"  MouseDown="img_dg_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+                
+                <Image Canvas.Left="902" Canvas.Top="5" Name="img_shiftROff" Opacity="1" Source="/Program;component/png/OBJ_19_36_Keyboardrelase_V0.0.png" Height="27" Width="27"   />
+                <Image Canvas.Left="902" Canvas.Top="5" Name="img_shiftROn" Opacity="1" Source="/Program;component/png/OBJ_19_36_KeyboardPressed_V0.0.png" Height="27" Width="27"  />
+                <Image Canvas.Left="898" Canvas.Top="0" Height="66" Name="img_shiftR" Opacity="0" Source="/Program;component/png/OBJ_19_28_Keyboard2Pressed_V0.0.png" Stretch="Fill" Width="157"  MouseDown="img_shiftR_MouseDown" MouseUp="img_MouseUp" MouseLeave="img_MouseLeave" />
+           
+            </Canvas>
+            <Canvas Canvas.Left="12" Canvas.Top="426" Height="72" Name="canvas5" Width="1062">
+                    <!--<Image Canvas.Left="72" Canvas.Top="0" Name="img_dg" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="65" Width="65" MouseDown="img_dg_MouseDown" MouseUp="img_MouseUp" />-->
+                <Image Canvas.Left="312" Canvas.Top="0" Name="img_space" Opacity="0" Source="/Program;component/png/OBJ_19_30_Keyboard4Pressed_V0.0.png" Height="74" Width="360" MouseDown="img_space_MouseDown" MouseUp="img_MouseUp" Stretch="Fill" MouseLeave="img_MouseLeave" />
+                    <!--<Image Canvas.Left="427" Canvas.Top="0" Name="img_sem" Opacity="0" Source="/Program;component/png/OBJ_19_27_Keyboard1Pressed_V0.0.png" Height="65" Width="65" MouseDown="img_sem_MouseDown" MouseUp="img_MouseUp" />-->
+                <Image Canvas.Left="843" Canvas.Top="35" Name="img_left" Opacity="0" Source="/Program;component/png/OBJ_19_31_Keyboard5Pressed_V0.0.png" Height="39" Width="66" MouseDown="img_left_MouseDown" MouseUp="img_MouseUp" />
+                <Image Canvas.Left="989" Canvas.Top="35" Name="img_right" Opacity="0" Source="/Program;component/png/OBJ_19_31_Keyboard5Pressed_V0.0.png" Height="39" Width="66" MouseDown="img_right_MouseDown" MouseUp="img_MouseUp" />
+            </Canvas>
+            <Label Canvas.Left="18" Canvas.Top="47" Content="{DynamicResource lanKey1023}" Height="54" FontSize="20" FontWeight="Bold" Opacity="0.7" Name="lbDis" Width="141" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        </Canvas>
+    </Canvas>
+</UserControl>

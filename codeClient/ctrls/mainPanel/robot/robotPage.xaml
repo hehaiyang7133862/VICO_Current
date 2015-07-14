@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.robotPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1510" d:DesignWidth="1068" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="1510" Width="1068" Name="cvsMain">
+        <Canvas Canvas.Left="972" Canvas.Top="-1"  Width="98" Height="76"  Background="#00000000" >
+            <Image Source="/Program;component/png/HeadSwitch/B1_P11_Blue.png" Width="98" Height="75" Stretch="Fill" />
+            <Label Name="lbDis1" Content="{DynamicResource robot_Main}"  Width="98" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3"/>
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="98" Canvas.Top="68" Canvas.Left="0" />
+        </Canvas>
+        <!--<Button Canvas.Left="488" Canvas.Top="214" Content="Load" Height="58" Name="button1" Width="75" Click="button1_Click" />
+        <Button Canvas.Left="248" Canvas.Top="223" Content="set" Height="49" Name="button2" Width="75" Click="button2_Click" />-->
+        <!--<Rectangle StrokeThickness="3" Stroke="#FFBA3535" Height="100" Width="100"/>-->
+        <!--<my:chartCtrl Canvas.Left="366" Canvas.Top="432" x:Name="chartCtrl1" w="500" h="500" points="10,10 200,50 60,80" vOpt="True" hOpt="True"/>
+        <my:GraphicsCurveCtrl Canvas.Left="120" Canvas.Top="432" x:Name="graphicsCurveCtrl1" w="500" h="550" points="0,0 100,300" vOpt="True" />-->
+    </Canvas>
+</UserControl>

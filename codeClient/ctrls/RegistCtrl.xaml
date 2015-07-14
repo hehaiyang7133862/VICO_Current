@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.RegistCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080">
+    <Canvas Name="cvsMain">
+        <Canvas.Resources>
+            <GeometryDrawing x:Key="bgImage" Brush="White">
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#FFCBCBCB" Thickness="2" ></Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <GeometryGroup>
+                        <RectangleGeometry Rect="0,0,798,598" RadiusX="5" RadiusY="5"></RectangleGeometry>
+                        <LineGeometry StartPoint="0,40" EndPoint="798,40" />
+                        <LineGeometry StartPoint="0,560" EndPoint="798,560" />
+                    </GeometryGroup>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </Canvas.Resources>
+
+        <Rectangle Height="1920" Width="1080" Fill="Black" Opacity="0.6" >
+            <Rectangle.Effect>
+                <BlurEffect></BlurEffect>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Canvas Height="600" Width="800" Canvas.Left="149" Canvas.Top="250" SnapsToDevicePixels="True" ClipToBounds="True">
+            <Canvas.Background>
+                <DrawingBrush Drawing="{StaticResource bgImage}" Stretch="None"></DrawingBrush>
+            </Canvas.Background>
+            <Label Canvas.Left="10" Canvas.Top="6" FontSize="16" Foreground="#FF303030">激活 VICO</Label>
+            <Label Name="lbLastDays" Canvas.Left="156" Canvas.Top="6" FontSize="16" Foreground="Red"></Label>
+            <Label Name="btnClose" Canvas.Right="0" Height="40" Width="60" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" Foreground="#FF303030" 
+                   MouseDown="btnClose_MouseDown" MouseLeave="btnClose_MouseLeave" MouseUp="btnClose_MouseUp">关闭</Label>
+            <Label Canvas.Left="30" Canvas.Top="80" FontSize="16" Foreground="#FF303030">步骤 1：</Label>
+            <Label Canvas.Left="100" Canvas.Top="80" FontSize="16" Foreground="#FF303030">请联系华模公司或代理商</Label>
+            <Label Canvas.Left="30" Canvas.Top="180" FontSize="16" Foreground="#FF303030">步骤 2：</Label>
+            <Label Canvas.Left="100" Canvas.Top="180" FontSize="16" Foreground="#FF303030" xml:space="preserve">向顾客服务代表提供下列设备信息</Label>
+            <Label Canvas.Left="240" Canvas.Top="220" FontSize="16" Foreground="#FF303030">--</Label>
+            <Label Canvas.Left="384" Canvas.Top="220" FontSize="16" Foreground="#FF303030">--</Label>
+            <Label Name="lbV1" Canvas.Left="120" Canvas.Top="220" Width="120" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF303030" FontSize="16" />
+            <Label Name="lbV3" Canvas.Left="264" Canvas.Top="220" Width="120" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF303030" FontSize="16" />
+            <Label Name="lbV4" Canvas.Left="408" Canvas.Top="220" Width="120" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF303030" FontSize="16" />
+            <Label Canvas.Left="30" Canvas.Top="280" FontSize="16" Foreground="#FF303030">步骤 3：</Label>
+            <Label Canvas.Left="100" Canvas.Top="280" FontSize="16" Foreground="#FF303030" xml:space="preserve">输入顾客服务代表提供的注册码</Label>
+            <Label Canvas.Left="480" Canvas.Top="319" FontSize="16" Foreground="Red" Name="lbError" Visibility="Hidden" xml:space="preserve">注册码有误，请确认</Label>
+            <Label Name="input1" Canvas.Left="120" Canvas.Top="320" Height="30" Width="100" FontSize="16" Foreground="#FF303030" BorderBrush="#FF303030" BorderThickness="1,1,1,1" MouseUp="input1_MouseUp" ></Label>
+            <Label Canvas.Left="218" Canvas.Top="320" FontSize="16" Foreground="#FF303030">--</Label>
+            <Label Name="input2" Canvas.Left="240" Canvas.Top="320" Height="30" Width="100" FontSize="16" Foreground="#FF303030" BorderBrush="#FF303030" BorderThickness="1,1,1,1" MouseUp="input2_MouseUp" ></Label>
+            <Label Canvas.Left="338" Canvas.Top="320" FontSize="16" Foreground="#FF303030">--</Label>
+            <Label Name="input3" Canvas.Left="360" Canvas.Top="320" Height="30" Width="100" FontSize="14" Foreground="#FF303030" BorderBrush="#FF303030" BorderThickness="1,1,1,1" MouseUp="input3_MouseUp" ></Label>
+            <Label Canvas.Left="0" Canvas.Bottom="0" Height="40" Width="800" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#FF303030"
+                   Name="btnConfirm" MouseDown="btnConfirm_MouseDown" MouseUp="btnConfirm_MouseUp" MouseLeave="btnConfirm_MouseLeave">确认</Label>
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.eventRecord"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             xmlns:my="clr-namespace:nsVicoClient.ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="1256" d:DesignWidth="1068">
+    <Canvas Name="cvsMain" Height="1256" Width="1068" Background="Transparent">
+        <Label Height="50" Canvas.Left="40" Content="{DynamicResource lanKey932}" FontWeight="Bold" FontSize="14" Foreground="#FF0082C3" VerticalContentAlignment="Center"/>
+        <Image Height="50" Width="55" Canvas.Right="0" Source="/Program;component/png/blocks/Locked_Size_2_1_V00.png"/>
+        <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+        <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <Line Canvas.Left="190" Canvas.Top="1" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="48" />
+        <Line Y2="48" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="245" Canvas.Top="1" />
+        <Line Y2="48" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="300" Canvas.Top="1" />
+        <Line Y2="48" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Right="109" Canvas.Top="1" />
+        <Line Y2="48" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Right="54" Canvas.Top="1" />
+        <my:checkBoxParamCtrl Canvas.Left="490" Canvas.Top="50" x:Name="paramCtrl" fdStateChange="paramMsgShow"/>
+        <my:checkBoxSysCtrl Canvas.Left="0" Canvas.Top="50" x:Name="sysCtrl" fdStateChange="sysMsgShow"/>
+        <my:checkBoxLoadCtrl Canvas.Left="735" Canvas.Top="50" x:Name="loadCtrl" fdStateChange="loadMsgShow"/>
+        <my:checkBocAlarmCtrl Canvas.Left="245" Canvas.Top="50" x:Name="alarmCtrl" fdStateChange="alarmMsgShow"/>
+        <Line X2="1068" Canvas.Top="100" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True"/>
+        <Canvas Canvas.Top="101" Height="1155" Width="1068" Background="White">
+            <Canvas Canvas.Left="5" Canvas.Top="2" Height="30" Width="1058" Background="#FFBCBCBC">
+                <Label Height="30" Canvas.Left="0" Content="{DynamicResource lanKey034}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="#FF444444" Margin="10,0,0,0"/>
+                <Label Height="30" Canvas.Left="70" Content="{DynamicResource lanKey035}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="#FF444444"/>
+                <Label Height="30" Canvas.Left="160" Content="{DynamicResource lanKey036}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="#FF444444"/>
+                <Label Height="30" Canvas.Left="550" Content="{DynamicResource lanKey037}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="#FF444444"/>
+                <Label Height="30" Canvas.Left="730" Content="{DynamicResource lanKey039}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="#FF444444"/>
+                <Label Height="30" Canvas.Left="820" Content="{DynamicResource lanKey041}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="#FF444444"/>
+                <Label Height="30" Canvas.Left="910" Content="{DynamicResource lanKey040}" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center" Foreground="#FF444444"/>
+                <Label Name="lbTotalListNum" Height="30" Canvas.Right="0" Content="200" FontSize="14" VerticalContentAlignment="Center" Foreground="#FF5A5A5A" Margin="0,0,10,0"/>
+            </Canvas>
+            <Canvas Name="cvsBgRecord" Canvas.Left="5" Canvas.Top="32" Height="1120" Width="1058" ClipToBounds="True" Background="#00000000"
+                    MouseUp="cvsRecord_MouseUp" MouseMove="cvsRecord_MouseMove" MouseLeave="cvsBgRecord_MouseLeave">
+                <Canvas Height="2720" Width="1058" Name="cvsEventRecord" Canvas.Top="-800" Canvas.Left="0" />
+                <Rectangle Canvas.Right="0" Canvas.Top="0" Height="1120" Width="7" Fill="#ffeaeaea" Name="recScrollBack" Visibility="Hidden"/>
+                <Rectangle Canvas.Right="0" Canvas.Top="0" Height="50" Width="7" Fill="Silver" RadiusX="1" RadiusY="1" Name="recScroll" Visibility="Hidden"/>
+            </Canvas>
+        </Canvas>
+        <my:filterUserCtrl x:Name="filterUserCtrl1" Canvas.Left="190" Canvas.Top="0" />
+        <my:filterTimeCtrl x:Name="filterTimeCtrl1" fdStateChange="refreshEvent" Canvas.Left="245" Canvas.Top="0" />
+        <my:exportERLstCtrl x:Name="exportERLstCtrl1" Canvas.Right="55" Canvas.Top="0" />
+    </Canvas>
+</UserControl>

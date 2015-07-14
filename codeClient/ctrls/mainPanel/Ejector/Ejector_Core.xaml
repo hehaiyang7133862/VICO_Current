@@ -1,0 +1,109 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.Ejector_Core"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1680" d:DesignWidth="1068"
+             xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="1680" Width="1068">
+        <StackPanel>
+            <Canvas Height="280" Width="1068" Name="cvsCoreA" Background="#FFEAEAEA">
+                <Canvas Name="cvsCoreAHead" Height="50" Width="1068" Background="White">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Label Canvas.Left="40" Height="50" Content="{DynamicResource lanKey160}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                    <my:multipleChoiceCtrl Canvas.Left="740" Canvas.Top="9" ItemCount="3" objName="Mld250" />
+                    <Label Tag="0" Canvas.Top="9" Canvas.Left="740" Height="32" Width="100" Content="{DynamicResource lanKey062}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MouseDown="CoreASelection" />
+                    <Label Tag="1" Canvas.Top="9" Canvas.Left="840" Height="32" Width="100" Content="{DynamicResource lanKey272}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MouseDown="CoreASelection" />
+                    <Label Tag="2" Canvas.Top="9" Canvas.Left="940" Height="32" Width="100" Content="{DynamicResource lanKey268}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MouseDown="CoreASelection" />
+                </Canvas>
+
+                <Line X2="1068" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line X2="1068" Canvas.Top="51" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line Y2="230" Canvas.Left="360" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line Y2="230" Canvas.Left="720" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                
+                <Image Canvas.Left="-15" Canvas.Top="25" Source="/Program;component/png/OBJ_27_30_CoreCIN.png" />
+                <Label Canvas.Left="55" Canvas.Top="65" Content="{DynamicResource lanKey273}" FontSize="14" Foreground="#FF444444" />
+                <my:lightStateCtrl Canvas.Left="125" Canvas.Top="67" objName="Mld345"/>
+                <Label Canvas.Left="155" Canvas.Top="65" Content="{DynamicResource lanKey274}" FontSize="14" Foreground="#FF444444"/>
+                <my:lightState2Ctrl Canvas.Left="200" Canvas.Top="67" objName="Mld340" bitNr="4"/>
+                <Label Canvas.Left="230" Canvas.Top="65" Content="{DynamicResource lanKey275}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="15" Canvas.Top="108" Content="{DynamicResource lanKey277}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="225" Canvas.Top="108" Content="{DynamicResource lanKey278}" FontSize="14" Foreground="#FF444444"/>
+                <my:btnSwitch0 Canvas.Left="125" Canvas.Top="110" objName="Mld252" />
+                <my:VicoSetBar Canvas.Left="10" Canvas.Top="145" myWidth="350" objName="Mld251" Value2Visiable="Hidden" Description="{DynamicResource lanKey1019}"/>
+                <my:VicoSetBar Canvas.Left="10" Canvas.Top="189" myWidth="350" objName="Mld253" objName2="Mld343" Description="{DynamicResource lanKey1020}"/>
+                <my:VicoSetBar Canvas.Left="10" Canvas.Top="233" myWidth="350" objName="Mld254" objName2="Mld341" Description="{DynamicResource lanKey1021}"/>
+                <Image Canvas.Left="345" Canvas.Top="25" Source="/Program;component/png/OBJ_27_31_CoreCOUT.png" />
+                <Label Canvas.Left="415" Canvas.Top="65" Content="{DynamicResource lanKey276}" FontSize="14" Foreground="#FF444444" />
+                <my:lightStateCtrl Canvas.Left="485" Canvas.Top="67" objName="Mld346" />
+                <Label Canvas.Left="515" Canvas.Top="65" Content="{DynamicResource lanKey274}" FontSize="14" Foreground="#FF444444" />
+                <my:lightState2Ctrl Canvas.Left="560" Canvas.Top="67" objName="Mld340" bitNr="3" />
+                <Label Canvas.Left="590" Canvas.Top="65" Content="{DynamicResource lanKey275}" FontSize="14" Foreground="#FF444444" />
+                <Label Canvas.Left="375" Canvas.Top="108" Content="{DynamicResource lanKey277}" FontSize="14" Foreground="#FF444444" />
+                <Label Canvas.Left="584" Canvas.Top="108" Content="{DynamicResource lanKey278}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch0 Canvas.Left="485" Canvas.Top="110" objName="Mld258"/>
+                <my:VicoSetBar Canvas.Left="370" Canvas.Top="145" myWidth="350" Value2Visiable="Hidden" Description="{DynamicResource lanKey1019}" objName="Mld257"/>
+                <my:VicoSetBar Canvas.Left="370" Canvas.Top="189" myWidth="350" Description="{DynamicResource lanKey1020}" objName="Mld259" objName2="Mld344"/>
+                <my:VicoSetBar Canvas.Left="370" Canvas.Top="233" myWidth="350" Description="{DynamicResource lanKey1021}" objName="Mld260" objName2="Mld342"/>
+                <Label Canvas.Left="740" Canvas.Top="65" Content="{DynamicResource lanKey279}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch Canvas.Left="863" Canvas.Top="65" objName="Mld255"/>
+                <Label Canvas.Left="740" Canvas.Top="113" Content="{DynamicResource lanKey280}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch Canvas.Left="863" Canvas.Top="113" objName="Mld256"/>
+                <Label Canvas.Left="740" Canvas.Top="161" Content="{DynamicResource lanKey281}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch Canvas.Left="863" Canvas.Top="161" objName="Mld261"/>
+            </Canvas>
+            <Canvas Height="280" Width="1068" Name="cvsCoreB" Background="#FFEAEAEA">
+                <Canvas Name="cvsCoreBHead" Height="50" Width="1068" Background="White">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Label Canvas.Left="40" Height="50" Content="{DynamicResource lanKey161}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+                    <my:multipleChoiceCtrl Canvas.Left="740" Canvas.Top="9" ItemCount="3" objName="Mld263" />
+                    <Label Tag="0" Canvas.Top="9" Canvas.Left="740" Height="32" Width="100" Content="{DynamicResource lanKey062}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MouseDown="CoreBSelection" />
+                    <Label Tag="1" Canvas.Top="9" Canvas.Left="840" Height="32" Width="100" Content="{DynamicResource lanKey272}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MouseDown="CoreBSelection" />
+                    <Label Tag="2" Canvas.Top="9" Canvas.Left="940" Height="32" Width="100" Content="{DynamicResource lanKey268}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" MouseDown="CoreBSelection" />
+                </Canvas>
+
+                <Line X2="1068" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line X2="1068" Canvas.Top="51" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line Y2="230" Canvas.Left="360" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line Y2="230" Canvas.Left="720" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+                <Image Canvas.Left="-15" Canvas.Top="25" Source="/Program;component/png/OBJ_27_30_CoreCIN.png" />
+                <Label Canvas.Left="55" Canvas.Top="65" Content="{DynamicResource lanKey273}" FontSize="14" Foreground="#FF444444" />
+                <my:lightStateCtrl Canvas.Left="125" Canvas.Top="67" objName="Mld354"/>
+                <Label Canvas.Left="155" Canvas.Top="65" Content="{DynamicResource lanKey274}" FontSize="14" Foreground="#FF444444"/>
+                <my:lightState2Ctrl Canvas.Left="200" Canvas.Top="67" objName="Mld349" bitNr="4"/>
+                <Label Canvas.Left="230" Canvas.Top="65" Content="{DynamicResource lanKey275}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="15" Canvas.Top="108" Content="{DynamicResource lanKey277}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="225" Canvas.Top="108" Content="{DynamicResource lanKey278}" FontSize="14" Foreground="#FF444444"/>
+                <my:btnSwitch0 Canvas.Left="125" Canvas.Top="110" objName="Mld265" />
+                <my:VicoSetBar Canvas.Left="10" Canvas.Top="145" myWidth="350" objName="Mld264" Value2Visiable="Hidden" Description="{DynamicResource lanKey1019}"/>
+                <my:VicoSetBar Canvas.Left="10" Canvas.Top="189" myWidth="350" objName="Mld266" objName2="Mld352" Description="{DynamicResource lanKey1020}"/>
+                <my:VicoSetBar Canvas.Left="10" Canvas.Top="233" myWidth="350" objName="Mld267" objName2="Mld350" Description="{DynamicResource lanKey1021}"/>
+                <Image Canvas.Left="345" Canvas.Top="25" Source="/Program;component/png/OBJ_27_31_CoreCOUT.png" />
+                <Label Canvas.Left="415" Canvas.Top="65" Content="{DynamicResource lanKey276}" FontSize="14" Foreground="#FF444444" />
+                <my:lightStateCtrl Canvas.Left="485" Canvas.Top="67" objName="Mld355" />
+                <Label Canvas.Left="515" Canvas.Top="65" Content="{DynamicResource lanKey274}" FontSize="14" Foreground="#FF444444" />
+                <my:lightState2Ctrl Canvas.Left="560" Canvas.Top="67" objName="Mld349" bitNr="3" />
+                <Label Canvas.Left="590" Canvas.Top="65" Content="{DynamicResource lanKey275}" FontSize="14" Foreground="#FF444444" />
+                <Label Canvas.Left="375" Canvas.Top="108" Content="{DynamicResource lanKey277}" FontSize="14" Foreground="#FF444444" />
+                <Label Canvas.Left="584" Canvas.Top="108" Content="{DynamicResource lanKey278}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch0 Canvas.Left="485" Canvas.Top="110" objName="Mld271"/>
+                <my:VicoSetBar Canvas.Left="370" Canvas.Top="145" myWidth="350" Value2Visiable="Hidden" Description="{DynamicResource lanKey1019}" objName="Mld257"/>
+                <my:VicoSetBar Canvas.Left="370" Canvas.Top="189" myWidth="350" Description="{DynamicResource lanKey1020}" objName="Mld259" objName2="Mld344"/>
+                <my:VicoSetBar Canvas.Left="370" Canvas.Top="233" myWidth="350" Description="{DynamicResource lanKey1021}" objName="Mld260" objName2="Mld342"/>
+                <Label Canvas.Left="740" Canvas.Top="65" Content="{DynamicResource lanKey279}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch Canvas.Left="863" Canvas.Top="65" objName="Mld255"/>
+                <Label Canvas.Left="740" Canvas.Top="113" Content="{DynamicResource lanKey280}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch Canvas.Left="863" Canvas.Top="113" objName="Mld256"/>
+                <Label Canvas.Left="740" Canvas.Top="161" Content="{DynamicResource lanKey281}" FontSize="14" Foreground="#FF444444" />
+                <my:btnSwitch Canvas.Left="863" Canvas.Top="161" objName="Mld261"/>
+            </Canvas>
+        </StackPanel>
+    </Canvas>
+</UserControl>

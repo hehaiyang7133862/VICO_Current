@@ -1,0 +1,155 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.Mold_MoldProtect"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="860" d:DesignWidth="1068">
+    <Canvas Height="860" Width="1068" Name="cvsMoldProtect" Background="#FFEAEAEA">
+        <Canvas Name="cvsHeadMoldProtect" Height="50" Width="1068" Background="White">
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+            <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <my:lightLinkStateCtrl objName="Mld535" Canvas.Left="5" Canvas.Top="10" />
+            <Label Canvas.Left="40" Height="50" Content="{DynamicResource strMold_MoldProtect}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <TabControl Name="tbl_MoldProtectState" Padding="0" BorderThickness="0" Canvas.Left="190" Canvas.Top="12" TabStripPlacement="Right" Background="White">
+                <TabItem Height="0" Margin="0" Padding="0">
+                    <Label Canvas.Left="453" Canvas.Top="22" Content="{DynamicResource lanKey1063}" Height="28"  Width="89"  FontSize="14" FontWeight="Bold" Foreground="Red"/>
+                </TabItem>
+                <TabItem Height="0" Margin="0" Padding="0">
+                    <Label Canvas.Left="453" Canvas.Top="22" Content="{DynamicResource lanKey1062}" Height="28"  Width="89" FontSize="14" FontWeight="Bold"  Foreground="#FF00E15A"/>
+                </TabItem>
+            </TabControl>
+            <Label Canvas.Left="540" Canvas.Top="5" Background="#FFD4D4D4" Content="{DynamicResource lanKey189}" Foreground="#FF444444" FontSize="18" Height="40" Width="360" VerticalContentAlignment="Center" />
+            <Label Foreground="#FFF4F4F4" Content="{DynamicResource Mld534}" Background="#FF00B4E1" FontSize="14" Height="40" Width="120" Canvas.Left="900" Canvas.Top="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="ReSample" />
+            <my:VicoLabel Canvas.Left="717" Canvas.Top="8" myFontSize="20" objName="Mld042" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible" />
+        </Canvas>
+
+        <Line X2="1068" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <Line X2="1068" Canvas.Top="51" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+        <Line Canvas.Top="100" X2="1068" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeDashArray="0.5,0.5" StrokeThickness="4" />
+        <Label Width="100" Canvas.Left="690" Canvas.Top="67" Content="{DynamicResource OI_Start}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" />
+        <Label Width="100" Canvas.Left="790" Canvas.Top="66" Content="{DynamicResource OI_P2}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" />
+        <Label Width="100" Canvas.Left="890" Canvas.Top="67" Content="{DynamicResource OI_End}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" />
+        <Line Canvas.Left="734" Canvas.Top="97" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="834" Canvas.Top="97" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="934" Canvas.Top="97" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="740" Canvas.Top="110" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="840" Canvas.Top="110" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="940" Canvas.Top="110" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <my:lightLinkStateCtrl Canvas.Left="12" Canvas.Top="120" objName ="Mld552" bitNr="9" />
+        <Label Canvas.Left="30" Canvas.Top="170" Content="{DynamicResource TP_Mld532}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="165" objName="Mld532" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible"  />
+        <Label Canvas.Left="270" Canvas.Top="170" Content="{DynamicResource TP_Mld533}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="336" Canvas.Top="166" objName="Mld533" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible" />
+        <Label Canvas.Left="580" Canvas.Top="135" Content="{DynamicResource OI_Position}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel x:Name="p0" Canvas.Left="700" Canvas.Top="135" myHeight="30" myWidth="80" objName="Mld553" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="p1" Canvas.Left="800" Canvas.Top="135" myHeight="30" myWidth="80" objName="Mld554" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel Canvas.Left="900" Canvas.Top="135" myHeight="30" myWidth="80" objName="Mld041" ReadOnly="True" UnitVisiable="Visible" />
+
+        <Line Canvas.Left="0" Canvas.Top="210" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeDashArray="0.5,0.5" StrokeThickness="4" X2="1068" />
+        <Line Canvas.Left="794" Canvas.Top="207" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="894" Canvas.Top="207" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="800" Canvas.Top="220" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="900" Canvas.Top="220" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <my:lightLinkStateCtrl Canvas.Left="10" Canvas.Top="230" objName="Mld552" bitNr="0" />
+        <Label Canvas.Left="30" Canvas.Top="280" Content="{DynamicResource OI_ActualTorque}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="275" objName="Sys097" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True"  UnitVisiable="Visible"/>
+        <Label Canvas.Left="30" Canvas.Top="330" Content="{DynamicResource OI_ForceOffset}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="325" objName="Mld539" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible"/>
+        <Label Canvas.Left="30" Canvas.Top="380" Content="{DynamicResource OI_PeakOffset}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="371" objName="Mld540" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" myForeground="#FFFF5600" UnitVisiable="Visible"/>
+        <Image Canvas.Left="270" Canvas.Top="220" Height="199" Width="331" Stretch="Fill" Source="/Program;component/png/blocks/MoldCurveBack.png" />
+        <my:CurveControl Canvas.Top="237" Canvas.Left="270" x:Name="curveCurrentOffset" CtrlHeight="164" CtrlWidth="300" CurveColor="#FFFD45C0" />
+        <Label Content="+0.0" Canvas.Left="586" Canvas.Top="224" Foreground="#FF444444" Name="currentUpLimit"/>
+        <Label Content="-0.0" Canvas.Left="586" Canvas.Top="388" Foreground="#FF444444" Name="currentDownLimit"/>
+        <Canvas Canvas.Top="319" Canvas.Left="270">
+            <Line Name="lForceUp1" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lForceUp2" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lForceUp3" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lForceDown1" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lForceDown2" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lForceDown3" Stroke="Red" StrokeThickness="2"></Line>
+
+            <my:Ring x:Name="pForceUp1" />
+            <my:Ring x:Name="pForceUp2" />
+            <my:Ring x:Name="pForceUp3" />
+            <my:Ring x:Name="pForceUp4" />
+            <my:Ring x:Name="pForceDown1" />
+            <my:Ring x:Name="pForceDown2" />
+            <my:Ring x:Name="pForceDown3" />
+            <my:Ring x:Name="pForceDown4" />
+        </Canvas>
+        <Label Canvas.Left="600" Canvas.Top="245" Content="{DynamicResource OI_ForceOffsetLimit}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel x:Name="f1" Canvas.Left="760" Canvas.Top="245" myHeight="30" myWidth="80" objName="Mld541" myBorderBrush="#FFD4D4D4" />
+        <my:VicoLabel x:Name="f2" Canvas.Left="860" Canvas.Top="245" myHeight="30" myWidth="80" objName="Mld542" myBorderBrush="#FFD4D4D4"/>
+        <Label Canvas.Left="980" Canvas.Top="245" Content="[%]" FontFamily="Verdana" FontSize="16" Foreground="#FF444444" />
+
+        <Line Canvas.Left="0" Canvas.Top="430" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeDashArray="0.5,0.5" StrokeThickness="4" X2="1068" />
+        <Line Canvas.Left="794" Canvas.Top="427" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="894" Canvas.Top="427" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="800" Canvas.Top="440" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="900" Canvas.Top="440" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <my:lightLinkStateCtrl Canvas.Left="12" Canvas.Top="450" objName="Mld552" bitNr="1" />
+        <Label Canvas.Left="30" Canvas.Top="500" Content="{DynamicResource OI_ActualSpeed}" FontSize="14" Foreground="#FF444444"/>
+        <Label Canvas.Left="30" Canvas.Top="550" Content="{DynamicResource OI_SpeedOffset}" FontSize="14" Foreground="#FF444444"/>
+        <Label Canvas.Left="30" Canvas.Top="600" Content="{DynamicResource OI_PeakOffset}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="495" objName="Mld145" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="545" objName="Mld544" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="595" objName="Mld545" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible" myForeground="#FFFF5600"/>
+        <Image Canvas.Left="270" Canvas.Top="440" Height="199" Width="331" Stretch="Fill" Source="/Program;component/png/blocks/MoldCurveBack.png" />
+        <my:CurveControl Canvas.Top="457" Canvas.Left="270" x:Name="curveSpeedOffset" CtrlHeight="164" CtrlWidth="300" CurveColor="#FFFD45C0"/>
+        <Label Canvas.Left="600" Canvas.Top="465" Content="{DynamicResource OI_SpeedOffsetLimit}" FontSize="14" Foreground="#FF444444"/>
+        <Label Content="+0.0" Canvas.Left="586" Canvas.Top="445" Foreground="#FF444444" Name="SpeedUpLimit"/>
+        <Label Content="-0.0" Canvas.Left="586" Canvas.Top="609" Foreground="#FF444444" Name="SpeedDownLimit"/>
+        <Canvas Canvas.Top="539" Canvas.Left="270">
+            <Line Name="lSpeedUp1" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lSpeedUp2" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lSpeedUp3" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lSpeedDown1" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lSpeedDown2" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Name="lSpeedDown3" Stroke="Red" StrokeThickness="2"></Line>
+            
+            <my:Ring x:Name="pSpeedUp1" />
+            <my:Ring x:Name="pSpeedUp2" />
+            <my:Ring x:Name="pSpeedUp3" />
+            <my:Ring x:Name="pSpeedUp4" />
+            <my:Ring x:Name="pSpeedDown1" />
+            <my:Ring x:Name="pSpeedDown2" />
+            <my:Ring x:Name="pSpeedDown3" />
+            <my:Ring x:Name="pSpeedDown4" />
+        </Canvas>
+        <my:VicoLabel x:Name="s1" Canvas.Left="760" Canvas.Top="465" myHeight="30" myWidth="80" objName="Mld546" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="s2" Canvas.Left="860" Canvas.Top="465" myHeight="30" myWidth="80" objName="Mld547" myBorderBrush="#FFD4D4D4"/>
+        <Label Canvas.Left="990" Canvas.Top="468" Content="{DynamicResource speedUnitKey}" FontSize="14" Foreground="#FF444444" />
+
+        <Line Canvas.Left="0" Canvas.Top="650" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeDashArray="0.5,0.5" StrokeThickness="4" X2="1068" />
+        <Line Canvas.Left="894" Canvas.Top="648" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="900" Canvas.Top="660" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <my:lightLinkStateCtrl Canvas.Left="12" Canvas.Top="670" objName ="Mld552" bitNr="2" />
+        <Label Canvas.Left="30" Canvas.Top="720" Content="{DynamicResource OI_ActualPosition}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="715" objName="Mld007" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible" />
+        <Label Canvas.Left="30" Canvas.Top="770" Content="{DynamicResource OI_PositionOffset}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="765" objName="Mld549" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible" />
+        <Label Canvas.Left="30" Canvas.Top="820" Content="{DynamicResource OI_PeakOffset}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel Canvas.Left="90" Canvas.Top="815" objName="Mld550" myFontFamily="Verdana" myHorizontalAlignment="Right" ReadOnly="True" UnitVisiable="Visible" myForeground="#FFFF5600" />
+        <Image Canvas.Left="270" Canvas.Top="660" Height="199" Width="331" Stretch="Fill" Source="/Program;component/png/blocks/MoldCurveBack.png" />
+        <my:CurveControl x:Name="curvePositionOffset" CtrlHeight="164" CtrlWidth="300" CurveColor="#FFFD45C0" Canvas.Top="676" Canvas.Left="270" />
+        <Label Content="+0.0" Canvas.Left="586" Canvas.Top="664" Foreground="#FF444444" Name="PositionUpLimit"/>
+        <Label Content="-0.0" Canvas.Left="586" Canvas.Top="828" Foreground="#FF444444" Name="PositionDownLimit"/>
+        <Canvas Canvas.Top="759" Canvas.Left="270">
+            <Line Canvas.Top="82" X2="299" Stroke="Red" StrokeThickness="2"></Line>
+            <Line Canvas.Top="-82" X2="299" Stroke="Red" StrokeThickness="2"></Line>
+            <my:Ring Canvas.Left="-4" Canvas.Top="-87" />
+            <my:Ring Canvas.Left="295" Canvas.Top="-87" />
+
+            <my:Ring Canvas.Left="-4" Canvas.Top="78" />
+            <my:Ring Canvas.Left="295" Canvas.Top="78" />
+        </Canvas>
+        <Label Canvas.Left="600" Canvas.Top="685" Content="{DynamicResource OI_PositionOffsetLimit}" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel  x:Name="op" Canvas.Left="860" Canvas.Top="685" myHeight="30" myWidth="80" objName="Mld551" myBorderBrush="#FFD4D4D4"/>
+        <Label Canvas.Left="990" Canvas.Top="688" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+    </Canvas>
+</UserControl>

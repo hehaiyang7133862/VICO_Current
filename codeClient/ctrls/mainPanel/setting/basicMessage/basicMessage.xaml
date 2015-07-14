@@ -1,0 +1,113 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.basicMessage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1510" d:DesignWidth="1080" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Width="1080" Height="1510">
+        <Canvas  Canvas.Top="535" Height="185" Name="canvas2" Width="994" Canvas.Left="10">
+            <Canvas Height="40" Width="300" Canvas.Top="51" Canvas.Left="30">
+                <Label Content="{DynamicResource lanKey926}" Canvas.Top="-51" FontSize="16"/>
+                <Label Content="{DynamicResource lanKey930}" Canvas.Top="-27"  FontSize="14"/>
+                <Image Source="/Program;component/png/OBJ_10_24_2ButtonInactive_V0.0.png" Width="261" Height="37"/>
+                <Image Source="/Program;component/png/OBJ_10_24_Leftpart_V0.0.png" Width="130" Height="37" Name="imgUnitMm"/>
+                <Image Source="/Program;component/png/OBJ_10_24_Rightpart_V0.0.png" Width="130" Height="37" Canvas.Left="130" Name="imgUnitInch" Visibility="Hidden"/>
+                <Label Content="mm" Name="lbUnitMm" FontSize="16" Height="37" Width="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  MouseDown="lbUnitMm_MouseDown" />
+                <Label Content="inch" Name="lbUnitInch" FontSize="16" Canvas.Left="130" Height="37" Width="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="lbUnitInch_MouseDown" />
+            </Canvas>
+            <Canvas Canvas.Left="30" Canvas.Top="132" Height="40" Width="300">
+                <Label Canvas.Top="-34" Content="{DynamicResource lanKey927}" FontSize="16" />
+                <Image Height="37" Source="/Program;component/png/OBJ_10_24_2ButtonInactive_V0.0.png" Width="261" />
+                <Image Height="37" Name="imgUnitC" Source="/Program;component/png/OBJ_10_24_Leftpart_V0.0.png" Width="130" />
+                <Image Canvas.Left="130" Height="37" Name="imgUnitF" Source="/Program;component/png/OBJ_10_24_Rightpart_V0.0.png" Visibility="Hidden" Width="130" />
+                <Label Content="℃" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitC" VerticalContentAlignment="Center" Width="130" MouseDown="lbUnitC_MouseDown" />
+                <Label Canvas.Left="130" Content="℉" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitF" VerticalContentAlignment="Center" Width="130" MouseDown="lbUnitF_MouseDown" />
+            </Canvas>
+            <Canvas Canvas.Left="539" Canvas.Top="51" Height="40" Width="300">
+                <Label Canvas.Top="-34" Content="{DynamicResource lanKey928}" FontSize="16" />
+                <Image Height="37" Source="/Program;component/png/OBJ_10_23_3ButtonInactive_V0.0.png" Width="261" />
+                <Image Height="37" Name="imgUnitMpa" Source="/Program;component/png/OBJ_10_23_leftPart_V0.0.png"  Width="87" />
+                <Image Height="37" Name="imgUnitBar" Source="/Program;component/png/OBJ_10_23_midpart_V0.0.png" Visibility="Hidden" Width="85" Canvas.Left="88" />
+                <Image Canvas.Left="173" Height="37" Name="imgUnitPsi" Source="/Program;component/png/OBJ_10_23_rightpart_V0.0.png" Visibility="Hidden" Width="87" />
+                <Label Content="Mpa" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitMpa" VerticalContentAlignment="Center"  Width="87" MouseDown="lbUnitMpa_MouseDown" />
+                <Label Content="Bar" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitBar" VerticalContentAlignment="Center"  Width="85" Canvas.Left="87" MouseDown="lbUnitBar_MouseDown" />
+                <Label Canvas.Left="173" Content="Psi" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitPsi" VerticalContentAlignment="Center" Width="87" MouseDown="lbUnitPsi_MouseDown" />
+            </Canvas>
+            <Canvas Canvas.Left="538" Canvas.Top="132" Height="40" Width="300">
+                <Label Canvas.Top="-34" Content="{DynamicResource lanKey929}" FontSize="16" />
+                <Image Height="37" Source="/Program;component/png/OBJ_10_23_3ButtonInactive_V0.0.png" Width="261" />
+                <Image Height="37" Name="imgUnitTon" Source="/Program;component/png/OBJ_10_23_leftPart_V0.0.png"  Width="87" />
+                <Image Height="37" Name="imgUnitKn" Source="/Program;component/png/OBJ_10_23_midpart_V0.0.png" Visibility="Hidden" Width="85" Canvas.Left="88" />
+                <Image Canvas.Left="173" Height="37" Name="imgUnitUsTon" Source="/Program;component/png/OBJ_10_23_rightpart_V0.0.png" Visibility="Hidden" Width="87" />
+                <Label Content="ton" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitTon" VerticalContentAlignment="Center"  Width="87" MouseDown="lbUnitTon_MouseDown" />
+                <Label Canvas.Left="88" Content="KN" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitKn" VerticalContentAlignment="Center" Width="85" MouseDown="lbUnitKn_MouseDown" />
+                <Label Canvas.Left="173" Content="US-ton" FontSize="16" Height="37" HorizontalContentAlignment="Center" Name="lbUnitUsTon" VerticalContentAlignment="Center" Width="87" MouseDown="lbUnitUsTon_MouseDown" />
+            </Canvas>
+            <!--<Label BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Canvas.Left="360" Canvas.Top="241" Content="开启" FontSize="14" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="80" MouseDown="Label_MouseDown_1" />
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1,1,0,1" Canvas.Left="30" Canvas.Top="241" Content="屏保时间" Height="30" VerticalContentAlignment="Center" Width="150" />
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1" Canvas.Left="180" Canvas.Top="241" Content="" FontSize="14" Height="30" Name="label2" VerticalContentAlignment="Center" Width="260" />
+            <Label Canvas.Left="30" Canvas.Top="198" Content="屏幕保护" Height="28" Name="label3" />-->
+        </Canvas>
+        <Canvas  Canvas.Top="12" Height="516" Name="canvas3" Width="1060" Canvas.Left="10">
+            <!--<Canvas.Background>
+                <ImageBrush ImageSource="/Program;component/png/OBJ_10_25_sysSetup_V0.0.png" />
+            </Canvas.Background>-->
+            <Line Canvas.Top="71" X2="1000" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2"/>
+            <Label Canvas.Left="21" Canvas.Top="1" Name="lbModeBg" Content="{Binding ElementName=lbMode, Path=Content}" Height="71" FontFamily="Michroma" FontSize="40" Width="280" VerticalContentAlignment="Center" Foreground="Black" />
+            <Label Canvas.Left="21" Canvas.Top="0" Name="lbMode" Content="RE 1550" Height="71" FontFamily="Michroma" FontSize="40" Width="280" VerticalContentAlignment="Center" Foreground="#FF00A9E1" MouseDown="lbMode_MouseDown" />
+            <Label Canvas.Left="312" Canvas.Top="6" Content="Valmo Machinery" Height="28" Name="label11" FontFamily="Sony Sketch EF" FontSize="18" Foreground="#FF444444" />
+            <Label Canvas.Left="312" Canvas.Top="22" Content="Real  Series" Height="40"  FontSize="32" FontFamily="Sony Sketch EF" Foreground="#FF444444" Name="lbSeries"/>
+            <!--<Label Canvas.Left="31" Canvas.Top="161" Content="{DynamicResource lanKey457}" Height="28" />-->
+            <!--<Label Canvas.Left="31" Canvas.Top="194" Content="{DynamicResource lanKey458}" Height="28" />-->
+            <!--<Label Canvas.Left="529" Canvas.Top="96" Content="{DynamicResource lanKey460}" Height="28" Name="label17" />-->
+            <!--<Label Canvas.Left="529" Canvas.Top="129" Content="{DynamicResource lanKey461}" Height="28" />-->
+            <!--<Label Canvas.Left="529" Canvas.Top="161" Content="{DynamicResource lanKey462}" Height="28" />-->
+            <!--<Label Canvas.Left="529" Canvas.Top="194" Content="{DynamicResource lanKey463}" Height="28" />-->
+            <!--<Label Canvas.Left="31" Canvas.Top="229" Content="{DynamicResource lanKey464}" Height="28" />-->
+            <Label Width="150" Height="30" Canvas.Left="500" Canvas.Top="278" Content="UI：" VerticalContentAlignment="Center" BorderBrush="#FFD4D4D4" BorderThickness="1,1,0,1" />
+            <Label Canvas.Left="650" Canvas.Top="278" Name="lbUIVersion" Height="30" Width="260" BorderBrush="#FFD4D4D4" BorderThickness="1" Content="00.000100.0.0000" FontSize="14" VerticalContentAlignment="Center" Background="#D6D6D6"/>
+            <Label Name="btnAccredit" Canvas.Left="830" Canvas.Top="457" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1"  Content="{DynamicResource lanKey475}" FontSize="14" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="80"  MouseUp="btnAccredit_MouseUp"/>
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="278" objName="Prd022" readOnly="True"/>
+            <!--<my:btnSetCtrl Canvas.Left="32" Canvas.Top="258" w="600"  x:Name="btnSetCtrl1" dis="{DynamicResource lanKey465}" objName="Prd022" readOnly="True" flagUnitS="True"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="314" objName="Prd095" readOnly="True"/>
+            <!--<my:btnSetCtrl Canvas.Left="32" Canvas.Top="302" w="600" x:Name="btnSetCtrl2" dis="{DynamicResource lanKey466}" objName="Prd095" readOnly="True" flagUnitS="True"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="350" objName="Sys195" readOnly="True"/>
+            <!--<my:btnSetCtrl Canvas.Left="32" Canvas.Top="346" w="600" objName="Sys195" dis="{DynamicResource Sys195}" readOnly="True" />-->
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="385" objName="Sys197" readOnly="True"/>
+            <!--<my:btnSetCtrl Canvas.Left="32" Canvas.Top="394" w="600" objName="Sys197" dis="{DynamicResource Sys197}" readOnly="True" />-->
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="421" objName="Sys196" readOnly="True"/>
+            <!--<my:btnSetCtrl Canvas.Left="32" Canvas.Top="439" w="600" objName="Sys196" dis="{DynamicResource Sys196}" readOnly="True" />-->
+            <!--<my:lbCtrlUnit Canvas.Left="154" Canvas.Top="159" objName="Mld225"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="141" objName="Mld225" readOnly="True"/>
+            <!--<my:lbCtrlUnit Canvas.Left="154" Canvas.Top="194" objName="Mld226"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="178" objName="Mld226" readOnly="True"/>
+            <!--<my:lbCtrlUnit Canvas.Left="154" Canvas.Top="229" objName="Inj207"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="214" objName="Inj207" readOnly="True"/>
+
+            <my:paramSetUnitCtrl Canvas.Left="500" Canvas.Top="105" objName="Mld234" readOnly="True"/>
+            <!--<my:lbCtrlUnit Canvas.Left="802" Canvas.Top="94" objName="Mld234"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="500" Canvas.Top="141" objName="Inj189" readOnly="True"/>
+            <!--<my:lbCtrlUnit Canvas.Left="802" Canvas.Top="130" objName="Inj189"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="500" Canvas.Top="178" objName="Inj199" readOnly="True"/>
+            <!--<my:lbCtrlUnit Canvas.Left="802" Canvas.Top="160" objName="Inj199"/>-->
+            <my:paramSetUnitCtrl Canvas.Left="500" Canvas.Top="214" objName="Inj190" readOnly="True"/>
+            <!--<my:lbCtrlUnit Canvas.Left="802" Canvas.Top="194" objName="Inj190"/>-->
+            <Label Canvas.Left="520" Canvas.Top="6" Content="Machinery Nr" FontFamily="Sony Sketch EF" FontSize="18" Foreground="#FF444444" Height="28" Name="label1" />
+            <Label Canvas.Left="520" Canvas.Top="22" Content="01" FontFamily="Sony Sketch EF" FontSize="32" Foreground="#FF444444" Height="40" Name="lbMachineNr" MouseDown="lbMachineNr_MouseDown" Width="163" />
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1,1,0,1" Canvas.Left="500" Canvas.Top="421" Content="{DynamicResource lanKey474}" Height="30" VerticalContentAlignment="Center" Width="150" />
+            <Label Name="lbDate" BorderBrush="#FFD4D4D4" BorderThickness="1" Canvas.Left="650" Canvas.Top="421" Content="24 Hour" FontSize="14" Height="30" VerticalContentAlignment="Center" Width="260" Background="#D6D6D6"/>
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1,1,0,1" Canvas.Left="500" Canvas.Top="385" Content="{DynamicResource lanKey472}" Height="30" VerticalContentAlignment="Center" Width="150" />
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1" Canvas.Left="650" Canvas.Top="385" Content="192.168.0.110" FontSize="14" Height="30" VerticalContentAlignment="Center" Width="260" Background="#D6D6D6"/>
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1,1,0,1" Canvas.Left="500" Canvas.Top="350" Content="{DynamicResource lanKey471}" Height="30" VerticalContentAlignment="Center" Width="150" />
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1" Name="lbIPAddr1" MouseDown="lbIPAddr1_MouseDown" Canvas.Left="650" Canvas.Top="350" Content="192.168.1.110" FontSize="14" Height="30" VerticalContentAlignment="Center" Width="260" Background="#D6D6D6"/>
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1,1,0,1" Canvas.Left="500" Canvas.Top="314" Content="PLC：" Height="30" VerticalContentAlignment="Center" Width="150" />
+            <Label BorderBrush="#FFD4D4D4" BorderThickness="1" Canvas.Left="650" Canvas.Top="314" Content="" FontSize="14" Height="30" VerticalContentAlignment="Center" Width="260" Background="#D6D6D6"/>
+            <Line Canvas.Left="0" Canvas.Top="258" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1000" />
+            <Line Canvas.Left="0" Canvas.Top="502" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1000" />
+            <!--<my:btnCtrl Canvas.Left="878" Canvas.Top="278" x:Name="btnUpgrade" dis="升级" upHandle="btnUpgrade_MouseUp" />-->
+        </Canvas>
+        <Label Canvas.Left="40" Canvas.Top="734" Content="视频分辨率设置（更改后，下次打开视频时执行）" FontSize="16" />
+        <ComboBox Name="cbVideoFormat" Canvas.Left="548" Canvas.Top="734" Height="25" Width="150" SelectionChanged="cbVideoFormat_SelectionChanged" />
+    </Canvas>
+</UserControl>

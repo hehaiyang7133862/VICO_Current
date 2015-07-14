@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.overViewPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1750" d:DesignWidth="1068">
+    <Canvas Name="cvsMain" Height="1750" Width="1068" Background="Transparent">
+        <Canvas Height="1676" Width="1068" Canvas.Top="74" Background="#F6F6F6">
+            <TabControl Canvas.Top="83" Height="1593" Width="1068" Name="tbMain" Background="#EAEAEA" SelectedIndex="0" Padding="0" BorderThickness="0">
+                <TabItem Height="0" Padding="0" Margin="0">
+                    <Canvas>
+                        <my:QuickSettingPage />
+                    </Canvas>
+                </TabItem>
+                <TabItem Height="0" Padding="0" Margin="0">
+                    <Canvas>
+                        <my:bdItemPage />
+                    </Canvas>
+                </TabItem>
+                <TabItem Height="0" Padding="0" Margin="0">
+                    <Canvas>
+                        <my:eventRecord  x:Name="eventRecord"/>
+                    </Canvas>
+                </TabItem>
+                <TabItem Height="0" Padding="0" Margin="0">
+                    <Canvas>
+                        <my:PictureViewCtrl />
+                    </Canvas>
+                </TabItem>
+            </TabControl>
+            
+            <Canvas Height="85" Width="1068" Background="Transparent">
+                <my:tabItemBtnCtrl Canvas.Left="14" Canvas.Top="5" x:Name="tblBtnCtrl" itemCount="4" focusNr="0" />
+
+                <Canvas Tag="0" Canvas.Left="16" Canvas.Top="7" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10"  Source="/Program;component/png/HeadSwitch/OBJ_22_13_FAST.png"/>
+                    <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource PT_OverView_QuickSetting}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Tag="1" Canvas.Left="101" Canvas.Top="7" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10"  Source="/Program;component/png/OBJ_21_9_Breakdown_V0.0.png"/>
+                    <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource strOverView_BreakDown}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Tag="2" Canvas.Left="186" Canvas.Top="7" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10"  Source="/Program;component/png/OBJ_21_11_EvnetLog_V0.0.png"/>
+                    <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource strOverView_EventRecord}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Tag="3" Canvas.Left="271" Canvas.Top="7" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10"  Source="/Program;component/png/OBJ_21_12_PicView_V0.0.png"/>
+                    <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource PT_OverView_Picture}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+            </Canvas>
+        </Canvas>
+        <Canvas Canvas.Left="0" Width="97" Height="75">
+            <Image Canvas.Top="-1" Height="75" Width="97" Source="/Program;component/png/HeadSwitch/B1_P1_Blue.png" Stretch="Fill" />
+            <Label Canvas.Top="41" Width="97" Content="{DynamicResource strMainMenu_Overview}" FontSize="12" Foreground="#FF0082C3" HorizontalContentAlignment="Center" />
+            <Image Canvas.Top="67" Height="9" Width="97" Source="/Program;component/png/HeadSwitch/Select_Me.png" Stretch="Fill" />
+        </Canvas>
+    </Canvas>
+</UserControl>

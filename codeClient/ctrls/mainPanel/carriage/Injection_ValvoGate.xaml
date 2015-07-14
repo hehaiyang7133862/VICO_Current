@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.Injection_ValvoGate"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1335" d:DesignWidth="1068">
+    <Canvas Name="cvsMain" Height="1335" Width="1068">
+        <StackPanel>
+            <Canvas Name="cvsNeedle1" Height="160" Width="1068" >
+                <Canvas Name="cvsNeedle1Head" Height="50" Width="1068" Background="White">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Label Canvas.Left="40" Height="50" VerticalContentAlignment="Center" Content="{DynamicResource lanKey2192}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                    <Canvas Canvas.Right="500" Canvas.Top="10">
+                        <Border Height="31" Width="220" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Background="#FFEAEAEA" />
+                        <Label Canvas.Left="0" Canvas.Top="1" Content="{DynamicResource lanKey300}" FontSize="14" Foreground="#FF444444"/>
+                        <my:lightState2Ctrl Canvas.Left="165" Canvas.Top="3" objName="Inj331" dis="ON"/>
+                        <my:lightState2Ctrl Canvas.Left="192" Canvas.Top="3" objName="Inj332" dis="OFF"/>
+                    </Canvas>
+                    <my:btnSwitch Canvas.Right="70" Canvas.Top="10" needConfirm="False" objName="Inj330"/>
+                </Canvas>
+                <Canvas Canvas.Top="50" Height="110" Width="1068" Background="#FFEAEAEA">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+                    <Label Canvas.Left="60" Canvas.Top="18" Content="{DynamicResource lanKey182}" Height="28" Width="172" Foreground="#FF444444" FontSize="14" />
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="18" Items="lanKey266,lanKey319,lanKey333,lanKey334,lanKey335,lanKey336,lanKey268" objname="Inj335"/>
+                    <Label Canvas.Left="60" Canvas.Top="59" Content="{DynamicResource lanKey062}" Height="28" Width="172" Foreground="#FF444444" FontSize="14" />
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="59" Items="lanKey337,lanKey338,lanKey339,lanKey340,lanKey341,lanKey342" objname="Inj339"/>
+                    <my:VicoSetBar myWidth="480" Canvas.Right="54" Canvas.Top="18" Description="{DynamicResource lanKey326}" objName="Inj336" objName2="Inj333" />
+                    <my:VicoSetBar myWidth="480" Canvas.Right="54" Canvas.Top="59" Description="{DynamicResource lanKey327}" objName="Inj340" objName2="Inj334" />
+                </Canvas>
+            </Canvas>
+            <Canvas Name="cvsNeedle2" Height="160" Width="1068">
+                <Canvas Name="cvsNeedle2Head" Height="50" Width="1068" Background="White">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Label Canvas.Left="40" Height="50" VerticalContentAlignment="Center" Content="{DynamicResource lanKey2193}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                    <Canvas Canvas.Right="500" Canvas.Top="10">
+                        <Border Height="31" Width="220" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Background="#FFEAEAEA" />
+                        <Label Canvas.Top="1" Canvas.Left="0" Content="{DynamicResource lanKey300}" FontSize="14" Foreground="#FF444444"/>
+                        <my:lightState2Ctrl Canvas.Left="165" Canvas.Top="3" objName="Inj346" dis="ON"/>
+                        <my:lightState2Ctrl Canvas.Left="192" Canvas.Top="3" objName="Inj347" dis="OFF"/>
+                    </Canvas>
+                    <my:btnSwitch Canvas.Right="70" Canvas.Top="10" needConfirm="False" objName="Inj345" />
+                </Canvas>
+                <Canvas Canvas.Top="50" Height="110" Width="1068" Background="#FFEAEAEA">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+                    <Label Canvas.Left="60" Canvas.Top="18" Content="{DynamicResource lanKey182}" Height="28" Width="172" Foreground="#FF444444" FontSize="14"/>
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="18" Items="lanKey266,lanKey319,lanKey333,lanKey334,lanKey335,lanKey336,lanKey268" objname="Inj350"/>
+                    <Label Canvas.Left="60" Canvas.Top="59" Content="{DynamicResource lanKey062}" Height="28" Width="172" Foreground="#FF444444" FontSize="14" />
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="59" Items="lanKey337,lanKey338,lanKey339,lanKey340,lanKey341,lanKey342" objname="Inj354"/>
+                    <my:VicoSetBar myWidth="480" Canvas.Left="534" Canvas.Top="18" Description="{DynamicResource lanKey326}" objName="Inj351" objName2="Inj348" />
+                    <my:VicoSetBar myWidth="480" Canvas.Left="534" Canvas.Top="59" Description="{DynamicResource lanKey327}" objName="Inj355" objName2="Inj349" />
+                </Canvas>
+            </Canvas>
+            <Canvas Name="cvsNeedle3" Height="160" Width="1068">
+                <Canvas Name="cvsNeedle3Head" Height="50" Width="1068" Background="White">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Label Canvas.Left="40" Height="50" VerticalContentAlignment="Center" Content="{DynamicResource lanKey2194}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                    <Canvas Canvas.Right="500" Canvas.Top="10">
+                        <Border Height="31" Width="220" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Background="#FFEAEAEA" />
+                        <Label Canvas.Top="1" Canvas.Left="0" Content="{DynamicResource lanKey300}" FontSize="14" Foreground="#FF444444"/>
+                        <my:lightState2Ctrl Canvas.Left="165" Canvas.Top="3" objName="Inj361" dis="ON"/>
+                        <my:lightState2Ctrl Canvas.Left="192" Canvas.Top="3" objName="Inj362" dis="OFF"/>
+                    </Canvas>
+                    <my:btnSwitch Canvas.Right="70" Canvas.Top="10" needConfirm="False" objName="Inj360" />
+                </Canvas>
+                <Canvas Canvas.Top="50" Height="110" Width="1068" Background="#FFEAEAEA">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    
+                    <Label Canvas.Left="60" Canvas.Top="18" Content="{DynamicResource lanKey182}" Height="28" Width="172" Foreground="#FF444444" FontSize="14"/>
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="18" Items="lanKey266,lanKey319,lanKey333,lanKey334,lanKey335,lanKey336,lanKey268" objname="Inj365"/>
+                    <Label Canvas.Left="60" Canvas.Top="59" Content="{DynamicResource lanKey062}" Height="28"  Width="172" Foreground="#FF444444" FontSize="14"/>
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="59" Items="lanKey337,lanKey338,lanKey339,lanKey340,lanKey341,lanKey342" objname="Inj369"/>
+                    <my:VicoSetBar myWidth="480" Canvas.Left="534" Canvas.Top="18" Description="{DynamicResource lanKey326}" objName="Inj366" objName2="Inj363" />
+                    <my:VicoSetBar myWidth="480" Canvas.Left="534" Canvas.Top="59" Description="{DynamicResource lanKey327}" objName="Inj370" objName2="Inj364" />
+                </Canvas>
+            </Canvas>
+            <Canvas Name="cvsNeedle4" Height="160" Width="1068">
+                <Canvas Name="cvsNeedle4Head" Height="50" Width="1068" Background="White">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Label Canvas.Left="40" Height="50" VerticalContentAlignment="Center" Content="{DynamicResource lanKey2195}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                    <Canvas Canvas.Right="500" Canvas.Top="10">
+                        <Border Height="31" Width="220" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" Background="#FFEAEAEA" />
+                        <Label Canvas.Top="1" Canvas.Left="0" Content="{DynamicResource lanKey300}" FontSize="14" Foreground="#FF444444"/>
+                        <my:lightState2Ctrl Canvas.Left="165" Canvas.Top="3" objName="Inj376" dis="ON"/>
+                        <my:lightState2Ctrl Canvas.Left="192" Canvas.Top="3" objName="Inj377" dis="OFF"/>
+                    </Canvas>
+                    <my:btnSwitch Canvas.Right="70" Canvas.Top="10" needConfirm="False" objName="Inj375" />
+                </Canvas>
+                <Canvas Canvas.Top="50" Height="110" Width="1068" Background="#FFEAEAEA">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+                    <Label Canvas.Left="60" Canvas.Top="18" Content="{DynamicResource lanKey182}" Height="28" Width="172" Foreground="#FF444444" FontSize="14"/>
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="18" Items="lanKey266,lanKey319,lanKey333,lanKey334,lanKey335,lanKey336,lanKey268" objname="Inj380"/>
+                    <Label Canvas.Left="60" Canvas.Top="59" Content="{DynamicResource lanKey062}" Height="28" Width="172" Foreground="#FF444444" FontSize="14"/>
+                    <my:myComboBox Canvas.Left="309" Canvas.Top="59" Items="lanKey337,lanKey338,lanKey339,lanKey340,lanKey341,lanKey342" objname="Inj384"/>
+                    <my:VicoSetBar myWidth="480" Canvas.Left="534" Canvas.Top="18" Description="{DynamicResource lanKey326}" objName="Inj381" objName2="Inj378" />
+                    <my:VicoSetBar myWidth="480" Canvas.Left="534" Canvas.Top="59" Description="{DynamicResource lanKey327}" objName="Inj385" objName2="Inj379" />
+                </Canvas>
+            </Canvas>
+        </StackPanel>
+    </Canvas>
+</UserControl>

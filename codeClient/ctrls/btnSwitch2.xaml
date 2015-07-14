@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.btnSwitch2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="28" d:DesignWidth="74">
+    <Canvas Height="28" Width="74" Name="cvsMain" MouseDown="cvsMain_MouseDown">
+        <Image Source="/Program;component/png/OBJ_10_1_Switch_Off_V0.3.png" Name="imgOff" Height="28" Width="74" />
+        <Image Source="/Program;component/png/OBJ_10_2_Switch_On_V0.3.png" Height="28" Width="74" Name="imgOpen" Canvas.Left="3" Canvas.Top="0" />
+    </Canvas>
+</UserControl>

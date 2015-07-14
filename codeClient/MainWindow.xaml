@@ -1,0 +1,31 @@
+﻿<Window x:Class="nsVicoClient.valmoWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None"
+        Title="MainWindow" Height="1920" Width="1080"
+        xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+        KeyDown="Window_KeyDown" MouseWheel="Window_MouseWheel" MouseDown="Window_MouseDown">
+    <Canvas Height="1920" Width="1080" Margin="0" Name="gdMain" MouseDown="Program_MouseDown">
+        <Canvas Name="cvsMain" Width="1080" Height="1920">
+            <my:addNewInterPretorCtrl  x:Name="addNewInerPretorPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:userCtrl  x:Name="userPanel" Opacity="0" Panel.ZIndex="2" />
+            <my:loadFromUsbCtrl  x:Name="loadFromUsbCtrl1" Panel.ZIndex="2"/>
+            <my:btnAttentionCtrl  Canvas.Top="281" x:Name="attentionPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:loadConfFileCtrl x:Name="loadConfFilePanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:saveConfFileCtrl  x:Name="saveConfFilePanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:charKeyCtrl x:Name="charKeyPanel" pos="108 600" Opacity="0" Panel.ZIndex="2"/>
+            <my:fileCoveredAlarm  x:Name="fileCoveredAlarmPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:linkPlcCtrl  x:Name="linkPlcPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:IpSetCtrl  x:Name="ipSetPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:lockScreenCtrl  x:Name="lockScreenPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:calcCtrl  x:Name="calcPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:IpSerSetCtrl  x:Name="ipSerSetPanel" Opacity="0" Panel.ZIndex="2"/>
+            <my:sysExitCtrl  x:Name="sysExitPanel" Opacity ="0" Panel.ZIndex="2"/>
+            
+            <my:mainPanelCtrl Canvas.Top="170" x:Name="mainPanel" />
+            <my:topPanelCtrl x:Name="topPanel" />
+            <my:RegistCtrl x:Name="registCtrl" Visibility="Hidden"></my:RegistCtrl>
+            <my:keysPanel Canvas.Bottom="0" Width="1080" x:Name="btnsPanel" />
+        </Canvas>
+    </Canvas>
+</Window>

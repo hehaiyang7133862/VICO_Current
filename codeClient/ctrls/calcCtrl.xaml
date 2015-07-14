@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.calcCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080">
+    <Canvas Name="cvsBackPanel"  MouseMove="lbPanelBack_MouseMove" MouseUp="lbPanelBack_MouseUp" ClipToBounds="True" Width="1080" Height="1920">
+        <Label Name="lbPanelBack"  Width="1080" Height="1920" MouseDown="lbPanelBack_MouseDown" Background="Black" Opacity="0.4" />
+
+        <Canvas Height="539" Width="374" Name="cvsMain" Canvas.Left="139" Canvas.Top="145">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Program;component/png/OBJ_19_15_Calculator_V0.0.png" />
+            </Canvas.Background>
+            <!--<Image Height="510" Width="430" Source="/Program;component/png/OBJ_19_15_Calculator_V0.0.png" />-->
+            <Canvas Height="108" Width="348" MouseDown="cvs_MouseDown" Canvas.Left="13" Canvas.Top="9">
+                <Label  Canvas.Left="15" Canvas.Top="9" Content="{DynamicResource ValmoCalc}" FontSize="20" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Name="lbDis" Width="318" />
+                <Label  Canvas.Left="15" Canvas.Top="55" Content="" FontSize="10" Height="35" HorizontalContentAlignment="Right" Name="lbResult00" Width="318" />
+            </Canvas>
+            <Canvas Width="374" Height="424" Canvas.Top="116">
+
+                <Image Height="57" Width="56" Canvas.Left="159" Canvas.Top="328" Name="imgRcp" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseDown="imgRec_MouseDown" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="222" Canvas.Top="72" Name="imgClr" Source="/Program;component/png/OBJ_19_18_iconC_V0.0.png" Opacity="0" MouseDown="imgClr_MouseDown" MouseUp="imgClr_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Height="57" Width="56" Canvas.Left="285" Canvas.Top="72" Name="imgBack" Source="/Program;component/png/OBJ_19_19_iconBackspace_V0.0.png" Opacity="0" MouseDown="imgBack_MouseDown" MouseUp="imgBack_MouseUp" MouseLeave="img_MouseLeave" />
+                <Image Height="57" Width="56" Canvas.Left="33" Canvas.Top="136" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Tag="7" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="96" Canvas.Top="136" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="8" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="159" Canvas.Top="136" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="9" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="285" Canvas.Top="136" Name="imgSquare" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseDown="imgSquare_MouseDown" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="33" Canvas.Top="200" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="4" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="96" Canvas.Top="200" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="5" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="159" Canvas.Top="200" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="6" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="222" Canvas.Top="200" Name="imgMlt" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseDown="imgMlt_MouseDown" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="285" Canvas.Top="200" Name="imgRadical" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" MouseDown="imgRadical_MouseDown" />
+                <Image Height="57" Width="56" Canvas.Left="222" Canvas.Top="328" Name="imgAdd" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseDown="imgAdd_MouseDown" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="33" Canvas.Top="264" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="1" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="96" Canvas.Top="264" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="2" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="159" Canvas.Top="264" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="3" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="222" Canvas.Top="136" Name="imgDiv" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseDown="imgDiv_MouseDown" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="32" Canvas.Top="328" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="0" Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+
+                <Image Height="57" Width="56" Canvas.Left="96" Canvas.Top="328" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png"  Tag="." Opacity="0" MouseDown="Image_MouseDown" MouseLeave="img_MouseLeave" MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="222" Canvas.Top="264" Name="imgSub" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseDown="imgSub_MouseDown" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" />
+                <Image Height="57" Width="56" Canvas.Left="285" Canvas.Top="264" Name="imgSigh" Source="/Program;component/png/OBJ_19_20_iconMult_V0.0.png" Opacity="0" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" MouseDown="imgSigh_MouseDown" />
+                <Image Height="57" Width="56" Canvas.Left="285" Canvas.Top="328" Name="imgEnter" Source="/Program;component/png/OBJ_19_25_iconequ_V0.0.png" Opacity="0" MouseDown="imgEnter_MouseDown" MouseLeave="img_MouseLeave"  MouseUp="Image_MouseUp" />
+                <Label Canvas.Left="33" Canvas.Top="0" Content="0" FontSize="22" Height="50" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Name="lbResult" Padding="5" Width="303" />
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.Maintain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="650" d:DesignWidth="1068" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Name="cvsMain" Height="650" Width="1068">
+        <Canvas.Resources>
+            <Style x:Key="ResetButton" TargetType="Button">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Name="cvsMain">
+                                <Grid.Background>
+                                    <ImageBrush ImageSource="/Program;component/png/OBJ_13_0_ButtonbaseRelease_V2.6.png"/>
+                                </Grid.Background>
+                                <Label HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}" Content="{TemplateBinding ContentControl.Content}"/>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter Property="Background" TargetName="cvsMain">
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="/Program;component/png/OBJ_13_1_ButtonbaseActive_V2.6.png"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Canvas.Resources>
+        <StackPanel Canvas.Top="0" Height="650" Name="sPanelMain" Width="1068" Background="White">
+            <Canvas Name="cvsDelayTime" Height="650" Width="1068">
+                <Canvas Name="cvsHeadDelayTime" Height="50" Width="1068" Background="White">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Label Canvas.Left="40" Content="{DynamicResource PT_DataAnalysis_Maintain_Interval}" VerticalContentAlignment="Center" Height="50" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                </Canvas>
+                <Canvas Name="cvsBodyDelayTime" Canvas.Top="50" Height="600" Width="1068" Background="#FFEAEAEA">
+                    <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+                    <my:VicoSetBar Canvas.Left="54" Canvas.Top="18" Description="{DynamicResource OI_RunTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="480" objName="Prd096" />
+                    <Label Canvas.Left="394" Canvas.Top="21" FontFamily="Verdana" Foreground="Black" FontSize="16" Content="[shots]" />
+                    <my:VicoSetBar Canvas.Right="54" Canvas.Top="18" Description="{DynamicResource TP_Sys195}" Value2Visiable="Hidden" ReadOnly="True" myWidth="480" objName="Sys195" />
+                    <my:VicoSetBar Canvas.Left="54" Canvas.Top="59" Description="{DynamicResource TP_Sys197}" Value2Visiable="Hidden" ReadOnly="True" myWidth="480" objName="Sys197" />
+                    <my:VicoSetBar Canvas.Right="54" Canvas.Top="59" Description="{DynamicResource TP_Sys196}" Value2Visiable="Hidden" ReadOnly="True" myWidth="480" objName="Sys196" />
+                    
+                    <Line X2="960" Canvas.Top="100" Stroke="#FFD4D4D4" StrokeThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="54" />
+                    
+                    <Label Canvas.Right="885" Canvas.Top="120" Content="{DynamicResource PT_DataAnalysis_Maintain_Interval}" FontSize="18" Foreground="#FF444444" />
+                    <Label Canvas.Left="180" Canvas.Top="120" Content="1" FontSize="18" Foreground="#FF444444" />
+                    <my:ellipeRate2Ctrl Canvas.Left="65" Canvas.Top="156" ForceGround="#FF1FC39D" rateValue="0" x:Name="erMaintain1Cr"/>
+                    <Image Canvas.Left="105" Canvas.Top="190" Height="50" Source="/Program;component/png/Sign/WorkerMaintain_50.png" />
+                    <Label Canvas.Left="155" Canvas.Top="210" Content="{DynamicResource OI_MaintainStatus}" FontSize="14" Foreground="#FF444444" />
+                    <Label Canvas.Right="915" Canvas.Top="280" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" Name="lbMaintain1Cr">0.0</Label>
+                    <Label Canvas.Left="145" Canvas.Top="280" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" >%</Label>
+                    <my:VicoSetBar Canvas.Left="240" Canvas.Top="124" Description="{DynamicResource OI_RunTime}" Value2Visiable="Hidden" ReadOnly="True" myWidth="360" objName="Sys390"/>
+                    <Line X2="280" Canvas.Left="240" Canvas.Top="159" Stroke="#FF444444" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <my:VicoSetBar Canvas.Left="240" Canvas.Top="166" Description="{DynamicResource OI_RemainTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="360" objName="Sys391" />
+                    <Line X2="280" Canvas.Left="240" Canvas.Top="200" Stroke="#FF444444" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                    <Label Canvas.Left="250" Canvas.Top="212" Content="{DynamicResource OI_ResetTime}" FontSize="14" Foreground="#FF444444" />
+                    <Line X2="280" Canvas.Left="240" Canvas.Top="241" Stroke="#FF444444" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                    <Button Canvas.Left="435" Canvas.Top="207" Content="RESET" Height="30" Width="80" Name="btnMaintain1" Style="{DynamicResource ResetButton}" Click="btnMaintain1_Click"/>
+
+                    <Label Canvas.Right="395" Canvas.Top="120" Content="{DynamicResource PT_DataAnalysis_Maintain_Interval}" FontSize="18" Foreground="#FF444444" />
+                    <Label Canvas.Left="674" Canvas.Top="120" Content="2" FontSize="18" Foreground="#FF444444" />
+                    <my:ellipeRate2Ctrl Canvas.Left="555" Canvas.Top="156" ForceGround="#FF1FC39D" rateValue="0" x:Name="erMaintain2Cr"/>
+                    <Image Canvas.Left="600" Canvas.Top="190" Height="50" Source="/Program;component/png/Sign/WorkerMaintain_50.png" />
+                    <Label Canvas.Left="650" Canvas.Top="210" Content="{DynamicResource OI_MaintainStatus}" FontSize="14" Foreground="#FF444444" />
+                    <Label Canvas.Right="425" Canvas.Top="280" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" Name="lbMaintain2Cr">0.0</Label>
+                    <Label Canvas.Left="635" Canvas.Top="280" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" >%</Label>
+                    <my:VicoSetBar Canvas.Left="730" Canvas.Top="124" Description="{DynamicResource OI_RunTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="360" objName="Sys393" />
+                    <Line Canvas.Left="730" Canvas.Top="159" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+                    <my:VicoSetBar Canvas.Left="730" Canvas.Top="166" Description="{DynamicResource OI_RemainTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="360" objName="Sys394" />
+                    <Line Canvas.Left="730" Canvas.Top="200" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+                    <Label Canvas.Left="740" Canvas.Top="213" Content="{DynamicResource OI_ResetTime}" FontSize="14" Foreground="#FF444444" />
+                    <Button Canvas.Left="925" Canvas.Top="207" Content="RESET" Height="30" Name="btnMaintain2" Width="80" Style="{DynamicResource ResetButton}" Click="btnMaintain2_Click"/>
+                    <Line Canvas.Left="730" Canvas.Top="240" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+
+                    <Line X2="960" Canvas.Top="316" Stroke="#FFD4D4D4" StrokeThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="54" />
+                    
+                    <Label Canvas.Right="885" Canvas.Top="336" Content="{DynamicResource PT_DataAnalysis_Maintain_Interval}" FontSize="18" Foreground="#FF444444" />
+                    <Label Canvas.Left="180" Canvas.Top="336" Content="3" FontSize="18" Foreground="#FF444444" />
+                    <my:ellipeRate2Ctrl Canvas.Left="65" Canvas.Top="370" ForceGround="#FF1FC39D" rateValue="0" x:Name="erMaintain3Cr"/>
+                    <Image Canvas.Left="105" Canvas.Top="406" Height="50" Source="/Program;component/png/Sign/WorkerMaintain_50.png" />
+                    <Label Canvas.Left="155" Canvas.Top="426" Content="{DynamicResource OI_MaintainStatus}" FontSize="14" Foreground="#FF444444" />
+                    <Label Canvas.Right="915" Canvas.Top="496" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" Name="lbMaintain3Cr">0.0</Label>
+                    <Label Canvas.Left="145" Canvas.Top="496" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" >%</Label>
+                    <my:VicoSetBar Canvas.Left="240" Canvas.Top="339" Description="{DynamicResource OI_RunTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="360" objName="Sys396" />
+                    <Line Canvas.Left="240" Canvas.Top="374" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+                    <my:VicoSetBar Canvas.Left="240" Canvas.Top="380" Description="{DynamicResource OI_RemainTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="360" objName="Sys397" />
+                    <Line Canvas.Left="240" Canvas.Top="416" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+                    <Label Canvas.Left="250" Canvas.Top="427" Content="{DynamicResource OI_ResetTime}" FontSize="14" Foreground="#FF444444" />
+                    <Button Canvas.Left="435" Canvas.Top="422" Content="RESET" Height="30" Name="btnMaintain3" Width="80" Style="{DynamicResource ResetButton}" Click="btnMaintain3_Click"/>
+                    <Line Canvas.Left="240" Canvas.Top="456" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+                    
+                    <Label Canvas.Right="395" Canvas.Top="336" Content="{DynamicResource PT_DataAnalysis_Maintain_Interval}" FontSize="18" Foreground="#FF444444" />
+                    <Label Canvas.Left="674" Canvas.Top="336" Content="4" FontSize="18" Foreground="#FF444444" />
+                    <my:ellipeRate2Ctrl Canvas.Left="555" Canvas.Top="370" ForceGround="#FF1FC39D" rateValue="0" x:Name="erMaintain4Cr"/>
+                    <Image Canvas.Left="600" Canvas.Top="406" Height="50" Source="/Program;component/png/Sign/WorkerMaintain_50.png" />
+                    <Label Canvas.Left="650" Canvas.Top="426" Content="{DynamicResource OI_MaintainStatus}" FontSize="14" Foreground="#FF444444" />
+                    <Label Canvas.Right="425" Canvas.Top="496" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" Name="lbMaintain4Cr">0.0</Label>
+                    <Label Canvas.Left="635" Canvas.Top="496" FontFamily="Verdana" FontSize="18" FontWeight="Bold" Foreground="#FF1FC39D" >%</Label>
+                    <my:VicoSetBar Canvas.Left="730" Canvas.Top="339" Description="{DynamicResource OI_RunTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="360" objName="Sys399" />
+                    <Line Canvas.Left="730" Canvas.Top="374" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+                    <my:VicoSetBar Canvas.Left="730" Canvas.Top="380" Description="{DynamicResource OI_RemainTime}" ReadOnly="True" Value2Visiable="Hidden" myWidth="360" objName="Sys400" />
+                    <Line Canvas.Left="730" Canvas.Top="416" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+                    <Label Canvas.Left="740" Canvas.Top="427" Content="{DynamicResource OI_ResetTime}" FontSize="14" Foreground="#FF444444" />
+                    <Button Canvas.Left="925" Canvas.Top="422" Content="RESET" Height="30" Name="btnMaintain4" Width="80" Style="{DynamicResource ResetButton}" Click="btnMaintain4_Click"/>
+                    <Line Canvas.Left="730" Canvas.Top="456" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF444444" StrokeThickness="2" X2="280" />
+
+                    <Line X2="960" Canvas.Top="530" Stroke="#FFD4D4D4" StrokeThickness="4" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="54" />
+                    <Label Canvas.Left="105" Canvas.Top="538" Content="{DynamicResource OI_Maintain_Notice}" FontSize="14" Foreground="#FF444444" />
+                    <Label Canvas.Left="147" Canvas.Top="566" Content="{DynamicResource OI_Maintain_Notice2}" FontSize="14" Foreground="#FF444444" />
+                </Canvas>
+            </Canvas>
+        </StackPanel>
+    </Canvas>
+</UserControl>

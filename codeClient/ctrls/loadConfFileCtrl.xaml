@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.loadConfFileCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080">
+    <Canvas Name="cvsMain"   Width="1080" Height="1920" >
+        <Label Height="1920" Width="1080" Name="cvsBackPanel"  Background="#FF050505" Opacity="0.7"/>
+
+        <Canvas Canvas.Left="10" Canvas.Top="10">
+            <Image Height="40"  Name="imgClose" Source="/Program;component/png/OBJ_22_12_REDCorss.png" Width="40" MouseDown="imgClose_MouseDown" />
+        </Canvas>
+        <Button Canvas.Left="62" Canvas.Top="36" Content="{DynamicResource lanKey1022}" Height="32" Name="btnLoad" Width="101" Click="btnLoad_Click" />
+        <Canvas Name="cvsBox"  Canvas.Left="62" Canvas.Top="90" Height="1700" Width="864" ClipToBounds="True">
+            <Canvas  Height="1700" Name="cvsValueLst" Width="864" Canvas.Top="0"/>
+        </Canvas>
+        <Label Canvas.Left="954" Canvas.Top="32" Content="1/1"  Name="lbCurPage" Width="72" Foreground="White" FontSize="16" HorizontalContentAlignment="Right"/>
+        <ProgressBar Canvas.Left="186" Canvas.Top="39" Height="24" Name="progressLoad" Width="474" />
+        <Label Canvas.Left="670" Canvas.Top="36" Content=""  Name="lbPer" FontSize="16" Foreground="White"/>
+        <Button Canvas.Left="764" Canvas.Top="30" Content="&lt;&lt;&lt;&lt;" Height="45" Name="btnLeft" Width="75" Click="btnLeft_Click" />
+        <Button Canvas.Left="873" Canvas.Top="30" Content=">>>>" Height="45" Name="btnRight" Width="75" Click="btnRight_Click" />
+        <ProgressBar Canvas.Left="336" Canvas.Top="540" Height="25" Name="progressBarShow" Width="422" />
+        <Label Name="lbPerShow" Canvas.Left="767" Canvas.Top="537" Height="30" FontSize="16" Foreground="White" Content="1000"/>
+    </Canvas>
+</UserControl>

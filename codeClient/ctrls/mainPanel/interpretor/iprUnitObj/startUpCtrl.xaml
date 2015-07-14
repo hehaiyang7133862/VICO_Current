@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.startUpCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="46" d:DesignWidth="46">
+    <Canvas Canvas.Left="165" Canvas.Top="51" Height="46" Name="cvsStart0" Width="46" >
+        <!--<Line Canvas.Left="29" Canvas.Top="23" Name="line1" Stroke="#FF006ea5" StrokeThickness="3" X1="49" />-->
+        <Line Canvas.Left="78" Canvas.Top="-92.5" Stroke="#FF006ea5" StrokeThickness="2" Y1="115" />
+        <Line Canvas.Top="-91" Canvas.Left="78" Stroke="#FF006ea5" StrokeThickness="2" X1="34" />
+        <Image Canvas.Left="74.5" Canvas.Top="19" Height="7" Source="/Program;component/png/ipr/ipr_st18_Blueball_7x7.png" Width="7" />
+        <!--<Line Name="lnNull" Canvas.Left="0" Canvas.Top="23" Stroke="#FF006ea5" StrokeThickness="3" X1="46" />-->
+        <!--<Image Name="imgNullUsed" Width="11" Height="11" Source="/Program;component/png/ipr/ipr_st17_Blueball_11x11.png" Canvas.Left="17.5" Canvas.Top="17.5"/>-->
+    </Canvas>
+</UserControl>

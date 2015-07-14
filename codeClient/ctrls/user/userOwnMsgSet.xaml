@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.userOwnMsgSet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="155" d:DesignWidth="313">
+    <Canvas Height="155"  Name="canvas1" Width="313" >
+        <Image  Source="/Program;component/png/OBJ_24_11_BlankLine.png" Canvas.Top="0" />
+        <Label Canvas.Left="154"  Content="liuzs" FontSize="14" Height="38" HorizontalContentAlignment="Right" Name="lbUserName" VerticalContentAlignment="Center" Width="150" Canvas.Top="0" />
+        <Label Canvas.Left="10"  Content="用户名" FontSize="14" Height="38" VerticalContentAlignment="Center" Width="300" Canvas.Top="0"  MouseDown="Label_MouseDown"/>
+        <Image Canvas.Left="0" Canvas.Top="43" Source="/Program;component/png/OBJ_24_11_BlankLine.png" />
+        <Label Canvas.Left="154" Canvas.Top="43" Content="******" FontSize="14" Height="38" HorizontalContentAlignment="Right" Name="lbPasswordValue" VerticalContentAlignment="Center" Width="150" />
+        <Label Canvas.Left="10" Canvas.Top="43" Content="密码" FontSize="14" Height="38" VerticalContentAlignment="Center" Width="300" MouseDown="lbPassword_MouseDown" />
+        <Image Canvas.Left="0" Canvas.Top="80" Source="/Program;component/png/OBJ_24_11_BlankLine.png" />
+        <Label Canvas.Left="154" Canvas.Top="80" Content="******" FontSize="14" Height="38" HorizontalContentAlignment="Right" Name="lbNewPasswordValue" VerticalContentAlignment="Center" Width="150" />
+        <Label Canvas.Left="10" Canvas.Top="80" Content="确认密码" FontSize="14" Height="38" VerticalContentAlignment="Center" Width="300"  MouseDown="lbNewPassword_MouseDown"/>
+        <Image Canvas.Left="0" Canvas.Top="117" Source="/Program;component/png/OBJ_24_11_BlankLine.png" />
+        <Label Canvas.Left="0" Canvas.Top="117" Content="确认" FontSize="14" Height="38" HorizontalContentAlignment="Center" Name="label4" VerticalContentAlignment="Center" Width="313"  MouseUp="lbPasswordOk_MouseUp" />
+        <Canvas Height="155" Width="313" Name="cvsPasswordOk" Background="#FFF3F228" Visibility="Hidden"  MouseUp="cvsPasswordOk_MouseUp">
+            <Label Canvas.Left="113" Canvas.Top="25" Content="密码修改成功！" Height="28" Name="lbPwOK"/>
+            <Label Canvas.Left="113" Canvas.Top="25" Content="两次输入的密码不一致！" Height="28" Visibility="Hidden" Name="lbPwError"/>
+            <Image Canvas.Left="0" Canvas.Top="85" Source="/Program;component/png/OBJ_24_10_GrayLine.png" />
+            <Label Canvas.Left="0" Canvas.Top="85" Content="确认" FontSize="14" Height="38" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" Width="313" MouseUp="Label_MouseUp" />
+        </Canvas>
+    </Canvas>
+</UserControl>

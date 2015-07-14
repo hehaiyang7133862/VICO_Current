@@ -1,0 +1,230 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.InjectionPressureMonitoring"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1068">
+    <Canvas Height="800" Width="1068" Background="White">
+        <Canvas.Resources>
+            <my:PosConverter x:Key="Pos" />
+            <my:PrsConverter x:Key="Prs" />
+        </Canvas.Resources>
+        <Line X2="1068" Canvas.Bottom="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+        <Canvas Height="470" Width="1068" Background="#FFEAEAEA" 
+                    MouseMove="p_MouseMove" MouseUp="p_MouseUp" MouseLeave="p_MouseLeave">
+            <Line X2="1068" Canvas.Top="50" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Top="51" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+            
+            <Canvas Name="cvsHeadMap" Height="50" Width="1068" Background="White">
+                <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                <Label Canvas.Left="50" Content="{DynamicResource PT_Carriage_PressureMonitor}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" Canvas.Top="12" />
+            </Canvas>
+            <Image Canvas.Left="110" Canvas.Top="118" Height="266" Width="835" Stretch="Fill" Source="/Program;component/png/blocks/Curve_PMA_V00.png" />
+            
+            <Line Canvas.Top="420" Stroke="#FF8C8C8C" StrokeDashArray="1,1" X2="1068" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"></Line>
+            <Line Canvas.Top="128" Canvas.Left="980" X2="9" Stroke="#FF8C8C8C" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Canvas.Top="253" Canvas.Left="980" X2="9" Stroke="#FF8C8C8C" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Canvas.Top="378" Canvas.Left="980" X2="9" Stroke="#FF8C8C8C" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Label Name="lbPrs10" Canvas.Top="114" Canvas.Left="1010" Content="0" FontFamily="Verdana" FontSize="14" Foreground="#FF8C8C8C" />
+            <Label Name="lbPrs9" Canvas.Top="139" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs8" Canvas.Top="164" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs7" Canvas.Top="189" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs6" Canvas.Top="214" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs5" Canvas.Top="239" Canvas.Left="1010" Content="0" FontFamily="Verdana" FontSize="14" Foreground="#FF8C8C8C" />
+            <Label Name="lbPrs4" Canvas.Top="264" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs3" Canvas.Top="289" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs2" Canvas.Top="314" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs1" Canvas.Top="339" Canvas.Left="1010" Content="0" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPrs0" Canvas.Top="364" Canvas.Left="1010" Content="0" FontFamily="Verdana" FontSize="14" Foreground="#FF8C8C8C" />
+            <Label Name="lbPos0" Canvas.Left="111" Canvas.Top="390" Content="0.00" FontFamily="Verdana" Foreground="#FFA4A4A4" />
+            <Label Name="lbPos1" Canvas.Left="167" Canvas.Top="390" Content="12.50" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos2" Canvas.Left="250" Canvas.Top="390" Content="25.00" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos3" Canvas.Left="333" Canvas.Top="390" Content="37.50" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos4" Canvas.Left="416" Canvas.Top="390" Content="50.00" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos5" Canvas.Left="499" Canvas.Top="390" Content="62.50" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos6" Canvas.Left="582" Canvas.Top="390" Content="75.00" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos7" Canvas.Left="665" Canvas.Top="390" Content="87.50" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos8" Canvas.Left="748" Canvas.Top="390" Content="100.00" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos9" Canvas.Left="831" Canvas.Top="390" Content="112.50" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" Width="70" />
+            <Label Name="lbPos10" Canvas.Right="111" Canvas.Top="390" Content="125.00" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Right" Width="70" />
+            <Label Canvas.Left="950" Canvas.Top="389" Content="[mm]" FontFamily="Verdana" Foreground="#FFA4A4A4" HorizontalContentAlignment="Center" />
+
+            <Line Canvas.Left="140" Canvas.Top="445" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#0082C3" StrokeThickness="6" X2="23" />
+            <Label Foreground="#FF0082C3" FontSize="16" Canvas.Top="430" Canvas.Left="170" Content="{StaticResource OI_ActualInjectionPressure}"/>
+            <Line Canvas.Left="480" Canvas.Top="445" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF9900" StrokeThickness="6" X2="23" />
+            <Label Foreground="#FF9900" FontSize="16" Canvas.Top="430" Canvas.Left="510" Content="{StaticResource OI_PressureMonitoringCurve}" />
+            <Line Canvas.Left="820" Canvas.Top="445" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFFF0095" StrokeThickness="6" X2="23" />
+            <Label Foreground="#FFFF0095" FontSize="16" Canvas.Top="430" Canvas.Left="850" Content="{StaticResource OI_InjectionPressureLimit}" />
+            <my:VicoLabel x:Name="VPPos" Canvas.Left="6" Canvas.Top="428" myHeight="35" myWidth="100" objName="Inj068" myBorderBrush="#FFD4D4D4" UnitVisiable="Visible" Opacity="0" />
+
+            <Canvas Name="cvsCurve" Canvas.Top="170" Canvas.Left="113" Height="208" Width="830" Background="Transparent">
+                <my:CurveControl x:Name="curve_Pos_Pressure_Current" CtrlHeight="208" CtrlWidth="830" CurveColor="#FFE400BB" />
+                <my:CurveCanves x:Name="curve_Pos_Pressure_History" SetHeight="208" SetWidth="830" HistoryBrush="#FFFF9DEE"/>
+                
+                <Line X1="{Binding ElementName=Pos2, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      X2="{Binding ElementName=Pos1, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      Y1="{Binding ElementName=Pre2, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}" 
+                      Y2="{Binding ElementName=Pre1, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}"  
+                      Stroke="#FF9900" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"></Line>
+                <Line X1="{Binding ElementName=Pos3, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      X2="{Binding ElementName=Pos2, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      Y1="{Binding ElementName=Pre3, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}" 
+                      Y2="{Binding ElementName=Pre2, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}"  
+                      Stroke="#FF9900" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"></Line>
+                <Line X1="{Binding ElementName=Pos4, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      X2="{Binding ElementName=Pos3, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      Y1="{Binding ElementName=Pre4, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}" 
+                      Y2="{Binding ElementName=Pre3, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}"  
+                      Stroke="#FF9900" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"></Line>
+                <Line X1="{Binding ElementName=Pos5, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      X2="{Binding ElementName=Pos4, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      Y1="{Binding ElementName=Pre5, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}" 
+                      Y2="{Binding ElementName=Pre4, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}"  
+                      Stroke="#FF9900" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"></Line>
+                <Line X1="{Binding ElementName=Pos6, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      X2="{Binding ElementName=Pos5, Path=Pos, Converter={StaticResource Pos}, Mode=OneWay}" 
+                      Y1="{Binding ElementName=Pre6, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}" 
+                      Y2="{Binding ElementName=Pre5, Path=Pos, Converter={StaticResource Prs}, Mode=OneWay}"  
+                      Stroke="#FF9900" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"></Line>
+
+                <Line Canvas.Top="{Binding ElementName=PreLimit, Path=Pos,Converter={StaticResource Prs},Mode=OneWay}"
+                      X2="830" Stroke="#FFFF0095" StrokeThickness="2" ></Line>
+
+                <Canvas Name="cvsVP" Canvas.Top="0" Canvas.Left="{Binding ElementName=VPPos, Path=Pos, Converter={StaticResource Pos},Mode=OneWay}">
+                    <Label Canvas.Top="-92" Canvas.Left="-15" FontSize="14">VP</Label>
+                    <Line Canvas.Top="-62" Stroke="Black" Y2="270" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"></Line>
+                </Canvas>
+                <Canvas Name="cvsP1" Canvas.Top="0" Canvas.Left="829">
+                    <Label Name="lbSetPrs1" Foreground="#FF9900" FontSize="14" Canvas.Top="-94" Canvas.Right="0" Content="{Binding ElementName=Pre1, Path=Pos,Mode=OneWay}"/>
+                    <Label Name="lbCurPrs1" Foreground="#0082C3" FontSize="14" Canvas.Top="-78" Canvas.Right="0" Content="0"/>
+                    <Line Canvas.Left="0" Canvas.Top="-42" Stroke="#FF9900" StrokeDashArray="1,1" Y2="250" StrokeThickness="2" ></Line>
+                </Canvas>
+                <Canvas Name="cvsP2" Canvas.Top="0" Canvas.Left="{Binding ElementName=Pos2, Path=Pos, Converter={StaticResource Pos},Mode=OneWay}">
+                    <Label Name="lbSetPrs2" Foreground="#FF9900" FontSize="14" Canvas.Top="-94" Canvas.Left="0" Content="{Binding ElementName=Pre2, Path=Pos,Mode=OneWay}"/>
+                    <Label Name="lbCurPrs2" Foreground="#0082C3" FontSize="14" Canvas.Top="-78" Canvas.Left="0" Content="0"/>
+                    <Line Canvas.Left="0" Canvas.Top="-42" Stroke="#FF9900" StrokeDashArray="1,1" Y2="250" StrokeThickness="2" ></Line>
+                </Canvas>
+                <Canvas Name="cvsP3" Canvas.Top="0" Canvas.Left="{Binding ElementName=Pos3, Path=Pos, Converter={StaticResource Pos},Mode=OneWay}">
+                    <Label Name="lbSetPrs3" Foreground="#FF9900" FontSize="14" Canvas.Top="-94" Canvas.Left="0" Content="{Binding ElementName=Pre3, Path=Pos,Mode=OneWay}"/>
+                    <Label Name="lbCurPrs3" Foreground="#0082C3" FontSize="14" Canvas.Top="-78" Canvas.Left="0" Content="0"/>
+                    <Line Canvas.Left="0" Canvas.Top="-42" Stroke="#FF9900" StrokeDashArray="1,1" Y2="250" StrokeThickness="2" ></Line>
+                </Canvas>
+                <Canvas Name="cvsP4" Canvas.Top="0" Canvas.Left="{Binding ElementName=Pos4, Path=Pos, Converter={StaticResource Pos},Mode=OneWay}">
+                    <Label Name="lbSetPrs4" Foreground="#FF9900" FontSize="14" Canvas.Top="-94" Canvas.Left="0" Content="{Binding ElementName=Pre4, Path=Pos,Mode=OneWay}"/>
+                    <Label Name="lbCurPrs4" Foreground="#0082C3" FontSize="14" Canvas.Top="-78" Canvas.Left="0" Content="0"/>
+                    <Line Canvas.Left="0" Canvas.Top="-42" Stroke="#FF9900" StrokeDashArray="1,1" Y2="250" StrokeThickness="2" ></Line>
+                </Canvas>
+                <Canvas Name="cvsP5" Canvas.Top="0" Canvas.Left="{Binding ElementName=Pos5, Path=Pos, Converter={StaticResource Pos},Mode=OneWay}">
+                    <Label Name="lbSetPrs5" Foreground="#FF9900" FontSize="14" Canvas.Top="-94" Canvas.Left="0" Content="{Binding ElementName=Pre5, Path=Pos,Mode=OneWay}"/>
+                    <Label Name="lbCurPrs5" Foreground="#0082C3" FontSize="14" Canvas.Top="-78" Canvas.Left="0" Content="0"/>
+                    <Line Canvas.Left="0" Canvas.Top="-42" Stroke="#FF9900" StrokeDashArray="1,1" Y2="250" StrokeThickness="2" ></Line>
+                </Canvas>
+                <Canvas Name="cvsP6" Canvas.Top="0" Canvas.Left="{Binding ElementName=Pos6, Path=Pos, Converter={StaticResource Pos},Mode=OneWay}">
+                    <Label Name="lbSetPrs6" Foreground="#FF9900" FontSize="14" Canvas.Top="-94" Canvas.Left="0" Content="{Binding ElementName=Pre6, Path=Pos,Mode=OneWay}"/>
+                    <Label Name="lbCurPrs6" Foreground="#0082C3" FontSize="14" Canvas.Top="-78" Canvas.Left="0" Content="0"/>
+                    <Line Canvas.Left="0" Canvas.Top="-42" Stroke="#FF9900" StrokeDashArray="1,1" Y2="250" StrokeThickness="2" ></Line>
+                </Canvas>
+
+                <Border Name="Cvs1" Height="40" Width="40" Background="Transparent" MouseDown="p_MouseDown"  BorderBrush="Transparent" BorderThickness="1"
+                        Canvas.Left="{Binding ElementName=Pos1, Path=Pos, Converter={StaticResource Pos},Mode=TwoWay}" 
+                        Canvas.Top="{Binding ElementName=Pre1, Path=Pos, Converter={StaticResource Prs},Mode=TwoWay}">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="-20" Y="-20" />
+                    </Border.RenderTransform>
+                    <Rectangle Name="p1" Canvas.Left="5" Canvas.Top="5" Height="30" Width="30" Fill="Red" Stroke="Transparent" StrokeThickness="20"  MouseDown="p_MouseDown"/>
+                </Border>
+                <Border Name="Cvs2" Height="40" Width="40" Background="Transparent" MouseDown="p_MouseDown" BorderBrush="Transparent" BorderThickness="1"
+                        Canvas.Left="{Binding ElementName=Pos2, Path=Pos, Converter={StaticResource Pos},Mode=TwoWay}" 
+                        Canvas.Top="{Binding ElementName=Pre2, Path=Pos, Converter={StaticResource Prs},Mode=TwoWay}">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="-20" Y="-20" />
+                    </Border.RenderTransform>
+                    <Rectangle Name="p2" Canvas.Left="5" Canvas.Top="5" Height="30" Width="30" Fill="Red" Stroke="Transparent" StrokeThickness="20"  MouseDown="p_MouseDown"/>
+                </Border>
+                <Border Name="Cvs3" Height="40" Width="40" Background="Transparent" MouseDown="p_MouseDown" BorderBrush="Transparent" BorderThickness="1"
+                        Canvas.Left="{Binding ElementName=Pos3, Path=Pos, Converter={StaticResource Pos},Mode=TwoWay}" 
+                        Canvas.Top="{Binding ElementName=Pre3, Path=Pos, Converter={StaticResource Prs},Mode=TwoWay}">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="-20" Y="-20" />
+                    </Border.RenderTransform>
+                    <Rectangle Name="p3" Canvas.Left="5" Canvas.Top="5" Height="30" Width="30" Fill="Red" Stroke="Transparent" StrokeThickness="20"  MouseDown="p_MouseDown"/>
+                </Border>
+                <Border Name="Cvs4" Height="40" Width="40" Background="Transparent" MouseDown="p_MouseDown" BorderBrush="Transparent" BorderThickness="1"
+                        Canvas.Left="{Binding ElementName=Pos4, Path=Pos, Converter={StaticResource Pos},Mode=TwoWay}" 
+                        Canvas.Top="{Binding ElementName=Pre4, Path=Pos, Converter={StaticResource Prs},Mode=TwoWay}">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="-20" Y="-20" />
+                    </Border.RenderTransform>
+                    <Rectangle Name="p4" Canvas.Left="5" Canvas.Top="5" Height="30" Width="30" Fill="Red" Stroke="Transparent" StrokeThickness="20"  MouseDown="p_MouseDown"/>
+                </Border>
+                <Border Name="Cvs5" Height="40" Width="40" Background="Transparent" MouseDown="p_MouseDown" BorderBrush="Transparent" BorderThickness="1"
+                        Canvas.Left="{Binding ElementName=Pos5, Path=Pos, Converter={StaticResource Pos},Mode=TwoWay}" 
+                        Canvas.Top="{Binding ElementName=Pre5, Path=Pos, Converter={StaticResource Prs},Mode=TwoWay}">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="-20" Y="-20" />
+                    </Border.RenderTransform>
+                    <Rectangle Name="p5" Canvas.Left="5" Canvas.Top="5" Height="30" Width="30" Fill="Red" Stroke="Transparent" StrokeThickness="20"  MouseDown="p_MouseDown"/>
+                </Border>
+                <Border Name="Cvs6" Height="40" Width="40" Background="Transparent" MouseDown="p_MouseDown" BorderBrush="Transparent" BorderThickness="1"
+                        Canvas.Left="{Binding ElementName=Pos6, Path=Pos, Converter={StaticResource Pos},Mode=TwoWay}" 
+                        Canvas.Top="{Binding ElementName=Pre6, Path=Pos, Converter={StaticResource Prs},Mode=TwoWay}">
+                    <Border.RenderTransform>
+                        <TranslateTransform X="-20" Y="-20" />
+                    </Border.RenderTransform>
+                    <Rectangle Name="p6" Canvas.Left="5" Canvas.Top="5" Height="30" Width="30" Fill="Red" Stroke="Transparent" StrokeThickness="20"  MouseDown="p_MouseDown"/>
+                </Border>
+            </Canvas>
+        </Canvas>
+        
+        <Line Canvas.Left="0" Canvas.Top="630" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeDashArray="0.5,0.5" StrokeThickness="4" X2="1068" />
+        <Line Canvas.Left="214" Canvas.Top="627" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="334" Canvas.Top="627" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="454" Canvas.Top="627" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="574" Canvas.Top="627" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="694" Canvas.Top="627" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="814" Canvas.Top="627" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" />
+        <Line Canvas.Left="220" Canvas.Top="641" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="340" Canvas.Top="639" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="460" Canvas.Top="639" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="580" Canvas.Top="639" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="700" Canvas.Top="639" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Line Canvas.Left="820" Canvas.Top="639" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" />
+        <Label Canvas.Left="64" Canvas.Top="491" Content="{DynamicResource TP_Inj046}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="64" Canvas.Top="533" Content="{DynamicResource TP_Inj435}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Right="140" Canvas.Top="533" Content="{DynamicResource OI_CloseInjectionMonitorNotice}" FontSize="14" Foreground="#FF9900" />
+        <my:btnSwitch Canvas.Left="940" Canvas.Top="533" needConfirm="True" objName="Inj435" />
+        <Label Canvas.Left="64" Canvas.Top="758" Content="{DynamicResource TP_Inj448}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Right="140" Canvas.Top="758" Content="{DynamicResource OI_PressureOverRunNotice}" FontSize="14" Foreground="#FF444444" />
+        <my:btnSwitch Canvas.Left="940" Canvas.Top="758" needConfirm="True" objName="Inj448" />
+
+        <Label Canvas.Left="170" Canvas.Top="585" Content="{DynamicResource OI_P6}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" Width="100" />
+        <Label Canvas.Left="290" Canvas.Top="585" Content="{DynamicResource OI_P5}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" Width="100" />
+        <Label Canvas.Left="410" Canvas.Top="585" Content="{DynamicResource OI_P4}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" Width="100" />
+        <Label Canvas.Left="530" Canvas.Top="585" Content="{DynamicResource OI_P3}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" Width="100" />
+        <Label Canvas.Left="650" Canvas.Top="585" Content="{DynamicResource OI_P2}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" Width="100" />
+        <Label Canvas.Left="770" Canvas.Top="585" Content="{DynamicResource OI_P1}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Center" Width="100" />
+        <Label Canvas.Left="64" Canvas.Top="677" Content="{DynamicResource OI_Position}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="64" Canvas.Top="719" Content="{DynamicResource OI_Pressure}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="890" Canvas.Top="717" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+        <Label Canvas.Left="890" Canvas.Top="677" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+        <my:VicoLabel x:Name="PreLimit" Canvas.Left="774" Canvas.Top="488" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="35" myWidth="100" objName="Inj046" myBorderBrush="#FFD4D4D4" UnitVisiable="Visible"/>
+        
+        <my:VicoLabel x:Name="Pos6" Canvas.Left="170" Canvas.Top="676" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj441" myBorderBrush="#FFD4D4D4" ReadOnly="True"/>
+        <my:VicoLabel x:Name="Pre6" Canvas.Left="170" Canvas.Top="716" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj447" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pos5" Canvas.Left="290" Canvas.Top="676" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj440" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pre5" Canvas.Left="290" Canvas.Top="716" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj446" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pos4" Canvas.Left="410" Canvas.Top="676" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj439" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pre4" Canvas.Left="410" Canvas.Top="716" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj445" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pos3" Canvas.Left="530" Canvas.Top="676" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj438" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pre3" Canvas.Left="530" Canvas.Top="716" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj444" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pos2" Canvas.Left="650" Canvas.Top="676" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj437" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pre2" Canvas.Left="650" Canvas.Top="716" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj443" myBorderBrush="#FFD4D4D4"/>
+        <my:VicoLabel x:Name="Pos1" Canvas.Left="770" Canvas.Top="676" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj436" ReadOnly="True"/>
+        <my:VicoLabel x:Name="Pre1" Canvas.Left="770" Canvas.Top="716" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Inj442" myBorderBrush="#FFD4D4D4"/>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.motorEnableCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             d:DesignHeight="40" d:DesignWidth="150">
+    <Canvas Name="cvsMain">
+        <TabControl Canvas.Left="1" Canvas.Top="4" Height="32" Width="32" Name="tbState1" TabStripPlacement="Right" Padding="0" BorderThickness="0" SelectedIndex="0" Background="Transparent">
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <Image Source="/Program;component/png/Sign/street_view-32.png" Height="32" Width="32" Stretch="Fill" />
+                </Canvas>
+            </TabItem>
+            <TabItem  Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <Image Source="/Program;component/png/Sign/running-32.png" Height="32" Width="32" Stretch="Fill" />
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <TabControl Canvas.Left="32" Canvas.Top="11" Height="30" Width="115" Name="tbState2" TabStripPlacement="Right" Padding="0" BorderThickness="0" SelectedIndex="0" Background="Transparent">
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <Label Content="{DynamicResource lanKey062}" Foreground="#FFC31400" FontSize="14" FontWeight="Bold" />
+                </Canvas>
+            </TabItem>
+            <TabItem  Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <Label Content="{DynamicResource lanKey2046}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <Label Canvas.Left="32" Canvas.Top="-4" Content="{DynamicResource lanKey2129}" Foreground="#FF444444"/>
+    </Canvas>
+</UserControl>

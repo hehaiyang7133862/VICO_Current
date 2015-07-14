@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.carriageNewPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d"                                                    
+             d:DesignHeight="1750" d:DesignWidth="1068">
+    <Canvas Height="17250" Width="1068" Name="cvsMain">
+        <TabControl Canvas.Top="157" Name="tbMain" SelectedIndex="0" Padding="0" BorderThickness="0" Height="1593" Width="1068" ClipToBounds="True" Background="#EAEAEA" >
+            <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:Carriage_Main />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:InjectionPressureMonitoring />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:Carriage_AutoPurge />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:Carriage_InjUnit />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:Injection_ValvoGate />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:Injection_Nozzle />
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <Canvas Canvas.Top="74" Height="85" Width="1068" Background="#F4F4F4">
+            <my:tabItemBtnCtrl x:Name="tblBtnCtrl" Canvas.Left="376" Canvas.Top="4" itemCount="6" focusNr="0" />
+            <StackPanel Canvas.Left="378" Canvas.Top="6" Orientation="Horizontal">
+                <Canvas Tag="0" Height="67" Width="85" Background="Transparent" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_40_charge_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-12" FontSize="10" Content="{DynamicResource PT_Carriage_Main}" Width="90" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Name="cvsMonitor" Tag="1" Height="67" Width="85" Background="Transparent" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_41_PM_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-12" FontSize="10" Content="{DynamicResource PT_Carriage_PressureMonitor}" Width="90" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Tag="2" Height="67" Width="85" Background="Transparent" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_37_autopurch_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-12" FontSize="10" Content="{DynamicResource PT_Carriage_AutoPurge}" Width="90" HorizontalContentAlignment="Center" Foreground="#FF444444"/>
+                </Canvas>
+                <Canvas Name="cvsInjUnit" Tag="3" Height="67" Width="85" Background="Transparent" MouseDown="HeadSwitch_MouseDown" ClipToBounds="True">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_38_injunit_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-12" FontSize="10" Content="{DynamicResource PT_Carriage_InjUnit}" Width="90" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Tag="4" Height="67" Width="85" Background="Transparent" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="36" Width="37" Canvas.Left="16" Canvas.Top="6" Source="/Program;component/png/HeadSwitch/OBJ_21_23_ValveGate_V0.0.png" Stretch="Fill" />
+                    <Label Canvas.Top="42" Canvas.Left="-12" FontSize="10" Content="{DynamicResource PT_Carriage_ValvoGate}" Width="90" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Name="cvsNozzle" Tag="5" Height="67" Width="85" Background="Transparent" MouseDown="HeadSwitch_MouseDown" ClipToBounds="True">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_35_Nozzle_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-12" FontSize="10" Content="{DynamicResource PT_Carriage_Nozzle}" Width="90" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+            </StackPanel>
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FF8C8C8C" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+        </Canvas>
+        <Canvas Height="77" Width="97" Canvas.Top="-1" Name="cvsQuickSetPage" Canvas.Left="584" Background="Transparent">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P7_Blue.png" Width="97" Height="75" Stretch="Fill" />
+            <Label Name="lbDis1" Content="{DynamicResource strMainMenu_Charge}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3" />
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" Canvas.Left="0" />
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.set_air"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas>
+        <Canvas Canvas.Left="0" Canvas.Top="0" Height="286" Width="180">
+            <my:btnFunc1 Canvas.Top="0" MouseDown="btn1_MouseDown" mouseUpHandle="btn1_MouseUp" x:Name="btn1" dis="{DynamicResource lanKey074}" />
+            <my:btnFunc1 Canvas.Top="40" MouseDown="btn2_MouseDown" mouseUpHandle="btn2_MouseUp" x:Name="btn2" dis="{DynamicResource lanKey075}" />
+            <my:btnFunc1 Canvas.Top="80" MouseDown="btn3_MouseDown" mouseUpHandle="btn3_MouseUp" x:Name="btn3" dis="{DynamicResource lanKey076}" />
+            <my:btnFunc1 Canvas.Top="120" MouseDown="btn4_MouseDown" mouseUpHandle="btn4_MouseUp" x:Name="btn4" dis="{DynamicResource lanKey077}" />
+            <my:btnFunc1 Canvas.Top="160" MouseDown="btn5_MouseDown" mouseUpHandle="btn5_MouseUp" x:Name="btn5" dis="{DynamicResource lanKey111}" />
+            <my:btnFunc1 Canvas.Top="200" MouseDown="btn6_MouseDown" mouseUpHandle="btn6_MouseUp" x:Name="btn6" dis="{DynamicResource lanKey112}" />
+        </Canvas>
+        <Canvas Canvas.Left="197" Canvas.Top="0" Height="286" Width="180">
+            <my:btnFunc1 Canvas.Top="0" MouseDown="btn7_MouseDown" mouseUpHandle="btn7_MouseUp" x:Name="btn7" dis="{DynamicResource lanKey084}" />
+            <my:btnFunc1 Canvas.Top="40" MouseDown="btn8_MouseDown" mouseUpHandle="btn8_MouseUp" x:Name="btn8" dis="{DynamicResource lanKey085}" />
+            <my:btnFunc1 Canvas.Top="80" MouseDown="btn9_MouseDown" mouseUpHandle="btn9_MouseUp" x:Name="btn9" dis="{DynamicResource lanKey096}" />
+            <my:btnFunc1 Canvas.Top="120" MouseDown="btn10_MouseDown" mouseUpHandle="btn10_MouseUp" x:Name="btn10" dis="{DynamicResource lanKey097}" />
+            <my:btnFunc1 Canvas.Top="160" MouseDown="btn11_MouseDown" mouseUpHandle="btn11_MouseUp" x:Name="btn11" dis="{DynamicResource lanKey098}" />
+            <my:btnFunc1 Canvas.Top="200" MouseDown="btn12_MouseDown" mouseUpHandle="btn12_MouseUp" x:Name="btn12" dis="{DynamicResource lanKey099}" />
+        </Canvas>
+        <Canvas Canvas.Left="425" Canvas.Top="0" Height="156" Name="cvsAirSet" Width="292">
+            <my:btnFunc1 Canvas.Left="112" Canvas.Top="0" x:Name="btnB1" dis="10 s" MouseDown="btnB1_MouseDown" mouseUpHandle="btnB1_MouseUp"/>
+            <Label Canvas.Left="0" Canvas.Top="0" Content="{DynamicResource lanKey2056}" Height="34" Name="label2" Width="106" VerticalContentAlignment="Center"/>
+            <my:btnFunc1 Canvas.Left="110" Canvas.Top="40" x:Name="btnKeepTm" dis="1 s" MouseDown="btnKeepTm_MouseDown" mouseUpHandle="btnKeepTm_MouseUp" />
+            <Label Canvas.Left="0" Canvas.Top="41" Content="{DynamicResource lanKey1020}" FontSize="16" Height="33" Width="97" />
+        </Canvas>
+        <my:activeErr1Ctrl Canvas.Left="493" Canvas.Top="223" x:Name="activeErr1Ctrl1" Visibility="Hidden"/>
+    </Canvas>
+</UserControl>

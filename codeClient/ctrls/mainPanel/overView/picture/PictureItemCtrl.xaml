@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.PictureItemCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="192" d:DesignWidth="108">
+    <Canvas Name="cvsMain">
+        <Image Name="image" />
+        <Border Name="brdSelected" Height="192" Width="108" BorderBrush="#FF00AAFF" BorderThickness="2,2,2,2" Visibility="Hidden">
+            <Border Background="Black" BorderBrush="Black" Opacity="0.1"/>
+        </Border>
+    </Canvas>
+</UserControl>

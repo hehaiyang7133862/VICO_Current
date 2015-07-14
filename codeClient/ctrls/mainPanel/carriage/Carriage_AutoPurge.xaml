@@ -1,0 +1,100 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.Carriage_AutoPurge"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+             xmlns:my="clr-namespace:nsVicoClient.ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="310" d:DesignWidth="1068">
+    <Canvas Name="cvsMain">
+        <Canvas Name="cvsHeadAutoPurge" Height="50" Width="1068" Background="White">
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+            <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Y2="48" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Right="54" Canvas.Top="1" />
+            <Line Y2="48" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Right="224" Canvas.Top="1" />
+            <Label Height="50" Canvas.Left="40" Content="{DynamicResource lanKey087}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" VerticalContentAlignment="Center"/>
+            <Label Name="lbStart" Canvas.Right="55" Content="{DynamicResource lanKey024}" Foreground="#FF444444" FontSize="18" Height="50" Width="170" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                  MouseDown="lbStart_MouseDown" MouseUp="lbStart_MouseUp" MouseLeave="lbStart_MouseLeave" />
+        </Canvas>
+        <Canvas Canvas.Top="50" Height="260" Width="1068" Background="#ffEAEAEA">
+            <Label Canvas.Left="770" Canvas.Top="139" Height="36" Width="82" Background="#FFDCDCDC"/>
+            <Label Canvas.Left="932" Canvas.Top="139" Height="36" Width="82" Background="#FFDCDCDC"/>
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <my:VicoSetBar Canvas.Left="54" Canvas.Top="19" myWidth="480" objName="Inj118" objName2="Inj117" Description="{DynamicResource lanKey087}"/>
+            <my:VicoSetBar Canvas.Right="54" Canvas.Top="19" myWidth="480" objName="Inj134" objName2="Inj133" Description="{DynamicResource Inj134}" />
+            <Line X2="200" Stroke="#FFD4D4D4" StrokeThickness="36" ClipToBounds="True" Canvas.Top="67" Canvas.Left="54" />
+            <Label Content="{DynamicResource lanKey082}" Canvas.Left="131" Canvas.Top="61" FontSize="14" Foreground="#FF444444"/>
+            <Line X2="200" Stroke="#FFD4D4D4" StrokeThickness="36" ClipToBounds="True" Canvas.Top="67" Canvas.Left="435" />
+            <Label Content="{DynamicResource lanKey081}" Width="200" HorizontalContentAlignment="Center" Canvas.Left="434" Canvas.Top="61" FontSize="14" Foreground="#FF444444"/>
+            <Line X2="200" Stroke="#FFD4D4D4" StrokeThickness="36" ClipToBounds="True" Canvas.Top="67" Canvas.Right="54" />
+            <Label Content="{DynamicResource lanKey080}" Canvas.Right="131" Canvas.Top="60" FontSize="14" Foreground="#FF444444"/>
+            <Line X2="1068" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" Canvas.Top="85" />
+
+            <Line Canvas.Left="135" Canvas.Top="104" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="216" Canvas.Top="104" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="175" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="256" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="135" Canvas.Top="139" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="82"/>
+            <Line Canvas.Left="135" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="122" />
+            <Line Canvas.Left="175" Canvas.Top="244" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="82" />
+            <Line Canvas.Left="175" Canvas.Top="209" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="82" />
+            <Line Canvas.Left="811" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="1013" Canvas.Top="104" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="932" Canvas.Top="104" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="851" Canvas.Top="104" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="770" Canvas.Top="104" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="892" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="973" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="770" Canvas.Top="139" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="244"/>
+            <Line Canvas.Left="770" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="244"/>
+            <Line Canvas.Left="811" Canvas.Top="209" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="163" />
+            <Line Canvas.Left="811" Canvas.Top="244" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="163" />
+            <Line Canvas.Left="453" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="534" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="615" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="71" />
+            <Line Canvas.Left="453" Canvas.Top="174" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="163" />
+            <Line Canvas.Left="453" Canvas.Top="209" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="163" />
+            <Line Canvas.Left="453" Canvas.Top="244" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="163" />
+            
+            <Label Canvas.Left="136" Canvas.Top="104" Height="35" Width="80" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom"
+                   FontFamily="Verdana" Content="{DynamicResource Inj128}" FontSize="14" Foreground="#FF727272" Background="#FFDCDCDC"/>
+            <my:VicoLabel Canvas.Left="135" Canvas.Top="139" myHeight="36" myWidth="82" objName="Inj128" />
+            <my:VicoLabel Canvas.Left="175" Canvas.Top="174" myHeight="36" myWidth="82" objName="Inj120" />
+            <my:VicoLabel Canvas.Left="175" Canvas.Top="209" myHeight="36" myWidth="82" objName="Inj121" />
+            <my:VicoLabel Canvas.Left="453" Canvas.Top="174" myHeight="36" myWidth="82" objName="Inj122" />
+            <my:VicoLabel Canvas.Left="534" Canvas.Top="174" myHeight="36" myWidth="82" objName="Inj123" />
+            <my:VicoLabel Canvas.Left="453" Canvas.Top="209" myHeight="36" myWidth="82" objName="Inj124" />
+            <my:VicoLabel Canvas.Left="534" Canvas.Top="209" myHeight="36" myWidth="82" objName="Inj125" />
+
+            <my:VicoLabel Canvas.Left="770" Canvas.Top="139" myHeight="36" myWidth="82" objName="Inj126" ReadOnly="True"/>
+            <my:VicoLabel Canvas.Left="851" Canvas.Top="139" myHeight="36" myWidth="82" objName="Inj127" />
+            <my:VicoLabel Canvas.Left="932" Canvas.Top="139" myHeight="36" myWidth="82" objName="Inj128" ReadOnly="True" />
+            <my:VicoLabel Canvas.Left="811" Canvas.Top="174" myHeight="36" myWidth="82" objName="Inj130" />
+            <my:VicoLabel Canvas.Left="892" Canvas.Top="174" myHeight="36" myWidth="82" objName="Inj129" />
+            <my:VicoLabel Canvas.Left="811" Canvas.Top="209" myHeight="36" myWidth="82" objName="Inj132" />
+            <my:VicoLabel Canvas.Left="892" Canvas.Top="209" myHeight="36" myWidth="82" objName="Inj131" />
+            <Label Canvas.Left="771" Canvas.Top="104" Content="1" FontSize="14" Foreground="#FF727272" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="80" />
+            <Label Canvas.Left="852" Canvas.Top="104" Content="2" FontSize="14" Foreground="#FF727272" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="80" />
+            <Label Background="#FFDCDCDC" Canvas.Left="933" Canvas.Top="104" Content="END" FontSize="14" Foreground="#FF727272" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Bottom" Width="80" />
+
+            <Label Canvas.Left="0" Canvas.Top="143" Content="{DynamicResource lanKey309}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="0" Canvas.Top="178" Content="{DynamicResource lanKey230}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="70" Canvas.Top="143" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+            <Label Canvas.Left="70" Canvas.Top="178" Content="{DynamicResource speedUnitKey}" FontSize="14" Foreground="#FF444444" />
+            <Label Canvas.Left="0" Canvas.Top="213" Content="{DynamicResource lanKey311}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="70" Canvas.Top="213" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+            <Label Canvas.Left="635" Canvas.Top="143" Content="{DynamicResource lanKey309}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="635" Canvas.Top="178" Content="{DynamicResource lanKey230}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="705" Canvas.Top="143" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+            <Label Canvas.Left="705" Canvas.Top="178" Content="{DynamicResource speedUnitKey}" FontSize="14" Foreground="#FF444444" />
+            <Label Canvas.Left="635" Canvas.Top="213" Content="{DynamicResource lanKey311}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="705" Canvas.Top="213" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+            <Label Canvas.Left="310" Canvas.Top="178" Content="{DynamicResource lanKey344}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="380" Canvas.Top="178" Content="[rpm]" FontSize="14" Foreground="#FF444444" />
+            <Label Canvas.Left="310" Canvas.Top="213" Content="{DynamicResource lanKey310}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="80" />
+            <Label Canvas.Left="380" Canvas.Top="213" Content="[s]" FontSize="14" Foreground="#FF444444" />
+        </Canvas>
+    </Canvas>
+</UserControl>

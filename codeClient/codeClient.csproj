@@ -1,0 +1,3771 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{032E2E21-6C20-46A7-B567-4112524B8951}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nsVicoClient</RootNamespace>
+    <AssemblyName>Program</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>WinICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>nsVicoClient.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video, Version=2.2.4.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.4.1, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ctrls\instructionsPage.xaml.cs">
+      <DependentUpon>instructionsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\MachionActionCtrl.xaml.cs">
+      <DependentUpon>MachionActionCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\AlarmHelpCtrl.xaml.cs">
+      <DependentUpon>AlarmHelpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\Instructions.xaml.cs">
+      <DependentUpon>Instructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\ConfigOutPut.xaml.cs">
+      <DependentUpon>ConfigOutPut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\CurveCanves.xaml.cs">
+      <DependentUpon>CurveCanves.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\DeleteConfirmCtrl.xaml.cs">
+      <DependentUpon>DeleteConfirmCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\DeletePictureProgressCtrl.xaml.cs">
+      <DependentUpon>DeletePictureProgressCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\DrawingCanvas.cs" />
+    <Compile Include="ctrls\mainPanel\carriage\InjectionPressureMonitoring.xaml.cs">
+      <DependentUpon>InjectionPressureMonitoring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\picture\ExportProgressCtrl.xaml.cs">
+      <DependentUpon>ExportProgressCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\Ejector_Air.xaml.cs">
+      <DependentUpon>Ejector_Air.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\Ejector_Core.xaml.cs">
+      <DependentUpon>Ejector_Core.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\carriage\Carriage_InjUnit.xaml.cs">
+      <DependentUpon>Carriage_InjUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\carriage\Carriage_AutoPurge.xaml.cs">
+      <DependentUpon>Carriage_AutoPurge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\carriage\Carriage_Main.xaml.cs">
+      <DependentUpon>Carriage_Main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\CurveControl.xaml.cs">
+      <DependentUpon>CurveControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\carriage\Injection_Nozzle.xaml.cs">
+      <DependentUpon>Injection_Nozzle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\carriage\Injection_ValvoGate.xaml.cs">
+      <DependentUpon>Injection_ValvoGate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\loadFromUsbCtrl.xaml.cs">
+      <DependentUpon>loadFromUsbCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_EMSignal.xaml.cs">
+      <DependentUpon>set_EMSignal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\wait_EMSignal.xaml.cs">
+      <DependentUpon>wait_EMSignal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\wait_startSignal.xaml.cs">
+      <DependentUpon>wait_startSignal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\debug\dbgObjCtrl.xaml.cs">
+      <DependentUpon>dbgObjCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mold\Mold_Curve.xaml.cs">
+      <DependentUpon>Mold_Curve.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mold\Mold_MoldProtect.xaml.cs">
+      <DependentUpon>Mold_MoldProtect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\thermoSettingPanel.xaml.cs">
+      <DependentUpon>thermoSettingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\Maintain.xaml.cs">
+      <DependentUpon>Maintain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\MoldAdjustProcessBar.xaml.cs">
+      <DependentUpon>MoldAdjustProcessBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mold\Mold_Lubrication.xaml.cs">
+      <DependentUpon>Mold_Lubrication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\machionState\motorEnableCtrl.xaml.cs">
+      <DependentUpon>motorEnableCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\machionState\motorOnlineCtrl.xaml.cs">
+      <DependentUpon>motorOnlineCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\MotorOnProcessBar.xaml.cs">
+      <DependentUpon>MotorOnProcessBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\machionState\motorStateCtrl.xaml.cs">
+      <DependentUpon>motorStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\machionState\motorVoltageCtrl.xaml.cs">
+      <DependentUpon>motorVoltageCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\machionState\motorWarningCtrl.xaml.cs">
+      <DependentUpon>motorWarningCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\multipleChoiceCtrl.xaml.cs">
+      <DependentUpon>multipleChoiceCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\picture\PictureItemCtrl.xaml.cs">
+      <DependentUpon>PictureItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\picture\PictureViewCtrl.xaml.cs">
+      <DependentUpon>PictureViewCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\myComboBox.xaml.cs">
+      <DependentUpon>myComboBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\myMessageBox.xaml.cs">
+      <DependentUpon>myMessageBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\myTabControl.xaml.cs">
+      <DependentUpon>myTabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\QuickSettingPage.xaml.cs">
+      <DependentUpon>QuickSettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\NumericTouchpad.xaml.cs">
+      <DependentUpon>NumericTouchpad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\PDFReader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrls\PDFReader.Designer.cs">
+      <DependentUpon>PDFReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\RegistCtrl.xaml.cs">
+      <DependentUpon>RegistCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\Ring.xaml.cs">
+      <DependentUpon>Ring.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\SPCCtrl.xaml.cs">
+      <DependentUpon>SPCCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\SPCSummaryUnitCtrl.xaml.cs">
+      <DependentUpon>SPCSummaryUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\SPCStateCtrl.xaml.cs">
+      <DependentUpon>SPCStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\SPCDetailCtrl.xaml.cs">
+      <DependentUpon>SPCDetailCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\SettingHeatingPage.xaml.cs">
+      <DependentUpon>SettingHeatingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\SetKeybordPage.xaml.cs">
+      <DependentUpon>SetKeybordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\SetKeybordUnit.xaml.cs">
+      <DependentUpon>SetKeybordUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\Schedule.xaml.cs">
+      <DependentUpon>Schedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\SetTimeCtrl.xaml.cs">
+      <DependentUpon>SetTimeCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\thermoSettingUnitCtrl.xaml.cs">
+      <DependentUpon>thermoSettingUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\ViewIOPage.xaml.cs">
+      <DependentUpon>ViewIOPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\topPanel\ParamMonitor.xaml.cs">
+      <DependentUpon>ParamMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\TopParamMonitor.xaml.cs">
+      <DependentUpon>TopParamMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\VicoLabel.xaml.cs">
+      <DependentUpon>VicoLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\VICOMsgBox.xaml.cs">
+      <DependentUpon>VICOMsgBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\VicoParamDisplay.xaml.cs">
+      <DependentUpon>VicoParamDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\VicoSetBar.xaml.cs">
+      <DependentUpon>VicoSetBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\VicoTimeLabel.xaml.cs">
+      <DependentUpon>VicoTimeLabel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\VideoSource.cs" />
+    <Compile Include="DataBase\dataPlc\DataStream.cs" />
+    <Compile Include="DataBase\dataPlc\ICMD_Stream.cs" />
+    <Compile Include="DataBase\dataPlc\IREAD_Stream.cs" />
+    <Compile Include="DataBase\dataPlc\IRESULT_Stream.cs" />
+    <Compile Include="DataBase\dataPlc\IWRITE_Stream.cs" />
+    <Compile Include="DataBase\dataPlc\I_RD_SVRLIST_Stream.cs" />
+    <Compile Include="DataBase\dataPlc\I_WR_SVRLIST_Stream.cs" />
+    <Compile Include="DataBase\dataPlc\Lasal32.cs" />
+    <Compile Include="DataBase\dbBase.cs" />
+    <Compile Include="DataBase\dvBase.cs" />
+    <Compile Include="DataBase\dvClass.cs" />
+    <Compile Include="DataBase\objUnit.cs" />
+    <Compile Include="DataBase\vm.cs" />
+    <Compile Include="DataSource\SPCData.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ctrls\numKeyCtrl.xaml.cs">
+      <DependentUpon>numKeyCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="startWindow.xaml.cs">
+      <DependentUpon>startWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ctrls\instructionsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\MachionActionCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\AlarmHelpCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\axisStateCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\axisStateItemCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\btnHidenCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\btnSwitch.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\btnSwitch0.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\btnSwitch2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\calcCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\calCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\Instructions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\ConfigOutPut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\CurveCanves.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\DeleteConfirmCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\DeletePictureProgressCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\carriage\InjectionPressureMonitoring.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\picture\ExportProgressCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\Ejector_Air.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\Ejector_Core.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\carriage\Carriage_InjUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\carriage\Carriage_AutoPurge.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\carriage\Carriage_Main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\catchScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\charKeyCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\checkBoxCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\bottom\barrelHeatingBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\bottom\btmBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\bottom\emStopBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\bottom\moldHeatingBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\bottom\resetBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\center\cntBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\keysPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\adjustBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\calcBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\cameraBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\manualBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\motorOffBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\motorOnBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\pdfBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\ctrlPanel\top\userBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\CurveControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\fileCoveredAlarm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\fileItemBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\fileMsgBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\GraphicsCurveCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\carriage\Injection_Nozzle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\carriage\Injection_ValvoGate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\jsqCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\lbCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\lbCtrlUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\linkPlcCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\loadConfFileCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\loadFileItemCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\loadFromUsbCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\lockScreenCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\lockUnitMsgCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\btnAttentionCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\btnCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\btnCtrl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\btnSetCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\btnStateCtrl3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\cancelBtn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\carriage\carriageNewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\chartCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\confirmBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\confirmCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\cvsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\dataAnalysis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\ergTimeInterval.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\chartUnit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\lineChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\prdMsgUnit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\productMessageList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\productMsg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\delCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\deleteCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\air\airSetUnitCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\core\coreSetPage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\core\coreSetPage2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\core\coreSetUnitCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\ejectorFirstPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\EjectorMap\ejectorMapLeft.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\EjectorMap\ejectorMapMiddle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\EjectorMap\ejectorMapRight.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\ejectorNewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\tuneTableCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\Ejector\tuneTCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\ellipeRate2Ctrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\ellipeRateCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\errorAlarmCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\exportCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\fileItemCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\fileSelectItemCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\folderCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\geometryLineCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\geometryLineInjCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\geometryLineProtectCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\heatingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\heatingSpMoldBtnCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\heatingSPStateBtnCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\heatingSpStateLbCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\BarrelHeatingCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\heatingStateLEDCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\heatingStateLEDCtrl2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\heatingStateLEDCtrl3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\thermoPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\thermoUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\thermoUnitSetBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\thermoUnitSetRightBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\tmpProcessBarCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\thermo\tmpSetBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\imgAlarmCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\injection\injectionNewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\actStartSelectCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\addNewInterPretorCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\cmpResultCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\exportIprFileCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\interpretorPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprFileInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprLoadCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprSaveCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\activeErr1Ctrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\activeErr2Ctrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\btnFunc1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\delay_me.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\Jump_step.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_air.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_carriagebwd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_carriagefwd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_charge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_cooling.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_cores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_doorclose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_dooropen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_ejectorIN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_ejectorOUT.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_EMSignal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_euromapsignal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_Injection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_moldclose.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_moldopen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_nozzle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_others.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_output.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_palleprogram.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_rottable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_shackmold.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_valvegate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_variable.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\wait_EMSignal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\wait_me.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitMenu\wait_startSignal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObjCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\endDownCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\endDownTmpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\endUpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\endUpTmpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\startBehindCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\startBehindTmpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\startDownCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\startDownTmpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\startUpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\startUpTmpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\iprUnitObj\tbMenuCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\loadIprFileCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\loadShadeCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\menuCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\menuGrpCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\newIprConfirmCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\test\endStateCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\test\lightDownCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\test\lightLeftCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\test\lightRightCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\test\lightUpCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\test\lnStateCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\test\startStateCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\interpretor\unitLinkState.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\IpSerSetCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\IpSetCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\heating\lbSwitchCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\lightLinkStateCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\lightState2Ctrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\lightStateCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\loadCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\loadFileCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\machionState\machionStatePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\mainPanelCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mapBtnCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mapBtnCtrl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mold\moldMap\moldMapLeft.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mold\moldMap\moldMapMiddle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mold\moldMap\moldMapRight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mold\moldOnOffNewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\openFileCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\breakDown\bdItemBarCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\breakDown\bdItemPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\ergUnitCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\checkBocAlarmCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\checkBoxLoadCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\checkBoxParamCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\checkBoxSysCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\eventRecord.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\exportERLstCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\exportEventHistoryCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\filterTimeCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\filterUserCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\eventRecord\filterUserUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\overViewPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\debug\dbgObjCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\mold\Mold_Curve.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mold\Mold_MoldProtect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\thermoSettingPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\Maintain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\MoldAdjustProcessBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\mold\Mold_Lubrication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\machionState\motorEnableCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\machionState\motorOnlineCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\MotorOnProcessBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\machionState\motorStateCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\machionState\motorVoltageCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\machionState\motorWarningCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\multipleChoiceCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\picture\PictureItemCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\picture\PictureViewCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\myComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\myMessageBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\myTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\NumericTouchpad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\ProcessBar2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\progressBarCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\robot\robotPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\robot\startUpPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\saveAsCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\saveCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\saveFileCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setIPAddrCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\basicMessage\basicMessage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\funcSetting\functionSettingPart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\HardwareIO\IOBtnCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\HardwareIO\IStateLED.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\HardwareIO\IStateLED_B.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\HardwareIO\OStateLED.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\HardwareIO\OStateLED_B.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\injectionPart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\motionPart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\moveMoldPart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\paramSetUnitCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\quickRun\quickRunPart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\settingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\sysConf\sysConfigPart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setValueCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\threeTypeSwitchCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\upgradeCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\multiInOneCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\multiInOneCtrl2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\processCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\progressCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\progressCtrl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\overView\QuickSettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\RegistCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\Ring.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\saveConfFileCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\SPCCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\SPCSummaryUnitCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\SPCStateCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\SPCDetailCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\SettingHeatingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\SetKeybordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\SetKeybordUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\mainPanel\dataAnalysis\Schedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\SetTimeCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\sysExitCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\tabItemBtnCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\tabItemBtnUnit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\tabStyleCtrls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\testLanCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\thermoSettingUnitCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\timeSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\topPanel\alarmUnitCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\topPanel\dateCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\topPanel\lanSelecCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\topPanel\lstWinMsgCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\topPanel\ParamMonitor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\topPanel\topPanelCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\TopParamMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\user\userCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\user\userMsg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\user\userMsgAddSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\user\userMsgSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\user\userOwnMsgSet.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\user\userSetPanelCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\setting\ViewIOPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\VicoLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\VICOMsgBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\VicoParamDisplay.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\VicoSetBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\VicoTimeLabel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\watchCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="lan\lanCN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="lan\lanEN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ctrls\axisStateCtrl.xaml.cs">
+      <DependentUpon>axisStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\axisStateItemCtrl.xaml.cs">
+      <DependentUpon>axisStateItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\btnHidenCtrl.xaml.cs">
+      <DependentUpon>btnHidenCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\btnSwitch.xaml.cs">
+      <DependentUpon>btnSwitch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\btnSwitch0.xaml.cs">
+      <DependentUpon>btnSwitch0.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\btnSwitch2.xaml.cs">
+      <DependentUpon>btnSwitch2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\calcCtrl.xaml.cs">
+      <DependentUpon>calcCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\calCtrl.xaml.cs">
+      <DependentUpon>calCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\catchScreen.xaml.cs">
+      <DependentUpon>catchScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\charKeyCtrl.xaml.cs">
+      <DependentUpon>charKeyCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\checkBoxCtrl.xaml.cs">
+      <DependentUpon>checkBoxCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\bottom\barrelHeatingBtn.xaml.cs">
+      <DependentUpon>barrelHeatingBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\bottom\btmBtn.xaml.cs">
+      <DependentUpon>btmBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\bottom\emStopBtn.xaml.cs">
+      <DependentUpon>emStopBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\bottom\moldHeatingBtn.xaml.cs">
+      <DependentUpon>moldHeatingBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\bottom\resetBtn.xaml.cs">
+      <DependentUpon>resetBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\center\cntBtn.xaml.cs">
+      <DependentUpon>cntBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\keysPanel.xaml.cs">
+      <DependentUpon>keysPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\adjustBtn.xaml.cs">
+      <DependentUpon>adjustBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\calcBtn.xaml.cs">
+      <DependentUpon>calcBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\cameraBtn.xaml.cs">
+      <DependentUpon>cameraBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\manualBtn.xaml.cs">
+      <DependentUpon>manualBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\motorOffBtn.xaml.cs">
+      <DependentUpon>motorOffBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\motorOnBtn.xaml.cs">
+      <DependentUpon>motorOnBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\pdfBtn.xaml.cs">
+      <DependentUpon>pdfBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ctrlPanel\top\userBtn.xaml.cs">
+      <DependentUpon>userBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\fileCoveredAlarm.xaml.cs">
+      <DependentUpon>fileCoveredAlarm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\fileItemBar.xaml.cs">
+      <DependentUpon>fileItemBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\fileMsgBar.xaml.cs">
+      <DependentUpon>fileMsgBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\GraphicsCurveCtrl.xaml.cs">
+      <DependentUpon>GraphicsCurveCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\jsqCtrl.xaml.cs">
+      <DependentUpon>jsqCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\lbCtrl.xaml.cs">
+      <DependentUpon>lbCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\lbCtrlUnit.xaml.cs">
+      <DependentUpon>lbCtrlUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\linkPlcCtrl.xaml.cs">
+      <DependentUpon>linkPlcCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\loadConfFileCtrl.xaml.cs">
+      <DependentUpon>loadConfFileCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\loadFileItemCtrl.xaml.cs">
+      <DependentUpon>loadFileItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\lockScreenCtrl.xaml.cs">
+      <DependentUpon>lockScreenCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\lockUnitMsgCtrl.xaml.cs">
+      <DependentUpon>lockUnitMsgCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\btnAttentionCtrl.xaml.cs">
+      <DependentUpon>btnAttentionCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\btnCtrl.xaml.cs">
+      <DependentUpon>btnCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\btnCtrl1.xaml.cs">
+      <DependentUpon>btnCtrl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\btnSetCtrl.xaml.cs">
+      <DependentUpon>btnSetCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\btnStateCtrl3.xaml.cs">
+      <DependentUpon>btnStateCtrl3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\cancelBtn.xaml.cs">
+      <DependentUpon>cancelBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\carriage\carriageNewPage.xaml.cs">
+      <DependentUpon>carriageNewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\chartCtrl.xaml.cs">
+      <DependentUpon>chartCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\confirmBtn.xaml.cs">
+      <DependentUpon>confirmBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\confirmCtrl.xaml.cs">
+      <DependentUpon>confirmCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\cvsPanel.xaml.cs">
+      <DependentUpon>cvsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\dataAnalysis.xaml.cs">
+      <DependentUpon>dataAnalysis.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\ergTimeInterval.xaml.cs">
+      <DependentUpon>ergTimeInterval.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\chartUnit.xaml.cs">
+      <DependentUpon>chartUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\lineChart.xaml.cs">
+      <DependentUpon>lineChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\prdMsgUnit.xaml.cs">
+      <DependentUpon>prdMsgUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\productMessageList.xaml.cs">
+      <DependentUpon>productMessageList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\dataAnalysis\productMsg.xaml.cs">
+      <DependentUpon>productMsg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\delCtrl.xaml.cs">
+      <DependentUpon>delCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\deleteCtrl.xaml.cs">
+      <DependentUpon>deleteCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\air\airSetUnitCtrl.xaml.cs">
+      <DependentUpon>airSetUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\core\coreSetPage1.xaml.cs">
+      <DependentUpon>coreSetPage1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\core\coreSetPage2.xaml.cs">
+      <DependentUpon>coreSetPage2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\core\coreSetUnitCtrl.xaml.cs">
+      <DependentUpon>coreSetUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\ejectorFirstPage.xaml.cs">
+      <DependentUpon>ejectorFirstPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\EjectorMap\ejectorMapLeft.xaml.cs">
+      <DependentUpon>ejectorMapLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\EjectorMap\ejectorMapMiddle.xaml.cs">
+      <DependentUpon>ejectorMapMiddle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\EjectorMap\ejectorMapRight.xaml.cs">
+      <DependentUpon>ejectorMapRight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\ejectorNewPage.xaml.cs">
+      <DependentUpon>ejectorNewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\tuneTableCtrl.xaml.cs">
+      <DependentUpon>tuneTableCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\Ejector\tuneTCtrl.xaml.cs">
+      <DependentUpon>tuneTCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\ellipeRate2Ctrl.xaml.cs">
+      <DependentUpon>ellipeRate2Ctrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\ellipeRateCtrl.xaml.cs">
+      <DependentUpon>ellipeRateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\errorAlarmCtrl.xaml.cs">
+      <DependentUpon>errorAlarmCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\exportCtrl.xaml.cs">
+      <DependentUpon>exportCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\fileItemCtrl.xaml.cs">
+      <DependentUpon>fileItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\fileSelectItemCtrl.xaml.cs">
+      <DependentUpon>fileSelectItemCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\folderCtrl.xaml.cs">
+      <DependentUpon>folderCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\geometryLine.cs" />
+    <Compile Include="ctrls\mainPanel\geometryLineCtrl.xaml.cs">
+      <DependentUpon>geometryLineCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\geometryLineInjCtrl.xaml.cs">
+      <DependentUpon>geometryLineInjCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\geometryLineProtectCtrl.xaml.cs">
+      <DependentUpon>geometryLineProtectCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\heatingPage.xaml.cs">
+      <DependentUpon>heatingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\heatingSpMoldBtnCtrl.xaml.cs">
+      <DependentUpon>heatingSpMoldBtnCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\heatingSPStateBtnCtrl.xaml.cs">
+      <DependentUpon>heatingSPStateBtnCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\heatingSpStateLbCtrl.xaml.cs">
+      <DependentUpon>heatingSpStateLbCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\BarrelHeatingCtrl.xaml.cs">
+      <DependentUpon>BarrelHeatingCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\heatingStateLEDCtrl.xaml.cs">
+      <DependentUpon>heatingStateLEDCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\heatingStateLEDCtrl2.xaml.cs">
+      <DependentUpon>heatingStateLEDCtrl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\heatingStateLEDCtrl3.xaml.cs">
+      <DependentUpon>heatingStateLEDCtrl3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\thermoPage.xaml.cs">
+      <DependentUpon>thermoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\thermoUnit.xaml.cs">
+      <DependentUpon>thermoUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\thermoUnitSetBar.xaml.cs">
+      <DependentUpon>thermoUnitSetBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\thermoUnitSetRightBar.xaml.cs">
+      <DependentUpon>thermoUnitSetRightBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\tmpProcessBarCtrl.xaml.cs">
+      <DependentUpon>tmpProcessBarCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\thermo\tmpSetBar.xaml.cs">
+      <DependentUpon>tmpSetBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\imgAlarmCtrl.xaml.cs">
+      <DependentUpon>imgAlarmCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\injection\injectionNewPage.xaml.cs">
+      <DependentUpon>injectionNewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\actStartSelectCtrl.xaml.cs">
+      <DependentUpon>actStartSelectCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\addNewInterPretorCtrl.xaml.cs">
+      <DependentUpon>addNewInterPretorCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\cmpResultCtrl.xaml.cs">
+      <DependentUpon>cmpResultCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\exportIprFileCtrl.xaml.cs">
+      <DependentUpon>exportIprFileCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\interpretorPage.xaml.cs">
+      <DependentUpon>interpretorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprCtrl.xaml.cs">
+      <DependentUpon>iprCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprFileInfo.xaml.cs">
+      <DependentUpon>iprFileInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprLoadCtrl.xaml.cs">
+      <DependentUpon>iprLoadCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprSaveCtrl.xaml.cs">
+      <DependentUpon>iprSaveCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprSetting.xaml.cs">
+      <DependentUpon>iprSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitCtrl.xaml.cs">
+      <DependentUpon>iprUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\activeErr1Ctrl.xaml.cs">
+      <DependentUpon>activeErr1Ctrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\activeErr2Ctrl.xaml.cs">
+      <DependentUpon>activeErr2Ctrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\btnFunc1.xaml.cs">
+      <DependentUpon>btnFunc1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\delay_me.xaml.cs">
+      <DependentUpon>delay_me.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\Jump_step.xaml.cs">
+      <DependentUpon>Jump_step.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_air.xaml.cs">
+      <DependentUpon>set_air.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_carriagebwd.xaml.cs">
+      <DependentUpon>set_carriagebwd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_carriagefwd.xaml.cs">
+      <DependentUpon>set_carriagefwd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_charge.xaml.cs">
+      <DependentUpon>set_charge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_cooling.xaml.cs">
+      <DependentUpon>set_cooling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_cores.xaml.cs">
+      <DependentUpon>set_cores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_doorclose.xaml.cs">
+      <DependentUpon>set_doorclose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_dooropen.xaml.cs">
+      <DependentUpon>set_dooropen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_ejectorIN.xaml.cs">
+      <DependentUpon>set_ejectorIN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_ejectorOUT.xaml.cs">
+      <DependentUpon>set_ejectorOUT.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_euromapsignal.xaml.cs">
+      <DependentUpon>set_euromapsignal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_Injection.xaml.cs">
+      <DependentUpon>set_Injection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_moldclose.xaml.cs">
+      <DependentUpon>set_moldclose.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_moldopen.xaml.cs">
+      <DependentUpon>set_moldopen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_nozzle.xaml.cs">
+      <DependentUpon>set_nozzle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_others.xaml.cs">
+      <DependentUpon>set_others.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_output.xaml.cs">
+      <DependentUpon>set_output.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_palleprogram.xaml.cs">
+      <DependentUpon>set_palleprogram.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_rottable.xaml.cs">
+      <DependentUpon>set_rottable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_shackmold.xaml.cs">
+      <DependentUpon>set_shackmold.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_valvegate.xaml.cs">
+      <DependentUpon>set_valvegate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\set_variable.xaml.cs">
+      <DependentUpon>set_variable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitMenu\wait_me.xaml.cs">
+      <DependentUpon>wait_me.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObjCtrl.xaml.cs">
+      <DependentUpon>iprUnitObjCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\endDownCtrl.xaml.cs">
+      <DependentUpon>endDownCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\endDownTmpCtrl.xaml.cs">
+      <DependentUpon>endDownTmpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\endUpCtrl.xaml.cs">
+      <DependentUpon>endUpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\endUpTmpCtrl.xaml.cs">
+      <DependentUpon>endUpTmpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\startBehindCtrl.xaml.cs">
+      <DependentUpon>startBehindCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\startBehindTmpCtrl.xaml.cs">
+      <DependentUpon>startBehindTmpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\startDownCtrl.xaml.cs">
+      <DependentUpon>startDownCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\startDownTmpCtrl.xaml.cs">
+      <DependentUpon>startDownTmpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\startUpCtrl.xaml.cs">
+      <DependentUpon>startUpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\startUpTmpCtrl.xaml.cs">
+      <DependentUpon>startUpTmpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\iprUnitObj\tbMenuCtrl.xaml.cs">
+      <DependentUpon>tbMenuCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\loadIprFileCtrl.xaml.cs">
+      <DependentUpon>loadIprFileCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\loadShadeCtrl.xaml.cs">
+      <DependentUpon>loadShadeCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\menuCtrl.xaml.cs">
+      <DependentUpon>menuCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\menuGrpCtrl.xaml.cs">
+      <DependentUpon>menuGrpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\newIprConfirmCtrl.xaml.cs">
+      <DependentUpon>newIprConfirmCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\test\endStateCtrl.xaml.cs">
+      <DependentUpon>endStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\test\lightDownCtrl.xaml.cs">
+      <DependentUpon>lightDownCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\test\lightLeftCtrl.xaml.cs">
+      <DependentUpon>lightLeftCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\test\lightRightCtrl.xaml.cs">
+      <DependentUpon>lightRightCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\test\lightUpCtrl.xaml.cs">
+      <DependentUpon>lightUpCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\test\lnStateCtrl.xaml.cs">
+      <DependentUpon>lnStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\test\startStateCtrl.xaml.cs">
+      <DependentUpon>startStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\interpretor\unitLinkState.xaml.cs">
+      <DependentUpon>unitLinkState.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\IpSerSetCtrl.xaml.cs">
+      <DependentUpon>IpSerSetCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\IpSetCtrl.xaml.cs">
+      <DependentUpon>IpSetCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\heating\lbSwitchCtrl.xaml.cs">
+      <DependentUpon>lbSwitchCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\lightLinkStateCtrl.xaml.cs">
+      <DependentUpon>lightLinkStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\lightState2Ctrl.xaml.cs">
+      <DependentUpon>lightState2Ctrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\lightStateCtrl.xaml.cs">
+      <DependentUpon>lightStateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\loadCtrl.xaml.cs">
+      <DependentUpon>loadCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\loadFileCtrl.xaml.cs">
+      <DependentUpon>loadFileCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\machionState\machionStatePage.xaml.cs">
+      <DependentUpon>machionStatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mainPanelCtrl.xaml.cs">
+      <DependentUpon>mainPanelCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mapBtnCtrl.xaml.cs">
+      <DependentUpon>mapBtnCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mapBtnCtrl2.xaml.cs">
+      <DependentUpon>mapBtnCtrl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mold\moldMap\moldMapLeft.xaml.cs">
+      <DependentUpon>moldMapLeft.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mold\moldMap\moldMapMiddle.xaml.cs">
+      <DependentUpon>moldMapMiddle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mold\moldMap\moldMapRight.xaml.cs">
+      <DependentUpon>moldMapRight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\mold\moldOnOffNewPage.xaml.cs">
+      <DependentUpon>moldOnOffNewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\openFileCtrl.xaml.cs">
+      <DependentUpon>openFileCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\breakDown\bdItemBarCtrl.xaml.cs">
+      <DependentUpon>bdItemBarCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\breakDown\bdItemPage.xaml.cs">
+      <DependentUpon>bdItemPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\ergUnitCtrl.xaml.cs">
+      <DependentUpon>ergUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\checkBocAlarmCtrl.xaml.cs">
+      <DependentUpon>checkBocAlarmCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\checkBoxLoadCtrl.xaml.cs">
+      <DependentUpon>checkBoxLoadCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\checkBoxParamCtrl.xaml.cs">
+      <DependentUpon>checkBoxParamCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\checkBoxSysCtrl.xaml.cs">
+      <DependentUpon>checkBoxSysCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\eventRecord.xaml.cs">
+      <DependentUpon>eventRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\exportERLstCtrl.xaml.cs">
+      <DependentUpon>exportERLstCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\exportEventHistoryCtrl.xaml.cs">
+      <DependentUpon>exportEventHistoryCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\filterTimeCtrl.xaml.cs">
+      <DependentUpon>filterTimeCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\filterUserCtrl.xaml.cs">
+      <DependentUpon>filterUserCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\eventRecord\filterUserUnit.xaml.cs">
+      <DependentUpon>filterUserUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\overView\overViewPage.xaml.cs">
+      <DependentUpon>overViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\ProcessBar2.xaml.cs">
+      <DependentUpon>ProcessBar2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\progressBarCtrl.xaml.cs">
+      <DependentUpon>progressBarCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\robot\robotPage.xaml.cs">
+      <DependentUpon>robotPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\robot\startUpPage.xaml.cs">
+      <DependentUpon>startUpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\saveAsCtrl.xaml.cs">
+      <DependentUpon>saveAsCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\saveCtrl.xaml.cs">
+      <DependentUpon>saveCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\saveFileCtrl.xaml.cs">
+      <DependentUpon>saveFileCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setIPAddrCtrl.xaml.cs">
+      <DependentUpon>setIPAddrCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\basicMessage\basicMessage.xaml.cs">
+      <DependentUpon>basicMessage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\funcSetting\functionSettingPart.xaml.cs">
+      <DependentUpon>functionSettingPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\HardwareIO\IOBtnCtrl.xaml.cs">
+      <DependentUpon>IOBtnCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\HardwareIO\IStateLED.xaml.cs">
+      <DependentUpon>IStateLED.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\HardwareIO\IStateLED_B.xaml.cs">
+      <DependentUpon>IStateLED_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\HardwareIO\OStateLED.xaml.cs">
+      <DependentUpon>OStateLED.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\HardwareIO\OStateLED_B.xaml.cs">
+      <DependentUpon>OStateLED_B.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\injectionPart.xaml.cs">
+      <DependentUpon>injectionPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\motionPart.xaml.cs">
+      <DependentUpon>motionPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\moveMoldPart.xaml.cs">
+      <DependentUpon>moveMoldPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\paramSetUnitCtrl.xaml.cs">
+      <DependentUpon>paramSetUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\quickRun\quickRunPart.xaml.cs">
+      <DependentUpon>quickRunPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\settingPage.xaml.cs">
+      <DependentUpon>settingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setting\sysConf\sysConfigPart.xaml.cs">
+      <DependentUpon>sysConfigPart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\setValueCtrl.xaml.cs">
+      <DependentUpon>setValueCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\threeTypeSwitchCtrl.xaml.cs">
+      <DependentUpon>threeTypeSwitchCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\mainPanel\upgradeCtrl.xaml.cs">
+      <DependentUpon>upgradeCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\multiInOneCtrl.xaml.cs">
+      <DependentUpon>multiInOneCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\multiInOneCtrl2.xaml.cs">
+      <DependentUpon>multiInOneCtrl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\processCtrl.xaml.cs">
+      <DependentUpon>processCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\progressCtrl.xaml.cs">
+      <DependentUpon>progressCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\progressCtrl1.xaml.cs">
+      <DependentUpon>progressCtrl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\saveConfFileCtrl.xaml.cs">
+      <DependentUpon>saveConfFileCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\sysExitCtrl.xaml.cs">
+      <DependentUpon>sysExitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\tabItemBtnCtrl.xaml.cs">
+      <DependentUpon>tabItemBtnCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\tabItemBtnUnit.xaml.cs">
+      <DependentUpon>tabItemBtnUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\tabStyleCtrls.xaml.cs">
+      <DependentUpon>tabStyleCtrls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\testLanCtrl.xaml.cs">
+      <DependentUpon>testLanCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\timeSelect.xaml.cs">
+      <DependentUpon>timeSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\topPanel\alarmUnitCtrl.xaml.cs">
+      <DependentUpon>alarmUnitCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\topPanel\dateCtrl.xaml.cs">
+      <DependentUpon>dateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\topPanel\lanSelecCtrl.xaml.cs">
+      <DependentUpon>lanSelecCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\topPanel\lstWinMsgCtrl.xaml.cs">
+      <DependentUpon>lstWinMsgCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\topPanel\topPanelCtrl.xaml.cs">
+      <DependentUpon>topPanelCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\userCtrl.xaml.cs">
+      <DependentUpon>userCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\userMsg.xaml.cs">
+      <DependentUpon>userMsg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\userMsgAddSet.xaml.cs">
+      <DependentUpon>userMsgAddSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\userMsgSet.xaml.cs">
+      <DependentUpon>userMsgSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\userOwnMsgSet.xaml.cs">
+      <DependentUpon>userOwnMsgSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\userSetPanelCtrl.xaml.cs">
+      <DependentUpon>userSetPanelCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\watchCtl.xaml.cs">
+      <DependentUpon>watchCtl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSource\dataView.cs" />
+    <Compile Include="DataSource\ergItemObj.cs" />
+    <Compile Include="DataSource\eventMgrObj.cs" />
+    <Compile Include="DataSource\hardware.cs" />
+    <Compile Include="DataSource\ItlPr.cs" />
+    <Compile Include="DataSource\linkMgr.cs" />
+    <Compile Include="DataSource\user\userDataBase.cs" />
+    <Compile Include="DataSource\user\userObj.cs" />
+    <Compile Include="DataSource\user\users.cs" />
+    <Compile Include="DataSource\vm.cs" />
+    <Compile Include="lan\Common.cs" />
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\numKeyCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="startWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="ctrls\PDFReader.resx">
+      <DependentUpon>PDFReader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\blocks\Curve_2Sep_normal_1_1_V00.png" />
+    <Resource Include="png\blocks\Curve_left_normal_1_3_V00.png" />
+    <Resource Include="png\blocks\Curve_Right_normal_1_2_V00.png" />
+    <Resource Include="png\blocks\Locked_Size_2_1_V00.png" />
+    <Resource Include="png\blocks\Steps_ChargeSettings_1_7_V00.png" />
+    <Resource Include="png\blocks\Steps_Ejector_Settings_1_4_V00.png" />
+    <Resource Include="png\blocks\Steps_injection_Settings_1_6_V00.png" />
+    <Resource Include="png\blocks\Steps_Mold_Settings_1_5_V00.png" />
+    <Resource Include="png\blocks\Unziped_Size_2_3_V00.png" />
+    <Resource Include="png\blocks\Ziped_Size_2_2_V00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\HeadSwitch\B1_P10_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P10_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P11_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P11_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P1_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P1_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P2_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P2_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P3_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P3_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P4_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P4_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P5_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P5_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P6_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P6_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P7_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P7_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P8_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P8_Gray.png" />
+    <Resource Include="png\HeadSwitch\B1_P8_Red.png" />
+    <Resource Include="png\HeadSwitch\B1_P9_Blue.png" />
+    <Resource Include="png\HeadSwitch\B1_P9_Gray.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_21_Hardware_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_21_Home_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_22_Heat_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_23_Assistans_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_24_Mold_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_25_Injection_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_26_Motion_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_27_FuncSetup_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_28_Fastexe_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_29_Config_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_30_Ejector_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_11_EvnetLog_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_12_PicView_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_13_ScreenSaver_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_23_ValveGate_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_5_Celender_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_6_User_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_7_Expert_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_7_Impert_V0.1.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_8_Printer_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_21_9_Breakdown_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_10_productCurve.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_11_Spc.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_7_productsetting.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_8_productBar.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_9_productlist.png" />
+    <Resource Include="png\HeadSwitch\Select_Me.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\ipr\Air.png" />
+    <Resource Include="png\ipr\Back.png" />
+    <Resource Include="png\ipr\Clock.png" />
+    <Resource Include="png\ipr\Core.png" />
+    <Resource Include="png\ipr\Counter.png" />
+    <Resource Include="png\ipr\Input.png" />
+    <Resource Include="png\ipr\Interpretation.png" />
+    <Resource Include="png\ipr\Interpretor_A.png" />
+    <Resource Include="png\ipr\ipr_01_main_start.png" />
+    <Resource Include="png\ipr\ipr_02_moldclose.png" />
+    <Resource Include="png\ipr\ipr_03_moldClamped.png" />
+    <Resource Include="png\ipr\ipr_04_injection.png" />
+    <Resource Include="png\ipr\ipr_05_Cooling.png" />
+    <Resource Include="png\ipr\ipr_06_moldopen.png" />
+    <Resource Include="png\ipr\ipr_07_moldopened.png" />
+    <Resource Include="png\ipr\ipr_op10_Core.png" />
+    <Resource Include="png\ipr\ipr_op11_Rotate.png" />
+    <Resource Include="png\ipr\ipr_op12_Output.png" />
+    <Resource Include="png\ipr\ipr_op13_Nozzle.png" />
+    <Resource Include="png\ipr\ipr_op14_Valvegate.png" />
+    <Resource Include="png\ipr\ipr_op15_euromap.png" />
+    <Resource Include="png\ipr\ipr_op17_delay.png" />
+    <Resource Include="png\ipr\ipr_op18_Calculater.png" />
+    <Resource Include="png\ipr\ipr_op19_wait.png" />
+    <Resource Include="png\ipr\ipr_op1_ejectorback.png" />
+    <Resource Include="png\ipr\ipr_op20_jump.png" />
+    <Resource Include="png\ipr\ipr_op21_Moldopen.png" />
+    <Resource Include="png\ipr\ipr_op22_Moldclose.png" />
+    <Resource Include="png\ipr\ipr_op2_ejectorfor.png" />
+    <Resource Include="png\ipr\ipr_op3_safetydoorClose.png" />
+    <Resource Include="png\ipr\ipr_op4_safetydoorOpen.png" />
+    <Resource Include="png\ipr\ipr_op5_CarrriageFWD.png" />
+    <Resource Include="png\ipr\ipr_op6_CarrriageBWD.png" />
+    <Resource Include="png\ipr\ipr_op7_MoldCompress.png" />
+    <Resource Include="png\ipr\ipr_op8_Charge.png" />
+    <Resource Include="png\ipr\ipr_op9_Air.png" />
+    <Resource Include="png\ipr\ipr_st10_Endwithother_pressed.png" />
+    <Resource Include="png\ipr\ipr_st11_End.png" />
+    <Resource Include="png\ipr\ipr_st12_End_pressed.png" />
+    <Resource Include="png\ipr\ipr_st13_MakeNewAction.png" />
+    <Resource Include="png\ipr\ipr_st14_EndLine.png" />
+    <Resource Include="png\ipr\ipr_st15_Addline.png" />
+    <Resource Include="png\ipr\ipr_st15_Addline_pressed.png" />
+    <Resource Include="png\ipr\ipr_st16_Baseborad.png" />
+    <Resource Include="png\ipr\ipr_st17_Blueball_11x11.png" />
+    <Resource Include="png\ipr\ipr_st18_Blueball_7x7.png" />
+    <Resource Include="png\ipr\ipr_st19_Delete.png" />
+    <Resource Include="png\ipr\ipr_st1_open.png" />
+    <Resource Include="png\ipr\ipr_st20_Move.png" />
+    <Resource Include="png\ipr\ipr_st21_Edit.png" />
+    <Resource Include="png\ipr\ipr_st2_Close.png" />
+    <Resource Include="png\ipr\ipr_st3_makeBlank.png" />
+    <Resource Include="png\ipr\ipr_st4_makeBlank_pressed.png" />
+    <Resource Include="png\ipr\ipr_st5_linklast.png" />
+    <Resource Include="png\ipr\ipr_st6_linklast_pressed.png" />
+    <Resource Include="png\ipr\ipr_st7_linkOtherLine.png" />
+    <Resource Include="png\ipr\ipr_st8_linkOtherLine_pressed.png" />
+    <Resource Include="png\ipr\ipr_st9_Endwithother.png" />
+    <Resource Include="png\ipr\Jump.png" />
+    <Resource Include="png\ipr\Length.png" />
+    <Resource Include="png\ipr\Light.png" />
+    <Resource Include="png\ipr\Output.png" />
+    <Resource Include="png\ipr\RotTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\IPR_PNG\Air.png" />
+    <Resource Include="png\IPR_PNG\Back.png" />
+    <Resource Include="png\IPR_PNG\block1.png" />
+    <Resource Include="png\IPR_PNG\block2.png" />
+    <Resource Include="png\IPR_PNG\Clock.png" />
+    <Resource Include="png\IPR_PNG\Core.png" />
+    <Resource Include="png\IPR_PNG\Counter.png" />
+    <Resource Include="png\IPR_PNG\filefolderhead.png" />
+    <Resource Include="png\IPR_PNG\filelock.png" />
+    <Resource Include="png\IPR_PNG\fileselected.png" />
+    <Resource Include="png\IPR_PNG\fileselectline.png" />
+    <Resource Include="png\IPR_PNG\fileselectline1.png" />
+    <Resource Include="png\IPR_PNG\fileunlock.png" />
+    <Resource Include="png\IPR_PNG\Input.png" />
+    <Resource Include="png\IPR_PNG\Interpretation.png" />
+    <Resource Include="png\IPR_PNG\Interpretor_A.png" />
+    <Resource Include="png\IPR_PNG\Interpretor_B.png" />
+    <Resource Include="png\IPR_PNG\ipr_00.png" />
+    <Resource Include="png\IPR_PNG\ipr_01_main_start.png" />
+    <Resource Include="png\IPR_PNG\ipr_01_main_start_2.png" />
+    <Resource Include="png\IPR_PNG\ipr_02_moldclose.png" />
+    <Resource Include="png\IPR_PNG\ipr_02_moldclose_2.png" />
+    <Resource Include="png\IPR_PNG\ipr_03_moldClamped.png" />
+    <Resource Include="png\IPR_PNG\ipr_03_moldClamped2.png" />
+    <Resource Include="png\IPR_PNG\ipr_04_injection.png" />
+    <Resource Include="png\IPR_PNG\ipr_04_injection2.png" />
+    <Resource Include="png\IPR_PNG\ipr_05_Cooling.png" />
+    <Resource Include="png\IPR_PNG\ipr_05_Cooling2.png" />
+    <Resource Include="png\IPR_PNG\ipr_06_moldopen.png" />
+    <Resource Include="png\IPR_PNG\ipr_06_moldopen2.png" />
+    <Resource Include="png\IPR_PNG\ipr_07_moldopened.png" />
+    <Resource Include="png\IPR_PNG\ipr_07_moldopened2.png" />
+    <Resource Include="png\IPR_PNG\ipr_op10_Core.png" />
+    <Resource Include="png\IPR_PNG\ipr_op11_Rotate.png" />
+    <Resource Include="png\IPR_PNG\ipr_op12_Output.png" />
+    <Resource Include="png\IPR_PNG\ipr_op13_Nozzle.png" />
+    <Resource Include="png\IPR_PNG\ipr_op14_Valvegate.png" />
+    <Resource Include="png\IPR_PNG\ipr_op15_euromap.png" />
+    <Resource Include="png\IPR_PNG\ipr_op17_delay.png" />
+    <Resource Include="png\IPR_PNG\ipr_op18_Calculater.png" />
+    <Resource Include="png\IPR_PNG\ipr_op19_wait.png" />
+    <Resource Include="png\IPR_PNG\ipr_op1_ejectorback.png" />
+    <Resource Include="png\IPR_PNG\ipr_op20_jump.png" />
+    <Resource Include="png\IPR_PNG\ipr_op21_Moldopen.png" />
+    <Resource Include="png\IPR_PNG\ipr_op22_Moldclose.png" />
+    <Resource Include="png\IPR_PNG\ipr_op23_Injection.png" />
+    <Resource Include="png\IPR_PNG\ipr_op24_SNOW.png" />
+    <Resource Include="png\IPR_PNG\ipr_op2_ejectorfor.png" />
+    <Resource Include="png\IPR_PNG\ipr_op3_safetydoorClose.png" />
+    <Resource Include="png\IPR_PNG\ipr_op4_safetydoorOpen.png" />
+    <Resource Include="png\IPR_PNG\ipr_op5_CarrriageFWD.png" />
+    <Resource Include="png\IPR_PNG\ipr_op6_CarrriageBWD.png" />
+    <Resource Include="png\IPR_PNG\ipr_op7_MoldCompress.png" />
+    <Resource Include="png\IPR_PNG\ipr_op8_Charge.png" />
+    <Resource Include="png\IPR_PNG\ipr_op9_Air.png" />
+    <Resource Include="png\IPR_PNG\ipr_st10_Endwithother_pressed.png" />
+    <Resource Include="png\IPR_PNG\ipr_st11_End.png" />
+    <Resource Include="png\IPR_PNG\ipr_st12_End_pressed.png" />
+    <Resource Include="png\IPR_PNG\ipr_st13_MakeNewAction.png" />
+    <Resource Include="png\IPR_PNG\ipr_st14_EndLine.png" />
+    <Resource Include="png\IPR_PNG\ipr_st15_Addline.png" />
+    <Resource Include="png\IPR_PNG\ipr_st15_Addline_pressed.png" />
+    <Resource Include="png\IPR_PNG\ipr_st16_Baseborad.png" />
+    <Resource Include="png\IPR_PNG\ipr_st17_Blueball_11x11.png" />
+    <Resource Include="png\IPR_PNG\ipr_st18_Blueball_7x7.png" />
+    <Resource Include="png\IPR_PNG\ipr_st19_Delete.png" />
+    <Resource Include="png\IPR_PNG\ipr_st1_open.png" />
+    <Resource Include="png\IPR_PNG\ipr_st20_Move.png" />
+    <Resource Include="png\IPR_PNG\ipr_st21_Edit.png" />
+    <Resource Include="png\IPR_PNG\ipr_st22_jog.png" />
+    <Resource Include="png\IPR_PNG\ipr_st23_Delet.png" />
+    <Resource Include="png\IPR_PNG\ipr_st24_Move.png" />
+    <Resource Include="png\IPR_PNG\ipr_st25_Edit.png" />
+    <Resource Include="png\IPR_PNG\ipr_st26_errblock.png" />
+    <Resource Include="png\IPR_PNG\ipr_st27_Process.png" />
+    <Resource Include="png\IPR_PNG\ipr_st28_Act.png" />
+    <Resource Include="png\IPR_PNG\ipr_st2_Close.png" />
+    <Resource Include="png\IPR_PNG\ipr_st3_makeBlank.png" />
+    <Resource Include="png\IPR_PNG\ipr_st4_makeBlank_pressed.png" />
+    <Resource Include="png\IPR_PNG\ipr_st5_linklast.png" />
+    <Resource Include="png\IPR_PNG\ipr_st6_linklast_pressed.png" />
+    <Resource Include="png\IPR_PNG\ipr_st7_linkOtherLine.png" />
+    <Resource Include="png\IPR_PNG\ipr_st8_linkOtherLine_pressed.png" />
+    <Resource Include="png\IPR_PNG\ipr_st9_Endwithother.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm023_Process.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm1_edit.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm1_Reflash.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm2_edit.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm3_SingleStep.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm4_Autorun.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm4_Save.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm56_SingleStep.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm5_Process.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm6_Save.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm8_Reflash.png" />
+    <Resource Include="png\IPR_PNG\ipr_wm9_Autorun.png" />
+    <Resource Include="png\IPR_PNG\Jump.png" />
+    <Resource Include="png\IPR_PNG\Length.png" />
+    <Resource Include="png\IPR_PNG\Light.png" />
+    <Resource Include="png\IPR_PNG\OpBut.png" />
+    <Resource Include="png\IPR_PNG\Output.png" />
+    <Resource Include="png\IPR_PNG\RotTable.png" />
+    <Resource Include="png\IPR_PNG\setbakc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\IprBlocks\ipr_00.png" />
+    <Resource Include="png\IprBlocks\ipr_01_main_start.png" />
+    <Resource Include="png\IprBlocks\ipr_01_main_start_2.png" />
+    <Resource Include="png\IprBlocks\ipr_02_moldclose.png" />
+    <Resource Include="png\IprBlocks\ipr_02_moldclose_2.png" />
+    <Resource Include="png\IprBlocks\ipr_03_moldClamped.png" />
+    <Resource Include="png\IprBlocks\ipr_03_moldClamped2.png" />
+    <Resource Include="png\IprBlocks\ipr_04_injection.png" />
+    <Resource Include="png\IprBlocks\ipr_04_injection2.png" />
+    <Resource Include="png\IprBlocks\ipr_05_Cooling.png" />
+    <Resource Include="png\IprBlocks\ipr_05_Cooling2.png" />
+    <Resource Include="png\IprBlocks\ipr_06_moldopen.png" />
+    <Resource Include="png\IprBlocks\ipr_06_moldopen2.png" />
+    <Resource Include="png\IprBlocks\ipr_07_moldopened.png" />
+    <Resource Include="png\IprBlocks\ipr_07_moldopened2.png" />
+    <Resource Include="png\IprBlocks\ipr_op10_Core.png" />
+    <Resource Include="png\IprBlocks\ipr_op11_Rotate.png" />
+    <Resource Include="png\IprBlocks\ipr_op12_Output.png" />
+    <Resource Include="png\IprBlocks\ipr_op13_Nozzle.png" />
+    <Resource Include="png\IprBlocks\ipr_op14_Valvegate.png" />
+    <Resource Include="png\IprBlocks\ipr_op15_euromap.png" />
+    <Resource Include="png\IprBlocks\ipr_op17_delay.png" />
+    <Resource Include="png\IprBlocks\ipr_op18_Calculater.png" />
+    <Resource Include="png\IprBlocks\ipr_op19_wait.png" />
+    <Resource Include="png\IprBlocks\ipr_op1_ejectorback.png" />
+    <Resource Include="png\IprBlocks\ipr_op20_jump.png" />
+    <Resource Include="png\IprBlocks\ipr_op21_Moldopen.png" />
+    <Resource Include="png\IprBlocks\ipr_op22_Moldclose.png" />
+    <Resource Include="png\IprBlocks\ipr_op23_Injection.png" />
+    <Resource Include="png\IprBlocks\ipr_op24_SNOW.png" />
+    <Resource Include="png\IprBlocks\ipr_op25_SUCKBACK.png" />
+    <Resource Include="png\IprBlocks\ipr_op26_OPEND.png" />
+    <Resource Include="png\IprBlocks\ipr_op27_holding.png" />
+    <Resource Include="png\IprBlocks\ipr_op2_ejectorfor.png" />
+    <Resource Include="png\IprBlocks\ipr_op3_safetydoorClose.png" />
+    <Resource Include="png\IprBlocks\ipr_op4_safetydoorOpen.png" />
+    <Resource Include="png\IprBlocks\ipr_op5_CarrriageFWD.png" />
+    <Resource Include="png\IprBlocks\ipr_op6_CarrriageBWD.png" />
+    <Resource Include="png\IprBlocks\ipr_op7_MoldCompress.png" />
+    <Resource Include="png\IprBlocks\ipr_op8_Charge.png" />
+    <Resource Include="png\IprBlocks\ipr_op9_Air.png" />
+    <Resource Include="png\IprBlocks\ipr_st13_MakeNewAction.png" />
+    <Resource Include="png\IprBlocks\ipr_st14_EndLine.png" />
+    <Resource Include="png\IprBlocks\ipr_st26_errblock.png" />
+    <Resource Include="png\IprBlocks\ipr_st28_Act.png" />
+    <Resource Include="png\IprBlocks\ipr_wm1_Reflash.png" />
+    <Resource Include="png\IprBlocks\ipr_wm2_edit.png" />
+    <Resource Include="png\IprBlocks\ipr_wm3_SingleStep.png" />
+    <Resource Include="png\IprBlocks\ipr_wm4_Autorun.png" />
+    <Resource Include="png\IprBlocks\ipr_wm5_Process.png" />
+    <Resource Include="png\IprBlocks\ipr_wm6_Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\Marks\flag_50.png" />
+    <Resource Include="png\Marks\Full_Mode_4_4.png" />
+    <Resource Include="png\Marks\Gear_50.png" />
+    <Resource Include="png\Marks\Init_Mode_4_1.png" />
+    <Resource Include="png\Marks\Manual_Mode_4_2.png" />
+    <Resource Include="png\Marks\Mark_CrossPos_3_12.png" />
+    <Resource Include="png\Marks\Mark_CushionEndPos_3_9.png" />
+    <Resource Include="png\Marks\Mark_CushionPos_3_8.png" />
+    <Resource Include="png\Marks\Mark_Ejeback_Grn_2_1_V00.png" />
+    <Resource Include="png\Marks\Mark_Ejeback_Grn_2_2_V00.png" />
+    <Resource Include="png\Marks\Mark_EjeFWD_3_23.png" />
+    <Resource Include="png\Marks\Mark_EjePos_3_12.png" />
+    <Resource Include="png\Marks\Mark_EjeShake_3_22.png" />
+    <Resource Include="png\Marks\Mark_Holding_Grn_2_7_V00.png" />
+    <Resource Include="png\Marks\Mark_injectionPos_3_6.png" />
+    <Resource Include="png\Marks\Mark_injectionSpeed_3_1.png" />
+    <Resource Include="png\Marks\Mark_injection_Grn_2_7_V00.png" />
+    <Resource Include="png\Marks\Mark_mldclose_Grn_2_8_V00.png" />
+    <Resource Include="png\Marks\Mark_mldopen_Grn_2_9_V00.png" />
+    <Resource Include="png\Marks\Mark_MoldPeakSpeed_3_14.png" />
+    <Resource Include="png\Marks\Mark_MoldPos_3_11.png" />
+    <Resource Include="png\Marks\Mark_MoldSpeed_3_13.png" />
+    <Resource Include="png\Marks\Mark_MoldTouchPos_3_21.png" />
+    <Resource Include="png\Marks\Mark_MoldUnitDestPos_3_20.png" />
+    <Resource Include="png\Marks\Mark_MoldUnitPos_3_19.png" />
+    <Resource Include="png\Marks\Mark_MoldUnitSpeed_3_18.png" />
+    <Resource Include="png\Marks\Mark_peakinjectionSpeed_3_2.png" />
+    <Resource Include="png\Marks\Mark_Peakpressure_3_7.png" />
+    <Resource Include="png\Marks\Mark_PeakTouquePos_3_17.png" />
+    <Resource Include="png\Marks\Mark_PeakTouque_3_16.png" />
+    <Resource Include="png\Marks\Mark_Recovery_Grn_2_6_V00.png" />
+    <Resource Include="png\Marks\Mark_SuckBack_Grn_2_5_V00.png" />
+    <Resource Include="png\Marks\Mark_Time_3_10.png" />
+    <Resource Include="png\Marks\Mark_Touque_3_15.png" />
+    <Resource Include="png\Marks\Mark_UnitBack_Grn_2_4_V00.png" />
+    <Resource Include="png\Marks\Mark_UnitFor_Grn_2_3_V00.png" />
+    <Resource Include="png\Marks\Mark_VPPos_3_4.png" />
+    <Resource Include="png\Marks\Mark_VPPres_3_5.png" />
+    <Resource Include="png\Marks\Mark_VPSpeed_3_3.png" />
+    <Resource Include="png\Marks\Semi_Mode_4_3.png" />
+    <Resource Include="png\Marks\Thumbdwon_50.png" />
+    <Resource Include="png\Marks\ThumbUp_50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\Sign\alarm_clock-32.png" />
+    <Resource Include="png\Sign\Button_left_switch_1_4_V00.png" />
+    <Resource Include="png\Sign\Button_middle_switch_1_5_V00.png" />
+    <Resource Include="png\Sign\Button_OFF_switch_1_1_V00.png" />
+    <Resource Include="png\Sign\Button_ON_switch_1_2_V00.png" />
+    <Resource Include="png\Sign\Button_right_switch_1_3_V00.png" />
+    <Resource Include="png\Sign\checked_user-32.png" />
+    <Resource Include="png\Sign\checked_user_W-32.png" />
+    <Resource Include="png\Sign\down4-25.png" />
+    <Resource Include="png\Sign\electricity-32.png" />
+    <Resource Include="png\Sign\forward-25.png" />
+    <Resource Include="png\Sign\forward-32.png" />
+    <Resource Include="png\Sign\genealogy-32.png" />
+    <Resource Include="png\Sign\gps_receiving-32.png" />
+    <Resource Include="png\Sign\heart_monitor-32.png" />
+    <Resource Include="png\Sign\link-32.png" />
+    <Resource Include="png\Sign\link_broken-32.png" />
+    <Resource Include="png\Sign\Mark_Alarm.png" />
+    <Resource Include="png\Sign\Mark_Event.png" />
+    <Resource Include="png\Sign\Mark_Warning.png" />
+    <Resource Include="png\Sign\micro-32.png" />
+    <Resource Include="png\Sign\OBJ_5_24_Harddisk_On_V0.0.png" />
+    <Resource Include="png\Sign\OBJ_5_25_USBdisk_On_V0.0.png" />
+    <Resource Include="png\Sign\OBJ_5_26_USBdisk_Off_V0.0.png" />
+    <Resource Include="png\Sign\OBJ_5_27_LockedFile_V0.0.png" />
+    <Resource Include="png\Sign\OBJ_5_28_ReleaseFile_V0.0.png" />
+    <Resource Include="png\Sign\pause-32.png" />
+    <Resource Include="png\Sign\play-32.png" />
+    <Resource Include="png\Sign\reload-32.png" />
+    <Resource Include="png\Sign\reset_25.png" />
+    <Resource Include="png\Sign\running-32.png" />
+    <Resource Include="png\Sign\today-32.png" />
+    <Resource Include="png\Sign\update-32.png" />
+    <Resource Include="png\Sign\upload-32.png" />
+    <Resource Include="png\Sign\user_male3-32.png" />
+    <Resource Include="png\Sign\user_male3-W_32.png" />
+    <Resource Include="png\Sign\walking-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\splash\Radbb14_Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="png\AutoPurge.png" />
+    <Resource Include="png\dateTime.png" />
+    <Resource Include="png\fileExplorer.png" />
+    <Resource Include="png\folder.ico" />
+    <Resource Include="png\icon_back.ico" />
+    <Resource Include="png\icon_back.png" />
+    <Resource Include="png\Interpretation.png" />
+    <Resource Include="png\Interpretor_A.png" />
+    <Resource Include="png\ipr_st28_Act.png" />
+    <Resource Include="png\linen.bmp" />
+    <Resource Include="png\linen_2.bmp" />
+    <Resource Include="png\Lubrication.png" />
+    <Resource Include="png\NozzleMovement.png" />
+    <Resource Include="png\OBJ_0_1_BlueHeadLine_V0.0.png" />
+    <Resource Include="png\OBJ_10_10_VerticalLine42_V0.0.png" />
+    <Resource Include="png\OBJ_10_11_GraphLine_V0.0.png" />
+    <Resource Include="png\OBJ_10_11_SelectSquareActive_V0.0.png" />
+    <Resource Include="png\OBJ_10_11_SelectSquare_V0.0.png" />
+    <Resource Include="png\OBJ_10_12_setupblock_287_428_V0.0.png" />
+    <Resource Include="png\OBJ_10_12_setupblock_Clamp_287_428_V0.0.png" />
+    <Resource Include="png\OBJ_10_12_setupblock_eje1_287_428_V0.0.png" />
+    <Resource Include="png\OBJ_10_12_setupblock_mold_287_428_V0.0.png" />
+    <Resource Include="png\OBJ_10_13_setupblock_288_568_V0.0.png" />
+    <Resource Include="png\OBJ_10_13_setupblock_Clamp_288_568_V0.0.png" />
+    <Resource Include="png\OBJ_10_14_setupblock_265_41_V0.0.png" />
+    <Resource Include="png\OBJ_10_15_setupblock_265_41_V0.0.png" />
+    <Resource Include="png\OBJ_10_16_showblock_68_69_V0.0.png" />
+    <Resource Include="png\OBJ_10_17_Greenbutton_261_37_V0.0.png" />
+    <Resource Include="png\OBJ_10_18_Greenbutton_261_37_V0.0.png" />
+    <Resource Include="png\OBJ_10_19_setupblock_287_298_Charge1_V0.0.png" />
+    <Resource Include="png\OBJ_10_19_setupblock_287_298_Charge2_V0.0.png" />
+    <Resource Include="png\OBJ_10_19_setupblock_287_298_eje2_V0.0.png" />
+    <Resource Include="png\OBJ_10_19_setupblock_287_298_Inj_V0.0.png" />
+    <Resource Include="png\OBJ_10_19_setupblock_287_298_Mold_V0.0.png" />
+    <Resource Include="png\OBJ_10_19_setupblock_287_298_V0.0.png" />
+    <Resource Include="png\OBJ_10_1_Switch_Off_V0.0.png" />
+    <Resource Include="png\OBJ_10_1_Switch_Off_V0.1.png" />
+    <Resource Include="png\OBJ_10_1_Switch_Off_V0.2.png" />
+    <Resource Include="png\OBJ_10_1_Switch_Off_V0.3.png" />
+    <Resource Include="png\OBJ_10_20_setupblock_265_41_V0.0.png" />
+    <Resource Include="png\OBJ_10_20_setupblock_484_354_V0.0.png" />
+    <Resource Include="png\OBJ_10_20_setupblock_Charge_484_354_V0.0.png" />
+    <Resource Include="png\OBJ_10_20_setupblock_eje3_484_354_V0.0.png" />
+    <Resource Include="png\OBJ_10_21_setupblock_482_299_V0.0.png" />
+    <Resource Include="png\OBJ_10_21_setupblock_Inj_482_299_V0.0.png" />
+    <Resource Include="png\OBJ_10_22_Inj_showblock_V0.0.png" />
+    <Resource Include="png\OBJ_10_23_3ButtonInactive_V0.0.png" />
+    <Resource Include="png\OBJ_10_23_leftPart_rels_V0.0.png" />
+    <Resource Include="png\OBJ_10_23_leftPart_V0.0.png" />
+    <Resource Include="png\OBJ_10_23_midpart_rels_V0.0.png" />
+    <Resource Include="png\OBJ_10_23_midpart_V0.0.png" />
+    <Resource Include="png\OBJ_10_23_rightpart_rels_V0.0.png" />
+    <Resource Include="png\OBJ_10_23_rightpart_V0.0.png" />
+    <Resource Include="png\OBJ_10_24_2ButtonInactive_V0.0.png" />
+    <Resource Include="png\OBJ_10_24_Leftpart_V0.0.png" />
+    <Resource Include="png\OBJ_10_24_Rightpart_V0.0.png" />
+    <Resource Include="png\OBJ_10_25_sysSetup_V0.0.png" />
+    <Resource Include="png\OBJ_10_26_set_V0.0.png" />
+    <Resource Include="png\OBJ_10_27_Bluebutton_261_37_V0.0.png" />
+    <Resource Include="png\OBJ_10_28_Bluebutton_261_37_V0.0.png" />
+    <Resource Include="png\OBJ_10_29_setupblock_290_972_Charge2_V0.0.png" />
+    <Resource Include="png\OBJ_10_2_Switch_On_V0.0.png" />
+    <Resource Include="png\OBJ_10_2_Switch_On_V0.1.png" />
+    <Resource Include="png\OBJ_10_2_Switch_On_V0.2.png" />
+    <Resource Include="png\OBJ_10_2_Switch_On_V0.3.png" />
+    <Resource Include="png\OBJ_10_30_setupblock_703_746_Charge2_V0.0.png" />
+    <Resource Include="png\OBJ_10_31_Sturt_V0.0.png" />
+    <Resource Include="png\OBJ_10_32_setupblock_201_41_V0.0.png" />
+    <Resource Include="png\OBJ_10_33_setupblock_201_41_V0.0.png" />
+    <Resource Include="png\OBJ_10_34_setupblock_591_201_V0.0.png" />
+    <Resource Include="png\OBJ_10_35_iprSet_180_34_PresV0.0.png" />
+    <Resource Include="png\OBJ_10_35_iprSet_180_34_V0.0.png" />
+    <Resource Include="png\OBJ_10_36_ValveGateMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_37_Menu7_V0.0.png" />
+    <Resource Include="png\OBJ_10_37_Menu8_V0.0.png" />
+    <Resource Include="png\OBJ_10_38_Menu4_V0.0.png" />
+    <Resource Include="png\OBJ_10_38_Menu5_V0.0.png" />
+    <Resource Include="png\OBJ_10_38_Menu6_V0.0.png" />
+    <Resource Include="png\OBJ_10_39_LubricationMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_3_SetupButton_V0.0.png" />
+    <Resource Include="png\OBJ_10_40_EjectorMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_40_EjectorMask_V0.1.png" />
+    <Resource Include="png\OBJ_10_41_NozzleMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_42_InjectionMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_43_MoldMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_44_Carriage_V0.0.png" />
+    <Resource Include="png\OBJ_10_45_RoundMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_46_MachineMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_47_EuromapMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_48_AirMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_49_CoreMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_4_mulitEditLowActive_V0.0.png" />
+    <Resource Include="png\OBJ_10_4_mulitEditLow_V0.0.png" />
+    <Resource Include="png\OBJ_10_4_singleEditActive_V0.0.png" />
+    <Resource Include="png\OBJ_10_4_singleEdit_V0.0.png" />
+    <Resource Include="png\OBJ_10_50_CarriageMask_V0.0.png" />
+    <Resource Include="png\OBJ_10_50_CarriageMask_V0.1.png" />
+    <Resource Include="png\OBJ_10_50_CarriageMask_V0.3.png" />
+    <Resource Include="png\OBJ_10_51_HotRunnerBack_Demo.png" />
+    <Resource Include="png\OBJ_10_51_HotRunnerBack_V0.0.png" />
+    <Resource Include="png\OBJ_10_51_HotRunnerBack_V0.1.png" />
+    <Resource Include="png\OBJ_10_52_MoldProtectBack_V0.0.png" />
+    <Resource Include="png\OBJ_10_53_Popup_Window_468_233_V0.0.png" />
+    <Resource Include="png\OBJ_10_54_List_277_853_V0.0.png" />
+    <Resource Include="png\OBJ_10_55_TuneT_Core.png" />
+    <Resource Include="png\OBJ_10_56_TuneT_back.png" />
+    <Resource Include="png\OBJ_10_57_lockerIn.png" />
+    <Resource Include="png\OBJ_10_57_lockerOut.png" />
+    <Resource Include="png\OBJ_10_57_lockerUnknow.png" />
+    <Resource Include="png\OBJ_10_58_Gearbox.png" />
+    <Resource Include="png\OBJ_10_5_MultEditUPActived_V0.0.png" />
+    <Resource Include="png\OBJ_10_5_MultEditUP_V0.0.png" />
+    <Resource Include="png\OBJ_10_6_MultEditLowActived_V0.0.png" />
+    <Resource Include="png\OBJ_10_6_MultEditLow_V0.0.png" />
+    <Resource Include="png\OBJ_10_7_singleEdit_Actived_V0.0.png" />
+    <Resource Include="png\OBJ_10_7_singleEdit_V0.0.png" />
+    <Resource Include="png\OBJ_10_8_mulitEditMidActive_V0.0.png" />
+    <Resource Include="png\OBJ_10_8_mulitEditMidFixActive_V0.0.png" />
+    <Resource Include="png\OBJ_10_8_mulitEditMidFix_V0.0.png" />
+    <Resource Include="png\OBJ_10_8_mulitEditMid_V0.0.png" />
+    <Resource Include="png\OBJ_10_9_mulitEditMidFixActive_V0.0.png" />
+    <Resource Include="png\OBJ_10_9_mulitEditMidFix_V0.0.png" />
+    <Resource Include="png\OBJ_11_10_SuckbackPosMark_V0.0.png" />
+    <Resource Include="png\OBJ_11_11_Lock_V0.0.png" />
+    <Resource Include="png\OBJ_11_12_UnLock_V0.0.png" />
+    <Resource Include="png\OBJ_11_13_InjectionMark_V0.0.png" />
+    <Resource Include="png\OBJ_11_14_Cooling_V0.0.png" />
+    <Resource Include="png\OBJ_11_15_LeftMove_V0.0.png" />
+    <Resource Include="png\OBJ_11_16_RightMove_V0.0.png" />
+    <Resource Include="png\OBJ_11_17_MoveActive_V0.0.png" />
+    <Resource Include="png\OBJ_11_18_VPSwitch_V0.0.png" />
+    <Resource Include="png\OBJ_11_19_NozzleBack_V0.0.png" />
+    <Resource Include="png\OBJ_11_1_VPMark_V0.0.png" />
+    <Resource Include="png\OBJ_11_20_save_as_V0.2.png" />
+    <Resource Include="png\OBJ_11_20_save_V0.0.png" />
+    <Resource Include="png\OBJ_11_20_save_V0.2.png" />
+    <Resource Include="png\OBJ_11_21_dustbin_V0.0.png" />
+    <Resource Include="png\OBJ_11_22_dustbin_V0.0.png" />
+    <Resource Include="png\OBJ_11_2_HoldPressureMark_V0.0.png" />
+    <Resource Include="png\OBJ_11_3_Button60Inactive_V0.0.png" />
+    <Resource Include="png\OBJ_11_4_Button60active_V0.0.png" />
+    <Resource Include="png\OBJ_11_5_Button60select_V0.0.png" />
+    <Resource Include="png\OBJ_11_6_ZoomINActive_V0.0.png" />
+    <Resource Include="png\OBJ_11_6_ZoomIN_V0.0.png" />
+    <Resource Include="png\OBJ_11_6_ZoomOutActive_V0.0.png" />
+    <Resource Include="png\OBJ_11_6_ZoomOut_V0.0.png" />
+    <Resource Include="png\OBJ_11_7_ZoomResetActive_V0.0.png" />
+    <Resource Include="png\OBJ_11_7_ZoomReset_V0.0.png" />
+    <Resource Include="png\OBJ_11_8_Play_V0.0.png" />
+    <Resource Include="png\OBJ_11_9_Pause_V0.0.png" />
+    <Resource Include="png\OBJ_12_1_RoundBlockEdit_V0.0.png" />
+    <Resource Include="png\OBJ_12_2_Clock_V0.0.png" />
+    <Resource Include="png\OBJ_12_3_EditBaseLefttoRight_V0.0.png" />
+    <Resource Include="png\OBJ_12_3_EditBaseRighttoLeft_V0.0.png" />
+    <Resource Include="png\OBJ_12_4_Unlock_V0.0.png" />
+    <Resource Include="png\OBJ_12_5_lock_V0.0.png" />
+    <Resource Include="png\OBJ_12_6_Celinder_V0.0.png" />
+    <Resource Include="png\OBJ_12_7_Time_AM_V0.0.png" />
+    <Resource Include="png\OBJ_12_8_Time_PM_V0.0.png" />
+    <Resource Include="png\OBJ_12_9_Time_Background_V0.0.png" />
+    <Resource Include="png\OBJ_12_9_Time_Background_V0.1.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V0.0.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.1.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.2.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.3.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.4.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.5.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.6.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.7.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.8.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V1.9.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V2.4.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V2.6.png" />
+    <Resource Include="png\OBJ_13_0_ButtonbaseRelease_V2.8.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V0.0.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.1.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.2.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.3.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.4.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.5.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.6.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.7.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.8.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V1.9.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V2.2.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V2.4.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V2.6.png" />
+    <Resource Include="png\OBJ_13_1_ButtonbaseActive_V2.8.png" />
+    <Resource Include="png\OBJ_13_2_LanguageBase_V0.0.png" />
+    <Resource Include="png\OBJ_13_3_MidButtonbaseRelease_V0.0.png" />
+    <Resource Include="png\OBJ_13_4_MidButtonbaseActive_V0.0.png" />
+    <Resource Include="png\OBJ_14_10_AcessSleepV0.0.png" />
+    <Resource Include="png\OBJ_14_1_ChargeIcon_V0.0.png" />
+    <Resource Include="png\OBJ_14_2_GrayPoint_V0.0.png" />
+    <Resource Include="png\OBJ_14_3_GreenPoint_V0.0.png" />
+    <Resource Include="png\OBJ_14_4_SelectBack_V0.0.png" />
+    <Resource Include="png\OBJ_14_5_AcessBase_V0.0.png" />
+    <Resource Include="png\OBJ_14_6_AcessDenail_V0.0.png" />
+    <Resource Include="png\OBJ_14_7_AcessOK_V0.0.png" />
+    <Resource Include="png\OBJ_14_8_AcessLow_V0.0.png" />
+    <Resource Include="png\OBJ_14_9_AcessWake_V0.0.png" />
+    <Resource Include="png\OBJ_15_10_HeatCrystalRed_V0.0.png" />
+    <Resource Include="png\OBJ_15_11_HeatCrystalGrayShort_V0.0.png" />
+    <Resource Include="png\OBJ_15_11_HeatCrystalRedShort_V0.0.png" />
+    <Resource Include="png\OBJ_15_12_BarrelHeatNozzle_V0.0.png" />
+    <Resource Include="png\OBJ_15_12_BarrelHeatZoneX_V0.0.png" />
+    <Resource Include="png\OBJ_15_13_BarrelHeatHopper_V0.0.png" />
+    <Resource Include="png\OBJ_15_14_BarrelHeaticon_V0.0.png" />
+    <Resource Include="png\OBJ_15_15_Heaticon_V0.0.png" />
+    <Resource Include="png\OBJ_15_16_FeederPart_V0.0.png" />
+    <Resource Include="png\OBJ_15_17_ScrollLeft_V0.0.png" />
+    <Resource Include="png\OBJ_15_17_ScrollLeft_V0.1.png" />
+    <Resource Include="png\OBJ_15_17_ScrollLeft_V0.2.png" />
+    <Resource Include="png\OBJ_15_18_ZoneCover_V0.0.png" />
+    <Resource Include="png\OBJ_15_19_MoldHeaticon_V0.0.png" />
+    <Resource Include="png\OBJ_15_1_SubTreeMainBack_V0.0.png" />
+    <Resource Include="png\OBJ_15_20_NozzlePart_V0.0.png" />
+    <Resource Include="png\OBJ_15_21_OtherPart_V0.0.png" />
+    <Resource Include="png\OBJ_15_22_Arrow_V0.0.png" />
+    <Resource Include="png\OBJ_15_23_Hr_Scroll_V0.0.png" />
+    <Resource Include="png\OBJ_15_24_Hr_updownbuttonActived_V0.0.png" />
+    <Resource Include="png\OBJ_15_25_Hr_Arrow_V0.0.png" />
+    <Resource Include="png\OBJ_15_26_Hr_Arrow_V0.0.png" />
+    <Resource Include="png\OBJ_15_27_Hr_16ZoneMask_V0.0.png" />
+    <Resource Include="png\OBJ_15_28_Hr_actlever_V0.0.png" />
+    <Resource Include="png\OBJ_15_29_Hr_ActiveUp_V0.0.png" />
+    <Resource Include="png\OBJ_15_2_SubTreeFirst_V0.0.png" />
+    <Resource Include="png\OBJ_15_2_SubTreeFirst_V0.1.png" />
+    <Resource Include="png\OBJ_15_30_dfdsf_V0.0.png" />
+    <Resource Include="png\OBJ_15_3_SubTreeSecond_V0.0.png" />
+    <Resource Include="png\OBJ_15_3_SubTreeSecond_V0.1.png" />
+    <Resource Include="png\OBJ_15_4_updownbuttonActived_V0.0.png" />
+    <Resource Include="png\OBJ_15_4_updownbutton_V0.0.png" />
+    <Resource Include="png\OBJ_15_5_CloseHopperShow_V0.0.png" />
+    <Resource Include="png\OBJ_15_6_OpenHopperShow_V0.0.png" />
+    <Resource Include="png\OBJ_15_7_HeatCrystalBlue_V0.0.png" />
+    <Resource Include="png\OBJ_15_8_HeatCrystalGray_V0.0.png" />
+    <Resource Include="png\OBJ_16_10_Baricon_V0.0.png" />
+    <Resource Include="png\OBJ_16_11_Seperateicon_V0.0.png" />
+    <Resource Include="png\OBJ_16_12_buttonbackGren_V0.0.png" />
+    <Resource Include="png\OBJ_16_13_buttonbackBlue_V0.0.png" />
+    <Resource Include="png\OBJ_16_13_buttonbacklakegren_V0.0.png" />
+    <Resource Include="png\OBJ_16_13_buttonbackorange_V0.0.png" />
+    <Resource Include="png\OBJ_16_14_BrakedownBack_V0.0.png" />
+    <Resource Include="png\OBJ_16_15_500Bar_V0.0.png" />
+    <Resource Include="png\OBJ_16_1_RightDirect_V0.0.png" />
+    <Resource Include="png\OBJ_16_2_LeftDirect_V0.0.png" />
+    <Resource Include="png\OBJ_16_3_lineBase1pixBlue_V0.0.png" />
+    <Resource Include="png\OBJ_16_3_lineBase1pixRed_V0.0.png" />
+    <Resource Include="png\OBJ_16_4_EditRightRoundActive_V0.0.png" />
+    <Resource Include="png\OBJ_16_4_EditRightRound_V0.0.png" />
+    <Resource Include="png\OBJ_16_5_EditLeftRoundActive_V0.0.png" />
+    <Resource Include="png\OBJ_16_5_EditLeftRound_V0.0.png" />
+    <Resource Include="png\OBJ_16_6_BaseMaskGray_V0.0.png" />
+    <Resource Include="png\OBJ_16_6_EditShortLeftRoundActive_V0.0.png" />
+    <Resource Include="png\OBJ_16_6_EditShortLeftRound_V0.0.png" />
+    <Resource Include="png\OBJ_16_7_EditShortActive_V0.0.png" />
+    <Resource Include="png\OBJ_16_7_EditShort_V0.0.png" />
+    <Resource Include="png\OBJ_16_8_EditShortRightRoundActive_V0.0.png" />
+    <Resource Include="png\OBJ_16_8_EditShortRightRound_V0.0.png" />
+    <Resource Include="png\OBJ_16_9_EditUpActive_V0.0.png" />
+    <Resource Include="png\OBJ_16_9_EditUp_V0.0.png" />
+    <Resource Include="png\OBJ_17_10_909SubTreeBack_V0.0.png" />
+    <Resource Include="png\OBJ_17_11_belt_V0.0.png" />
+    <Resource Include="png\OBJ_17_12_SetReference_V0.0.png" />
+    <Resource Include="png\OBJ_17_1_ScrollBarPercent_V0.0.png" />
+    <Resource Include="png\OBJ_17_2_BlueHeadLine_V0.0.png" />
+    <Resource Include="png\OBJ_17_3_GreenHeadLine_V0.0.png" />
+    <Resource Include="png\OBJ_17_4_BlueHeadLineSeperater_V0.0.png" />
+    <Resource Include="png\OBJ_17_5_GreenHeadLineSeperater_V0.0.png" />
+    <Resource Include="png\OBJ_17_6_rejectorLine_V0.0.png" />
+    <Resource Include="png\OBJ_17_7_brakedownBack_V0.0.png" />
+    <Resource Include="png\OBJ_17_7_CurveBack200_100_V0.0.png" />
+    <Resource Include="png\OBJ_17_8_Block_whit_V0.0.png" />
+    <Resource Include="png\OBJ_17_8_LoadFile_V0.0.png" />
+    <Resource Include="png\OBJ_17_9_setupicon_V0.0.png" />
+    <Resource Include="png\OBJ_18_1_MachineModeActiveBlue_V0.0.png" />
+    <Resource Include="png\OBJ_18_2_MachineModeInactiveGray_V0.0.png" />
+    <Resource Include="png\OBJ_18_3_MachineModeInactiveOrange_V0.0.png" />
+    <Resource Include="png\OBJ_18_4_AdjustActive_V0.0.png" />
+    <Resource Include="png\OBJ_18_5_AdjustInactive_V0.0.png" />
+    <Resource Include="png\OBJ_18_6_MachineModePress_V0.0.png" />
+    <Resource Include="png\OBJ_19_10_Number9active_V0.0.png" />
+    <Resource Include="png\OBJ_19_11_DOTactive_V0.0.png" />
+    <Resource Include="png\OBJ_19_11_Number0active_V0.0.png" />
+    <Resource Include="png\OBJ_19_12_Numberbackspaceactive_V0.0.png" />
+    <Resource Include="png\OBJ_19_13_NumberMineractive_V0.0.png" />
+    <Resource Include="png\OBJ_19_14_NumberOKactive_V0.0.png" />
+    <Resource Include="png\OBJ_19_15_Calculator_V0.0.png" />
+    <Resource Include="png\OBJ_19_16_icon1x_V0.0.png" />
+    <Resource Include="png\OBJ_19_17_icon+-_V0.0.png" />
+    <Resource Include="png\OBJ_19_18_iconC_V0.0.png" />
+    <Resource Include="png\OBJ_19_19_iconBackspace_V0.0.png" />
+    <Resource Include="png\OBJ_19_1_NumberInputBackInactive_V0.0.png" />
+    <Resource Include="png\OBJ_19_20_iconMult_V0.0.png" />
+    <Resource Include="png\OBJ_19_20_iconX2_V0.0.png" />
+    <Resource Include="png\OBJ_19_21_iconDIV_V0.0.png" />
+    <Resource Include="png\OBJ_19_22_iconMiner_V0.0.png" />
+    <Resource Include="png\OBJ_19_23_iconSequ_V0.0.png" />
+    <Resource Include="png\OBJ_19_24_iconPlus_V0.0.png" />
+    <Resource Include="png\OBJ_19_25_iconequ_V0.0.png" />
+    <Resource Include="png\OBJ_19_26_Keyboard_V0.0.png" />
+    <Resource Include="png\OBJ_19_26_Keyboard_V0.1.png" />
+    <Resource Include="png\OBJ_19_27_Keyboard1Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_28_Keyboard2Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_29_Keyboard3Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_2_Number1active_V0.0.png" />
+    <Resource Include="png\OBJ_19_30_Keyboard4Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_31_Keyboard5Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_32_Keyboard6Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_33_Keyboard7Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_34_Keyboard8Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_35_Keyboard9Pressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_36_KeyboardPressed_V0.0.png" />
+    <Resource Include="png\OBJ_19_36_Keyboardrelase_V0.0.png" />
+    <Resource Include="png\OBJ_19_3_Number2active_V0.0.png" />
+    <Resource Include="png\OBJ_19_4_Number3active_V0.0.png" />
+    <Resource Include="png\OBJ_19_5_Number4active_V0.0.png" />
+    <Resource Include="png\OBJ_19_6_Number5active_V0.0.png" />
+    <Resource Include="png\OBJ_19_7_Number6active_V0.0.png" />
+    <Resource Include="png\OBJ_19_8_Number7active_V0.0.png" />
+    <Resource Include="png\OBJ_19_9_Number8active_V0.0.png" />
+    <Resource Include="png\OBJ_1_2_InternetConnected_V0.0.png" />
+    <Resource Include="png\OBJ_1_2_InternetDisConnect_V0.0.png" />
+    <Resource Include="png\OBJ_1_3_PLCConnected_V0.0.png" />
+    <Resource Include="png\OBJ_1_3_PLCDisConnect_V0.0.png" />
+    <Resource Include="png\OBJ_1_4_OnlineHelpActive_V0.0.png" />
+    <Resource Include="png\OBJ_1_4_OnlineHelpInActive_V0.0.png" />
+    <Resource Include="png\OBJ_1_5_EnglishLanguage_V0.0%281%29.png" />
+    <Resource Include="png\OBJ_1_5_EnglishLanguage_V0.0.png" />
+    <Resource Include="png\OBJ_1_5_EnglishLanguage_V0.1.png" />
+    <Resource Include="png\OBJ_1_6_ChineseLanguage_V0.0%281%29.png" />
+    <Resource Include="png\OBJ_1_6_ChineseLanguage_V0.0.png" />
+    <Resource Include="png\OBJ_20_10_ForceOffActive_V0.0.png" />
+    <Resource Include="png\OBJ_20_11_GreenLedActive_V0.0.png" />
+    <Resource Include="png\OBJ_20_12_GreenLedInactive_V0.0.png" />
+    <Resource Include="png\OBJ_20_13_RedLedActive_V0.0.png" />
+    <Resource Include="png\OBJ_20_14_RedLedInactive_V0.0.png" />
+    <Resource Include="png\OBJ_20_15_Forceed_V0.0.png" />
+    <Resource Include="png\OBJ_20_16_CDM163_V0.0.png" />
+    <Resource Include="png\OBJ_20_17_CDI163_V0.0.png" />
+    <Resource Include="png\OBJ_20_18_CTO163_V0.0.png" />
+    <Resource Include="png\OBJ_20_19_CAI883_V0.0.png" />
+    <Resource Include="png\OBJ_20_1_LogOut_V0.0.png" />
+    <Resource Include="png\OBJ_20_20_CAM124_V0.0.png" />
+    <Resource Include="png\OBJ_20_20_CIO021_V0.0.png" />
+    <Resource Include="png\OBJ_20_21_Hardware_V0.0.png" />
+    <Resource Include="png\OBJ_20_21_Home_V0.0.png" />
+    <Resource Include="png\OBJ_20_22_Heat_V0.0.png" />
+    <Resource Include="png\OBJ_20_23_Assistans_V0.0.png" />
+    <Resource Include="png\OBJ_20_24_Mold_V0.0.png" />
+    <Resource Include="png\OBJ_20_25_Injection_V0.0.png" />
+    <Resource Include="png\OBJ_20_26_Motion_V0.0.png" />
+    <Resource Include="png\OBJ_20_27_FuncSetup_V0.0.png" />
+    <Resource Include="png\OBJ_20_28_Fastexe_V0.0.png" />
+    <Resource Include="png\OBJ_20_29_Config_V0.0.png" />
+    <Resource Include="png\OBJ_20_2_Logbackground_V0.0.png" />
+    <Resource Include="png\OBJ_20_30_Ejector_V0.0.png" />
+    <Resource Include="png\OBJ_20_30_GreenLedInactive_V0.0.bmp" />
+    <Resource Include="png\OBJ_20_31_Carriage_V0.0.png" />
+    <Resource Include="png\OBJ_20_31_GreenLedActive_V0.0.bmp.bmp" />
+    <Resource Include="png\OBJ_20_32_Driver_V0.0.png" />
+    <Resource Include="png\OBJ_20_32_RedLedInactive_V0.0.bmp.bmp" />
+    <Resource Include="png\OBJ_20_33_RedLedActive_V0.0.bmp.bmp.bmp" />
+    <Resource Include="png\OBJ_20_33_TuneT_Neg_V0.0.png" />
+    <Resource Include="png\OBJ_20_34_TuneT_Pos_V0.0.png" />
+    <Resource Include="png\OBJ_20_3_UserExchange_V0.0.png" />
+    <Resource Include="png\OBJ_20_4_SnowflagWhite_V0.0.png" />
+    <Resource Include="png\OBJ_20_5_CCP521_V0.0.png" />
+    <Resource Include="png\OBJ_20_6_VSP042_V0.0.png" />
+    <Resource Include="png\OBJ_20_7_ForceOnInactive_V0.0.png" />
+    <Resource Include="png\OBJ_20_8_ForceOnActive_V0.0.png" />
+    <Resource Include="png\OBJ_20_9_ForceOffInactive_V0.0.png" />
+    <Resource Include="png\OBJ_21_0_BackBlock.png" />
+    <Resource Include="png\OBJ_21_10_MachanOverView2_V0.0.png" />
+    <Resource Include="png\OBJ_21_10_MachanOverView_V0.0.png" />
+    <Resource Include="png\OBJ_21_11_EvnetLog_V0.0.png" />
+    <Resource Include="png\OBJ_21_12_PicView_V0.0.png" />
+    <Resource Include="png\OBJ_21_13_ScreenSaver_V0.0.png" />
+    <Resource Include="png\OBJ_21_14_GapShadow_V0.0.png" />
+    <Resource Include="png\OBJ_21_14_GapShadow_V0.1.png" />
+    <Resource Include="png\OBJ_21_15_SeperateLine_V0.0.png" />
+    <Resource Include="png\OBJ_21_16_Line_V0.0.png" />
+    <Resource Include="png\OBJ_21_17_OpenWindowsBase_V0.0.png" />
+    <Resource Include="png\OBJ_21_17_OpenWindows_V0.0.png" />
+    <Resource Include="png\OBJ_21_18_OpenWindowsSharp_V0.0.png" />
+    <Resource Include="png\OBJ_21_19_RoundSelectMask_V0.0.png" />
+    <Resource Include="png\OBJ_21_1_Alarm_V0.0.png" />
+    <Resource Include="png\OBJ_21_1_Alarm_V0.1.png" />
+    <Resource Include="png\OBJ_21_1_Alarm_V0.2.png" />
+    <Resource Include="png\OBJ_21_20_RoundSelectMask_V0.0.png" />
+    <Resource Include="png\OBJ_21_21_RoundSelectBase_V0.0.png" />
+    <Resource Include="png\OBJ_21_22_UserSelectBase_V0.0.png" />
+    <Resource Include="png\OBJ_21_23_ValveGate_V0.0.png" />
+    <Resource Include="png\OBJ_21_2_ValueEnter_V0.0.png" />
+    <Resource Include="png\OBJ_21_2_ValueEnter_V0.1.png" />
+    <Resource Include="png\OBJ_21_2_ValueEnter_V0.2.png" />
+    <Resource Include="png\OBJ_21_3_SystemInfo_V0.0.png" />
+    <Resource Include="png\OBJ_21_3_SystemInfo_V0.1.png" />
+    <Resource Include="png\OBJ_21_3_SystemInfo_V0.2.png" />
+    <Resource Include="png\OBJ_21_4_Access_V0.0.png" />
+    <Resource Include="png\OBJ_21_4_Access_V0.1.png" />
+    <Resource Include="png\OBJ_21_4_Access_V0.2.png" />
+    <Resource Include="png\OBJ_21_5_Celender_V0.0.png" />
+    <Resource Include="png\OBJ_21_6_User_V0.0.png" />
+    <Resource Include="png\OBJ_21_7_Expert_V0.0.png" />
+    <Resource Include="png\OBJ_21_7_Impert_V0.1.png" />
+    <Resource Include="png\OBJ_21_8_Printer_V0.0.png" />
+    <Resource Include="png\OBJ_21_9_Breakdown_V0.0.png" />
+    <Resource Include="png\OBJ_22_10_productCurve.png" />
+    <Resource Include="png\OBJ_22_11_Spc.png" />
+    <Resource Include="png\OBJ_22_12_blackCorss.png" />
+    <Resource Include="png\OBJ_22_12_REDCorss.png" />
+    <Resource Include="png\OBJ_22_13_Resize.png" />
+    <Resource Include="png\OBJ_22_14_productListBack.png" />
+    <Resource Include="png\OBJ_22_15_GreenMark.png" />
+    <Resource Include="png\OBJ_22_16_QuicksetMask.png" />
+    <Resource Include="png\OBJ_22_17_IncreaseY.png" />
+    <Resource Include="png\OBJ_22_18_DecreaseY.png" />
+    <Resource Include="png\OBJ_22_19_SPCCurveBar.png" />
+    <Resource Include="png\OBJ_22_1_RedLeftArr_V0.0.png" />
+    <Resource Include="png\OBJ_22_20_SPCCurveScrollBar.png" />
+    <Resource Include="png\OBJ_22_21_SPCCurveScrollPoint.png" />
+    <Resource Include="png\OBJ_22_22_StartRecord.png" />
+    <Resource Include="png\OBJ_22_23_StartRecord.png" />
+    <Resource Include="png\OBJ_22_24_PointMode.png" />
+    <Resource Include="png\OBJ_22_25_CurveMode.png" />
+    <Resource Include="png\OBJ_22_26_Minner.png" />
+    <Resource Include="png\OBJ_22_27_Adder.png" />
+    <Resource Include="png\OBJ_22_2_BlackLeftArr_V0.0.png" />
+    <Resource Include="png\OBJ_22_3_CyanLeftArr_V0.0.png" />
+    <Resource Include="png\OBJ_22_4_MoreSettings_V0.0.png" />
+    <Resource Include="png\OBJ_22_5_BlackDownArr_V0.0.png" />
+    <Resource Include="png\OBJ_22_6_GoTop.png" />
+    <Resource Include="png\OBJ_22_7_productsetting.png" />
+    <Resource Include="png\OBJ_22_8_productBar.png" />
+    <Resource Include="png\OBJ_22_9_productlist.png" />
+    <Resource Include="png\OBJ_23_10_LongLine_MoldHeatOn.png" />
+    <Resource Include="png\OBJ_23_11_ShortLine_MoldHeatOn.png" />
+    <Resource Include="png\OBJ_23_12_MoldHeatBlock.png" />
+    <Resource Include="png\OBJ_23_13_GlobalMoldHeatBlock.png" />
+    <Resource Include="png\OBJ_23_14_Assis.png" />
+    <Resource Include="png\OBJ_23_15_Alarm.png" />
+    <Resource Include="png\OBJ_23_16_MoldHeatingBlockActive.png" />
+    <Resource Include="png\OBJ_23_17_MoldHeatUnitActive.png" />
+    <Resource Include="png\OBJ_23_18_Motor.png" />
+    <Resource Include="png\OBJ_23_19_Screw.png" />
+    <Resource Include="png\OBJ_23_1_BarrelModle.png" />
+    <Resource Include="png\OBJ_23_2_ThermoActiveobj.png" />
+    <Resource Include="png\OBJ_23_2_ThermoInactiveobj.png" />
+    <Resource Include="png\OBJ_23_3_ThermoTextBar.png" />
+    <Resource Include="png\OBJ_23_4_ThermoMenuWhite.png" />
+    <Resource Include="png\OBJ_23_5_ThermoMenuGray.png" />
+    <Resource Include="png\OBJ_23_6_ThermoFuncMenu.png" />
+    <Resource Include="png\OBJ_23_7_ButtonActive.png" />
+    <Resource Include="png\OBJ_23_8_MoldHeatUnit.png" />
+    <Resource Include="png\OBJ_23_9_MoldHeatOFF.png" />
+    <Resource Include="png\OBJ_23_9_MoldHeatOn.png" />
+    <Resource Include="png\OBJ_23_9_MoldHeatOn_2.png" />
+    <Resource Include="png\OBJ_24_10_GrayLine.png" />
+    <Resource Include="png\OBJ_24_11_BlankLine.png" />
+    <Resource Include="png\OBJ_24_12_LoginNameActive_295_45.png" />
+    <Resource Include="png\OBJ_24_12_LoginNameRelease_295_45.png" />
+    <Resource Include="png\OBJ_24_13_LoginPassActive295_45.png" />
+    <Resource Include="png\OBJ_24_13_LoginPassRelaese_295_45.png" />
+    <Resource Include="png\OBJ_24_14_openlist.png" />
+    <Resource Include="png\OBJ_24_15_Bar.png" />
+    <Resource Include="png\OBJ_24_1_GreenLEDActive.png" />
+    <Resource Include="png\OBJ_24_2_GreenLEDInactive.png" />
+    <Resource Include="png\OBJ_24_3_RedLEDActive.png" />
+    <Resource Include="png\OBJ_24_4_RedLEDInactive.png" />
+    <Resource Include="png\OBJ_24_5_LoginBlock.png" />
+    <Resource Include="png\OBJ_24_5_MultifuncBlock.png" />
+    <Resource Include="png\OBJ_24_6_MultifuncArrDown.png" />
+    <Resource Include="png\OBJ_24_7_Button_Login.png" />
+    <Resource Include="png\OBJ_24_8_Button_ChangeUser.png" />
+    <Resource Include="png\OBJ_24_8_Button_lockscreen.png" />
+    <Resource Include="png\OBJ_24_9_Button_LogOff.png" />
+    <Resource Include="png\OBJ_25_10_ProS_injPress.png" />
+    <Resource Include="png\OBJ_25_11_ProS_VP.png" />
+    <Resource Include="png\OBJ_25_12_ProS_Rule.png" />
+    <Resource Include="png\OBJ_25_13_ProS_Screw.png" />
+    <Resource Include="png\OBJ_25_14_ProS_BackPres.png" />
+    <Resource Include="png\OBJ_25_15_ProS_Timer.png" />
+    <Resource Include="png\OBJ_25_16_ProS_Carriage.png" />
+    <Resource Include="png\OBJ_25_17_ProS_barrelheat.png" />
+    <Resource Include="png\OBJ_25_18_ProS_HopperTemp.png" />
+    <Resource Include="png\OBJ_25_19_ProS_PumpTemp.png" />
+    <Resource Include="png\OBJ_25_1_Ejector.png" />
+    <Resource Include="png\OBJ_25_20_ProS_ShotNr.png" />
+    <Resource Include="png\OBJ_25_21_ProS_Marker.png" />
+    <Resource Include="png\OBJ_25_22_ProS_PShotnr.png" />
+    <Resource Include="png\OBJ_25_23_ProS_GoodPart.png" />
+    <Resource Include="png\OBJ_25_24_ProS_badPart.png" />
+    <Resource Include="png\OBJ_25_25_ProS_Enagy.png" />
+    <Resource Include="png\OBJ_25_26_ProS_Robot.png" />
+    <Resource Include="png\OBJ_25_27_TuneTable.png" />
+    <Resource Include="png\OBJ_25_2_ProgShow127117.png" />
+    <Resource Include="png\OBJ_25_3_ProgShowWin.png" />
+    <Resource Include="png\OBJ_25_3_ProgShowWin2.png" />
+    <Resource Include="png\OBJ_25_4_ProS_Mold.png" />
+    <Resource Include="png\OBJ_25_5_ProS_Clampforce.png" />
+    <Resource Include="png\OBJ_25_6_ProS_Torque.png" />
+    <Resource Include="png\OBJ_25_7_ProS_MotorTemp.png" />
+    <Resource Include="png\OBJ_25_8_ProS_ejector.png" />
+    <Resource Include="png\OBJ_25_9_ProS_injection.png" />
+    <Resource Include="png\OBJ_26_10_ObCornerRed.png" />
+    <Resource Include="png\OBJ_26_11_ObCornerBlue.png" />
+    <Resource Include="png\OBJ_26_12_InjectionCurveBack.png" />
+    <Resource Include="png\OBJ_26_12_InjectionCurveBack_Part1.png" />
+    <Resource Include="png\OBJ_26_12_InjectionCurveBack_Part2.png" />
+    <Resource Include="png\OBJ_26_12_InjectionCurveBack_Part3.png" />
+    <Resource Include="png\OBJ_26_12_InjectionCurveBack_Part4.png" />
+    <Resource Include="png\OBJ_26_12_InjectionCurveBack_temp.png" />
+    <Resource Include="png\OBJ_26_12_ObDelta_Right.png" />
+    <Resource Include="png\OBJ_26_12_shadow2_14_55.png" />
+    <Resource Include="png\OBJ_26_12_shadow2_14_93.png" />
+    <Resource Include="png\OBJ_26_12_shadow_14_55.png" />
+    <Resource Include="png\OBJ_26_12_shadow_14_93.png" />
+    <Resource Include="png\OBJ_26_13_ObDelta_Left.png" />
+    <Resource Include="png\OBJ_26_14_ObEndLine.png" />
+    <Resource Include="png\OBJ_26_15_Eject&amp;MoldCurveBack.png" />
+    <Resource Include="png\OBJ_26_15_Eject&amp;MoldCurveBack_2.png" />
+    <Resource Include="png\OBJ_26_15_EjectMoldCurveBack.png" />
+    <Resource Include="png\OBJ_26_15_Eject_MoldCurveBack.png" />
+    <Resource Include="png\OBJ_26_15_Eject_MoldCurveBack_2.png" />
+    <Resource Include="png\OBJ_26_16_ObBlueActive_2.png" />
+    <Resource Include="png\OBJ_26_17_ObBlueInactive_2.png" />
+    <Resource Include="png\OBJ_26_18_ObBluePill.png" />
+    <Resource Include="png\OBJ_26_19_ObBackPressureLevel.png" />
+    <Resource Include="png\OBJ_26_1_UnitBack.png" />
+    <Resource Include="png\OBJ_26_20_ChargeCurveback.png" />
+    <Resource Include="png\OBJ_26_20_ChargeCurveback_dd.png" />
+    <Resource Include="png\OBJ_26_21_InjectionSteps.png" />
+    <Resource Include="png\OBJ_26_22_InjectionSpeedSteps.png" />
+    <Resource Include="png\OBJ_26_2_UnitMask.png" />
+    <Resource Include="png\OBJ_26_3_UnitLine.png" />
+    <Resource Include="png\OBJ_26_4_ObBlueActive.png" />
+    <Resource Include="png\OBJ_26_4_ObOrangeActive.png" />
+    <Resource Include="png\OBJ_26_5_ObBlueInactive.png" />
+    <Resource Include="png\OBJ_26_5_ObOrangeInactive.png" />
+    <Resource Include="png\OBJ_26_6_ObOrangeRunningBar.png" />
+    <Resource Include="png\OBJ_26_7_ObBlack.png" />
+    <Resource Include="png\OBJ_26_8_blackSeperator.png" />
+    <Resource Include="png\OBJ_26_9_ObBlueRunningBar.png" />
+    <Resource Include="png\OBJ_27_10_Charge - 副本.png" />
+    <Resource Include="png\OBJ_27_10_Charge.png" />
+    <Resource Include="png\OBJ_27_11_Suckback - 副本.png" />
+    <Resource Include="png\OBJ_27_11_Suckback.png" />
+    <Resource Include="png\OBJ_27_12_Ejectorback - 副本.png" />
+    <Resource Include="png\OBJ_27_12_Ejectorback.png" />
+    <Resource Include="png\OBJ_27_13_EjectorFor - 副本.png" />
+    <Resource Include="png\OBJ_27_13_EjectorFor.png" />
+    <Resource Include="png\OBJ_27_14_CarriageFor - 副本.png" />
+    <Resource Include="png\OBJ_27_14_CarriageFor.png" />
+    <Resource Include="png\OBJ_27_15_Carriageback - 副本.png" />
+    <Resource Include="png\OBJ_27_15_Carriageback.png" />
+    <Resource Include="png\OBJ_27_16_AutoPg - 副本.png" />
+    <Resource Include="png\OBJ_27_16_AutoPg.png" />
+    <Resource Include="png\OBJ_27_17_UnitBack - 副本.png" />
+    <Resource Include="png\OBJ_27_17_UnitBack.png" />
+    <Resource Include="png\OBJ_27_18_UnitFor - 副本.png" />
+    <Resource Include="png\OBJ_27_18_UnitFor.png" />
+    <Resource Include="png\OBJ_27_19_MoldHeating - 副本.png" />
+    <Resource Include="png\OBJ_27_19_MoldHeating.png" />
+    <Resource Include="png\OBJ_27_19_MoldHeating2.png" />
+    <Resource Include="png\OBJ_27_1_ButtonBottum.png" />
+    <Resource Include="png\OBJ_27_20_BarrelHeating - 副本.png" />
+    <Resource Include="png\OBJ_27_20_BarrelHeating.png" />
+    <Resource Include="png\OBJ_27_20_BarrelHeatingActive - 副本.png" />
+    <Resource Include="png\OBJ_27_20_BarrelHeatingActive.png" />
+    <Resource Include="png\OBJ_27_21_Lubi - 副本.png" />
+    <Resource Include="png\OBJ_27_21_Lubi.png" />
+    <Resource Include="png\OBJ_27_22_Air1 - 副本.png" />
+    <Resource Include="png\OBJ_27_22_Air1.png" />
+    <Resource Include="png\OBJ_27_23_Air2 - 副本.png" />
+    <Resource Include="png\OBJ_27_23_Air2.png" />
+    <Resource Include="png\OBJ_27_24_Air3 - 副本.png" />
+    <Resource Include="png\OBJ_27_24_Air3.png" />
+    <Resource Include="png\OBJ_27_25_Air4 - 副本.png" />
+    <Resource Include="png\OBJ_27_25_Air4.png" />
+    <Resource Include="png\OBJ_27_26_CoreAIN - 副本.png" />
+    <Resource Include="png\OBJ_27_26_CoreAIN.png" />
+    <Resource Include="png\OBJ_27_27_CoreAOUT - 副本.png" />
+    <Resource Include="png\OBJ_27_27_CoreAOUT.png" />
+    <Resource Include="png\OBJ_27_28_CoreBIN - 副本.png" />
+    <Resource Include="png\OBJ_27_28_CoreBIN.png" />
+    <Resource Include="png\OBJ_27_29_CoreBOUT - 副本.png" />
+    <Resource Include="png\OBJ_27_29_CoreBOUT.png" />
+    <Resource Include="png\OBJ_27_2_ButtonBottum.png" />
+    <Resource Include="png\OBJ_27_30_CoreCIN - 副本.png" />
+    <Resource Include="png\OBJ_27_30_CoreCIN.png" />
+    <Resource Include="png\OBJ_27_31_CoreCOUT - 副本.png" />
+    <Resource Include="png\OBJ_27_31_CoreCOUT.png" />
+    <Resource Include="png\OBJ_27_32_ArrowRight.png" />
+    <Resource Include="png\OBJ_27_33_ArrowLeft.png" />
+    <Resource Include="png\OBJ_27_34_ArrowRight.png" />
+    <Resource Include="png\OBJ_27_35_ArrowLeft.png" />
+    <Resource Include="png\OBJ_27_36_Charge.png" />
+    <Resource Include="png\OBJ_27_37_DuoArrow.png" />
+    <Resource Include="png\OBJ_27_38_ArrowRight.png" />
+    <Resource Include="png\OBJ_27_39_ArrowLeft.png" />
+    <Resource Include="png\OBJ_27_3_Dark.png" />
+    <Resource Include="png\OBJ_27_40_NozzleTouchIcon.png" />
+    <Resource Include="png\OBJ_27_41_NozzleBackIcon.png" />
+    <Resource Include="png\OBJ_27_42_SecLub.png" />
+    <Resource Include="png\OBJ_27_43_MainLub.png" />
+    <Resource Include="png\OBJ_27_44_Nozzle.png" />
+    <Resource Include="png\OBJ_27_45_DuoButtonBack.png" />
+    <Resource Include="png\OBJ_27_46_Pressed.png" />
+    <Resource Include="png\OBJ_27_47_RED.png" />
+    <Resource Include="png\OBJ_27_48_GREEN.png" />
+    <Resource Include="png\OBJ_27_49_Expump.png" />
+    <Resource Include="png\OBJ_27_4_Light.png" />
+    <Resource Include="png\OBJ_27_50_watervalve.png" />
+    <Resource Include="png\OBJ_27_51_tunetabel_pos.png" />
+    <Resource Include="png\OBJ_27_52_tunetabel_neg.png" />
+    <Resource Include="png\OBJ_27_53_Nozzle.png" />
+    <Resource Include="png\OBJ_27_5_Pressed.png" />
+    <Resource Include="png\OBJ_27_5_Pressed2.png" />
+    <Resource Include="png\OBJ_27_6_Released.png" />
+    <Resource Include="png\OBJ_27_6_Released2.png" />
+    <Resource Include="png\OBJ_27_7_KeyMoldOpen - 副本.png" />
+    <Resource Include="png\OBJ_27_7_KeyMoldOpen.png" />
+    <Resource Include="png\OBJ_27_8_KeyMoldClose - 副本.png" />
+    <Resource Include="png\OBJ_27_8_KeyMoldClose.png" />
+    <Resource Include="png\OBJ_27_9_KeyInjection - 副本.png" />
+    <Resource Include="png\OBJ_27_9_KeyInjection.png" />
+    <Resource Include="png\OBJ_28_1_Blueclub_5x5.png" />
+    <Resource Include="png\OBJ_28_2_Greenclub_5x5.png" />
+    <Resource Include="png\OBJ_28_3_Yellowclub_5x5.png" />
+    <Resource Include="png\OBJ_28_4_Orangeclub_5x5.png" />
+    <Resource Include="png\OBJ_28_5_Pclub_5x5.png" />
+    <Resource Include="png\OBJ_28_6_LineBase_green_111x7.png" />
+    <Resource Include="png\OBJ_28_6_LineBase_green_1x7.png" />
+    <Resource Include="png\OBJ_28_7_LineBase_red_1x7.png" />
+    <Resource Include="png\OBJ_29_0_Whiteback.png" />
+    <Resource Include="png\OBJ_29_10_other.png" />
+    <Resource Include="png\OBJ_29_11_waitInput.png" />
+    <Resource Include="png\OBJ_29_12_waitRotable.png" />
+    <Resource Include="png\OBJ_29_13_waitPos.png" />
+    <Resource Include="png\OBJ_29_14_waitVar.png" />
+    <Resource Include="png\OBJ_29_15_waitCore.png" />
+    <Resource Include="png\OBJ_29_16_jumpInput.png" />
+    <Resource Include="png\OBJ_29_17_jumpPos.png" />
+    <Resource Include="png\OBJ_29_18_jumpRottable.png" />
+    <Resource Include="png\OBJ_29_19_jumpVar.png" />
+    <Resource Include="png\OBJ_29_1_Greenback.png" />
+    <Resource Include="png\OBJ_29_20_IprBack.png" />
+    <Resource Include="png\OBJ_29_20_wiatCore.png" />
+    <Resource Include="png\OBJ_29_21_add.png" />
+    <Resource Include="png\OBJ_29_21_minner.png" />
+    <Resource Include="png\OBJ_29_22_downLink.png" />
+    <Resource Include="png\OBJ_29_23_uplink.png" />
+    <Resource Include="png\OBJ_29_24_Blank.png" />
+    <Resource Include="png\OBJ_29_26_5Steps.png" />
+    <Resource Include="png\OBJ_29_27_3Steps.png" />
+    <Resource Include="png\OBJ_29_28_4Steps.png" />
+    <Resource Include="png\OBJ_29_29_2Steps.png" />
+    <Resource Include="png\OBJ_29_2_Rotteble.png" />
+    <Resource Include="png\OBJ_29_30_1Steps.png" />
+    <Resource Include="png\OBJ_29_31_baseback.png" />
+    <Resource Include="png\OBJ_29_32_blackButtonPress_172.png" />
+    <Resource Include="png\OBJ_29_32_blackButton_172.png" />
+    <Resource Include="png\OBJ_29_33_blackButtonPress_100.png" />
+    <Resource Include="png\OBJ_29_33_blackButton_100.png" />
+    <Resource Include="png\OBJ_29_34_savebutton_100.png" />
+    <Resource Include="png\OBJ_29_34_savebutton_51.png" />
+    <Resource Include="png\OBJ_29_35_newfilebutton_100.png" />
+    <Resource Include="png\OBJ_29_35_newfilebutton_51.png" />
+    <Resource Include="png\OBJ_29_36_Compair_100.png" />
+    <Resource Include="png\OBJ_29_36_Compair_51.png" />
+    <Resource Include="png\OBJ_29_37_Sync_100.png" />
+    <Resource Include="png\OBJ_29_37_Sync_51.png" />
+    <Resource Include="png\OBJ_29_37_Sync_OK_100.png" />
+    <Resource Include="png\OBJ_29_38_BlueBar.png" />
+    <Resource Include="png\OBJ_29_38_BlueRdLeftHead.png" />
+    <Resource Include="png\OBJ_29_38_BlueRdRightHead.png" />
+    <Resource Include="png\OBJ_29_39_RedBar.png" />
+    <Resource Include="png\OBJ_29_39_RedRdLeftHead.png" />
+    <Resource Include="png\OBJ_29_39_RedRdRightHead.png" />
+    <Resource Include="png\OBJ_29_3_Delay.png" />
+    <Resource Include="png\OBJ_29_40_WhiteBar.png" />
+    <Resource Include="png\OBJ_29_40_whiteRdLeftHead.png" />
+    <Resource Include="png\OBJ_29_40_whiteRdRightHead.png" />
+    <Resource Include="png\OBJ_29_41_BrakedownShadow.png" />
+    <Resource Include="png\OBJ_29_42_ActiveBar.png" />
+    <Resource Include="png\OBJ_29_43_BrakedownBack.png" />
+    <Resource Include="png\OBJ_29_4_Airblow.png" />
+    <Resource Include="png\OBJ_29_5_Counter.png" />
+    <Resource Include="png\OBJ_29_6_Core.png" />
+    <Resource Include="png\OBJ_29_7_Position.png" />
+    <Resource Include="png\OBJ_29_8_output.png" />
+    <Resource Include="png\OBJ_29_9_jump.png" />
+    <Resource Include="png\OBJ_2_10_VPSwitch_V0.0.png" />
+    <Resource Include="png\OBJ_2_11_TorqueBarBase_V0.0.png" />
+    <Resource Include="png\OBJ_2_12_TorqueBarValue1_V0.0.png" />
+    <Resource Include="png\OBJ_2_13_BaseMaskGray_V0.0.png" />
+    <Resource Include="png\OBJ_2_1_ProductRateBar_V0.0.png" />
+    <Resource Include="png\OBJ_2_3_LeftArrActive_V0.0.png" />
+    <Resource Include="png\OBJ_2_3_LeftArrFree_V0.0.png" />
+    <Resource Include="png\OBJ_2_4_RoghtArrAcitve_V0.0.png" />
+    <Resource Include="png\OBJ_2_4_RoghtArrFree_V0.0.png" />
+    <Resource Include="png\OBJ_2_5_Mold_V0.0.png" />
+    <Resource Include="png\OBJ_2_6_Ejector_V0.0.png" />
+    <Resource Include="png\OBJ_2_7_Inject_V0.0.png" />
+    <Resource Include="png\OBJ_2_8_Charge_V0.0.png" />
+    <Resource Include="png\OBJ_2_9_NozzleTouched_V0.0.png" />
+    <Resource Include="png\OBJ_2_9_NozzleUnTouch_V0.0.png" />
+    <Resource Include="png\OBJ_3_1_AlarmLineBase_V0.0.png" />
+    <Resource Include="png\OBJ_3_2_AlarmLineMask_V0.0.png" />
+    <Resource Include="png\OBJ_3_3_AlarmLineRed_V0.0.png" />
+    <Resource Include="png\OBJ_3_4_BackgroundBlue_V0.0.png" />
+    <Resource Include="png\OBJ_4_0_Background_23_V0.0.png" />
+    <Resource Include="png\OBJ_4_0_Background_V0.0.png" />
+    <Resource Include="png\OBJ_4_10_Teach2_V0.0.png" />
+    <Resource Include="png\OBJ_4_10_Teach_V0.0.png" />
+    <Resource Include="png\OBJ_4_11_Charge2_V0.0.png" />
+    <Resource Include="png\OBJ_4_11_Charge_V0.0.png" />
+    <Resource Include="png\OBJ_4_11_Injection2_V0.0.png" />
+    <Resource Include="png\OBJ_4_11_Injection_V0.0.png" />
+    <Resource Include="png\OBJ_4_12_Barrelheat_V0.0.png" />
+    <Resource Include="png\OBJ_4_13_Product_V0.0.png" />
+    <Resource Include="png\OBJ_4_14_Settings2_V0.0.png" />
+    <Resource Include="png\OBJ_4_14_Settings_V0.0.png" />
+    <Resource Include="png\OBJ_4_15_Record_V0.0.png" />
+    <Resource Include="png\OBJ_4_15_SPC2_V0.0.png" />
+    <Resource Include="png\OBJ_4_15_SPC_V0.0.png" />
+    <Resource Include="png\OBJ_4_16_All_V0.0.png" />
+    <Resource Include="png\OBJ_4_16_Overview_V0.0.png" />
+    <Resource Include="png\OBJ_4_16_ROBOT2_V0.0.png" />
+    <Resource Include="png\OBJ_4_16_ROBOT_V0.0.png" />
+    <Resource Include="png\OBJ_4_17_Abutton_V0.0.png" />
+    <Resource Include="png\OBJ_4_18_AbuttonPress_V0.0.png" />
+    <Resource Include="png\OBJ_4_19_Bbutton_V0.0.png" />
+    <Resource Include="png\OBJ_4_1_BackgroundMain_V0.0.png" />
+    <Resource Include="png\OBJ_4_1_BackgroundMain_V0.1.png" />
+    <Resource Include="png\OBJ_4_1_BackgroundMain_V0.2.png" />
+    <Resource Include="png\OBJ_4_1_BackgroundShadow_V0.0.png" />
+    <Resource Include="png\OBJ_4_20_BbuttonPress_V0.0.png" />
+    <Resource Include="png\OBJ_4_21_MoldClampBack_V0.0.png" />
+    <Resource Include="png\OBJ_4_22_MoldClampCurve_V0.0.png" />
+    <Resource Include="png\OBJ_4_23_button_40_40_V0.0.png" />
+    <Resource Include="png\OBJ_4_24_buttonPress_40_40_V0.0.png" />
+    <Resource Include="png\OBJ_4_25_Greenok_40_40_V0.0.png" />
+    <Resource Include="png\OBJ_4_26_Grayok_40_40_V0.0.png" />
+    <Resource Include="png\OBJ_4_27_GraySetup_40_40_V0.0.png" />
+    <Resource Include="png\OBJ_4_28_Trans_62_54_V0.0.png" />
+    <Resource Include="png\OBJ_4_29_Press_62_54_V0.0.png" />
+    <Resource Include="png\OBJ_4_2_BackgroundSon1_V0.0.png" />
+    <Resource Include="png\OBJ_4_30_Press_57_57_V0.0.png" />
+    <Resource Include="png\OBJ_4_30_Trans_57_57_V0.0.png" />
+    <Resource Include="png\OBJ_4_31_in_down2_V0.0.png" />
+    <Resource Include="png\OBJ_4_31_in_down_V0.0.png" />
+    <Resource Include="png\OBJ_4_31_in_left2_V0.0.png" />
+    <Resource Include="png\OBJ_4_31_in_left_V0.0.png" />
+    <Resource Include="png\OBJ_4_31_in_up2_V0.0.png" />
+    <Resource Include="png\OBJ_4_31_in_up_V0.0.png" />
+    <Resource Include="png\OBJ_4_32_Block2_V0.0.png" />
+    <Resource Include="png\OBJ_4_32_Block_V0.0.png" />
+    <Resource Include="png\OBJ_4_33_SideBut2.png" />
+    <Resource Include="png\OBJ_4_33_SideBut_V0.0.png" />
+    <Resource Include="png\OBJ_4_3_Arral_V0.0.png" />
+    <Resource Include="png\OBJ_4_3_BackgroundSon_LeftSelect_V0.0.png" />
+    <Resource Include="png\OBJ_4_4_BackgroundSon_MidSelect_V0.0.png" />
+    <Resource Include="png\OBJ_4_5_BackgroundSon_RightSelect_V0.0.png" />
+    <Resource Include="png\OBJ_4_6_Shadow_V0.0.png" />
+    <Resource Include="png\OBJ_4_7_Overview2_V0.0.png" />
+    <Resource Include="png\OBJ_4_7_Overview_V0.0.png" />
+    <Resource Include="png\OBJ_4_8_FastSettings_V0.0.png" />
+    <Resource Include="png\OBJ_4_9_EjectorSettings2_V0.0.png" />
+    <Resource Include="png\OBJ_4_9_EjectorSettings_V0.0.png" />
+    <Resource Include="png\OBJ_4_9_MoldSettings2_V0.0.png" />
+    <Resource Include="png\OBJ_4_9_MoldSettings_V0.0.png" />
+    <Resource Include="png\OBJ_5_0_ButtonLine_V0.0.png" />
+    <Resource Include="png\OBJ_5_10_Back_V0.0.png" />
+    <Resource Include="png\OBJ_5_11_Start_Inactive_V0.0.png" />
+    <Resource Include="png\OBJ_5_11_Start_V0.0.png" />
+    <Resource Include="png\OBJ_5_12_Stop_V0.0.png" />
+    <Resource Include="png\OBJ_5_13_MotorStart_V0.0.png" />
+    <Resource Include="png\OBJ_5_14_MotorStop_V0.0.png" />
+    <Resource Include="png\OBJ_5_15_MotorStop_V0.0.png" />
+    <Resource Include="png\OBJ_5_16_AutoHopper_ON_V0.0.png" />
+    <Resource Include="png\OBJ_5_17_AutoHopper_OFF_V0.0.png" />
+    <Resource Include="png\OBJ_5_18_EuromapPlag_ON_V0.0.png" />
+    <Resource Include="png\OBJ_5_19_EuromapPlag_OFF_V0.0.png" />
+    <Resource Include="png\OBJ_5_1_UserName_V0.0.png" />
+    <Resource Include="png\OBJ_5_20_Hotrunner_ON_V0.0.png" />
+    <Resource Include="png\OBJ_5_21_Hotrunner_OFF_V0.0.png" />
+    <Resource Include="png\OBJ_5_22_Link_ON_V0.0.png" />
+    <Resource Include="png\OBJ_5_23_Link_OFF_V0.0.png" />
+    <Resource Include="png\OBJ_5_24_Harddisk_On_V0.0.png" />
+    <Resource Include="png\OBJ_5_25_USBdisk_On_V0.0.png" />
+    <Resource Include="png\OBJ_5_26_USBdisk_Off_V0.0.png" />
+    <Resource Include="png\OBJ_5_27_LockedFile_V0.0.png" />
+    <Resource Include="png\OBJ_5_28_ReleaseFile_V0.0.png" />
+    <Resource Include="png\OBJ_5_2_AthrLow_V0.0.png" />
+    <Resource Include="png\OBJ_5_2_AthrOK_V0.0.png" />
+    <Resource Include="png\OBJ_5_3_Printer_V0.0.png" />
+    <Resource Include="png\OBJ_5_4_Calculator_V0.0.png" />
+    <Resource Include="png\OBJ_5_4_Camera_V0.0.png" />
+    <Resource Include="png\OBJ_5_5_ModeSelect_V0.0.png" />
+    <Resource Include="png\OBJ_5_5_ModeUnSelect_V0.0.png" />
+    <Resource Include="png\OBJ_5_6_ManualSelect_V0.0.png" />
+    <Resource Include="png\OBJ_5_6_ManualUnselect_V0.0.png" />
+    <Resource Include="png\OBJ_5_6_Manual_V0.0.png" />
+    <Resource Include="png\OBJ_5_7_SemiAutoSelect_V0.0.png" />
+    <Resource Include="png\OBJ_5_7_SemiAutoUnselect_V0.0.png" />
+    <Resource Include="png\OBJ_5_8_FullAutoSelect_V0.0.png" />
+    <Resource Include="png\OBJ_5_8_FullAutoUnselect_V0.0.png" />
+    <Resource Include="png\OBJ_6_1_ResetActive_V0.0.png" />
+    <Resource Include="png\OBJ_6_1_Reset_V0.0.png" />
+    <Resource Include="png\OBJ_6_2_EmStopActive_V0.0.png" />
+    <Resource Include="png\OBJ_6_2_EmStopInactive_V0.0.png" />
+    <Resource Include="png\OBJ_6_2_EmStopInactive_V0_1.png" />
+    <Resource Include="png\OBJ_6_3_OpKeyBase_V0.0.png" />
+    <Resource Include="png\VICO_2.50_Visual_Interface_Demo.png" />
+    <Resource Include="png\VICO_2.60_Visual_Interface_Demo.png" />
+    <Resource Include="png\WinICON.ico" />
+    <Resource Include="png\win_FilterLog.png" />
+    <Resource Include="png\win_FilterUserLog.png" />
+    <Resource Include="png\Win_Login.png" />
+    <Resource Include="png\win_showsetup.png" />
+    <Resource Include="png\Win_TimeDateSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\Lasal32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataSource\kernel32.dll" />
+    <Resource Include="png\Sign\Cammra-32.png" />
+    <Resource Include="png\Sign\Monitor-32.png" />
+    <Resource Include="png\Sign\Net-32.png" />
+    <Resource Include="png\Flag\china.png" />
+    <Resource Include="png\Flag\usa.png" />
+    <Resource Include="png\blocks\HeadLine-2015.png" />
+    <Resource Include="png\blocks\PageSwitch-back.png" />
+    <Resource Include="png\Sign\help-32.png" />
+    <Resource Include="png\Sign\WorkerMaintain_50.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_14_Maintain.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_15_Schedule.png" />
+    <Resource Include="png\blocks\ShadowBlock.png" />
+    <Resource Include="png\blocks\SPC_Detail.png" />
+    <Resource Include="png\Sign\Settings-25.png" />
+    <Resource Include="png\btn\Button_5_V00.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_41_PM_V0.0.png" />
+    <Resource Include="png\blocks\MoldCurveBack.png" />
+    <Resource Include="png\blocks\Curve_PMA_V00.png" />
+    <Resource Include="png\blocks\NumKeypad.png" />
+    <Resource Include="png\btn\NumKey_PlusMin.png" />
+    <Resource Include="png\btn\NumKey_AddValue.png" />
+    <Resource Include="png\btn\NumKey_BackSpace.png" />
+    <Resource Include="png\btn\NumKey_Enter.png" />
+    <Resource Include="png\btn\NumKey_MinValue.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_13_FAST.png" />
+    <Resource Include="png\blocks\InjMoveCurve.png" />
+    <Resource Include="png\blocks\PressureControlCurve.png" />
+    <SplashScreen Include="Radbb14_Start.png" />
+    <Resource Include="png\IprBlocks\ipr_op2_ejectorshake.png" />
+    <Resource Include="png\Sign\up4-25.png" />
+    <Resource Include="png\blocks\Drawback.png" />
+    <Resource Include="png\blocks\EjectorMoveCurve.png" />
+    <Resource Include="png\blocks\MoldMoveCurve.png" />
+    <Resource Include="png\blocks\OBJ_10_53_Popup_Window3_468_233_V0.0.png" />
+    <Resource Include="png\blocks\CAI888.png" />
+    <Resource Include="png\blocks\CDI163.png" />
+    <Resource Include="png\blocks\CDM163.png" />
+    <Resource Include="png\blocks\CIO021.png" />
+    <Resource Include="png\blocks\CTO163.png" />
+    <Resource Include="png\blocks\SlideDark_172_63.png" />
+    <Resource Include="png\Sign\playBg.png" />
+    <Resource Include="png\blocks\left-32.png" />
+    <Resource Include="png\Sign\trash2-32.png" />
+    <Resource Include="png\Marks\Mark_Alarm.png" />
+    <Resource Include="png\Marks\Mark_Event.png" />
+    <Resource Include="png\Marks\Mark_injPressure_3_31.png" />
+    <Resource Include="png\Marks\Mark_injVol_3_32.png" />
+    <Resource Include="png\Marks\Mark_Screwrotespeed_3_26.png" />
+    <Resource Include="png\Marks\Mark_VPtime_3_30.png" />
+    <Resource Include="png\Marks\Mark_Warning.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_37_autopurch_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_38_injunit_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_39_injection_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_40_charge_V0.0.png" />
+    <Resource Include="WinICON.ico" />
+    <Resource Include="png\HeadSwitch\OBJ_20_35_Nozzle_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_36_moldprtc_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_13_3_MidButtonbaseRelease_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_13_4_MidButtonbaseActive_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_14_10_AcessSleepV0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_14_8_AcessLow_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_14_9_AcessWake_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_18_1_MachineModeActiveBlue_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_18_2_MachineModeInactiveGray_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_18_3_MachineModeInactiveOrange_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_18_4_AdjustActive_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_18_5_AdjustInactive_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_18_6_MachineModePress_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_31_MoldOpCls_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_32_Lubricant_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_33_Core_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_20_34_Air_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_12_Stop_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_13_MotorStart_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_14_MotorStop_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_15_MotorStop_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_4_Calculator_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_4_Camera_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_6_ManualSelect_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_6_ManualUnselect_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_6_Manual_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_7_SemiAutoSelect_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_7_SemiAutoUnselect_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_8_FullAutoSelect_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_5_8_FullAutoUnselect_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_6_1_ResetActive_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_6_1_Reset_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_6_2_EmStopActive_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_6_2_EmStopInactive_V0_1.png" />
+    <Resource Include="png\Sign\download_filled-32.png" />
+    <Resource Include="png\Sign\upload_filled-32.png" />
+    <Resource Include="png\blocks\EuroCore.png" />
+    <Resource Include="png\Sign\Ulock_50.png" />
+    <Resource Include="png\blocks\Button_Slide_Active.png" />
+    <Resource Include="png\blocks\Button_Slide_base.png" />
+    <Resource Include="png\Marks\Mark_ClampForce_3_28.png" />
+    <Resource Include="png\Marks\Mark_TouquePercent_3_29.png" />
+    <Resource Include="png\blocks\MoldClampCurve.png" />
+    <Resource Include="png\blocks\MoldProtectCurve.png" />
+    <Resource Include="png\Sign\downmove.png" />
+    <Resource Include="png\Sign\upmove.png" />
+    <Resource Include="png\Marks\Mark_InjUPos_3_25.png" />
+    <Resource Include="png\Marks\Mark_InjUTouchForce_3_27.png" />
+    <Resource Include="png\Marks\Mark_InjUTouchPos_3_26.png" />
+    <Resource Include="png\IprBlocks\ipr_op28_Other.png" />
+    <Resource Include="png\IprBlocks\ipr_op29_Presuck.png" />
+    <Resource Include="png\IprBlocks\ipr_op30_PreRels.png" />
+    <Resource Include="png\IprBlocks\ipr_op31_NozzleOpen.png" />
+    <Resource Include="png\IprBlocks\ipr_op32_waitsignal.png" />
+    <Resource Include="png\IprBlocks\ipr_op33_EMOutput.png" />
+    <Resource Include="png\IprBlocks\ipr_op33_waitEMinput.png" />
+    <Resource Include="png\blocks\Curve_Injection.png" />
+    <Resource Include="png\btn\OBJ_13_3_MidButtonbaseRelease_V0.0.png" />
+    <Resource Include="png\btn\OBJ_13_4_MidButtonbaseActive_V0.0.png" />
+    <Resource Include="png\btn\OBJ_14_10_AcessSleepV0.0.png" />
+    <Resource Include="png\btn\OBJ_14_8_AcessLow_V0.0.png" />
+    <Resource Include="png\btn\OBJ_14_9_AcessWake_V0.0.png" />
+    <Resource Include="png\btn\OBJ_18_1_MachineModeActiveBlue_V0.0.png" />
+    <Resource Include="png\btn\OBJ_18_2_MachineModeInactiveGray_V0.0.png" />
+    <Resource Include="png\btn\OBJ_18_3_MachineModeInactiveOrange_V0.0.png" />
+    <Resource Include="png\btn\OBJ_18_4_AdjustActive_V0.0.png" />
+    <Resource Include="png\btn\OBJ_18_5_AdjustInactive_V0.0.png" />
+    <Resource Include="png\btn\OBJ_18_6_MachineModePress_V0.0.png" />
+    <Resource Include="png\btn\OBJ_27_10_Charge.png" />
+    <Resource Include="png\btn\OBJ_27_11_Suckback.png" />
+    <Resource Include="png\btn\OBJ_27_12_Ejectorback.png" />
+    <Resource Include="png\btn\OBJ_27_13_EjectorFor.png" />
+    <Resource Include="png\btn\OBJ_27_14_CarriageFor.png" />
+    <Resource Include="png\btn\OBJ_27_15_Carriageback.png" />
+    <Resource Include="png\btn\OBJ_27_17_UnitBack.png" />
+    <Resource Include="png\btn\OBJ_27_18_UnitFor.png" />
+    <Resource Include="png\btn\OBJ_27_45_DuoButtonBack.png" />
+    <Resource Include="png\btn\OBJ_27_46_Pressed.png" />
+    <Resource Include="png\btn\OBJ_27_47_RED.png" />
+    <Resource Include="png\btn\OBJ_27_48_GREEN.png" />
+    <Resource Include="png\btn\OBJ_27_7_KeyMoldOpen.png" />
+    <Resource Include="png\btn\OBJ_27_8_KeyMoldClose.png" />
+    <Resource Include="png\btn\OBJ_27_9_KeyInjection.png" />
+    <Resource Include="png\btn\OBJ_5_12_Stop_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_13_MotorStart_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_14_MotorStop_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_15_MotorStop_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_4_Calculator_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_4_Camera_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_6_ManualSelect_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_6_ManualUnselect_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_6_Manual_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_7_SemiAutoSelect_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_7_SemiAutoUnselect_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_8_FullAutoSelect_V0.0.png" />
+    <Resource Include="png\btn\OBJ_5_8_FullAutoUnselect_V0.0.png" />
+    <Resource Include="png\btn\OBJ_6_1_ResetActive_V0.0.png" />
+    <Resource Include="png\btn\OBJ_6_1_Reset_V0.0.png" />
+    <Resource Include="png\btn\OBJ_6_2_EmStopActive_V0.0.png" />
+    <Resource Include="png\btn\OBJ_6_2_EmStopInactive_V0_1.png" />
+    <Resource Include="png\blocks\MAIN_OP_LINE.png" />
+    <Resource Include="png\blocks\OBJ_10_53_Popup_Window2_468_233_V0.0.png" />
+    <Resource Include="png\blocks\OBJ_10_53_Popup_Window_468_233_V0.0.png" />
+    <Resource Include="png\OBJ_10_53_Popup_Window2_468_233_V0.0.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_12_SpcD.png" />
+    <Resource Include="png\HeadSwitch\OBJ_22_13_Energ.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_10_Charge.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_11_Suckback.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_12_Ejectorback.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_13_EjectorFor.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_14_CarriageFor.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_15_Carriageback.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_17_UnitBack.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_18_UnitFor.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_19_MoldHeating.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_19_MoldHeating2.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_20_BarrelHeating.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_20_BarrelHeatingActive.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_25_Air4.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_30_CoreCIN.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_31_CoreCOUT.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_42_SecLub.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_42_SecLub_Act.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_43_MainLub.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_43_MainLub_Act.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_44_RobNoRef.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_44_RobNoRef_ACt.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_44_RobRef.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_44_RobRef_Act.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_45_RobOn.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_45_RobOn_Act.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_49_Expump.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_49_Expump_Act.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_50_watervalve.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_50_watervalve_Act.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_51_tunetabel_pos.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_52_tunetabel_neg.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_53_Nozzle.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_7_KeyMoldOpen.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_8_KeyMoldClose.png" />
+    <Resource Include="png\HeadSwitch\OBJ_27_9_KeyInjection.png" />
+    <Resource Include="png\Marks\Mark_PresbefCharge_3_24.png" />
+    <Resource Include="png\Marks\Mark_rotespeed_3_25.png" />
+    <Resource Include="png\blocks\ProductCurve_Base.png" />
+    <Resource Include="png\blocks\ProductCurve_Scale.png" />
+    <Resource Include="png\Sign\info_Err-32.png" />
+    <Resource Include="png\Sign\info_OK-32.png" />
+    <Resource Include="png\Sign\pressure-32.png" />
+    <Resource Include="png\Sign\street_view-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

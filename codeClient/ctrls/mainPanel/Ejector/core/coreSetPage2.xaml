@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.coreSetPage2"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="955" d:DesignWidth="1005" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Width="1005" Name="cvsMain" Height="955">
+        <!--<Image Source="/Program;component/png/OBJ_15_3_SubTreeSecond_V0.0.png" Canvas.Top="159" Canvas.Left="983" Name="imgTbOverView2"  />-->
+        <my:coreSetUnitCtrl dis="{DynamicResource lanKey163}"  Canvas.Left="9" Canvas.Top="11" x:Name="coreSetUnitCtrl1" objState="Mld367"  objOutput1="Mld372" objOutput2="Mld373" objSwitch1="Mld291" objSwitch2="Mld297" objSwitch3="Mld294" objSwitch4="Mld295" objSwitch5="Mld300" objPos1="Mld290" objPos2="Mld296" objTm1="Mld292" objTm2="Mld293" objTm3="Mld298" objTm4="Mld299" objTmRo1="Mld370" objTmRo2="Mld368" objTmRo3="Mld371" objTmRo4="Mld369" objMode="Mld289" objVisible="Mld301"/>
+        <my:coreSetUnitCtrl dis="{DynamicResource lanKey164}"  Canvas.Left="9" Canvas.Top="294" x:Name="coreSetUnitCtrl2" objState="Mld376"  objOutput1="Mld381" objOutput2="Mld382" objSwitch1="Mld304" objSwitch2="Mld310" objSwitch3="Mld307" objSwitch4="Mld308" objSwitch5="Mld313" objPos1="Mld303" objPos2="Mld309" objTm1="Mld305" objTm2="Mld306" objTm3="Mld311" objTm4="Mld312" objTmRo1="Mld379" objTmRo2="Mld377" objTmRo3="Mld380" objTmRo4="Mld378" objMode="Mld302" objVisible="Mld314"/>
+        <my:coreSetUnitCtrl dis="{DynamicResource lanKey165}"  Canvas.Left="9" Canvas.Top="577" x:Name="coreSetUnitCtrl3" objState="Mld385"  objOutput1="Mld390" objOutput2="Mld391" objSwitch1="Mld317" objSwitch2="Mld323" objSwitch3="Mld320" objSwitch4="Mld321" objSwitch5="Mld326" objPos1="Mld316" objPos2="Mld322" objTm1="Mld318" objTm2="Mld319" objTm3="Mld324" objTm4="Mld325" objTmRo1="Mld388" objTmRo2="Mld386" objTmRo3="Mld389" objTmRo4="Mld387" objMode="Mld315" objVisible="Mld327"/>
+    </Canvas>
+</UserControl>

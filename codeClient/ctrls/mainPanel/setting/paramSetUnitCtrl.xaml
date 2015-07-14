@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.paramSetUnitCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="410" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="30" Width="410" Name="cvsMain">
+        <Label Width="150" Name="lbDis" Height="30" Content="{DynamicResource lanKey2099}" VerticalContentAlignment="Center" BorderBrush="Silver" BorderThickness="1,1,0,1"/>
+        <Label Canvas.Left="150" FontSize="16" Height="30" VerticalContentAlignment="Center" Width="200" BorderBrush="Silver" BorderThickness="1" Name="lbValue" Content="250" MouseDown="lbValue_MouseDown" MouseUp="lbValue_MouseUp" MouseLeave="lbValue_MouseLeave" />
+        <Label Width="60" Name="lbUnit" Height="30" Canvas.Left="350" Content="[inch/s2]" VerticalContentAlignment="Center" BorderBrush="Silver" BorderThickness="0,1,1,1"/>
+    </Canvas>
+</UserControl>

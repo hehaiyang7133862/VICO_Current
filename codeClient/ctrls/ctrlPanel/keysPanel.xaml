@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.keysPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="593" d:DesignWidth="1080" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="593" Canvas.Bottom="0" Name="cvsMain">
+        <Rectangle Height="1000" Width="1080" Canvas.Top="13" Fill="Black" Opacity="0.4"/>
+        <Canvas Height="345" Width="1080" Canvas.Top="100" Name="cvsCnt" ClipToBounds="True">
+            <my:cntBtn Canvas.Left="25" Canvas.Top="8" Type="k_10_KeyMoldOpen" />
+            <my:cntBtn Canvas.Left="173" Canvas.Top="8" Type="k_11_KeyMoldClose" />
+            <my:cntBtn Canvas.Left="617" Canvas.Top="8" Type="k_20_Suckback" />
+            <my:cntBtn Canvas.Left="469" Canvas.Top="8" Type="k_19_Charge" />
+            <my:cntBtn Canvas.Left="321" Canvas.Top="8" Type="k_18_KeyInjection" />
+            <my:cntBtn Canvas.Left="765" Canvas.Top="8" Type="k_35_CoreAIN"  />
+            <my:cntBtn Canvas.Left="913" Canvas.Top="8" Type="k_36_CoreAOUT"  />
+            <my:cntBtn Canvas.Left="25" Canvas.Top="121" Type="k_12_Ejectorback"  />
+            <my:cntBtn Canvas.Left="173" Canvas.Top="121" Type="k_13_EjectorFor"  />
+            <my:cntBtn Canvas.Left="321" Canvas.Top="121" Type="k_21_CarriageFor"  />
+            <my:cntBtn Canvas.Left="469" Canvas.Top="121" Type="k_22_Carriageback"  />
+            <my:cntBtn Canvas.Left="617" Canvas.Top="121" Type="k_54_Nozzle" />
+            <my:cntBtn Canvas.Left="765" Canvas.Top="121" Type="k_37_CoreBIN"  />
+            <my:cntBtn Canvas.Left="913" Canvas.Top="121" Type="k_38_CoreBOUT"  />
+            <my:cntBtn Canvas.Left="173" Canvas.Top="234" Type="k_6_UnitFor"  />
+            <my:cntBtn Canvas.Left="25" Canvas.Top="234" Type="k_7_UnitBack"  />
+            <my:cntBtn Canvas.Left="321" Canvas.Top="234" Type="k_23_Air1"  />
+            <my:cntBtn Canvas.Left="469" Canvas.Top="234" Type="k_24_Air2"  />
+            <my:cntBtn Canvas.Left="617" Canvas.Top="234" Type="k_25_Air3"  />
+            <my:cntBtn Canvas.Left="765" Canvas.Top="234" Type="k_61_TPos"  />
+            <my:cntBtn Canvas.Left="913" Canvas.Top="234" Type="k_62_TNeg"  />
+            <my:cntBtn Canvas.Left="25" Canvas.Top="347" Type="k_26_Air4" />
+            <my:cntBtn Canvas.Left="173" Canvas.Top="347" Type="k_27_Air5" />
+            <my:cntBtn Canvas.Left="617" Canvas.Top="347" Type="k_30_Air8" />
+            <my:cntBtn Canvas.Left="469" Canvas.Top="347" Type="k_29_Air7" />
+            <my:cntBtn Canvas.Left="321" Canvas.Top="347" Type="k_28_Air6" />
+            <my:cntBtn Canvas.Left="765" Canvas.Top="347" Type="k_31_Air9" />
+            <my:cntBtn Canvas.Left="913" Canvas.Top="347" Type="k_32_Air10" />
+            <my:cntBtn Canvas.Left="25" Canvas.Top="460" Type="k_33_Air11" />
+            <my:cntBtn Canvas.Left="173" Canvas.Top="460" Type="k_34_Air12" />
+            <my:cntBtn Canvas.Left="321" Canvas.Top="460" Type="k_39_CoreCIN" />
+            <my:cntBtn Canvas.Left="469" Canvas.Top="460" Type="k_40_CoreCOUT" />
+            <my:cntBtn Canvas.Left="617" Canvas.Top="460" Type="k_41_CoreDIN" />
+            <my:cntBtn Canvas.Left="765" Canvas.Top="460" Type="k_42_CoreDOUT" />
+            <my:cntBtn Canvas.Left="913" Canvas.Top="460" Type="k_43_CoreEIN" />
+            <my:cntBtn Canvas.Left="173" Canvas.Top="573" Type="k_45_CoreFIN" />
+            <my:cntBtn Canvas.Left="25" Canvas.Top="573" Type="k_44_CoreEOUT" />
+            <my:cntBtn Canvas.Left="321" Canvas.Top="573" Type="k_46_CoreFOUT" />
+        </Canvas>
+        <Image Height="170" Width="1080" Source="/Program;component/png/blocks/Button-Back.png" Canvas.Bottom="0" />
+        <Canvas Name="cvsTop" Canvas.Top="13">
+            <my:userBtn Canvas.Left="156" Canvas.Top="9" x:Name="userBtn1" />
+            <my:cameraBtn Canvas.Left="234" Canvas.Top="9" x:Name="cameraBtn1" />
+            <my:calcBtn Canvas.Left="312" Canvas.Top="9" x:Name="calcBtn1" />
+            <my:pdfBtn Canvas.Left="390" Canvas.Top="9" x:Name="pdfBtn1" />
+            <my:manualBtn Canvas.Left="469" Canvas.Top="9" x:Name="manualBtn1" />
+            <my:adjustBtn Canvas.Left="692" Canvas.Top="9" x:Name="adjustBtn1" />
+            <my:motorOnBtn Canvas.Left="771" Canvas.Top="9" x:Name="motorOnBtn1" />
+            <my:motorOffBtn Canvas.Left="849" Canvas.Top="9" x:Name="motorOffBtn1" />
+            <Line X2="1080" StrokeThickness="10" Stroke="#FF006EA5" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Name="lmenu" X2="1080" StrokeThickness="2" Stroke="Black" ClipToBounds="True" Canvas.Top="87" SnapsToDevicePixels="True" Opacity="1"/>
+        </Canvas>
+        <Canvas Name="btnFold" Height="80" Width="150" Background="Transparent" Canvas.Top="-27" MouseUp="btnFold_MouseUp">
+            <Canvas Height="30" Width="100" Canvas.Left="25" Canvas.Top="25" Background="#FFB7C9C8" MouseUp="btnFold_MouseUp">
+                <Image Name="imgDown" Source="/Program;component/png/Sign/downmove.png" Visibility="Visible" Canvas.Left="23" Canvas.Top="7" />
+                <Image Name="imgUp" Source="/Program;component/png/Sign/upmove.png" Visibility="Hidden" Canvas.Left="23" Canvas.Top="7" />
+            </Canvas>
+        </Canvas>
+        <Canvas Name="cvsBtn" Height="80" Width="794" Canvas.Left="142" Canvas.Bottom="5" Background="#FFC1C3BD">
+            <my:btmBtn Canvas.Left="22" Canvas.Bottom="5" type="k_14_BarrelHeatingActive" />
+            <my:btmBtn Canvas.Left="98" Canvas.Bottom="5" type="k_52_MoldHeating" />
+            <my:btmBtn Canvas.Left="174" Canvas.Bottom="5" type="k_59_Expump" />
+            <my:btmBtn Canvas.Left="250" Canvas.Bottom="5"  type="k_60_watervalve"/>
+            <my:btmBtn Canvas.Left="326" Canvas.Bottom="5"  type="k_53_SecLub"/>
+            <my:btmBtn Canvas.Left="402" Canvas.Bottom="5"  type="k_8_MainLub"/>
+            <my:btmBtn Canvas.Left="478" Canvas.Bottom="5"  />
+            <my:btmBtn Canvas.Left="554" Canvas.Bottom="5"  />
+            <my:btmBtn Canvas.Left="630" Canvas.Bottom="5"  type="k_N2"/>
+            <my:btmBtn Canvas.Left="706" Canvas.Bottom="5"  type="k_N3"/>
+        </Canvas>
+        <Canvas Name="cvsMenuBtn" Height="65" Width="794" Canvas.Bottom="78" Canvas.Left="142" Background="#FFC1C3BD" ClipToBounds="True">
+            <my:btmBtn Canvas.Left="62" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="138" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="214" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="290" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="366" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="442" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="518" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="594" Canvas.Top="1" />
+            <my:btmBtn Canvas.Left="670" Canvas.Top="1" />
+        </Canvas>
+        <my:resetBtn Canvas.Bottom="5" Canvas.Left="0" />
+        <my:emStopBtn Canvas.Bottom="5" Canvas.Right="0" />
+    </Canvas>
+</UserControl>

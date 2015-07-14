@@ -1,0 +1,114 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.settingPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="1750" d:DesignWidth="1068" >
+    <Canvas Height="1750" Width="1068" Name="cvsMain" Background="Transparent">
+        <TabControl Name="tbMain" TabStripPlacement="Right" Canvas.Top="159" Height="1591" Width="1070" Background="#EAEAEA" Margin="0" Padding="0" BorderThickness="0" SelectedIndex="9">
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:sysConfigPart />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:quickRunPart />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:functionSettingPart />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:motionPart />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:injectionPart />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:moveMoldPart />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:SetKeybordPage />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:SettingHeatingPage />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:ViewIOPage />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Width="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:basicMessage />
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <Canvas Canvas.Top="74" Height="85" Width="1068" Background="#F4F4F4">
+            <my:tabItemBtnCtrl Canvas.Left="180" Canvas.Top="4" x:Name="tblBtnCtrl" itemCount="10" focusNr="9" />
+            
+            <Canvas Tag="0" Canvas.Left="182" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_29_Config_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey950}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="1" Canvas.Left="267" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_28_Fastexe_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey949}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="2" Canvas.Left="352" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_27_FuncSetup_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey948}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="3" Canvas.Left="437" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_26_Motion_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey1082}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="4" Canvas.Left="522" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_25_Injection_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey947}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="5" Canvas.Left="607" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_24_Mold_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey946}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="6" Canvas.Left="692" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_23_Assistans_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey945}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="7" Canvas.Left="777" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_22_Heat_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey944}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="8" Canvas.Left="862" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_21_Hardware_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey943}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            <Canvas Tag="9" Canvas.Left="947" Canvas.Top="6" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/OBJ_20_21_Home_V0.0.png"/>
+                <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource lanKey942}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+            </Canvas>
+            
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FF8C8C8C" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+        </Canvas>
+        <Canvas Canvas.Left="875" Canvas.Top="-1"  Width="97" Height="76"  Background="Transparent" >
+            <Image Width="97" Height="75" Source="/Program;component/png/HeadSwitch/B1_P10_Blue.png" Stretch="Fill"/>
+            <Label Name="lbDis0" Content="{DynamicResource strMainMenu_Setting}" Canvas.Left="0" Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3"/>
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" Canvas.Left="0" />
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.ejectorMapLeft"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="380" d:DesignWidth="1068" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Name="cvsMain" Height="380" Width="1068" >
+        <Canvas Name="cvsHead" Height="50" Width="1068" Background="White">
+            <Label Canvas.Left="50" Content="{DynamicResource lanKey2132}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" Canvas.Top="12" />
+            <Line Y2="48" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="174" Canvas.Top="1" />
+            <Image Height="30" Width="40" Canvas.Bottom="-5" Canvas.Right="68" Source="/Program;component/png/Marks/Mark_Ejeback_Grn_2_2_V00.png" />
+            <Label Canvas.Right="107" Canvas.Bottom="1" Content="{DynamicResource lanKey229}" FontSize="14" Foreground="Gray" />
+            <Line Y2="48" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="1013" Canvas.Top="1" />
+            <Image Canvas.Right="0" Name="imgZiped" Height="50" Width="55" Source="/Program;component/png/blocks/Ziped_Size_2_2_V00.png" />
+            <Image Canvas.Right="0" Name="imgUnziped" Height="50" Width="55" Source="/Program;component/png/blocks/Unziped_Size_2_3_V00.png" />
+
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+            <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+        </Canvas>
+        <Canvas Name="cvsBody" Canvas.Top="50" Height="330" Width="1068" Background="#FFF4F4F4">
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Image Width="962" Height="273" Source="/Program;component/png/blocks/Curve_Right_normal_1_2_V00.png" Canvas.Left="54" Canvas.Top="15" />
+
+            <Label Canvas.Top="288" Canvas.Left="55" Content="{DynamicResource lanKey345}" Foreground="Gray" FontSize="14"/>
+            <Label Canvas.Top="288" Canvas.Left="110" Content="{DynamicResource lanKey230}" Foreground="Gray" FontSize="14"/>
+            <Label Canvas.Top="284" Canvas.Left="162" Content="0.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center"/>
+            <Label Canvas.Top="284" Canvas.Left="230" Content="360.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax10"/>
+            <Label Canvas.Top="284" Canvas.Left="312" Content="320.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax20"/>
+            <Label Canvas.Top="284" Canvas.Left="395" Content="280.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax30"/>
+            <Label Canvas.Top="284" Canvas.Left="478" Content="240.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax40"/>
+            <Label Canvas.Top="284" Canvas.Left="561" Content="200.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax50"/>
+            <Label Canvas.Top="284" Canvas.Left="644" Content="160.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax60"/>
+            <Label Canvas.Top="284" Canvas.Left="727" Content="120.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax70"/>
+            <Label Canvas.Top="284" Canvas.Left="810" Content="80.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax80"/>
+            <Label Canvas.Top="284" Canvas.Left="893" Content="40.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax90"/>
+            <Label Canvas.Top="284" Canvas.Left="967" Content="0.00" Foreground="Gray" Width="50" HorizontalContentAlignment="Center" Name="lbMax"/>
+            <Line Canvas.Top="310" Canvas.Left="160" X1="0" X2="845" Stroke="#FF00E1A9" StrokeThickness="3" ClipToBounds="True" SnapsToDevicePixels="True" />
+
+            <my:CurveControl x:Name="EjectorFWDCurrentCurve" CurveColor="#FFE400BB" Canvas.Top="30" Canvas.Left="175" CtrlHeight="250" CtrlWidth="830"/>
+            <my:CurveControl x:Name="EjectorFWDSpeedCurve" CurveColor="#FF3379E2" Canvas.Top="29" Canvas.Left="175" CtrlHeight="250" CtrlWidth="830"/>
+        </Canvas>
+        <Canvas Name="cvsPos3" Height="380" Width="100" Canvas.Left="900">
+            <Line Y1="5" Y2="45" Stroke="#FF1D6C94" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True" />
+            <Label Canvas.Left="3" Canvas.Top="-3" Name="lbPos3" Content="200.44" FontSize="22" FontFamily="CuprumFFU" Foreground="#FF1D6C94"/>
+            <Line Y1="13" Y2="21" Stroke="#FF005A87" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Top="50"/>
+            <Image Source="/Program;component/png/OBJ_26_17_ObBlueInactive_2.png" Canvas.Left="-7" Canvas.Top="71" />
+            <Image Source="/Program;component/png/OBJ_26_9_ObBlueRunningBar.png"  Canvas.Left="-4" Canvas.Top="32"/>
+        </Canvas>
+        <Canvas Name="map4Panel"  Canvas.Left="174" Canvas.Top="80" Height="250" Width="831">
+            <Line Name="map4lnH1" Stroke="Red" StrokeThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Name="map4lnH2" Stroke="Red" StrokeThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Name="map4lnH3" Stroke="Red" StrokeThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Name="map4lnV1" Stroke="Red" StrokeThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Name="map4lnV2" Stroke="Red" StrokeThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Line Name="map4lnV3" Stroke="#FF929292" StrokeThickness="1" ClipToBounds="True" SnapsToDevicePixels="True" />
+            <Image Canvas.Left="0" Canvas.Top="0" Name="imgep1v0" Source="/Program;component/png/OBJ_26_10_ObCornerRed.png" Visibility="Hidden" />
+            <Image Canvas.Left="0" Canvas.Top="0" Name="imgep1v1" Source="/Program;component/png/OBJ_26_10_ObCornerRed.png" Visibility="Hidden" />
+            <Image Canvas.Left="0" Canvas.Top="0" Name="imgep2v0" Source="/Program;component/png/OBJ_26_10_ObCornerRed.png" Visibility="Hidden" />
+            <Image Canvas.Left="0" Canvas.Top="0" Name="imgep2v1" Source="/Program;component/png/OBJ_26_10_ObCornerRed.png" Visibility="Hidden" />
+            <Image Canvas.Left="0" Canvas.Top="0" Name="imgep3v0" Source="/Program;component/png/OBJ_26_10_ObCornerRed.png" Visibility="Hidden" />
+            <Image Canvas.Left="0" Canvas.Top="0" Name="imgep3v1" Source="/Program;component/png/OBJ_26_10_ObCornerRed.png" Visibility="Hidden" />
+        </Canvas>
+    </Canvas>
+</UserControl>

@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.errorAlarmCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1920" d:DesignWidth="1080" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas  Name="cvsBackPanel"  Width="1080" Height="1920" MouseUp="cvsBackPanel_MouseUp" MouseMove="cvsBackPanel_MouseMove">
+        <Label Name="lbPanelBack" MouseDown="lbPanelBack_MouseDown" Width="1080" Height="1920" Background="Black" Opacity="0.6"/>
+        <Canvas Name="cvsChar" Height="287" Width="298" Canvas.Left="297" Canvas.Top="233">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Program;component/png/OBJ_10_19_setupblock_287_298_V0.0.png" />
+            </Canvas.Background>
+            <Label Canvas.Left="6" Canvas.Top="0" Content="{DynamicResource lanKey2022}" Height="45" Name="label1" Width="286" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16"/>
+            <TextBlock Canvas.Left="46" Canvas.Top="102" Height="41" Name="textBlock1" Text="{DynamicResource lanKey2101}" Width="231" FontSize="14" TextWrapping="Wrap" />
+            <my:confirmBtn Canvas.Left="113" Canvas.Top="192" x:Name="confirmBtn1"  upHandle="confirmBtn1_MouseUp"/>
+
+        </Canvas>
+    </Canvas>
+</UserControl>

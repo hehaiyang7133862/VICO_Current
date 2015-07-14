@@ -1,0 +1,157 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.thermoPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1180" d:DesignWidth="1068">
+    <Canvas Name="cvsMain" Height="1180" Width="1068" Background="#FFEAEAEA" MouseDown="cvsMain_MouseDown" MouseUp="cvsMain_MouseUp" MouseMove="cvsMain_MouseMove" MouseLeave="cvsMain_MouseLeave">
+        <StackPanel Height="1180" Width="1068" Canvas.Top="0" Name="sPanelMain">
+            <Canvas Height="50" Width="1068" Background="White">
+                <Label Canvas.Left="40" Canvas.Top="10" Content="{DynamicResource lanKey2234}" Foreground="#FF0082C3" FontSize="14" FontWeight="Bold" />
+                <Image Canvas.Right="0" Height="50" Width="55" Source="/Program;component/png/blocks/Locked_Size_2_1_V00.png" />
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+                <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+            </Canvas>
+            <Canvas Height="110">
+                <my:VicoSetBar myWidth="480" Canvas.Left="54" Canvas.Top="18" objName="Tmp182" Description="{DynamicResource Tmp182}" Value2Visiable="Hidden"/>
+                <my:VicoSetBar myWidth="480" Canvas.Left="54" Canvas.Top="59" objName="Tmp179" Description="{DynamicResource Tmp179}" Value2Visiable="Hidden"/>
+                <my:VicoSetBar myWidth="480" Canvas.Right="54" Canvas.Top="59" objName="Tmp180" Description="{DynamicResource Tmp180}" Value2Visiable="Hidden"/>
+            </Canvas>
+            <Canvas Name="cvsZone1" Height="170" Width="1068">
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <my:thermoUnit Canvas.Left="35" Canvas.Top="20" x:Name="thermoUnit1" objCurAndSettingValue="Tmp260" />
+                <my:thermoUnit Canvas.Left="80" Canvas.Top="20" x:Name="thermoUnit2" objCurAndSettingValue="Tmp261" />
+                <my:thermoUnit Canvas.Left="127" Canvas.Top="20" x:Name="thermoUnit3" objCurAndSettingValue="Tmp262" />
+                <my:thermoUnit Canvas.Left="173" Canvas.Top="20" x:Name="thermoUnit4" objCurAndSettingValue="Tmp263" />
+                <my:thermoUnit Canvas.Left="219" Canvas.Top="20" x:Name="thermoUnit5" objCurAndSettingValue="Tmp264" />
+                <my:thermoUnit Canvas.Left="265" Canvas.Top="20" x:Name="thermoUnit6" objCurAndSettingValue="Tmp265" />
+                <my:thermoUnit Canvas.Left="310" Canvas.Top="20" x:Name="thermoUnit7" objCurAndSettingValue="Tmp266" />
+                <my:thermoUnit Canvas.Left="357" Canvas.Top="20" x:Name="thermoUnit8" objCurAndSettingValue="Tmp267" />
+                <my:thermoUnit Canvas.Left="403" Canvas.Top="20" x:Name="thermoUnit9" objCurAndSettingValue="Tmp268" />
+                <my:thermoUnit Canvas.Left="449" Canvas.Top="20" x:Name="thermoUnit10" objCurAndSettingValue="Tmp269" />
+                <my:thermoUnit Canvas.Left="495" Canvas.Top="20" x:Name="thermoUnit11" objCurAndSettingValue="Tmp270" />
+                <my:thermoUnit Canvas.Left="540" Canvas.Top="20" x:Name="thermoUnit12" objCurAndSettingValue="Tmp271" />
+                <my:thermoUnit Canvas.Left="587" Canvas.Top="20" x:Name="thermoUnit13" objCurAndSettingValue="Tmp272" />
+                <my:thermoUnit Canvas.Left="632" Canvas.Top="20" x:Name="thermoUnit14" objCurAndSettingValue="Tmp273" />
+                <my:thermoUnit Canvas.Left="679" Canvas.Top="20" x:Name="thermoUnit15" objCurAndSettingValue="Tmp274" />
+                <my:thermoUnit Canvas.Left="725" Canvas.Top="20" x:Name="thermoUnit16" objCurAndSettingValue="Tmp275" />
+                <Label Canvas.Left="775" Canvas.Top="15" Content="1-16" FontWeight="Bold" FontSize="18"/>
+                <Label Canvas.Left="775" Canvas.Top="55" Content="{DynamicResource lanKey379}" FontSize="14"/>
+                <my:VicoLabel Canvas.Left="775" Canvas.Top="90" objName="Tmp200" UnitVisiable="Visible" myHorizontalAlignment="Right" myBorderBrush="#FFD4D4D4"/>
+            </Canvas>
+            <Canvas Name="cvsZone2" Height="170" Width="1068">
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <my:thermoUnit Canvas.Left="35" Canvas.Top="20" x:Name="thermoUnit17" objCurAndSettingValue="Tmp276" />
+                <my:thermoUnit Canvas.Left="80" Canvas.Top="20" x:Name="thermoUnit18" objCurAndSettingValue="Tmp277" />
+                <my:thermoUnit Canvas.Left="127" Canvas.Top="20" x:Name="thermoUnit19" objCurAndSettingValue="Tmp278" />
+                <my:thermoUnit Canvas.Left="173" Canvas.Top="20" x:Name="thermoUnit20" objCurAndSettingValue="Tmp279" />
+                <my:thermoUnit Canvas.Left="219" Canvas.Top="20" x:Name="thermoUnit21" objCurAndSettingValue="Tmp280" />
+                <my:thermoUnit Canvas.Left="265" Canvas.Top="20" x:Name="thermoUnit22" objCurAndSettingValue="Tmp281" />
+                <my:thermoUnit Canvas.Left="310" Canvas.Top="20" x:Name="thermoUnit23" objCurAndSettingValue="Tmp282" />
+                <my:thermoUnit Canvas.Left="357" Canvas.Top="20" x:Name="thermoUnit24" objCurAndSettingValue="Tmp283" />
+                <my:thermoUnit Canvas.Left="403" Canvas.Top="20" x:Name="thermoUnit25" objCurAndSettingValue="Tmp284" />
+                <my:thermoUnit Canvas.Left="449" Canvas.Top="20" x:Name="thermoUnit26" objCurAndSettingValue="Tmp285" />
+                <my:thermoUnit Canvas.Left="495" Canvas.Top="20" x:Name="thermoUnit27" objCurAndSettingValue="Tmp286" />
+                <my:thermoUnit Canvas.Left="540" Canvas.Top="20" x:Name="thermoUnit28" objCurAndSettingValue="Tmp287" />
+                <my:thermoUnit Canvas.Left="587" Canvas.Top="20" x:Name="thermoUnit29" objCurAndSettingValue="Tmp288" />
+                <my:thermoUnit Canvas.Left="632" Canvas.Top="20" x:Name="thermoUnit30" objCurAndSettingValue="Tmp289" />
+                <my:thermoUnit Canvas.Left="679" Canvas.Top="20" x:Name="thermoUnit31" objCurAndSettingValue="Tmp290" />
+                <my:thermoUnit Canvas.Left="725" Canvas.Top="20" x:Name="thermoUnit32" objCurAndSettingValue="Tmp291" />
+                <Label Canvas.Left="775" Canvas.Top="15" Content="17-32" FontWeight="Bold" FontSize="18"/>
+                <Label Canvas.Left="775" Canvas.Top="55" Content="{DynamicResource lanKey379}" FontSize="14"/>
+                <my:VicoLabel Canvas.Left="775" Canvas.Top="90" objName="Tmp205" UnitVisiable="Visible" myHorizontalAlignment="Right" myBorderBrush="#FFD4D4D4"/>
+            </Canvas>
+            <Canvas Name="cvsZone3" Height="170" Width="1068">
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <my:thermoUnit Canvas.Left="35" Canvas.Top="20" x:Name="thermoUnit33" objCurAndSettingValue="Tmp292" />
+                <my:thermoUnit Canvas.Left="80" Canvas.Top="20" x:Name="thermoUnit34" objCurAndSettingValue="Tmp293" />
+                <my:thermoUnit Canvas.Left="127" Canvas.Top="20" x:Name="thermoUnit35" objCurAndSettingValue="Tmp294" />
+                <my:thermoUnit Canvas.Left="173" Canvas.Top="20" x:Name="thermoUnit36" objCurAndSettingValue="Tmp295" />
+                <my:thermoUnit Canvas.Left="219" Canvas.Top="20" x:Name="thermoUnit37" objCurAndSettingValue="Tmp296" />
+                <my:thermoUnit Canvas.Left="265" Canvas.Top="20" x:Name="thermoUnit38" objCurAndSettingValue="Tmp297" />
+                <my:thermoUnit Canvas.Left="310" Canvas.Top="20" x:Name="thermoUnit39" objCurAndSettingValue="Tmp298" />
+                <my:thermoUnit Canvas.Left="357" Canvas.Top="20" x:Name="thermoUnit40" objCurAndSettingValue="Tmp299" />
+                <my:thermoUnit Canvas.Left="403" Canvas.Top="20" x:Name="thermoUnit41" objCurAndSettingValue="Tmp300" />
+                <my:thermoUnit Canvas.Left="449" Canvas.Top="20" x:Name="thermoUnit42" objCurAndSettingValue="Tmp301" />
+                <my:thermoUnit Canvas.Left="495" Canvas.Top="20" x:Name="thermoUnit43" objCurAndSettingValue="Tmp302" />
+                <my:thermoUnit Canvas.Left="540" Canvas.Top="20" x:Name="thermoUnit44" objCurAndSettingValue="Tmp303" />
+                <my:thermoUnit Canvas.Left="587" Canvas.Top="20" x:Name="thermoUnit45" objCurAndSettingValue="Tmp304" />
+                <my:thermoUnit Canvas.Left="632" Canvas.Top="20" x:Name="thermoUnit46" objCurAndSettingValue="Tmp305" />
+                <my:thermoUnit Canvas.Left="679" Canvas.Top="20" x:Name="thermoUnit47" objCurAndSettingValue="Tmp306" />
+                <my:thermoUnit Canvas.Left="725" Canvas.Top="20" x:Name="thermoUnit48" objCurAndSettingValue="Tmp307" />
+                <Label Canvas.Left="775" Canvas.Top="15" Content="33-48" FontWeight="Bold" FontSize="18"/>
+                <Label Canvas.Left="775" Canvas.Top="55" Content="{DynamicResource lanKey379}" FontSize="14"/>
+                <my:VicoLabel Canvas.Left="775" Canvas.Top="90" objName="Tmp210" UnitVisiable="Visible" myHorizontalAlignment="Right" myBorderBrush="#FFD4D4D4"/>
+            </Canvas>
+            <Canvas Name="cvsZone4" Height="170" Width="1068">
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <my:thermoUnit Canvas.Left="35" Canvas.Top="20" x:Name="thermoUnit49" objCurAndSettingValue="Tmp308" />
+                <my:thermoUnit Canvas.Left="80" Canvas.Top="20" x:Name="thermoUnit50" objCurAndSettingValue="Tmp309" />
+                <my:thermoUnit Canvas.Left="127" Canvas.Top="20" x:Name="thermoUnit51" objCurAndSettingValue="Tmp310" />
+                <my:thermoUnit Canvas.Left="173" Canvas.Top="20" x:Name="thermoUnit52" objCurAndSettingValue="Tmp311" />
+                <my:thermoUnit Canvas.Left="219" Canvas.Top="20" x:Name="thermoUnit53" objCurAndSettingValue="Tmp312" />
+                <my:thermoUnit Canvas.Left="265" Canvas.Top="20" x:Name="thermoUnit54" objCurAndSettingValue="Tmp313" />
+                <my:thermoUnit Canvas.Left="310" Canvas.Top="20" x:Name="thermoUnit55" objCurAndSettingValue="Tmp314" />
+                <my:thermoUnit Canvas.Left="357" Canvas.Top="20" x:Name="thermoUnit56" objCurAndSettingValue="Tmp315" />
+                <my:thermoUnit Canvas.Left="403" Canvas.Top="20" x:Name="thermoUnit57" objCurAndSettingValue="Tmp316" />
+                <my:thermoUnit Canvas.Left="449" Canvas.Top="20" x:Name="thermoUnit58" objCurAndSettingValue="Tmp317" />
+                <my:thermoUnit Canvas.Left="495" Canvas.Top="20" x:Name="thermoUnit59" objCurAndSettingValue="Tmp318" />
+                <my:thermoUnit Canvas.Left="540" Canvas.Top="20" x:Name="thermoUnit60" objCurAndSettingValue="Tmp319" />
+                <my:thermoUnit Canvas.Left="587" Canvas.Top="20" x:Name="thermoUnit61" objCurAndSettingValue="Tmp320" />
+                <my:thermoUnit Canvas.Left="632" Canvas.Top="20" x:Name="thermoUnit62" objCurAndSettingValue="Tmp321" />
+                <my:thermoUnit Canvas.Left="679" Canvas.Top="20" x:Name="thermoUnit63" objCurAndSettingValue="Tmp322" />
+                <my:thermoUnit Canvas.Left="725" Canvas.Top="20" x:Name="thermoUnit64" objCurAndSettingValue="Tmp323" />
+                <Label Canvas.Left="775" Canvas.Top="15" Content="49-64" FontWeight="Bold" FontSize="18"/>
+                <Label Canvas.Left="775" Canvas.Top="55" Content="{DynamicResource lanKey379}" FontSize="14"/>
+                <my:VicoLabel Canvas.Left="775" Canvas.Top="90" objName="Tmp215" UnitVisiable="Visible" myHorizontalAlignment="Right" myBorderBrush="#FFD4D4D4"/>
+            </Canvas>
+            <Canvas Name="cvsZone5" Height="170" Width="1068">
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <my:thermoUnit Canvas.Left="35" Canvas.Top="20" x:Name="thermoUnit65" objCurAndSettingValue="Tmp324" />
+                <my:thermoUnit Canvas.Left="80" Canvas.Top="20" x:Name="thermoUnit66" objCurAndSettingValue="Tmp325" />
+                <my:thermoUnit Canvas.Left="127" Canvas.Top="20" x:Name="thermoUnit67" objCurAndSettingValue="Tmp326" />
+                <my:thermoUnit Canvas.Left="173" Canvas.Top="20" x:Name="thermoUnit68" objCurAndSettingValue="Tmp327" />
+                <my:thermoUnit Canvas.Left="219" Canvas.Top="20" x:Name="thermoUnit69" objCurAndSettingValue="Tmp328" />
+                <my:thermoUnit Canvas.Left="265" Canvas.Top="20" x:Name="thermoUnit70" objCurAndSettingValue="Tmp329" />
+                <my:thermoUnit Canvas.Left="310" Canvas.Top="20" x:Name="thermoUnit71" objCurAndSettingValue="Tmp330" />
+                <my:thermoUnit Canvas.Left="357" Canvas.Top="20" x:Name="thermoUnit72" objCurAndSettingValue="Tmp331" />
+                <my:thermoUnit Canvas.Left="403" Canvas.Top="20" x:Name="thermoUnit73" objCurAndSettingValue="Tmp332" />
+                <my:thermoUnit Canvas.Left="449" Canvas.Top="20" x:Name="thermoUnit74" objCurAndSettingValue="Tmp333" />
+                <my:thermoUnit Canvas.Left="495" Canvas.Top="20" x:Name="thermoUnit75" objCurAndSettingValue="Tmp334" />
+                <my:thermoUnit Canvas.Left="540" Canvas.Top="20" x:Name="thermoUnit76" objCurAndSettingValue="Tmp335" />
+                <my:thermoUnit Canvas.Left="587" Canvas.Top="20" x:Name="thermoUnit77" objCurAndSettingValue="Tmp336" />
+                <my:thermoUnit Canvas.Left="632" Canvas.Top="20" x:Name="thermoUnit78" objCurAndSettingValue="Tmp337" />
+                <my:thermoUnit Canvas.Left="679" Canvas.Top="20" x:Name="thermoUnit79" objCurAndSettingValue="Tmp338" />
+                <my:thermoUnit Canvas.Left="725" Canvas.Top="20" x:Name="thermoUnit80" objCurAndSettingValue="Tmp339" />
+                <Label Canvas.Left="775" Canvas.Top="15" Content="65-80" FontWeight="Bold" FontSize="18"/>
+                <Label Canvas.Left="775" Canvas.Top="55" Content="{DynamicResource lanKey379}" FontSize="14"/>
+                <my:VicoLabel Canvas.Left="775" Canvas.Top="90" objName="Tmp220" UnitVisiable="Visible" myHorizontalAlignment="Right" myBorderBrush="#FFD4D4D4"/>
+            </Canvas>
+            <Canvas Name="cvsZone6" Height="170" Width="1068">
+                <Line X2="1068" Canvas.Top="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                <my:thermoUnit Canvas.Left="35" Canvas.Top="20" x:Name="thermoUnit81" objCurAndSettingValue="Tmp340" />
+                <my:thermoUnit Canvas.Left="80" Canvas.Top="20" x:Name="thermoUnit82" objCurAndSettingValue="Tmp341" />
+                <my:thermoUnit Canvas.Left="127" Canvas.Top="20" x:Name="thermoUnit83" objCurAndSettingValue="Tmp342" />
+                <my:thermoUnit Canvas.Left="173" Canvas.Top="20" x:Name="thermoUnit84" objCurAndSettingValue="Tmp343" />
+                <my:thermoUnit Canvas.Left="219" Canvas.Top="20" x:Name="thermoUnit85" objCurAndSettingValue="Tmp344" />
+                <my:thermoUnit Canvas.Left="265" Canvas.Top="20" x:Name="thermoUnit86" objCurAndSettingValue="Tmp345" />
+                <my:thermoUnit Canvas.Left="310" Canvas.Top="20" x:Name="thermoUnit87" objCurAndSettingValue="Tmp346" />
+                <my:thermoUnit Canvas.Left="357" Canvas.Top="20" x:Name="thermoUnit88" objCurAndSettingValue="Tmp347" />
+                <my:thermoUnit Canvas.Left="403" Canvas.Top="20" x:Name="thermoUnit89" objCurAndSettingValue="Tmp348" />
+                <my:thermoUnit Canvas.Left="449" Canvas.Top="20" x:Name="thermoUnit90" objCurAndSettingValue="Tmp349" />
+                <my:thermoUnit Canvas.Left="495" Canvas.Top="20" x:Name="thermoUnit91" objCurAndSettingValue="Tmp350" />
+                <my:thermoUnit Canvas.Left="540" Canvas.Top="20" x:Name="thermoUnit92" objCurAndSettingValue="Tmp351" />
+                <my:thermoUnit Canvas.Left="587" Canvas.Top="20" x:Name="thermoUnit93" objCurAndSettingValue="Tmp352" />
+                <my:thermoUnit Canvas.Left="632" Canvas.Top="20" x:Name="thermoUnit94" objCurAndSettingValue="Tmp353" />
+                <my:thermoUnit Canvas.Left="679" Canvas.Top="20" x:Name="thermoUnit95" objCurAndSettingValue="Tmp354" />
+                <my:thermoUnit Canvas.Left="725" Canvas.Top="20" x:Name="thermoUnit96" objCurAndSettingValue="Tmp355" />
+                <Label Canvas.Left="775" Canvas.Top="15" Content="81-96" FontWeight="Bold" FontSize="18"/>
+                <Label Canvas.Left="775" Canvas.Top="55" Content="{DynamicResource lanKey379}" FontSize="14"/>
+                <my:VicoLabel Canvas.Left="775" Canvas.Top="90" objName="Tmp225" UnitVisiable="Visible" myHorizontalAlignment="Right" myBorderBrush="#FFD4D4D4"/>
+            </Canvas>
+        </StackPanel>
+    </Canvas>
+</UserControl>

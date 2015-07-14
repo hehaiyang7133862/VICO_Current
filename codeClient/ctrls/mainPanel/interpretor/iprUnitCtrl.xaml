@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.iprUnitCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="443" d:DesignWidth="1100" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Width="1100" Height="433" Name="cvsMain"  MouseUp="cvsMain_MouseUp" MouseMove="cvsMain_MouseMove" MouseLeave="cvsMain_MouseLeave">
+        <Canvas Name="cvsGrpLn" Canvas.Left="51" Canvas.Top="0" Width="89" Height="433">
+            <!--<Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Width="89" Height="433" Canvas.Left="0" Visibility="Hidden"/>-->
+            <Line X1="22" Stroke="#FF78DDFF" StrokeThickness="1" Canvas.Top="230" Name="lnLeft"/>
+            <Line X1="68" X2="90" Stroke="#FF78DDFF" StrokeThickness="1" Canvas.Top="230" Name="lnRight"/>
+        </Canvas>
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg1" Width="89" Height="433" Canvas.Left="146" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg2" Width="89" Height="433" Canvas.Left="241" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg3" Width="89" Height="433" Canvas.Left="336" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg4" Width="89" Height="433" Canvas.Left="431" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg5" Width="89" Height="433" Canvas.Left="526" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg6" Width="89" Height="433" Canvas.Left="621" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg7" Width="89" Height="433" Canvas.Left="716" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg8" Width="89" Height="433" Canvas.Left="811" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg9" Width="89" Height="433" Canvas.Left="906" />
+        <Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Name="imgBg10" Width="89" Height="433" Canvas.Left="1001" />
+        <Canvas Name="cvsGrp0" Canvas.Left="51" Canvas.Top="0" Width="89" Height="433">
+            <!--<Image Source="/Program;component/png/ipr/ipr_st16_Baseborad.png" Width="89" Height="433" Canvas.Left="0" Visibility="Hidden"/>-->
+            <my:iprUnitObjCtrl Canvas.Top="207" Canvas.Left="22" x:Name="iprUnitObjCtrlStart" flagBehind="True" lineNr="1"/>
+            <Image Name="imgMain1" Height="46" Width="46" Canvas.Top="174" Canvas.Left="22" Source="/Program;component/png/IPR_PNG/ipr_01_main_start_2.png"  Opacity="0"  />
+            <Image Name="imgMain2" Height="46" Width="46" Canvas.Top="174" Canvas.Left="22" Source="/Program;component/png/IPR_PNG/ipr_02_moldclose_2.png"  Opacity="0"  />
+            <Image Name="imgMain3" Height="46" Width="46" Canvas.Top="174" Canvas.Left="22" Source="/Program;component/png/IPR_PNG/ipr_03_moldClamped2.png"  Opacity="0"  />
+            <Image Name="imgMain4" Height="46" Width="46" Canvas.Top="174" Canvas.Left="22" Source="/Program;component/png/IPR_PNG/ipr_04_injection2.png"  Opacity="0"  />
+            <Image Name="imgMain5" Height="46" Width="46" Canvas.Top="174" Canvas.Left="22" Source="/Program;component/png/IPR_PNG/ipr_05_Cooling2.png"  Opacity="0"  />
+            <Image Name="imgMain6" Height="46" Width="46" Canvas.Top="174" Canvas.Left="22" Source="/Program;component/png/IPR_PNG/ipr_06_moldopen2.png"  Opacity="0"  />
+            <Image Name="imgMain7" Height="46" Width="46" Canvas.Top="174" Canvas.Left="22" Source="/Program;component/png/IPR_PNG/ipr_07_moldopened2.png"  Opacity="0"   MouseDown="imgGrp_MouseDown" MouseUp="imgMain7_MouseUp" MouseLeave="imgMain7_MouseLeave" />
+            <!--<Image Width="46" Height="46" Source="/Program;component/png/ipr/ipr_01_main_start.png" Canvas.Top="174" Canvas.Left="22" Name="imgGrp1" MouseDown="imgGrp_MouseDown" Visibility="Hidden"/>-->
+            <Image Canvas.Top="226.5" Canvas.Left="11" Height="7" Width="67" Source="/Program;component/png/IPR_PNG/ipr_00.png" />
+            <Label Name="lbNum0" Content="0" FontSize="40" Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" Visibility="Hidden"/>
+            <Label Content="{DynamicResource lanKey974}" Canvas.Top="231" Canvas.Left="0" Width="89" HorizontalContentAlignment="Center" FontSize="14" Name="lbGrpDis"/>
+        </Canvas>
+        <Canvas Name="cvsGrp1" Canvas.Left="146"  Canvas.Top="0" Width="89" Height="433" Background="#00EAEAEA" >
+            <Label Name="lbNum" Content="1" FontSize="40" Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl10" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl00" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl20" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp2" Canvas.Left="241" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum2" Content="2" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl11" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl01" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl21" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp3" Canvas.Left="336" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum3" Content="3" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl12" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl02" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl22" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp4" Canvas.Left="431" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum4" Content="4" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl13" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl03" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl23" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp5" Canvas.Left="526" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum5" Content="5" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl14" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl04" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl24" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp6" Canvas.Left="621" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum6" Content="6" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl15" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl05" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl25" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp7" Canvas.Left="716" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum7" Content="7" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl16" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl06" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl26" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp8" Canvas.Left="811" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum8" Content="8" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl17" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl07" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl27" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp9" Canvas.Left="906" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum9" Content="9" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl18" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl08" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl28" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        <Canvas Name="cvsGrp10" Canvas.Left="1001" Visibility="Hidden" Canvas.Top="0">
+            <Label Name="lbNum10" Content="10" FontSize="40"  Width="89" HorizontalContentAlignment="Center" FontFamily="Michroma" Canvas.Left="0" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="207" x:Name="iprUnitObjCtrl19" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="93" x:Name="iprUnitObjCtrl09" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+            <my:iprUnitObjCtrl Canvas.Left="21" Canvas.Top="321" x:Name="iprUnitObjCtrl29" MouseDown="cvsFocusMouseDown" MouseEnter="cvsFocus_MouseEnter" MouseLeave="cvsFocus_MouseLeave" MouseUp="cvsFocsuMouseUp" />
+        </Canvas>
+        
+        <Label Height="5" Width="184" Background="#ff00b9c3" Canvas.Top="-5" Canvas.Left="51" Name="lbWidthUp" Visibility="Hidden"/>
+        <Label Background="#ff00b9c3" Canvas.Left="51" Canvas.Top="433" Height="5" Width="184" Name="lbWidthDown" Visibility="Hidden"/>
+        <Line Stroke="Brown" StrokeThickness="1" Y1="115" StrokeDashArray="5, 5" Canvas.Top="93" Canvas.Left="402" Visibility="Hidden" Name="lnFocus"/>
+        <Border Name="bdFocus" Width="50" Height="50" BorderBrush="Green" BorderThickness="2" CornerRadius="7" Canvas.Top="4" Canvas.Left="3" Visibility="Hidden"/>
+        
+    </Canvas>
+</UserControl>

@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.menuGrpCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="330" d:DesignWidth="750" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="330" Width="750">
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl1" VerticalAlignment="Top" type ="ipr_op05_ejectorback" Canvas.Top="13" Canvas.Left="340"/>
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl2" VerticalAlignment="Top" type="ipr_op04_ejectorfor" Canvas.Top="13" Canvas.Left="240"/>
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl3" VerticalAlignment="Top" type="ipr_op06_safetydoorClose" Canvas.Top="13" Canvas.Left="540"/>
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl4" VerticalAlignment="Top" type="ipr_op07_safetydoorOpen" Canvas.Top="13" Canvas.Left="640"/>
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl5" VerticalAlignment="Top" type="ipr_op08_CarrriageFWD" Canvas.Top="93" Canvas.Left="40" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl6" VerticalAlignment="Top" type="ipr_op09_CarrriageBWD" Canvas.Top="93" Canvas.Left="140" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl7" VerticalAlignment="Top" type="ipr_op10_ShackMold" Canvas.Top="173" Canvas.Left="340" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl8" VerticalAlignment="Top" type="ipr_op14_Charge" Canvas.Top="93" Canvas.Left="340" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl9" VerticalAlignment="Top" type="ipr_op17_Air" Canvas.Top="173" Canvas.Left="40" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl10" VerticalAlignment="Top" type="ipr_op16_Cores" Canvas.Top="173" Canvas.Left="140" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl11" VerticalAlignment="Top" type="ipr_op21_Rottable" Canvas.Top="13" Canvas.Left="440"/>
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl12" VerticalAlignment="Top" type="ipr_op19_Output" Canvas.Top="173" Canvas.Left="240" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl13" VerticalAlignment="Top" type="ipr_op22_Nozzle" Canvas.Top="93" Canvas.Left="540" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl14" VerticalAlignment="Top" type="ipr_op23_Valvegate" Canvas.Top="93" Canvas.Left="640" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl17" VerticalAlignment="Top" type="ipr_op03_delay" Canvas.Top="253" Canvas.Left="40" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl18" VerticalAlignment="Top" type="ipr_op18_Variable" Canvas.Top="253" Canvas.Left="240" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl19" VerticalAlignment="Top" type="ipr_op02_wait" Canvas.Top="253" Canvas.Left="340" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl20" VerticalAlignment="Top" type="ipr_op26_jump" Canvas.Top="253" Canvas.Left="140" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl21" VerticalAlignment="Top" type="ipr_op12_Moldopen" Canvas.Top="13" Canvas.Left="40" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl22" VerticalAlignment="Top" type="ipr_op11_Moldclose" Canvas.Top="13" Canvas.Left="140" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl23" VerticalAlignment="Top" type="ipr_op13_Injection" Canvas.Top="93" Canvas.Left="240" />
+        <my:menuCtrl HorizontalAlignment="Left"  x:Name="menuCtrl24" VerticalAlignment="Top" type="ipr_op15_cooling" Canvas.Top="93" Canvas.Left="440" />
+        <!--<my:menuCtrl Canvas.Left="440" Canvas.Top="173" x:Name="menuCtrl29" type="ipr_op24_seteuromapsignal"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <my:menuCtrl Canvas.Left="540" Canvas.Top="173" x:Name="menuCtrl30" type="ipr_op30_waitstartsignal" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <my:menuCtrl Canvas.Left="640" Canvas.Top="173" x:Name="menuCtrl31" type="ipr_op29_waiteuromapsignal" HorizontalAlignment="Left" VerticalAlignment="Top" />-->
+    </Canvas>
+</UserControl>

@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.btnSetCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls"
+             mc:Ignorable="d" 
+             d:DesignHeight="35" d:DesignWidth="935">
+    <Canvas Name="cvsMain" Height="35" Width="935" >
+        <Label Name="lbDescription" Margin="10,0,0,0" Height="{Binding ElementName=cvsMain,Path=Height}" VerticalContentAlignment="Center" Content="设定锁模力" FontSize="14" Foreground="#FF444444"/>
+        <my:VicoLabel x:Name="lbValue" Canvas.Right="240" myHeight="35" myFontFamily="Verdana" myFontSize="18" myHorizontalAlignment="Right" UnitVisiable="Visible" />
+        <Label Name="lbValue2" Margin="0,0,10,0" Canvas.Right="0" Height="{Binding ElementName=cvsMain,Path=Height}" Content="0.00" FontSize="18" FontFamily="Verdana" VerticalContentAlignment="Center"/>
+    </Canvas>
+</UserControl>

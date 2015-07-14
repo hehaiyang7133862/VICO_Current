@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.unitLinkState"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="185">
+    <Canvas>
+        <Image Canvas.Left="0" Canvas.Top="48" Height="40" Source="/Program;component/png/OBJ_4_24_buttonPress_40_40_V0.0.png" Width="40" Name="imgStartMld"/>
+        <Image Canvas.Left="17" Canvas.Top="0" Height="40" Source="/Program;component/png/OBJ_4_24_buttonPress_40_40_V0.0.png" Width="40" Name="imgStartUp"/>
+        <Image Canvas.Left="17" Canvas.Top="96" Height="40" Source="/Program;component/png/OBJ_4_24_buttonPress_40_40_V0.0.png" Width="40" Name="imgStartDown"/>
+        <Image Canvas.Left="126" Canvas.Top="0" Height="40" Source="/Program;component/png/OBJ_4_24_buttonPress_40_40_V0.0.png" Width="40" Name="imgEndUp"/>
+        <Image Canvas.Left="126" Canvas.Top="96" Height="40" Source="/Program;component/png/OBJ_4_24_buttonPress_40_40_V0.0.png" Width="40" Name="imgEndDown"/>  
+        <Image Canvas.Left="141" Canvas.Top="49" Height="40" Source="/Program;component/png/OBJ_4_24_buttonPress_40_40_V0.0.png" Width="40" Name="imgEndMld"/>
+
+        <Image Canvas.Left="17" Canvas.Top="0" Height="40" Source="/Program;component/png/OBJ_4_31_in_up_V0.0.png" Width="40"  MouseDown="startUp_MouseDown"/>
+        <Image Canvas.Left="17" Canvas.Top="0" Height="40" Source="/Program;component/png/OBJ_4_31_in_up2_V0.0.png" Width="40" Name="startUpLink" MouseDown="startUp_MouseDown" Opacity="0"/>
+        <Image Canvas.Left="126" Canvas.Top="96" Height="40" Source="/Program;component/png/OBJ_4_31_in_up_V0.0.png" Width="40"  MouseDown="endDown_MouseDown" />
+        <Image Canvas.Left="126" Canvas.Top="96" Height="40" Source="/Program;component/png/OBJ_4_31_in_up2_V0.0.png" Width="40" Name="endDownLink" MouseDown="endDown_MouseDown"  Opacity="0"/>
+        <Image Canvas.Left="141" Canvas.Top="49" Height="40" Source="/Program;component/png/OBJ_4_31_in_left_V0.0.png" Width="40"  MouseDown="endMld_MouseDown" />
+        <Image Canvas.Left="141" Canvas.Top="49" Height="40" Source="/Program;component/png/OBJ_4_31_in_left2_V0.0.png" Width="40" Name="endMldLink"  MouseDown="endMld_MouseDown"  Opacity="0"/>
+        <Image Canvas.Left="0" Canvas.Top="48" Height="40" Source="/Program;component/png/OBJ_4_31_in_left_V0.0.png" Width="40"  MouseDown="startMld_MouseDown"/>
+        <Image Canvas.Left="0" Canvas.Top="48" Height="40" Source="/Program;component/png/OBJ_4_31_in_left2_V0.0.png" Width="40" Name="startMldLink" MouseDown="startMld_MouseDown" Opacity="0"/>
+        <Image Canvas.Left="17" Canvas.Top="96" Height="40" Source="/Program;component/png/OBJ_4_31_in_down_V0.0.png" Width="40"  MouseDown="startDown_MouseDown" />
+        <Image Canvas.Left="17" Canvas.Top="96" Height="40" Source="/Program;component/png/OBJ_4_31_in_down2_V0.0.png" Width="40" Name="startDownLink"  MouseDown="startDown_MouseDown"  Opacity="0"/>
+
+        <Image Canvas.Left="126" Canvas.Top="0" Height="40" Source="/Program;component/png/OBJ_4_31_in_down_V0.0.png" Width="40"  MouseDown="endUp_MouseDown" />
+        <Image Canvas.Left="126" Canvas.Top="0" Height="40" Source="/Program;component/png/OBJ_4_31_in_down2_V0.0.png" Width="40" Name="endUpLink" MouseDown="endUp_MouseDown"  Opacity="0"/>
+    </Canvas>
+</UserControl>

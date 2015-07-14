@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.btnFunc1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="34" d:DesignWidth="180">
+    <Canvas Height="34" Width="180">
+        <Image Height="34" Width="180" Name="imgDown" Source="/Program;component/png/OBJ_10_35_iprSet_180_34_PresV0.0.png" Opacity="0"/>
+        <Image Height="34" Width="180" Name="imgUp" Source="/Program;component/png/OBJ_10_35_iprSet_180_34_V0.0.png" Opacity="1"/>
+        <Image Height="29" Width="29" Name="imgErr" Source="/Program;component/png/OBJ_21_3_SystemInfo_V0.0.png" Canvas.Top="3" Canvas.Left="2" Opacity="0"/>
+        <Label Content=">" HorizontalContentAlignment="Right" Name="lbFocus" VerticalContentAlignment="Center" Height="34" FontSize="18" Width="180" FontWeight="Bold" Foreground="#FF008787" Opacity="0"/>
+        <Label Content="" FontFamily="Verdana" Height="34" Width="180" Name="Dis" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MouseDown="Dis_MouseDown" MouseUp="Dis_MouseUp" MouseLeave="Dis_MouseLeave" />
+
+    </Canvas>
+</UserControl>

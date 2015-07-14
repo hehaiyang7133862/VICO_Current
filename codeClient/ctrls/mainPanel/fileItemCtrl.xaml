@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.fileItemCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="43" d:DesignWidth="360" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="43" Width="360" Name="cvsMain" MouseDown="cvsMain_MouseDown" MouseUp="cvsMain_MouseUp" MouseLeave="cvsMain_MouseLeave">
+        <Image Height="43" Width="358" Source="/Program;component/png/IPR_PNG/fileselectline1.png" Canvas.Top="1" />
+        <Image Height="43" Width="358" Source="/Program;component/png/IPR_PNG/fileselected.png" Opacity="0" Name="imgFocus" Canvas.Top="-1" Canvas.Left="-3" />
+        <Image Height="23" Width="21" Source="/Program;component/png/IPR_PNG/filelock.png" Canvas.Top="10" Canvas.Left="10" Opacity="0"/>
+        <Image Height="23" Width="23" Source="/Program;component/png/IPR_PNG/fileunlock.png" Canvas.Top="10" Canvas.Left="10" />
+        <Label Canvas.Left="44" Canvas.Top="-2" Content="Label" Height="30" Name="lbFilename" Width="241" FontSize="16" VerticalContentAlignment="Center"/>
+        <Label Canvas.Left="44" Canvas.Top="19" Content="Label" Height="24" Name="lbDis" Width="241" FontSize="10" VerticalContentAlignment="Center" Foreground="Silver"/>
+        <Image Height="23" Width="23" Source="/Program;component/png/OBJ_10_11_SelectSquareActive_V0.0.png" Canvas.Top="11" Canvas.Left="322" Name="imgFocusOn" Opacity="0"/>
+        <my:btnCtrl Canvas.Left="234" Canvas.Top="6" x:Name="btnDel" dis="{DynamicResource lanKey2102}" Visibility="Hidden"/>
+    </Canvas>
+</UserControl>

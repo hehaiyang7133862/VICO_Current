@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.moldOnOffNewPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1750" d:DesignWidth="1068">
+    <Canvas Name="cvsMain" Height="1750" Width="1068" Background="Transparent">
+        <Canvas Height="1676" Width="1068" Canvas.Top="74" Background="#EAEAEA">
+            <TabControl Canvas.Top="83" Name="tbMain" Padding="0" BorderThickness="0" Background="#EAEAEA" Height="1593" Width="1068" ClipToBounds="True" SelectedIndex="0">
+                <TabItem Height="0" Padding="0" Margin="0">
+                    <Canvas>
+                        <my:Mold_Curve />
+                    </Canvas>
+                </TabItem>
+                <TabItem Height="0" Padding="0" Margin="0">
+                    <Canvas>
+                        <my:Mold_MoldProtect/>
+                    </Canvas>
+                </TabItem>
+                <TabItem Height="0" Padding="0" Margin="0">
+                    <Canvas>
+                        <my:Mold_Lubrication />
+                    </Canvas>
+                </TabItem>
+            </TabControl>
+            <Canvas Height="85" Width="1068" Background="#F4F4F4">
+                <my:tabItemBtnCtrl x:Name="tblBtnCtrl" Canvas.Left="130" Canvas.Top="5" itemCount="3" focusNr="0" />
+
+                <Canvas Tag="0" Canvas.Left="132" Canvas.Top="7" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_31_MoldOpCls_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource strMold_Main}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Tag="1" Canvas.Left="217" Canvas.Top="7" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_36_moldprtc_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource strMold_MoldProtect}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444" />
+                </Canvas>
+                <Canvas Tag="2" Canvas.Left="302" Canvas.Top="7" Width="67" Height="67" Background="#00000000" MouseDown="HeadSwitch_MouseDown">
+                    <Image Height="67" Width="67" Canvas.Top="-10" Source="/Program;component/png/HeadSwitch/OBJ_20_32_Lubricant_V0.0.png" Stretch="Fill"/>
+                    <Label Canvas.Top="42" Canvas.Left="-16" FontSize="10" Content="{DynamicResource strMold_Lubrication}" Width="99" HorizontalContentAlignment="Center" Foreground="#FF444444"/>
+                </Canvas>
+
+                <Line X2="1068" Canvas.Bottom="0" Stroke="#FF8C8C8C" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+            </Canvas>
+        </Canvas>
+        <Canvas Canvas.Left="195" Canvas.Top="-1" >
+            <Image Height="75" Width="98" Source="/Program;component/png/HeadSwitch/B1_P3_Blue.png" Stretch="Fill" />
+            <Label Canvas.Top="42" Width="98" Content="{DynamicResource strMainMenu_Mold}" HorizontalContentAlignment="Center" FontSize="12" Foreground="#FF0082C3" />
+            <Image Canvas.Left="0" Canvas.Top="68" Width="98" Source="/Program;component/png/HeadSwitch/Select_Me.png" />
+        </Canvas>
+    </Canvas>
+</UserControl>

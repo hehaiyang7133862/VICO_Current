@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.btnHidenCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="40">
+    <Canvas>
+        <Image Source="/Program;component/png/OBJ_4_23_button_40_40_V0.0.png" Height="40" Width="40"  />
+        <Image Source="/Program;component/png/OBJ_4_24_buttonPress_40_40_V0.0.png" Name="imgCloseDown" Height="40" Width="40"  Visibility="Hidden" />
+        <Image Source="/Program;component/png/OBJ_22_12_REDCorss.png" Name="imgClose" Height="40" Width="40" MouseDown="imgClose_MouseDown" MouseUp="imgClose_MouseUp" />
+
+    </Canvas>
+</UserControl>

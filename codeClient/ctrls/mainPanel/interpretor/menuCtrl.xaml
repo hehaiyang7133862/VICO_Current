@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.menuCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="70">
+    <Canvas Width="66" Height="70" Background="#00ffffff" Name="cvsMain" MouseDown="cvsMain_MouseDown">
+        <Image Width="46" Height="46" Name="img" Source="/Program;component/png/ipr/ipr_op1_ejectorback.png" Canvas.Left="10" />
+        <Image Name="img1" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op1_ejectorback.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img2" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op2_ejectorfor.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img3" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op3_safetydoorClose.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img4" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op4_safetydoorOpen.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img5" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op5_CarrriageFWD.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img6" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op6_CarrriageBWD.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img7" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op7_MoldCompress.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img8" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op8_Charge.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img9" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op9_Air.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img10" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op10_Core.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img11" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op11_Rotate.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img12" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op12_Output.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img13" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op13_Nozzle.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img14" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op14_Valvegate.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img15" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op15_euromap.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img16" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op1_ejectorback.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img17" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op17_delay.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img18" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op18_Calculater.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img19" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op19_wait.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img20" Height="46" Width="46" Source="/Program;component/png/ipr/ipr_op20_jump.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img21" Height="46" Width="46" Source="/Program;component/png/IPR_PNG/ipr_op21_Moldopen.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img22" Height="46" Width="46" Source="/Program;component/png/IPR_PNG/ipr_op22_Moldclose.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img23" Height="46" Width="46" Source="/Program;component/png/IPR_PNG/ipr_op23_Injection.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img24" Height="46" Width="46" Source="/Program;component/png/IPR_PNG/ipr_op24_SNOW.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img29" Height="46" Width="46" Source="/Program;component/png/IprBlocks/ipr_op33_EMOutput.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img30" Height="46" Width="46" Source="/Program;component/png/IprBlocks/ipr_op32_waitsignal.png"  Opacity="0" Canvas.Left="10" />
+        <Image Name="img31" Height="46" Width="46" Source="/Program;component/png/IprBlocks/ipr_op33_waitEMinput.png"  Opacity="0" Canvas.Left="10" />
+        <Label Content="{DynamicResource lanKey951}" Name="lbDis" Width="100" HorizontalContentAlignment="Center" Canvas.Top="44" Canvas.Left="-16" />
+    </Canvas>
+</UserControl>

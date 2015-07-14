@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.set_shackmold"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas>
+        <my:activeErr1Ctrl Canvas.Left="493" Canvas.Top="223" x:Name="activeErr1Ctrl1" Visibility="Hidden"/>
+
+        <Label Canvas.Left="13" Canvas.Top="12" Height="28"  Content="{DynamicResource Mld601}"/>
+        <Label Canvas.Left="13" Canvas.Top="52" Height="28"  Content="{DynamicResource Mld602}"/>
+        <Label Canvas.Left="13" Canvas.Top="92" Height="28"  Content="{DynamicResource Mld603}"/>
+        <Label Canvas.Left="13" Canvas.Top="132" Height="28"  Content="{DynamicResource Mld606}"/>
+        <Label Canvas.Left="13" Canvas.Top="172" Height="28"  Content="{DynamicResource Mld605}"/>
+        
+        <my:btnFunc1 Canvas.Left="200" Canvas.Top="12" x:Name="Value1" mouseUpHandle="btn1_MouseUp" />
+        <my:btnFunc1 Canvas.Left="200" Canvas.Top="52" x:Name="Value2" mouseUpHandle="btn2_MouseUp" />
+        <my:btnFunc1 Canvas.Left="200" Canvas.Top="92" x:Name="Value3" mouseUpHandle="btn3_MouseUp" />
+        <my:btnFunc1 Canvas.Left="200" Canvas.Top="132" x:Name="Value4" mouseUpHandle="btn4_MouseUp" />
+        <my:btnFunc1 Canvas.Left="200" Canvas.Top="172" x:Name="Value5" mouseUpHandle="btn5_MouseUp" />
+    </Canvas>
+</UserControl>

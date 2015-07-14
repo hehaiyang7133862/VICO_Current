@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.SPCCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="1335" d:DesignWidth="1068" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Name="cvsMain" Height="1335" Width="1068" Background="#FFEAEAEA" ClipToBounds="True">
+        <Canvas Width="1068" Height="50" Background="White">
+            <Label Height="50" Width="150" Canvas.Left="40" Content="SPC" FontWeight="Bold" FontSize="14" Foreground="#FF0082C3" VerticalContentAlignment="Center"/>
+            <Label Name="lbCounter" Height="50" Width="120" Canvas.Right="80" Content="0" FontWeight="Bold" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+            <Label Canvas.Left="990" Canvas.Top="14" Content="{DynamicResource lanKey039}"/>
+            <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
+            <Line X2="1068" Canvas.Bottom="0" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        </Canvas>
+        
+        <Label Canvas.Top="50" Height="40" Width="300" Content="{DynamicResource lanKey2235}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" Margin="20,0,0,0" />
+        <Label Canvas.Left="300" Canvas.Top="50" Height="40" Width="100" Content="{DynamicResource lanKey2236}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="400" Canvas.Top="50" Height="40" Width="100" Content="CPK" FontSize="14" Foreground="#FF444444"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="500" Canvas.Top="50" Height="40" Width="100" Content="{DynamicResource lanKey023}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="600" Canvas.Top="50" Height="40" Width="100" Content="LSL" FontSize="14" Foreground="#FF444444"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="700" Canvas.Top="50" Height="40" Width="100" Content="{DynamicResource lanKey2017}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="800" Canvas.Top="50" Height="40" Width="100" Content="USL" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        <Label Canvas.Left="900" Canvas.Top="50" Height="40" Width="100" Content="{DynamicResource LanKey1135}" FontSize="14" Foreground="#FF444444" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+
+        <Line X2="1068" Canvas.Top="90" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+        <StackPanel Canvas.Top="91" Name="sPanel"/>
+
+        <TabControl Canvas.Right="0" Canvas.Top="50" Height="730" Width="825" Name="tbMain" TabStripPlacement="Left" Padding="0" BorderThickness="0" SelectedIndex="0" Background="Transparent"
+                         MouseDown="tbMain_MouseDown" MouseMove="tbMain_MouseMove" MouseUp="tbMain_MouseUp" MouseLeave="tbMain_MouseLeave">
+        </TabControl>
+    </Canvas>
+</UserControl>

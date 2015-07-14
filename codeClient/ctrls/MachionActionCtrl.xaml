@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.MachionActionCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="404">
+    <StackPanel Height="50" Width="404" ClipToBounds="True" Background="Transparent" Orientation="Horizontal">
+        <Image Name="Action0" Height="36" Width="0" Margin="2,0,0,0" Source="/Program;component/png/IprBlocks/ipr_op22_Moldclose.png"></Image>
+        <Image Name="Action1" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op21_Moldopen.png"></Image>
+        <Image Name="Action2" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op15_euromap.png"></Image>
+        <Image Name="Action3" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op26_OPEND.png"></Image>
+        <Image Name="Action4" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_MoldUnitFWD.png"></Image>
+        <Image Name="Action5" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op29_MoldUnitBWD.png"></Image>
+        <Image Name="Action6" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op2_ejectorfor.png"></Image>
+        <Image Name="Action7" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op1_ejectorback.png"></Image>
+        <Image Name="Action8" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action9" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op11_Rotate.png"></Image>
+        <Image Name="Action10" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op11_Rotate.png"></Image>
+        <Image Name="Action11" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action12" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action13" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action14" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action15" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op5_CarrriageFWD.png"></Image>
+        <Image Name="Action16" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op6_CarrriageBWD.png"></Image>
+        <Image Name="Action17" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op23_Injection.png"></Image>
+        <Image Name="Action18" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op8_Charge.png"></Image>
+        <Image Name="Action19" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op25_SUCKBACK.png"></Image>
+        <Image Name="Action20" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op24_SNOW.png"></Image>
+        <Image Name="Action21" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action22" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action23" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op32_AutoAdj.png"></Image>
+        <Image Name="Action24" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op30_AutoP.png"></Image>
+        <Image Name="Action25" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action26" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action27" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action28" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action29" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action30" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action31" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action32" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op31_Lub.png"></Image>
+        <Image Name="Action33" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action34" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action35" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action36" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action37" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action38" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action39" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action40" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action41" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action42" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op10_Core.png"></Image>
+        <Image Name="Action43" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op31_Lub.png"></Image>
+        <Image Name="Action44" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action45" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action46" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action47" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action48" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action49" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action50" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action51" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op9_Air.png"></Image>
+        <Image Name="Action52" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action53" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action54" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action55" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action56" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action57" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action58" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action59" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action60" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action61" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action62" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op28_Other.png"></Image>
+        <Image Name="Action63" Height="36" Width="0" Source="/Program;component/png/IprBlocks/ipr_op26_OPEND.png"></Image>
+    </StackPanel>
+</UserControl>

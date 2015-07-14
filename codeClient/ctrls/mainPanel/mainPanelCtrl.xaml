@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.mainPanelCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="1750" d:DesignWidth="1080" 
+             xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Height="1750" Width="1080" Name="cvsMain" ClipToBounds="True" Background="White" SnapsToDevicePixels="True" 
+            MouseDown="cvsMain_MouseDown" MouseMove="cvsMain_MouseMove" MouseUp="cvsMain_MouseUp" MouseLeave="cvsMain_MouseLeave">
+        <Image Canvas.Left="5" Height="75" Width="1070" Stretch="Fill" Source="/Program;component/png/blocks/PageSwitch-back.png" />
+        <TabControl Name="tbctlMain" Height="1752" Width="1070" Canvas.Left="5" Background="Transparent" Margin="0" Padding="0" BorderThickness="1,1,1,1" BorderBrush="#FFD4D4D4" TabStripPlacement="Bottom">
+            <TabItem Height="0" Padding="0" Margin="0">
+                <Canvas>
+                    <my:overViewPage x:Name="overViewPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:machionStatePage x:Name="machionStatePage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:moldOnOffNewPage x:Name="moldOnOffNewPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:ejectorNewPage x:Name="ejectorNewPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:interpretorPage x:Name="interpretorPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:injectionNewPage x:Name="injectionNewPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:carriageNewPage x:Name="carriageNewPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:heatingPage x:Name="heatingPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Name="tmDataAnalysis" Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:dataAnalysis x:Name="dataAnalysis1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:settingPage x:Name="settingPage1" />
+                </Canvas>
+            </TabItem>
+            <TabItem Height="0" Padding="0" Margin="0" >
+                <Canvas>
+                    <my:robotPage x:Name="robotPage1" />
+                </Canvas>
+            </TabItem>
+        </TabControl>
+        <Canvas Canvas.Left="5" Canvas.Top="0" Height="75" Width="98" Tag="0" Name="cvsOverview" MouseDown="cvsFirstPage_MouseDown" Opacity="0">
+            <Label Canvas.Left="0" Canvas.Top="42" Width="98" Content="{DynamicResource strMainMenu_Overview}" FontSize="12" HorizontalContentAlignment="Center" />
+            <Image Canvas.Left="0" Height="75" Width="98" Source="/Program;component/png/HeadSwitch/B1_P1_Gray.png" Stretch="Fill" />
+        </Canvas>
+        <Canvas Canvas.Left="103" Canvas.Top="0" Width="98" Height="75" Name="cvsMachionState" MouseDown="cvsQuickSetPage_MouseDown" Tag="1" Opacity="1">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P2_Gray.png" Width="98" Height="75" Stretch="Fill" Canvas.Top="0" />
+            <Label Name="lbDis1" Content="{DynamicResource strMainMenu_MachionState}"  Width="98" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="201" Canvas.Top="0"  Width="98" Height="75" Name="cvsMold" MouseDown="cvsMoldOnOffPage_MouseDown" Tag="2" Opacity="1" >
+            <Image Source="/Program;component/png/HeadSwitch/B1_P3_Gray.png" Width="98" Height="75" Stretch="Fill"/>
+            <Label Name="lbDis2" Content="{DynamicResource strMainMenu_Mold}"  Width="98" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="299" Canvas.Top="0"  Width="97" Height="75" Name="cvsEjector" MouseDown="cvsEjectorPage_MouseDown" Tag="3" Opacity="1">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P4_Gray.png" Width="97" Height="75" Stretch="Fill"/>
+            <Label Name="lbDis3" Content="{DynamicResource strMainMenu_Ejector}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="396" Canvas.Top="0"  Width="97" Height="75" Name="cvsInterpreter" MouseDown="cvsSettingInstructionPage_MouseDown" Tag="4" Opacity="1">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P5_Gray.png" Width="97" Height="75" Stretch="Fill"/>
+            <Label Name="lbDis60" Content="{DynamicResource strMainMenu_Interpreter}"  Width="97" HorizontalContentAlignment="Center"  FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="493" Canvas.Top="0"  Width="97" Height="75" Name="cvsInjection" MouseDown="cvsInjectionSettingsPage_MouseDown" Tag="5" Opacity="1">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P6_Gray.png" Width="97" Height="75" Stretch="Fill"/>
+            <Label Name="lbDis5" Content="{DynamicResource strMainMenu_Injection}"  Width="97" HorizontalContentAlignment="Center"  FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="590" Canvas.Top="0"  Width="97" Height="75" Name="cvsCharge" MouseDown="cvsCarriagePage_MouseDown" Tag="6"  >
+            <Image Source="/Program;component/png/HeadSwitch/B1_P7_Gray.png" Width="97" Height="75" Stretch="Fill"/>
+            <Label Name="lbDis6" Content="{DynamicResource strMainMenu_Charge}"  Width="97" HorizontalContentAlignment="Center"  FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="687" Canvas.Top="0"  Width="97" Height="75" Name="cvsHeating" MouseDown="cvsBerrelHeatingPage_MouseDown" Tag="7" >
+            <Image Source="/Program;component/png/HeadSwitch/B1_P8_Gray.png" Width="97" Height="75" Stretch="Fill"/>
+            <Label Name="lbDis7" Content="{DynamicResource strMainMenu_Heating}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="784" Canvas.Top="0" Width="97" Height="75" Name="cvsDataAnalysis" MouseDown="cvsDataPage_MouseDown" Tag="8">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P9_Gray.png" Width="97" Height="75" Stretch="Fill"/>
+            <Label Name="lbDis8" Content="{DynamicResource strMainMenu_DataAnalysis}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="881" Canvas.Top="0" Width="97" Height="75" Name="cvsSetting" MouseDown="cvsSettingPage_MouseDown" Tag="9">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P10_Gray.png" Width="97" Height="75" Stretch="Fill" />
+            <Label Name="lbDis9" Content="{DynamicResource strMainMenu_Setting}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <Canvas Canvas.Left="978" Canvas.Top="0" Width="97" Height="75" Name="cvsRobotPage" MouseDown="cvsRobotPage_MouseDown" Tag="10">
+            <Image Source="/Program;component/png/HeadSwitch/B1_P11_Gray.png" Width="97" Height="75" Stretch="Fill" Canvas.Left="0" />
+            <Label Name="lbDis10" Content="{DynamicResource robot_Main}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" />
+        </Canvas>
+        <my:btnAttentionCtrl x:Name="confirm" Opacity="1"/>
+    </Canvas>
+</UserControl>

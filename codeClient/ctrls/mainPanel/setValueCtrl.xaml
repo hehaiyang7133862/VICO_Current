@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.setValueCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="32" d:DesignWidth="190" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Name="cvsMain" Height="32" Width="190">
+        <Border Background="White" BorderBrush="#FFD4D4D4" BorderThickness="1" Canvas.Left="0" Canvas.Top="0" CornerRadius="0" Height="32" Name="bdBox" Width="120" MouseDown="bdBox_MouseDown"/>
+        <my:lbCtrl Canvas.Top="1" Canvas.Left="1" x:Name="lbCtrlValue" myFontSize="18" myFontFamily="Verdana" myVerticalAlignment="Center" myHorizontalAlignment="Right" myWidth="118" myHeight="30" />
+        <Label Canvas.Right="0" Canvas.Top="0" Content="[UST-on]" FontSize="14" Foreground="#FF444444" Height="32" HorizontalContentAlignment="Left" Name="lbUnit" VerticalContentAlignment="Center" Width="70" />
+    </Canvas>
+</UserControl>

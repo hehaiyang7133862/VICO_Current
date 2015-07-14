@@ -1,0 +1,12 @@
+﻿<Window x:Class="nsVicoClient.ctrls.startWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="startWindow" Height="1920" Width="1080" WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/Program;component/png/splash/Radbb14_Start.png" />
+    </Window.Background>
+    <Grid>
+        <Label Content=" " Height="79" FontSize="33"  HorizontalAlignment="Left" Margin="364,272,0,0" Name="lbPer" VerticalAlignment="Top" Width="236" />
+        <Label Content="startWindow" FontSize="25"  HorizontalAlignment="Left" Margin="704,221,0,0" Name="label1"  Width="179" Opacity="0"/>
+    </Grid>
+</Window>

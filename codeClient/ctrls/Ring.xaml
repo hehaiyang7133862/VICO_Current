@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.Ring"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="9" d:DesignWidth="9">
+    <Canvas Height="9" Width="9" >
+        <Ellipse Name="ellMain" Height="9" Width="9" Stroke="Red" StrokeThickness="3" />
+        <Ellipse Height="3" Width="3" Fill="White" Stroke="White" Canvas.Left="3" Canvas.Top="3"/>
+    </Canvas>
+</UserControl>

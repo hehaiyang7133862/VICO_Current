@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.MoldAdjustProcessBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="40" d:DesignWidth="40">
+    <Canvas Name="cvsMain" Height="40" Width="40" ClipToBounds="True" >
+        <Path Canvas.Left="20" Canvas.Top="20" Name="pathMain" StrokeThickness="2" Stroke="White" SnapsToDevicePixels="True">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="0,12">
+                        <ArcSegment x:Name="arc" Point="-12,0" Size="12,12" RotationAngle="90" IsLargeArc="False" SweepDirection="Clockwise" IsStroked="True"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Canvas>
+</UserControl>

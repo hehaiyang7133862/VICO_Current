@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.filterTimeCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+    d:DesignHeight="50" d:DesignWidth="55" >
+    <Canvas Name="cvsMain" Height="50" Width="55" Background="#00000000" 
+            MouseDown="cvsMain_MouseDown" MouseUp="cvsMain_MouseUp" MouseLeave="cvsMain_MouseLeave">
+        <Image Source="/Program;component/png/Sign/today-32.png" Canvas.Left="11" Canvas.Top="10" />
+
+        <Canvas Canvas.Left="-245" Canvas.Top="-175" Height="1510" Width="1080" Name="cvsBg" Background="#00000000" MouseDown="cvsBg_MouseDown"
+                MouseMove="cvsBg_MouseMove" MouseUp="cvsBg_MouseUp" Visibility="Hidden">
+            <Canvas Canvas.Left="150" Canvas.Top="250" Height="221" Name="cvsTime" Width="883" MouseDown="cvsUser_MouseDown">
+                <Image Width="883" Height="221" Source="/Program;component/png/OBJ_12_9_Time_Background_V0.1.png" Opacity="0.9" />
+                <Label Canvas.Left="216" Canvas.Top="40" Content="{DynamicResource lanKey037}" FontSize="22" Height="38" Name="label2" />
+                <Label Canvas.Left="325" Canvas.Top="40" Content="2012" FontFamily="Michroma" FontSize="22" Height="38" Name="lbTmYearStart" MouseUp="lbTmYearStart_MouseDown" />
+                <Label Canvas.Left="408" Canvas.Top="40" Content="/" FontSize="22" Height="38" Name="label3" />
+                <Label Canvas.Left="413" Canvas.Top="40" Content="11" FontFamily="Michroma" FontSize="22" Height="38" HorizontalContentAlignment="Center" Name="lbTmMonthStart" Width="52" MouseUp="lbTmMonthStart_MouseDown" />
+                <Label Canvas.Left="453" Canvas.Top="40" Content="/" FontSize="22" Height="38" Name="label5" />
+                <Label Canvas.Left="465" Canvas.Top="40" Content="13" FontFamily="Michroma" FontSize="22" Height="38" HorizontalContentAlignment="Center" Name="lbTmDayStart" Width="52" MouseUp="lbTmDayStart_MouseDown" />
+                <Label Canvas.Left="510" Canvas.Top="40" Content="/" FontSize="22" Height="38" Name="label7" />
+                <Label Canvas.Left="525" Canvas.Top="40" Content="08" FontFamily="Michroma" FontSize="22" Height="38" HorizontalContentAlignment="Right" Name="lbTmHourStart" Width="53" MouseUp="lbTmHourStart_MouseDown" />
+                <Label Canvas.Left="216" Canvas.Top="87" Content="{DynamicResource lanKey038}" FontSize="22" Height="38" Name="label4" />
+                <Label Canvas.Left="325" Canvas.Top="87" Content="2012" FontFamily="Michroma" FontSize="22" Height="38" Name="lbTmYearEnd" MouseUp="lbTmYearEnd_MouseDown" />
+                <Label Canvas.Left="408" Canvas.Top="87" Content="/" FontSize="22" Height="38" Name="label8" />
+                <Label Canvas.Left="413" Canvas.Top="87" Content="11" FontFamily="Michroma" FontSize="22" Height="38" HorizontalContentAlignment="Center" Name="lbTmMonthEnd" Width="52" MouseUp="lbTmMonthEnd_MouseDown" />
+                <Label Canvas.Left="453" Canvas.Top="87" Content="/" FontSize="22" Height="38" Name="label10" />
+                <Label Canvas.Left="465" Canvas.Top="87" Content="13" FontFamily="Michroma" FontSize="22" Height="38" HorizontalContentAlignment="Center" Name="lbTmDayEnd" Width="52" MouseUp="lbTmDayEnd_MouseDown" />
+                <Label Canvas.Left="510" Canvas.Top="87" Content="/" FontSize="22" Height="38" Name="label12" />
+                <Label Canvas.Left="525" Canvas.Top="87" Content="08" FontFamily="Michroma" FontSize="22" Height="38" HorizontalContentAlignment="Right" Name="lbTmHourEnd" Width="53" MouseUp="lbTmHourEnd_MouseDown" />
+                <Image Canvas.Left="330" Canvas.Top="146" Height="30" Source="/Program;component/png/OBJ_13_0_ButtonbaseRelease_V1.5.png" Width="80" />
+                <Label Name="lbTmSetOk" Canvas.Left="330" Canvas.Top="146" Content="{DynamicResource lanKey2005}" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="80" MouseUp="lbTmSetOk_MouseDown" />
+                <Image Canvas.Left="426" Canvas.Top="146" Height="30" Source="/Program;component/png/OBJ_13_0_ButtonbaseRelease_V1.3.png" Width="80" />
+                <Label Name="lbTmSetCancle" Canvas.Left="426" Canvas.Top="146" Content="{DynamicResource lanKey2010}" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="80" MouseUp="lbTmSetCancle_MouseDown" />
+            </Canvas>
+        </Canvas>
+    </Canvas>
+</UserControl>
+

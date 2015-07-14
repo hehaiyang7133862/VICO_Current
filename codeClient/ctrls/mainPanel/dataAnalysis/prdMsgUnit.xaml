@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.prdMsgUnit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="1068">
+    <Canvas Name="cvsBackground" Height="25" Width="1068" ClipToBounds="True">
+        <Canvas.Background>
+            <DrawingBrush Stretch="Fill">
+                <DrawingBrush.Drawing>
+                    <GeometryDrawing x:Name="gd" Brush="Transparent">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="#FFD4D4D4" Thickness="1"></Pen>
+                        </GeometryDrawing.Pen>
+                        <GeometryDrawing.Geometry>
+                            <GeometryGroup>
+                                <LineGeometry StartPoint="68,0" EndPoint="68,25" />
+                                <LineGeometry StartPoint="168,0" EndPoint="168,25" />
+                                <LineGeometry StartPoint="268,0" EndPoint="268,25" />
+                                <LineGeometry StartPoint="368,0" EndPoint="368,25" />
+                                <LineGeometry StartPoint="468,0" EndPoint="468,25" />
+                                <LineGeometry StartPoint="568,0" EndPoint="568,25" />
+                                <LineGeometry StartPoint="668,0" EndPoint="668,25" />
+                                <LineGeometry StartPoint="768,0" EndPoint="768,25" />
+                                <LineGeometry StartPoint="868,0" EndPoint="868,25" />
+                                <LineGeometry StartPoint="968,0" EndPoint="968,25" />
+                                <LineGeometry StartPoint="0,25" EndPoint="1068,25" />
+                            </GeometryGroup>
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingBrush.Drawing>
+            </DrawingBrush>
+        </Canvas.Background>
+        <Label Name="lbNo" Canvas.Right="1002" Canvas.Top="-2" Content="-19" FontSize="14" Foreground="#FF444444"/>
+        <Label Name="lbinj_HoldingTime" Canvas.Left="68" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbcarriageTime" Canvas.Left="168" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbcycleTime" Canvas.Left="268" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbVPPositon" Canvas.Left="368" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbVPPressure" Canvas.Left="468" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbVPTime" Canvas.Left="568" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbinjStartPosition" Canvas.Left="668" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbminCushionPosition" Canvas.Left="768" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbcushionCompletePositon" Canvas.Left="868" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+        <Label Name="lbinjPeakPressure" Canvas.Left="968" Canvas.Top="-2" Content="0.00" FontSize="14" HorizontalContentAlignment="Center" Width="100" />
+    </Canvas>
+</UserControl>

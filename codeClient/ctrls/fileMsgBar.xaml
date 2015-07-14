@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="nsVicoClient.ctrls.fileMsgBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="43" d:DesignWidth="358" >
+    <UserControl.Background>
+        <ImageBrush ImageSource="/Program;component/png/IPR_PNG/fileselectline1.png" Stretch="Uniform" TileMode="None" AlignmentY="Bottom" />
+    </UserControl.Background>
+    <Canvas Height="43" Width="358" Name="cvsMain" MouseDown="cvsMain_MouseDown">
+        <Image Height="43" Width="358" Source="/Program;component/png/IPR_PNG/fileselected.png" Name="imgFocus" Visibility="Hidden" Canvas.Top="-2" />
+        <Image Height="23" Width="23" Source="/Program;component/png/IPR_PNG/fileunlock.png" Canvas.Top="10" Canvas.Left="10" />
+        <Label Canvas.Left="44" Canvas.Top="0" Content="Standard.ipr"  Name="lbFileName" Width="273" VerticalContentAlignment="Center" Foreground="#FF646464" FontSize="16"/>
+        <Label Canvas.Left="44" Canvas.Top="20" Content="2013/3/24"  Name="lbFileMdTm" Width="273"  Foreground="#FFC8C8C8" />
+        <Image Height="23" Width="23" Source="/Program;component/png/OBJ_10_11_SelectSquare_V0.0.png" Canvas.Top="10" Canvas.Left="322" Name="imgFocusOff"/>
+        <Image Height="23" Width="23" Source="/Program;component/png/OBJ_10_11_SelectSquareActive_V0.0.png" Canvas.Top="10" Canvas.Left="322" Name="imgFocusOn" Visibility="Hidden"/>
+    </Canvas>
+</UserControl>

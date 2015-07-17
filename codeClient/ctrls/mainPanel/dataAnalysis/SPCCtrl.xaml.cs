@@ -34,6 +34,17 @@ namespace nsVicoClient.ctrls
         private void getNewSPCData(objUnit obj)
         {
             valmoWin.ds.ReadNewData();
+
+            object objFileName = TryFindResource("IprFileName");
+            if (objFileName != null)
+            {
+                string strFileName = objFileName.ToString();
+
+                if (strFileName.Length > 0)
+                {
+                    SocketConnect.getInstance().UpLoad(strFileName);
+                }
+            }
         }
 
         private void UpdateCycle()

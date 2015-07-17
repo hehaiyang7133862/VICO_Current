@@ -267,6 +267,7 @@
     <Compile Include="ctrls\SetTimeCtrl.xaml.cs">
       <DependentUpon>SetTimeCtrl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ctrls\Socket.cs" />
     <Compile Include="ctrls\thermoSettingUnitCtrl.xaml.cs">
       <DependentUpon>thermoSettingUnitCtrl.xaml</DependentUpon>
     </Compile>

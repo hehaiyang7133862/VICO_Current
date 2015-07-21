@@ -55,6 +55,7 @@ namespace nsVicoClient
         public static List<nullEvent> lstSUnitChange = new List<nullEvent>();
         public static execEvent execHandle;
         public static execMsgEvent execMsg;
+        public static intEvent RefushAuthorization;
         public static List<nullEvent> lstLanRefresh = new List<nullEvent>();
         public static List<nullEvent> lstUsbCheckFunc = new List<nullEvent>();
         public static DateTime tmNull = new DateTime(2012, 9, 4, 0, 0, 0);
@@ -325,6 +326,8 @@ namespace nsVicoClient
 
             TimeSpan tSpan = datelimit - dateNow;
             SysBasicInfo.remainingTrialDays = tSpan.Days;
+
+            valmoWin.RefushAuthorization(SysBasicInfo.remainingTrialDays);
 
             if (tSpan.Days < 6)
             {

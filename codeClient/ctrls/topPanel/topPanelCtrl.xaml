@@ -45,7 +45,6 @@
             <Label Name="lbDate" Canvas.Right="5" Canvas.Top="21" Content="01-01 2015" FontSize="14" FontFamily="Verdana" Foreground="#444444" />
             <Label Name="btnSetTime" Canvas.Right="0" Height="47" Width="118" Background="Transparent" MouseUp="btnSetTime_MouseUp" Canvas.Top="1" />
         </Canvas>
-        
         <Border Name="cvsVideo" Canvas.Top="200" Canvas.Left="220" Height="527" Width="642" Visibility="Hidden" Background="White" BorderBrush="#FF8C8C8C" BorderThickness="1">
             <Canvas>
                 <Canvas Height="130" Width="660" Background="Transparent" Canvas.Left="-10" Canvas.Top="-35" MouseMove="cvsVideoHead_MouseMove" MouseUp="cvsVideoHead_MouseUp" MouseLeave="cvsVideoHead_MouseLeave">
@@ -63,5 +62,12 @@
                 </WindowsFormsHost>
             </Canvas>
         </Border>
+        <Canvas Name="cvsAuthorization" Height="50" Width="404" ClipToBounds="True" Visibility="Hidden">
+            <Image Source="/Program;component/png/blocks/HeadLine-2015.png" Height="79" Width="1080"></Image>
+            <Image Source="/Program;component/png/OBJ_21_3_SystemInfo_V0.1.png" Height="30" Width="30" Canvas.Left="10" Canvas.Top="10" Name="imgAct"/>
+            <Label FontSize="16" FontWeight="Black" Foreground="#FF444444" Canvas.Left="40" Canvas.Top="9">授权时间仅剩</Label>
+            <Label Name="lbAuthorizationDays" Width="30" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Black" Foreground="Red" Canvas.Left="145" Canvas.Top="9">5</Label>
+            <Label FontSize="16" FontWeight="Black" Foreground="#FF444444" Canvas.Left="174" Canvas.Top="9">天</Label>
+        </Canvas>
     </Canvas>
 </UserControl>

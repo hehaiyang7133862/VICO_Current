@@ -140,6 +140,8 @@ namespace nsVicoClient.ctrls
             TimeSpan tSpan = datelimit - dateNow;
             SysBasicInfo.remainingTrialDays = tSpan.Days;
 
+            valmoWin.RefushAuthorization(SysBasicInfo.remainingTrialDays);
+
             if (tSpan.Days > 3000)
             {
                 lbDate.Content = "Authorized";

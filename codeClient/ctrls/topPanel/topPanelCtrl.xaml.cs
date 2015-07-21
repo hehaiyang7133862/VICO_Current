@@ -69,6 +69,7 @@ namespace nsVicoClient.ctrls
 
                 valmoWin.lstLanRefresh.Add(setCtrlsLanFunc);
                 valmoWin.BackstageClockTick += SystemClock;
+                valmoWin.RefushAuthorization += this.RefushAuthorizationTime;
 
                 if (VideoSource.getInstance().bInitState == true)
                 {
@@ -85,6 +86,20 @@ namespace nsVicoClient.ctrls
             catch (Exception ex)
             {
                 vm.perror(ex.ToString());
+            }
+        }
+
+        public void RefushAuthorizationTime(int days)
+        {
+            if (days < 6)
+            {
+                this.cvsAuthorization.Visibility = Visibility.Visible;
+
+                lbAuthorizationDays.Content = days;
+            }
+            else
+            {
+                this.cvsAuthorization.Visibility = Visibility.Hidden;
             }
         }
 

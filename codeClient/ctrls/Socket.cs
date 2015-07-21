@@ -96,6 +96,37 @@ namespace nsVicoClient.ctrls
                 socketMsg += queryParm("Prd089");
                 socketMsg += queryParm("Prd090");
 
+                //电能统计
+                
+                //机器加热每周期能耗
+                socketMsg += queryParm("Prd745");
+                //模具加热每周期能耗
+                socketMsg += queryParm("Prd746");
+                //驱动器每周期能耗
+                socketMsg += queryParm("Prd747");
+                //每周期总能耗
+                socketMsg += queryParm("Prd748");
+                //机器加热每小时能耗
+                socketMsg += queryParm("Prd749");
+                //模具加热每小时能耗
+                socketMsg += queryParm("Prd750");
+                //驱动器每小时能耗
+                socketMsg += queryParm("Prd751");
+                //每小时总能耗
+                socketMsg += queryParm("Prd752");
+                //机器加热功率
+                socketMsg += queryParm("Prd753");
+                //模具加热功率
+                socketMsg += queryParm("Prd754");
+                //驱动器功率
+                socketMsg += queryParm("Prd755");
+                //机器总功率
+                socketMsg += queryParm("Prd756");
+                //每KG能耗
+                socketMsg += queryParm("Prd757");
+                //项目总能耗
+                socketMsg += queryParm("Prd758");
+
                 byte[] arrMsg = System.Text.Encoding.UTF8.GetBytes(socketMsg);
 
                 socketClient.Send(arrMsg);

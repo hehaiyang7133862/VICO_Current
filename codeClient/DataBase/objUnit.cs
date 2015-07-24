@@ -106,6 +106,10 @@ namespace nsDataMgr
         /// value=0.0 rate=10 uni="%"
         /// </summary>
         Per,
+        /// <summary>
+        /// value=0.0 rate=100 uni="%"
+        /// </summary>
+        Per00,
         /// <summary> 
         /// value=0.0 rate=100 unit="ton"
         /// </summary>
@@ -326,6 +330,7 @@ namespace nsDataMgr
             {UnitType.Tm_day,          unit_day },
             {UnitType.Tm_hour,         unit_hour },
             {UnitType.Per,             unit_Per },
+            {UnitType.Per00,             unit_Per },
             {UnitType.Force_ton,       unit_ton },
             {UnitType.Force_KN,        unit_KN },
             {UnitType.Force_USton,     unit_Us_ton },
@@ -387,6 +392,7 @@ namespace nsDataMgr
             {UnitType.Tm_day,                   1 },
             {UnitType.Tm_hour,                  3600 },
             {UnitType.Per,                      10 },
+            {UnitType.Per00,                      100 },
             {UnitType.Force_ton,                100 },
             {UnitType.Force_KN,                 10 },
             {UnitType.Force_USton,              100 / 9.07 },
@@ -440,6 +446,7 @@ namespace nsDataMgr
             {UnitType.Tm_day,                   "0" },//1
             {UnitType.Tm_hour,                  "0.0" },//1
             {UnitType.Per,                      "0.0" },//0.1
+            {UnitType.Per00,                      "0.0" },//0.1
             {UnitType.Force_ton,                "0.0" },//0.1
             {UnitType.Force_KN,                 "0.0" },//1
             {UnitType.Force_USton,              "0.0" },//1/
@@ -1210,6 +1217,7 @@ namespace nsDataMgr
                 case UnitType.Len_mm:
                 case UnitType.Len_inch:
                 case UnitType.Per:
+                case UnitType.Per00:
                 case UnitType.Force_ton:
                 case UnitType.ForceTon:
                 case UnitType.Torque:

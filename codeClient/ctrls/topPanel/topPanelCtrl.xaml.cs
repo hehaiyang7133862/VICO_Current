@@ -142,7 +142,7 @@ namespace nsVicoClient.ctrls
                         linkPanel.Visibility = Visibility.Hidden;
 
                         linkState = true;
-                        recUnit obj = new recUnit("Sys000", DateTime.Now, recType.sysType);
+                        recUnit obj = new recUnit("Als000", DateTime.Now, recType.sysType);
                         valmoWin.eventMgr.msgSave(obj);
                         //WinMsg mwMsg = new WinMsg();
                         //mwMsg.type = WinMsgType.mwMsg;
@@ -157,7 +157,7 @@ namespace nsVicoClient.ctrls
                         if (linkState)
                         {
                             linkState = false;
-                            recUnit obj = new recUnit("Sys001", DateTime.Now, recType.sysType);
+                            recUnit obj = new recUnit("Als001", DateTime.Now, recType.sysType);
                             valmoWin.eventMgr.msgSave(obj);
                         }
                         //WinMsg mwMsg = new WinMsg();
@@ -200,7 +200,7 @@ namespace nsVicoClient.ctrls
                         linkPanel.flagForceClose = false;
                         linkPanel.active = true;
 
-                        recUnit obj = new recUnit("Sys000", DateTime.Now, recType.sysType);
+                        recUnit obj = new recUnit("Als000", DateTime.Now, recType.sysType);
                         valmoWin.eventMgr.msgSave(obj);
                     }
                     break;

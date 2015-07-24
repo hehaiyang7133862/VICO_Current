@@ -363,12 +363,12 @@
                             <Line X2="79" Canvas.Left="1" Canvas.Top="37" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Label Canvas.Left="1" Canvas.Top="40" Content="1" Foreground="#FF444444" FontFamily="Verdana"/>
                             <my:IStateLED_B Canvas.Left="28" Canvas.Top="39" objName="IBT002" bitNr="0" />
-                            <Label Canvas.Left="105" Canvas.Top="39" Content="{DynamicResource TP_IOF017}" Foreground="#FF444444"/>
+                            <Label Canvas.Left="105" Canvas.Top="39" Content="{DynamicResource TP_IOF018}" Foreground="#FF444444"/>
                             <Line X2="280" Canvas.Left="105" Canvas.Top="64" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Line X2="79" Canvas.Left="1" Canvas.Top="64" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Label Canvas.Left="1" Canvas.Top="67" Content="2" Foreground="#FF444444" FontFamily="Verdana"/>
                             <my:IStateLED_B Canvas.Left="28" Canvas.Top="66" objName="IBT002" bitNr="1" />
-                            <Label Canvas.Left="105" Canvas.Top="66" Content="{DynamicResource TP_IOF018}" Foreground="#FF444444"/>
+                            <Label Canvas.Left="105" Canvas.Top="66" Content="{DynamicResource TP_IOF017}" Foreground="#FF444444"/>
                             <Line X2="280" Canvas.Left="105" Canvas.Top="91" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Line X2="79" Canvas.Left="1" Canvas.Top="91" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Label Canvas.Left="1" Canvas.Top="94" Content="3" Foreground="#FF444444" FontFamily="Verdana"/>

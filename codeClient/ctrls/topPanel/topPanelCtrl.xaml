@@ -10,11 +10,8 @@
     <Canvas Width="1080" Height="170" Name="cvsMain" Background="#FFBCBCBC">
         <my:lstWinMsgCtrl Canvas.Top="135" x:Name="lstWinMsgCtrl1" Width="1080" Canvas.Left="0" />
         <my:ParamMonitor Canvas.Top="49" />
-        <Canvas Height="79" Width="1080">
-            <Canvas.Background>
-                <ImageBrush ImageSource="/Program;component/png/blocks/HeadLine-2015.png"></ImageBrush>
-            </Canvas.Background>
-            
+        <Canvas Height="60" Width="1080" ClipToBounds="True">
+            <Image Height="79" Width="1080" Source="/Program;component/png/blocks/HeadLine-2015.png"></Image>
             <my:MachionActionCtrl />
             
             <Label Name="lbIprFileName" Canvas.Right="345" Canvas.Top="-2" Content="{DynamicResource IprFileName}" FontSize="18" FontFamily="Verdana" Foreground="#444444" />

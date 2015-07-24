@@ -149,39 +149,33 @@ namespace nsVicoClient
                 this.dtStart = DateTime.Parse(strTmp[2]);
                 this.plateNums = Int32.Parse(strTmp[3]);
 
-                switch (this.serialNum[0])
+                switch (serialNum.Substring(0,3))
                 {
-                    case 'A':
+                    case "Alm":
                         {
-                            if (this.serialNum[2] == 's')
-                            {
-                                this.type = recType.sysType;
-                            }
-                            else
-                            {
-                                this.type = recType.alarmType;
-                            }
-                            if (strTmp[4] == "--")
-                            {
+                            this.type = recType.alarmType;
 
-                            }
-                            else
-                            {
-                                this.dtEnd = DateTime.Parse(strTmp[4]);
-                            }
+                            //if (strTmp[4] == "--")
+                            //{
+
+                            //}
+                            //else
+                            //{
+                            //    this.dtEnd = DateTime.Parse(strTmp[4]);
+                            //}
                         }
                         break;
-                    case 'L':
+                    case "Log":
                         {
                             this.type = recType.logType;
                         }
                         break;
-                    case 'S':
+                    case "Als":
                         {
                             this.type = recType.sysType;
                         }
                         break;
-                    case 'M':
+                    default:
                         {
                             this.oldValue = double.Parse(strTmp[4]);
                             this.newValue = double.Parse(strTmp[5]);
@@ -257,7 +251,7 @@ namespace nsVicoClient
 
             strReturn = serialNum + str + userName + str + dtStart.ToString("yyyy/MM/dd hh:mm:ss") + str + plateNums + str;
 
-            if (serialNum[0] == 'A')
+            if ((serialNum[0] == 'A') || (serialNum[0] == 'L'))
             {
                 if (dtEnd.Year != 1)
                 {
@@ -268,7 +262,7 @@ namespace nsVicoClient
                     strReturn += "--" + str;
                 }
             }
-            if (serialNum[0] == 'M')
+            else
             {
                 strReturn += oldValue + str + newValue + str;
             }

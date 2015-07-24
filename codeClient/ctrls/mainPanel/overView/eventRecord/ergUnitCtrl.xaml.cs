@@ -64,7 +64,7 @@ namespace nsVicoClient.ctrls
                         imgType.Source = (BitmapImage)App.Current.TryFindResource("imgL");
                         break;
                     case recType.operateType:
-                        lbSerialNum.Content = "M" + ErObj.serialNum.Substring(3,3);
+                        lbSerialNum.Content = ErObj.serialNum;
                         imgType.Source = (BitmapImage)App.Current.TryFindResource("imgM");
                         break;
                     case recType.sysType:
@@ -87,7 +87,7 @@ namespace nsVicoClient.ctrls
                 }
                 else
                     lbDis.Content = "";
-                lbDtStart.Content = ErObj.dtStart.ToString("yyyy.MM.dd hh:mm:ss");
+                lbDtStart.Content = ErObj.dtStart.ToString("yyyy.MM.dd HH:mm:ss");
                 if (ErObj.type == recType.operateType || ErObj.type == recType.logType)
                     lbDtEnd.Content = "";
                 else

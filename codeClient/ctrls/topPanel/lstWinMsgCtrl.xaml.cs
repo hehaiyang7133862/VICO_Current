@@ -251,7 +251,7 @@ namespace nsVicoClient.ctrls
                 if (cvsListAlarm.Visibility == Visibility.Visible)
                 {
                     cvsListAlarm.Children.Clear();
-                    cvsListAlarm.Height = curActiveAlmObjLst.Count * 35 + 100;
+                    cvsListAlarm.Height = curActiveAlmObjLst.Count * 35;
                     for (int i = 0; i < curActiveAlmObjLst.Count; i++)
                     {
                         alarmUnitCtrl almPanel = new alarmUnitCtrl(curActiveAlmObjLst[i], i + 1);

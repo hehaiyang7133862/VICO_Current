@@ -66,7 +66,7 @@
             <!--<Label Canvas.Left="529" Canvas.Top="194" Content="{DynamicResource lanKey463}" Height="28" />-->
             <!--<Label Canvas.Left="31" Canvas.Top="229" Content="{DynamicResource lanKey464}" Height="28" />-->
             <Label Width="150" Height="30" Canvas.Left="500" Canvas.Top="278" Content="UI：" VerticalContentAlignment="Center" BorderBrush="#FFD4D4D4" BorderThickness="1,1,0,1" />
-            <Label Canvas.Left="650" Canvas.Top="278" Name="lbUIVersion" Height="30" Width="260" BorderBrush="#FFD4D4D4" BorderThickness="1" Content="00.000100.0.0000" FontSize="14" VerticalContentAlignment="Center" Background="#D6D6D6"/>
+            <Label Canvas.Left="650" Canvas.Top="278" Name="lbUIVersion" Height="30" Width="260" BorderBrush="#FFD4D4D4" BorderThickness="1" Content="00.000100.0.0002" FontSize="14" VerticalContentAlignment="Center" Background="#D6D6D6"/>
             <Label Name="btnAccredit" Canvas.Left="830" Canvas.Top="457" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1"  Content="{DynamicResource lanKey475}" FontSize="14" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="80"  MouseUp="btnAccredit_MouseUp"/>
             <my:paramSetUnitCtrl Canvas.Left="30" Canvas.Top="278" objName="Prd022" readOnly="True"/>
             <!--<my:btnSetCtrl Canvas.Left="32" Canvas.Top="258" w="600"  x:Name="btnSetCtrl1" dis="{DynamicResource lanKey465}" objName="Prd022" readOnly="True" flagUnitS="True"/>-->

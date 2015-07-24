@@ -40,7 +40,7 @@
             <my:heatingSpMoldBtnCtrl Canvas.Left="0.5" Canvas.Top="66"  x:Name="btnTmp025" objName="Tmp025"/>
             <my:heatingSPStateBtnCtrl Canvas.Left="0" Canvas.Top="27" x:Name="btnTmp129" dis="{DynamicResource lanKey372}"/>
 
-            <my:VicoLabel Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp082" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
+            <my:VicoLabel ReadOnly="True" Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp082" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="115" x:Name="lbTmp018" objName="Tmp018" myHeight="39" myWidth="93" />
             <my:VicoLabel Canvas.Left="0" Canvas.Top="153" x:Name="lbTmp021" objName="Tmp021" myHeight="40" myWidth="93" />
             <my:VicoLabel Canvas.Left="0" Canvas.Top="192" x:Name="lbTmp022" objName="Tmp022" myHeight="40" myWidth="93" />
@@ -51,7 +51,7 @@
             <Image Source="/Program;component/png/OBJ_15_21_OtherPart_V0.0.png" Height="283" Width="93" Canvas.Top="27" />
             <my:heatingSpMoldBtnCtrl Canvas.Left="0.5" Canvas.Top="66"  x:Name="btnTmp033" objName="Tmp033"/>
             <my:heatingSPStateBtnCtrl Canvas.Left="0" Canvas.Top="27" x:Name="btnTmp130" dis="{DynamicResource lanKey373}"/>
-            <my:VicoLabel Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp089" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
+            <my:VicoLabel ReadOnly="True" Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp089" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="115" x:Name="lbTmp026" objName="Tmp026" myHeight="39" myWidth="93" />
             <my:VicoLabel Canvas.Left="0" Canvas.Top="153" x:Name="lbTmp029" objName="Tmp029" myHeight="40" myWidth="93" />
             <my:VicoLabel Canvas.Left="0" Canvas.Top="192" x:Name="lbTmp030" objName="Tmp030" myHeight="40" myWidth="93" />
@@ -63,7 +63,7 @@
             <!--<Label Canvas.Left="0" Canvas.Top="0" Content="第三段" FontSize="16" HorizontalContentAlignment="Center" Name="lbTempPr_131_heating" Width="93" Height="40" VerticalContentAlignment="Center" />-->
             <my:heatingSpMoldBtnCtrl Canvas.Left="0.5" Canvas.Top="66"  x:Name="btnTmp041" objName="Tmp041"/>
             <my:heatingSPStateBtnCtrl Canvas.Left="0" Canvas.Top="27" x:Name="btnTmp140" dis="{DynamicResource lanKey374}"/>
-            <my:VicoLabel Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp096" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
+            <my:VicoLabel ReadOnly="True" Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp096" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="115" x:Name="lbTmp034" objName="Tmp034" myHeight="39" myWidth="93" />
             <my:VicoLabel Canvas.Left="0" Canvas.Top="153" x:Name="lbTmp037" objName="Tmp037" myHeight="40" myWidth="93" />
             <my:VicoLabel Canvas.Left="0" Canvas.Top="192" x:Name="lbTmp038" objName="Tmp038" myHeight="40" myWidth="93"/>
@@ -74,7 +74,7 @@
             <Image Source="/Program;component/png/OBJ_15_21_OtherPart_V0.0.png" Height="283" Width="93" Canvas.Top="27" />
             <my:heatingSpMoldBtnCtrl Canvas.Left="0.5" Canvas.Top="66"  x:Name="btnTmp049" objName="Tmp049"/>
             <my:heatingSPStateBtnCtrl Canvas.Left="0" Canvas.Top="27" x:Name="btnTmp132" dis="{DynamicResource lanKey375}"/>
-            <my:VicoLabel Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp103" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
+            <my:VicoLabel ReadOnly="True" Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp103" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="115" x:Name="lbTmp042" objName="Tmp042" myHeight="39" myWidth="93"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="153" x:Name="lbTmp045" objName="Tmp045" myHeight="40" myWidth="93"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="192" x:Name="lbTmp046" objName="Tmp046" myHeight="40" myWidth="93"/>
@@ -85,7 +85,7 @@
             <Image Source="/Program;component/png/OBJ_15_21_OtherPart_V0.0.png" Height="283" Width="93" Canvas.Top="27" />
             <my:heatingSpMoldBtnCtrl Canvas.Left="0.5" Canvas.Top="66"  x:Name="btnTmp057" objName="Tmp057"/>
             <my:heatingSPStateBtnCtrl Canvas.Left="0" Canvas.Top="27" x:Name="btnTmp133" dis="{DynamicResource lanKey376}"/>
-            <my:VicoLabel Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp110" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
+            <my:VicoLabel ReadOnly="True" Canvas.Left="0" myHeight="35" myWidth="93" Canvas.Top="-11" objName="Tmp110" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="115" x:Name="lbTmp050" objName="Tmp050" myHeight="39" myWidth="93"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="153" x:Name="lbTmp053" objName="Tmp053" myHeight="40" myWidth="93"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="192" x:Name="lbTmp054" objName="Tmp054" myHeight="40" myWidth="93"/>
@@ -96,7 +96,7 @@
             <Image Source="/Program;component/png/OBJ_15_20_NozzlePart_V0.0.png" Height="283" Width="71" Canvas.Top="27" />
             <my:heatingSpMoldBtnCtrl Canvas.Left="1" Canvas.Top="66" w="69" x:Name="btnTmp017" objName="Tmp017"/>
             <my:heatingSPStateBtnCtrl Canvas.Left="0" Canvas.Top="27" x:Name="btnTmo128" dis="{DynamicResource lanKey297}" w="71"/>
-            <my:VicoLabel Canvas.Left="0" myHeight="35" myWidth="71" Canvas.Top="-11" objName="Tmp075" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
+            <my:VicoLabel ReadOnly="True" Canvas.Left="0" myHeight="35" myWidth="71" Canvas.Top="-11" objName="Tmp075" myHorizontalAlignment="Center" myFontSize="16" myFontWeight="Black" myForeground="Red" UnitVisiable="Hidden"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="115" x:Name="lbTmp010" objName="Tmp010" myHeight="39" myWidth="71"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="153" x:Name="lbTmp013" objName="Tmp013" myHeight="40" myWidth="71"/>
             <my:VicoLabel Canvas.Left="0" Canvas.Top="192" x:Name="lbTmp014" objName="Tmp014" myHeight="40" myWidth="71"/>

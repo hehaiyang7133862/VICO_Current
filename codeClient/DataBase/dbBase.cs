@@ -1525,7 +1525,7 @@ namespace nsDataMgr
             lstItem.Add(new objUnit("Tmp093", UnitType.DgtType, "0", "1", "HeatingZoneControl4.sHeatingZoneSwitch"));
             lstItem.Add(new objUnit("Tmp094", UnitType.Temp_C, "0", "6000", "HeatingZoneControl4.sHeatingLimitValue"));
             lstItem.Add(new objUnit("Tmp095", UnitType.DgtType, "0", "2", "ZoneType4.Data"));
-            lstItem.Add(new objUnit("Tmp096", UnitType.Per00, "0", "10000", "HeatingZoneContro4.Y_Heat_S"));
+            lstItem.Add(new objUnit("Tmp096", UnitType.Per00, "0", "10000", "HeatingZoneControl4.Y_Heat_S"));
             lstItem.Add(new objUnit("Tmp098", UnitType.DgtType, "0", "9999999", "HeatingZoneControl4.sKP"));
             lstItem.Add(new objUnit("Tmp099", UnitType.DgtType, "0", "9999999", "HeatingZoneControl4.sKI"));
             lstItem.Add(new objUnit("Tmp100", UnitType.DgtType, "0", "1", "HeatingZoneControl5.sHeatingZoneSwitch"));

@@ -21,11 +21,11 @@ namespace nsVicoClient
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            //if (Environment.CurrentDirectory != "D:\\ValmoEngineering")
-            //{
-            //    MessageBox.Show("Path Error!");
-            //    Environment.Exit(0);
-            //}
+            if (Environment.CurrentDirectory != "D:\\ValmoEngineering")
+            {
+                MessageBox.Show("Path Error!");
+                Environment.Exit(0);
+            }
 
             Process thisProc = Process.GetCurrentProcess();
             if(Process.GetProcessesByName(thisProc.ProcessName).Length >1)

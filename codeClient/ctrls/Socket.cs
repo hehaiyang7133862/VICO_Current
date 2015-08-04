@@ -35,6 +35,14 @@ namespace nsVicoClient.ctrls
             }
         }
 
+        public void close()
+        {
+            if (socketClient != null)
+            {
+                socketClient.Close();
+            }
+        }
+
         public void UpLoad(string fileName)
         {
             if (IsSocketInit == true)
@@ -60,6 +68,8 @@ namespace nsVicoClient.ctrls
                 socketMsg += queryParm("Prd003");
                 //计划产品数
                 socketMsg += queryParm("Prd008");
+                //剩余时间
+                socketMsg += queryParm("Prd023");
                 //平均周期时间
                 socketMsg += queryParm("Prd024");
 

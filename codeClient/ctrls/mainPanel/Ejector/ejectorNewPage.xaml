@@ -64,9 +64,9 @@
         </Canvas>
         
         <Canvas Canvas.Left="293" Canvas.Top="-1"  Width="97" Height="75" Name="cvsEjectorPage" Background="Transparent">
-            <Image Source="/Program;component/png/HeadSwitch/B1_P4_Blue.png" Width="97" Height="75" Stretch="Fill" Canvas.Left="0" />
+            <Image Source="/Program;component/png/HeadSwitch/B1_P4_Blue.png" Width="97" Height="75" Stretch="Fill" />
             <Label Name="lbDis1" Content="{DynamicResource strMainMenu_Ejector}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3" />
-            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" Canvas.Left="0" />
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="66" />
         </Canvas>
     </Canvas>
 </UserControl>

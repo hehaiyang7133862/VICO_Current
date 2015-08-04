@@ -108,7 +108,7 @@
         <Canvas Canvas.Left="875" Canvas.Top="-1"  Width="97" Height="76"  Background="Transparent" >
             <Image Width="97" Height="75" Source="/Program;component/png/HeadSwitch/B1_P10_Blue.png" Stretch="Fill"/>
             <Label Name="lbDis0" Content="{DynamicResource strMainMenu_Setting}" Canvas.Left="0" Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3"/>
-            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" Canvas.Left="0" />
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="66" />
         </Canvas>
     </Canvas>
 </UserControl>

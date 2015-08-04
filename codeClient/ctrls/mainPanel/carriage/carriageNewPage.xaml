@@ -72,7 +72,7 @@
         <Canvas Height="77" Width="97" Canvas.Top="-1" Name="cvsQuickSetPage" Canvas.Left="584" Background="Transparent">
             <Image Source="/Program;component/png/HeadSwitch/B1_P7_Blue.png" Width="97" Height="75" Stretch="Fill" />
             <Label Name="lbDis1" Content="{DynamicResource strMainMenu_Charge}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3" />
-            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" Canvas.Left="0" />
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="66" />
         </Canvas>
     </Canvas>
 </UserControl>

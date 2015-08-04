@@ -55,7 +55,7 @@
         <Canvas Canvas.Left="0" Width="97" Height="75">
             <Image Canvas.Top="-1" Height="75" Width="97" Source="/Program;component/png/HeadSwitch/B1_P1_Blue.png" Stretch="Fill" />
             <Label Canvas.Top="41" Width="97" Content="{DynamicResource strMainMenu_Overview}" FontSize="12" Foreground="#FF0082C3" HorizontalContentAlignment="Center" />
-            <Image Canvas.Top="67" Height="9" Width="97" Source="/Program;component/png/HeadSwitch/Select_Me.png" Stretch="Fill" />
+            <Image Canvas.Top="65" Height="9" Width="97" Source="/Program;component/png/HeadSwitch/Select_Me.png" Stretch="Fill" />
         </Canvas>
     </Canvas>
 </UserControl>

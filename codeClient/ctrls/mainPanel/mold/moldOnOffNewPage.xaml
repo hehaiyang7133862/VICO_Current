@@ -47,7 +47,7 @@
         <Canvas Canvas.Left="195" Canvas.Top="-1" >
             <Image Height="75" Width="98" Source="/Program;component/png/HeadSwitch/B1_P3_Blue.png" Stretch="Fill" />
             <Label Canvas.Top="42" Width="98" Content="{DynamicResource strMainMenu_Mold}" HorizontalContentAlignment="Center" FontSize="12" Foreground="#FF0082C3" />
-            <Image Canvas.Left="0" Canvas.Top="68" Width="98" Source="/Program;component/png/HeadSwitch/Select_Me.png" />
+            <Image Canvas.Top="66" Width="98" Source="/Program;component/png/HeadSwitch/Select_Me.png" />
         </Canvas>
     </Canvas>
 </UserControl>

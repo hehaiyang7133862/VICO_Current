@@ -171,19 +171,19 @@
                     <Line Canvas.Left="501" Canvas.Top="142" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="255" />
                     <Line Canvas.Left="501" Canvas.Top="182" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="255" />
                     <Line Canvas.Left="501" Canvas.Top="222" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="255" />
-                    
-                    <my:VicoLabel Canvas.Left="501" Canvas.Top="62" myHeight="41" myWidth="86" x:Name="btnInj087" objName="Inj087" />
-                    <my:VicoLabel Canvas.Left="501" Canvas.Top="102" myHeight="41" myWidth="86" x:Name="btnInj090" objName="Inj090" />
-                    <my:VicoLabel Canvas.Left="501" Canvas.Top="142" myHeight="41" myWidth="86" x:Name="btnInj093" objName="Inj093" />
-                    <my:VicoLabel Canvas.Left="501" Canvas.Top="182" myHeight="41" myWidth="86" x:Name="btnInj096" objName="Inj096" />
-                    <my:VicoLabel Canvas.Left="586" Canvas.Top="62" myHeight="41" myWidth="86" x:Name="btnInj088" objName="Inj088" />
-                    <my:VicoLabel Canvas.Left="586" Canvas.Top="102" myHeight="41" myWidth="86" x:Name="btnInj091" objName="Inj091" />
-                    <my:VicoLabel Canvas.Left="586" Canvas.Top="142" myHeight="41" myWidth="86" x:Name="btnInj094" objName="Inj094" />
-                    <my:VicoLabel Canvas.Left="586" Canvas.Top="182" myHeight="41" myWidth="86" x:Name="btnInj097" objName="Inj097" />
-                    <my:VicoLabel Canvas.Left="671" Canvas.Top="62" myHeight="41" myWidth="86" x:Name="btnInj089" objName="Inj089" />
-                    <my:VicoLabel Canvas.Left="671" Canvas.Top="102" myHeight="41" myWidth="86" x:Name="btnInj092" objName="Inj092" />
-                    <my:VicoLabel Canvas.Left="671" Canvas.Top="142" myHeight="41" myWidth="86" x:Name="btnInj095" objName="Inj095" />
-                    <my:VicoLabel Canvas.Left="671" Canvas.Top="182" myHeight="41" myWidth="86" x:Name="btnInj098" objName="Inj098" />
+
+                    <my:VicoLabel Canvas.Left="501" Canvas.Top="62" myHeight="41" myWidth="86" x:Name="btnInj087" objName="Inj087" myFontSize="22"/>
+                    <my:VicoLabel Canvas.Left="501" Canvas.Top="102" myHeight="41" myWidth="86" x:Name="btnInj090" objName="Inj090" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="501" Canvas.Top="142" myHeight="41" myWidth="86" x:Name="btnInj093" objName="Inj093" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="501" Canvas.Top="182" myHeight="41" myWidth="86" x:Name="btnInj096" objName="Inj096" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="586" Canvas.Top="62" myHeight="41" myWidth="86" x:Name="btnInj088" objName="Inj088" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="586" Canvas.Top="102" myHeight="41" myWidth="86" x:Name="btnInj091" objName="Inj091" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="586" Canvas.Top="142" myHeight="41" myWidth="86" x:Name="btnInj094" objName="Inj094" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="586" Canvas.Top="182" myHeight="41" myWidth="86" x:Name="btnInj097" objName="Inj097" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="671" Canvas.Top="62" myHeight="41" myWidth="86" x:Name="btnInj089" objName="Inj089" myFontSize="22"/>
+                    <my:VicoLabel Canvas.Left="671" Canvas.Top="102" myHeight="41" myWidth="86" x:Name="btnInj092" objName="Inj092" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="671" Canvas.Top="142" myHeight="41" myWidth="86" x:Name="btnInj095" objName="Inj095" myFontSize="22" />
+                    <my:VicoLabel Canvas.Left="671" Canvas.Top="182" myHeight="41" myWidth="86" x:Name="btnInj098" objName="Inj098" myFontSize="22" />
 
                     <Line Canvas.Left="501" Canvas.Top="59" ClipToBounds="True" Stroke="#FFA4A4A4" StrokeThickness="8" X2="256"/>
                     <Line Canvas.Left="672" Canvas.Top="59" ClipToBounds="True" Stroke="#FF00BFFF" StrokeThickness="8" X2="84" />

@@ -85,6 +85,11 @@ namespace nsVicoClient.ctrls
 
             DirectoryInfo d = new DirectoryInfo(Environment.CurrentDirectory + @"\jpeg\");
 
+            if (d.Exists != true)
+            {
+                d.Create();
+            }
+
             foreach (FileInfo f in d.GetFiles("*.jpeg"))
             {
                 PictureItemCtrl p = new PictureItemCtrl();

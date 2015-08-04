@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="1750" d:DesignWidth="1068">
     <Canvas Height="1750" Width="1068" Name="cvsMain" Background="Transparent">
-        <StackPanel Canvas.Top="73" Height="1676" Width="1068" Background="#EAEAEA">
+        <StackPanel Canvas.Top="74" Height="1676" Width="1068" Background="#EAEAEA">
             <Canvas Name="cvsSelect" Width="1068" Height="85" Background="#F4F4F4">
                 <my:tabItemBtnCtrl Canvas.Left="650" Canvas.Top="4" x:Name="tblBtnCtrl" itemCount="2" focusNr="0"/>
 
@@ -38,7 +38,7 @@
         <Canvas Width="97" Height="75" Name="cvsFirstPage"  Background="Transparent" Canvas.Left="681" Canvas.Top="-1">
             <Image Width="97" Height="75" Source="/Program;component/png/HeadSwitch/B1_P8_Blue.png" Stretch="Fill"/>
             <Label Name="lbDis0" Content="{DynamicResource strMainMenu_Heating}" Canvas.Left="0" Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3"/>
-            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" Canvas.Left="0" />
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="66" />
         </Canvas>
     </Canvas>
 </UserControl>

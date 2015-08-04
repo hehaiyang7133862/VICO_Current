@@ -72,7 +72,7 @@
         <Canvas Height="77" Width="97" Canvas.Left="778" Canvas.Top="-1" Background="Transparent" >
             <Image Source="/Program;component/png/HeadSwitch/B1_P9_Blue.png" Width="97" Height="75" Stretch="Fill"/>
             <Label Content="{DynamicResource strMainMenu_DataAnalysis}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3" />
-            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" />
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="66" />
         </Canvas>
     </Canvas>
 </UserControl>

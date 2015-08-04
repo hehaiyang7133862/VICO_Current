@@ -110,7 +110,7 @@ namespace nsVicoClient.ctrls
         {
             lbCurFocus = lbTmYear;
             lbCurFocus.Background = Brushes.Green;
-            valmoWin.SNumInput.init(2020, 2010, "year", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
+            valmoWin.SNumInput.init(2099, 2010, "year", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
         }
         private void lbTmMonth_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -159,19 +159,19 @@ namespace nsVicoClient.ctrls
         {
             lbCurFocus = lbTmHour;
             lbCurFocus.Background = Brushes.Green;
-            valmoWin.SNumInput.init(21, 1, "hour", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
+            valmoWin.SNumInput.init(24, 0, "hour", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
         }
         private void lbTmMin_MouseDown(object sender, MouseButtonEventArgs e)
         {
             lbCurFocus = lbTmMin;
             lbCurFocus.Background = Brushes.Green;
-            valmoWin.SNumInput.init(60, 1, "min", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
+            valmoWin.SNumInput.init(60, 0, "min", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
         }
         private void lbTmSec_MouseDown(object sender, MouseButtonEventArgs e)
         {
             lbCurFocus = lbTmSec;
             lbCurFocus.Background = Brushes.Green;
-            valmoWin.SNumInput.init(60, 1, "second", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
+            valmoWin.SNumInput.init(60, 0, "second", lbCurFocus.Content.ToString(), "", 1, disposeFunc, confirmFunc);
         }
 
         private void cvsBackPanel_MouseDown(object sender, MouseButtonEventArgs e)

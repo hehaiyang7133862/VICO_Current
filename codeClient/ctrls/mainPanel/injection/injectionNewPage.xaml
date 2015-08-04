@@ -384,7 +384,7 @@
         <Canvas Canvas.Left="487" Canvas.Top="-1" Width="97" Height="75" Name="cvsInjectionSettingsPage" Background="Transparent">
             <Image Source="/Program;component/png/HeadSwitch/B1_P6_Blue.png" Width="97" Height="75" Stretch="Fill"/>
             <Label Name="lbDis5" Content="{DynamicResource strMainMenu_Injection}"  Width="97" HorizontalContentAlignment="Center" FontSize="11" Canvas.Top="42" Foreground="#FF0082C3" />
-            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="68" Canvas.Left="0" />
+            <Image Source="/Program;component/png/HeadSwitch/Select_Me.png" Width="97" Canvas.Top="66" />
         </Canvas>
     </Canvas>
 </UserControl>

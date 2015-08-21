@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="lan/lanCN.xaml"/>
+                <ResourceDictionary Source="Simple Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <sys:String x:Key="IprFileName">NewProject.ipr</sys:String>

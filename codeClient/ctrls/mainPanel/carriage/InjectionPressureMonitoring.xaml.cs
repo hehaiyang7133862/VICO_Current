@@ -97,7 +97,7 @@ namespace nsVicoClient.ctrls
             }
             else
             {
-                curve_Pos_Pressure_History.SaveCurve(historyData_Pos_Pressure);
+                curve_Pos_Pressure_History.NewHistroyCurve(historyData_Pos_Pressure);
 
                 bIsSaveCurve = false;
             }

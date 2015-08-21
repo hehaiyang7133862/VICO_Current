@@ -194,7 +194,7 @@
                     <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="238" x:Name="checkBoxCtrl4" bitNr="4" objName="Prd053" />
 
                     <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="283" objName ="Prd066" />
-                    <Label Canvas.Left="17" Canvas.Top="283" Content="{DynamicResource lanKey427}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
+                    <Label Canvas.Left="17" Canvas.Top="283" Content="{DynamicResource TP_Inj029}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
                     <Label Canvas.Left="256" Canvas.Top="281" Content="[s]" FontSize="14" Foreground="#FF444444" />
                     <my:VicoLabel Canvas.Left="285" Canvas.Top="281" objName="Prd061" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
                     <my:VicoLabel Canvas.Left="420" Canvas.Top="281" objName="Prd062" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />

@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:root="clr-namespace:nsVicoClient.ctrls" 
              mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
-    <Canvas Name="cvsMain">
-        <root:DrawingCanvas x:Name="drawingSurface" Height="300" Width="300" Background="Transparent"/>
+    <Canvas Name="cvsMain" Height="300" Width="300" Background="Transparent" ClipToBounds="True">
+        <root:DrawingCanvas x:Name="History" Height="300" Width="300" Background="Transparent"/>
+        <root:DrawingCanvas x:Name="Current" Height="300" Width="300" Background="Transparent"/>
     </Canvas>
 </UserControl>

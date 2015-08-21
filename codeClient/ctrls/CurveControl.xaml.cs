@@ -101,6 +101,23 @@ namespace nsVicoClient.ctrls
         /// 刷新曲线
         /// </summary>
         /// <param name="p">曲线点集合</param>
+        public void refushCurve(List<Point> points)
+        {
+            pf.Segments.Clear();
+
+            for (int i = 0; i < points.Count; i++)
+            {
+                if (i != 0)
+                {
+                    pf.Segments.Add(new LineSegment(getPos(points[i]), true));
+                }
+                else
+                {
+                    pf.StartPoint = getPos(points[i]);
+                }
+            }
+        }
+
         public void refushCurve(Point[] points)
         {
             pf.Segments.Clear();
@@ -117,6 +134,7 @@ namespace nsVicoClient.ctrls
                 }
             }
         }
+
         /// <summary>
         /// 清理曲线
         /// </summary>
@@ -126,19 +144,28 @@ namespace nsVicoClient.ctrls
 
         private Point getPos(Point p)
         {
+            if (p.X > 10000)
+            {
+                p.X = 10000;
+            }
+            if (p.X < 0)
+            {
+                p.X = 0;
+            }
+
+            if (p.Y > 10000)
+            {
+                p.Y = 10000;
+            }
+            if (p.Y < -10000)
+            {
+                p.Y = -10000;
+            }
+
             return new Point(getPosX(p.X), getPosY(p.Y));
         }
         private double getPosX(double x)
         {
-            if (x > 10000)
-            {
-                x = 10000;
-            }
-            if (x < 0)
-            {
-                x = 0;
-            }
-
             if (!_bIsCurveReverseX)
             {
                 return x / 10000 * _staffWidth;
@@ -150,15 +177,6 @@ namespace nsVicoClient.ctrls
         }
         private double getPosY(double y)
         {
-            if (y > 10000)
-            {
-                y = 10000;
-            }
-            if (y < 0)
-            {
-                y = 0;
-            }
-
             if (!_bIsCurverReverseY)
             {
                 return y / 10000 * _staffHeight;

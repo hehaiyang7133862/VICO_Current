@@ -214,8 +214,8 @@ namespace nsVicoClient
             
             if (user == null)
                 return -1; //不存在该用户
-            if (user.userId == userMgr.userId || user.userId == userMt.userId || user.userId == userOp.userId)
-                return -2;//不允许删除该用户
+            if (user.accessLevel > 2)
+                return -2;
             switch (user.accessLevel)
             {
                 case 1:

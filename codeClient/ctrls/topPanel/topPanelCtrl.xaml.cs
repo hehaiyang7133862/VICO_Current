@@ -282,8 +282,6 @@ namespace nsVicoClient.ctrls
         }
         private void tbLan_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (!valmoWin.dv.checkAccesslevel(4))
-                return;
             lanSelectPanel.show();
         }
 

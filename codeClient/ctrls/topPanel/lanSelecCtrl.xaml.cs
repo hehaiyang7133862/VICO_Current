@@ -71,5 +71,22 @@ namespace nsVicoClient.ctrls
             valmoWin.execHandle(opeOrderType.lanChange);
             this.Visibility = Visibility.Hidden;
         }
+
+        private void btnClose_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            lbClose.Foreground = new SolidColorBrush(Color.FromRgb(0x44, 0x44, 0x44));
+
+            this.Visibility = Visibility.Hidden;
+        }
+
+        private void btnClose_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            lbClose.Foreground = new SolidColorBrush(Color.FromRgb(0xEA, 0xEA, 0xEA));
+        }
+
+        private void btnClose_MouseLeave(object sender, MouseEventArgs e)
+        {
+            lbClose.Foreground = new SolidColorBrush(Color.FromRgb(0x44, 0x44, 0x44));
+        }
     }
 }

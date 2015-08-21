@@ -8,7 +8,7 @@
     <Canvas Height="1920" Width="1080" Margin="0" Name="gdMain" MouseDown="Program_MouseDown">
         <Canvas Name="cvsMain" Width="1080" Height="1920">
             <my:addNewInterPretorCtrl  x:Name="addNewInerPretorPanel" Opacity="0" Panel.ZIndex="2"/>
-            <my:userCtrl  x:Name="userPanel" Opacity="0" Panel.ZIndex="2" />
+            <my:UserCtrl x:Name="userPanel" Opacity="0" Panel.ZIndex="2" />
             <my:loadFromUsbCtrl  x:Name="loadFromUsbCtrl1" Panel.ZIndex="2"/>
             <my:btnAttentionCtrl  Canvas.Top="281" x:Name="attentionPanel" Opacity="0" Panel.ZIndex="2"/>
             <my:loadConfFileCtrl x:Name="loadConfFilePanel" Opacity="0" Panel.ZIndex="2"/>

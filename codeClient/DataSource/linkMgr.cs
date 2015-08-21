@@ -20,7 +20,6 @@ namespace nsVicoClient
         int iRlbMap = -1;
         static string plcIpAddr = "TCP:10.10.150.13";
         Lasal32.CB_RLADD_FUNCTYPE methptr;
-        Lasal32.CB_RLADD_FUNCTYPE methptrHeart;
 
         objUnit objHeart ;
         objUnit objHeartErr ;
@@ -34,7 +33,6 @@ namespace nsVicoClient
         {
             plcIpAddr = "TCP:" + getIpAddr();
             methptr = new Lasal32.CB_RLADD_FUNCTYPE(RefListCallBack);
-            methptrHeart = new Lasal32.CB_RLADD_FUNCTYPE(RefListHeartCallBack);
 
             dtState.Tick += new EventHandler(dtState_Tick);
             dtState.Interval = new TimeSpan(0, 0, 0, 0, 126);

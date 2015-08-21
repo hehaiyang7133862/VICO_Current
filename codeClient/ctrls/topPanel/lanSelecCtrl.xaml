@@ -13,6 +13,10 @@
         </Canvas>
 
         <Label Canvas.Left="80" Canvas.Top="90" Content="{DynamicResource OI_LanSelect}" Foreground="#FF444444" FontSize="18" />
+        <Border Name="btnClose" Canvas.Right="80" Canvas.Top="90" BorderBrush="Transparent" MouseDown="btnClose_MouseDown" MouseUp="btnClose_MouseUp" MouseLeave="btnClose_MouseLeave" >
+            <Label Name="lbClose" Content="{DynamicResource OI_OFF}" Foreground="#FF444444" FontSize="18" />
+        </Border>
+        <Line X2="920" Canvas.Left="80" Canvas.Top="130" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True"/>
         <Line X2="920" Canvas.Left="80" Canvas.Top="130" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True"/>
 
         <Canvas Name="Lan_cn" Canvas.Left="80" Canvas.Top="140" Height="60" Width="250" 

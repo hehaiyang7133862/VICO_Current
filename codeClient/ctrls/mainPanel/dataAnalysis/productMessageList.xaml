@@ -54,7 +54,7 @@
                 <Label Height="50" Width="150" Canvas.Left="40" Content="{DynamicResource lanKey938}" FontWeight="Bold" FontSize="14" Foreground="#FF0082C3" VerticalContentAlignment="Center"/>
                 <Image Height="50" Width="55" Canvas.Right="0" Source="/Program;component/png/blocks/Locked_Size_2_1_V00.png"/>
 
-                <Label Canvas.Left="68" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey284}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="68" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource TP_Prd187}" FontSize="14" Foreground="#FF444444"/>
                 <Label Canvas.Left="68" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="[s]" FontSize="14" Foreground="#FF444444"/>
 
                 <Label Canvas.Left="168" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey292}" FontSize="14" Foreground="#FF444444"/>
@@ -69,7 +69,7 @@
                 <Label Canvas.Left="468" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey426}" FontSize="14" Foreground="#FF444444"/>
                 <Label Canvas.Left="468" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444"/>
 
-                <Label Canvas.Left="568" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey427}" FontSize="14" Foreground="#FF444444"/>
+                <Label Canvas.Left="568" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource TP_Inj029}" FontSize="14" Foreground="#FF444444"/>
                 <Label Canvas.Left="568" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="[s]" FontSize="14" Foreground="#FF444444"/>
 
                 <Label Canvas.Left="668" Canvas.Top="52" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource lanKey4282}" FontSize="14" Foreground="#FF444444"/>
@@ -85,9 +85,6 @@
                 <Label Canvas.Left="968" Canvas.Top="70" Width="100" HorizontalContentAlignment="Center" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444"/>
 
                 <Label Canvas.Right="1000" Canvas.Top="111" Width="100" HorizontalContentAlignment="Right" Content="{DynamicResource lanKey022}" FontSize="14" Foreground="#FF444444"/>
-
-                <my:VicoLabel Canvas.Left="68" Canvas.Top="102" objName="Prd027" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                <Label Name="lbOffset1" Canvas.Left="68" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
                 <my:VicoLabel Canvas.Left="168" Canvas.Top="102" objName="Prd034" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
                 <Label Name="lbOffset2" Canvas.Left="168" Canvas.Top="122" Width="100" HorizontalContentAlignment="Center" Content="+0.00" FontSize="12" Foreground="#FF444444"/>
                 <my:VicoLabel Canvas.Left="268" Canvas.Top="102" objName="Prd041" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />

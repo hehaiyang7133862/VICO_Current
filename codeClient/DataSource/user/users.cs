@@ -35,6 +35,7 @@ namespace nsVicoClient
         public userClass nullUser;
         userBase userDb = new userBase();
         public static string[] userTypeName = new string[] { "...", "userOp", "userMt", "userMgr", "userSer", "userRoot" };
+
         public Users()
         {
             try

@@ -2627,9 +2627,31 @@
 	
     <sys:String x:Key="OI_SenSerType">J,K Senser Type Select</sys:String>
 	
-    <sys:String x:Key="OI_KeyDisk">KeyDisk</sys:String>
-    <sys:String x:Key="OI_Exit">Exit</sys:String>
-	
+	<sys:String x:Key="OI_Lock">Screen Save</sys:String>
+    <sys:String x:Key="OI_LogIn">Login</sys:String>
+    <sys:String x:Key="OI_LogOut">LogOut</sys:String>
+    <sys:String x:Key="OI_KeyDisk">Create User</sys:String>
+    <sys:String x:Key="OI_Exit">Exit to Windows</sys:String>
+    <sys:String x:Key="OI_Switch">Change User</sys:String>
+    <sys:String x:Key="OI_USB">Create User</sys:String>
+    <sys:String x:Key="OI_Confirm">Confirm</sys:String>
+    <sys:String x:Key="OI_Delete">Delete</sys:String>
+    <sys:String x:Key="OI_Username">User Name</sys:String>
+    <sys:String x:Key="OI_Password">Password</sys:String>
+    <sys:String x:Key="OI_LogIn_Notice">Login</sys:String>
+    <sys:String x:Key="OI_LogIn_Notice2">Login with user name and password</sys:String>
+    <sys:String x:Key="OI_LogIn_OK">User Logged In</sys:String>
+    <sys:String x:Key="OI_LogIn_Failed">Wrong user name or password!</sys:String>
+    <sys:String x:Key="OI_USB_Notice">Create a USB disk which can be directly logged.</sys:String>
+    <sys:String x:Key="OI_UserManage">Account management</sys:String>
+    <sys:String x:Key="OI_User_Notice">Create, Edit, Delete Account</sys:String>
+    <sys:String x:Key="OI_NewPassword">New password</sys:String>
+    <sys:String x:Key="OI_NewPasswordConfirm">Confirm Password</sys:String>
+    <sys:String x:Key="OI_Password_Error">Wrong confirm password!</sys:String>
+    <sys:String x:Key="OI_CreateUser">Create User</sys:String>
+    <sys:String x:Key="OI_CreateUser_Error">Create User Failure</sys:String>
+    <sys:String x:Key="OI_Level">Level</sys:String>
+
     <sys:String x:Key="OI_MoldProtectPostion">MoldProtectPosition</sys:String>
     <sys:String x:Key="OI_ActualForce">Act Force</sys:String>
     <sys:String x:Key="OI_ForceOffset">Force Offset</sys:String>

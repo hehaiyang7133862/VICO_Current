@@ -1080,10 +1080,10 @@ namespace nsDataMgr
             lstItem.Add(new objUnit("Inj038", UnitType.Prs_Mpa, "0", "Inj188", "MainInjectionParameter1\\Injection1.sHolding_P2"));
             lstItem.Add(new objUnit("Inj039", UnitType.Prs_Mpa, "0", "Inj188", "MainInjectionParameter1\\Injection1.sHolding_P3"));
             lstItem.Add(new objUnit("Inj040", UnitType.Prs_Mpa, "0", "Inj188", "MainInjectionParameter1\\Injection1.sHolding_P4"));
-            lstItem.Add(new objUnit("Inj041", UnitType.Tm_s3, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T1"));
-            lstItem.Add(new objUnit("Inj042", UnitType.Tm_s3, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T2"));
-            lstItem.Add(new objUnit("Inj043", UnitType.Tm_s3, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T3"));
-            lstItem.Add(new objUnit("Inj044", UnitType.Tm_s3, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T4"));
+            lstItem.Add(new objUnit("Inj041", UnitType.Tm_s, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T1"));
+            lstItem.Add(new objUnit("Inj042", UnitType.Tm_s, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T2"));
+            lstItem.Add(new objUnit("Inj043", UnitType.Tm_s, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T3"));
+            lstItem.Add(new objUnit("Inj044", UnitType.Tm_s, "0", "100000", "MainInjectionParameter1\\Injection1.sHolding_T4"));
             lstItem.Add(new objUnit("Inj045", UnitType.Prs_Mpa, "noMin", "noMax", "MainInjectionControl1.sShow_InjPeakPressure"));
             lstItem.Add(new objUnit("Inj046", UnitType.Prs_Mpa, "0", "Inj189", "MainInjectionParameter1\\Injection1.sInjPSpeedInjection"));
             lstItem.Add(new objUnit("Inj047", UnitType.DgtType, "0", "1", "MainInjectionParameter1\\Injection1.sNozzleChkBit"));
@@ -1435,6 +1435,16 @@ namespace nsDataMgr
             lstItem.Add(new objUnit("Inj446", UnitType.Prs_Mpa, "0", "Inj189", "MainInjectionParameter1\\PMAlarmSettings1.sHPMPressure5"));
             lstItem.Add(new objUnit("Inj447", UnitType.Prs_Mpa, "0", "Inj189", "MainInjectionParameter1\\PMAlarmSettings1.sHPMPressure6"));
             lstItem.Add(new objUnit("Inj448", UnitType.DgtType, "0", "1", "MainInjectionParameter1\\PMAlarmSettings1.sStopMove"));
+            lstItem.Add(new objUnit("Inj450", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P1"));
+            lstItem.Add(new objUnit("Inj451", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P2"));
+            lstItem.Add(new objUnit("Inj452", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P3"));
+            lstItem.Add(new objUnit("Inj453", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P4"));
+            lstItem.Add(new objUnit("Inj454", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P5"));
+            lstItem.Add(new objUnit("Inj455", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P6"));
+            lstItem.Add(new objUnit("Inj456", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P7"));
+            lstItem.Add(new objUnit("Inj457", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P8"));
+            lstItem.Add(new objUnit("Inj458", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P9"));
+            lstItem.Add(new objUnit("Inj459", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_PE"));
 
             lstItem.Add(new objUnit("Tmp001", UnitType.DgtType, "noMin", "noMax", "BarrelControl1.sStandbyMode"));
             lstItem.Add(new objUnit("Tmp002", UnitType.Tm_minRD, "noMin", "noMax", "BarrelControl1.sStandbyTimeShow"));
@@ -1827,6 +1837,8 @@ namespace nsDataMgr
             lstItem.Add(new objUnit("Prd098", UnitType.Per, "noMin", "noMax", "ProductCounter1.sProduceGuage"));
             lstItem.Add(new objUnit("Prd099", UnitType.DgtType, "noMin", "noMax", "ProductCounter1.sPassedMoldNumber"));
             lstItem.Add(new objUnit("Prd104", UnitType.Tm_s, "noMin", "noMax", "ProductCounter1.sREC_TempTimer"));
+            lstItem.Add(new objUnit("Prd105", UnitType.DgtType, "noMin", "noMax", "ProductCounter1.sProduceDataAddr"));
+            lstItem.Add(new objUnit("Prd106", UnitType.DgtType, "noMin", "noMax", "ProductCounter1.sLinesCount"));
             lstItem.Add(new objUnit("Prd109", UnitType.DgtType, "noMin", "noMax", "Brakedownlist1.sReflashCycle"));
             lstItem.Add(new objUnit("Prd171", UnitType.Tm_s, "500", "1010", "SPC_Collector1.sR_Cycletime"));
             lstItem.Add(new objUnit("Prd172", UnitType.Tm_s, "noMin", "noMax", "Brakedownlist1.sCycleTimeCool"));

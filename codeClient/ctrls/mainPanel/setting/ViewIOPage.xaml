@@ -90,9 +90,9 @@
                             <Line X2="280" Canvas.Left="105" Canvas.Top="353" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Label Canvas.Left="1" Canvas.Top="356" Content="7" Foreground="#FF444444" FontFamily="Verdana"/>
                             <my:IStateLED_B Canvas.Left="28" Canvas.Top="355" objName="IBT003" bitNr="6" />
-                            <Line X2="79" Canvas.Left="1" Canvas.Top="395" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                            <Line X2="79" Canvas.Left="1" Canvas.Top="380" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Label Canvas.Left="105" Canvas.Top="355" Content="{DynamicResource TP_IOF039}" Foreground="#FF444444"/>
-                            <Line X2="280" Canvas.Left="105" Canvas.Top="395" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
+                            <Line X2="280" Canvas.Left="105" Canvas.Top="380" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                             <Label Canvas.Left="1" Canvas.Top="383" Content="8" Foreground="#FF444444" FontFamily="Verdana"/>
                             <my:IStateLED_B Canvas.Left="28" Canvas.Top="382" objName="IBT003" bitNr="7" />
                             <Line X2="79" Canvas.Left="1" Canvas.Top="407" Stroke="#FFA4A4A4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
@@ -502,7 +502,7 @@
                             <Line X1="80" Y1="0" X2="0" Y2="126" Canvas.Right="0" Canvas.Top="0" Stroke="#FFFF1A00" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                         </Canvas>
                     </Canvas>
-                    <Canvas Width="400" ClipToBounds="True" Name="cvsModules3">
+                    <Canvas Width="82" ClipToBounds="True" Name="cvsModules3">
                         <Label Canvas.Left="27" Canvas.Top="3" Content="3" Foreground="#FF0082C3" FontSize="18" FontWeight="Bold" FontFamily="Verdana"/>
                         <Line Canvas.Left="0" Canvas.Top="38" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFEBD400" StrokeThickness="16" X2="395" Name="ybar3" Visibility="Hidden"/>
                         <Line Canvas.Left="32" Canvas.Top="38" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13"/>
@@ -686,7 +686,7 @@
                             <Line X1="80" Y1="0" X2="0" Y2="126" Canvas.Right="0" Canvas.Top="0" Stroke="#FFFF1A00" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                         </Canvas>
                     </Canvas>
-                    <Canvas Width="400" ClipToBounds="True" Name="cvsModules4">
+                    <Canvas Width="82" ClipToBounds="True" Name="cvsModules4">
                         <Label Canvas.Left="27" Canvas.Top="3" Content="4" Foreground="#FF0082C3" FontSize="18" FontWeight="Bold" FontFamily="Verdana"/>
                         <Line Canvas.Left="0" Canvas.Top="38" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFEBD400" StrokeThickness="16" X2="395" Name="ybar4" Visibility="Hidden"/>
                         <Line Canvas.Left="32" Canvas.Top="38" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13"/>

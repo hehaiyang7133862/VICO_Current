@@ -36,13 +36,8 @@ namespace nsVicoClient.ctrls
 
             refushH += r;
             r();
-            lstPrdData = new ProductParam[10];
-            lstUnit = new prdMsgUnit[50];
 
-            for (int i = 0; i < 10; i++)
-            {
-                lstPrdData[i] = new ProductParam();
-            }
+            lstUnit = new prdMsgUnit[50];
 
             lstUnit[0] = uint0;
             lstUnit[1] = uint1;
@@ -106,14 +101,80 @@ namespace nsVicoClient.ctrls
             valmoWin.dv.PrdPr[75].add();
             valmoWin.dv.PrdPr[82].add();
             valmoWin.dv.PrdPr[89].add();
+            valmoWin.dv.PrdPr[105].add();
+            valmoWin.dv.PrdPr[106].add();
 
             valmoWin.dv.PrdPr[215].addHandle(refush);
+
         }
 
+        public void DataInit()
+        {
+            lstPrdData = new ProductParam[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                lstPrdData[i] = new ProductParam();
+            }
+
+            int count = valmoWin.dv.PrdPr[106].valueNew;
+            int[] historyData = new int[count * 10];
+            Lasal32.GetData(historyData, (uint)valmoWin.dv.PrdPr[105].valueNew, count * 40);
+
+            for (int i = 0; i < count; i++)
+            {
+                lstPrdData[0].newValue = valmoWin.dv.PrdPr[187].getDblValue(historyData[i * 10]);
+                lstPrdData[1].newValue = valmoWin.dv.PrdPr[33].getDblValue(historyData[i * 10 + 1]);
+                lstPrdData[2].newValue = valmoWin.dv.PrdPr[40].getDblValue(historyData[i * 10 + 2]);
+                lstPrdData[3].newValue = valmoWin.dv.PrdPr[47].getDblValue(historyData[i * 10 + 3]);
+                lstPrdData[4].newValue = valmoWin.dv.PrdPr[54].getDblValue(historyData[i * 10 + 4]);
+                lstPrdData[5].newValue = valmoWin.dv.PrdPr[61].getDblValue(historyData[i * 10 + 5]);
+                lstPrdData[6].newValue = valmoWin.dv.PrdPr[68].getDblValue(historyData[i * 10 + 6]);
+                lstPrdData[7].newValue = valmoWin.dv.PrdPr[75].getDblValue(historyData[i * 10 + 7]);
+                lstPrdData[8].newValue = valmoWin.dv.PrdPr[82].getDblValue(historyData[i * 10 + 8]);
+                lstPrdData[9].newValue = valmoWin.dv.PrdPr[89].getDblValue(historyData[i * 10 + 9]);
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                lstUnit[i].bVisiable = true;
+            }
+
+            if (count < 50)
+            {
+                for (int i = count; i < 50; i++)
+                {
+                    lstUnit[i].bVisiable = false;
+                }
+            }
+
+            for (int i = 0; i < count; i++)
+            {
+                lstUnit[count - i - 1].dataInitialize(lstPrdData[0][i], lstPrdData[1][i], lstPrdData[2][i], lstPrdData[3][i], lstPrdData[4][i],
+                    lstPrdData[5][i], lstPrdData[6][i], lstPrdData[7][i], lstPrdData[8][i], lstPrdData[9][i]);
+            }
+
+            vMax.dataInitialize(lstPrdData[0].max, lstPrdData[1].max, lstPrdData[2].max, lstPrdData[3].max, lstPrdData[4].max,
+                lstPrdData[5].max, lstPrdData[6].max, lstPrdData[7].max, lstPrdData[8].max, lstPrdData[9].max);
+            vMin.dataInitialize(lstPrdData[0].min, lstPrdData[1].min, lstPrdData[2].min, lstPrdData[3].min, lstPrdData[4].min,
+                lstPrdData[5].min, lstPrdData[6].min, lstPrdData[7].min, lstPrdData[8].min, lstPrdData[9].min);
+            vAvg.dataInitialize(lstPrdData[0].avg, lstPrdData[1].avg, lstPrdData[2].avg, lstPrdData[3].avg, lstPrdData[4].avg,
+                lstPrdData[5].avg, lstPrdData[6].avg, lstPrdData[7].avg, lstPrdData[8].avg, lstPrdData[9].avg);
+            vOff.dataInitialize(lstPrdData[0].offset, lstPrdData[1].offset, lstPrdData[2].offset, lstPrdData[3].offset, lstPrdData[4].offset,
+                lstPrdData[5].offset, lstPrdData[6].offset, lstPrdData[7].offset, lstPrdData[8].offset, lstPrdData[9].offset);
+        }
+
+        bool isInit = false;
         public void refush(objUnit obj)
         {
-            double inj_HoldingTime = valmoWin.dv.PrdPr[26].vDbl;
-            double inj_HoldingTimeBase = valmoWin.dv.PrdPr[27].vDbl;
+            if (isInit == false)
+            {
+                DataInit();
+
+                isInit = true;
+            }
+
+            double inj_HoldingTime = valmoWin.dv.PrdPr[187].vDbl;
             double carriageTime = valmoWin.dv.PrdPr[33].vDbl;
             double carriageTimeBase = valmoWin.dv.PrdPr[34].vDbl;
             double cycleTime = valmoWin.dv.PrdPr[40].vDbl;
@@ -144,7 +205,6 @@ namespace nsVicoClient.ctrls
             lstPrdData[8].newValue = cushionCompletePosition;
             lstPrdData[9].newValue = injPeakPressure;
 
-            string inj_HoldingTimeOffset = valmoWin.dv.PrdPr[26].getStrValue(Math.Abs(inj_HoldingTime - inj_HoldingTimeBase));
             string carriageTimeOffset = valmoWin.dv.PrdPr[33].getStrValue(Math.Abs(carriageTime - carriageTimeBase));
             string cycleTimeOffset = valmoWin.dv.PrdPr[40].getStrValue(Math.Abs(cycleTime - cycleTimeBase));
             string VPPositionOffset = valmoWin.dv.PrdPr[47].getStrValue(Math.Abs(VPPosition - VPPositionBase));
@@ -186,7 +246,6 @@ namespace nsVicoClient.ctrls
             vOff.dataInitialize(lstPrdData[0].offset, lstPrdData[1].offset, lstPrdData[2].offset, lstPrdData[3].offset, lstPrdData[4].offset,
                 lstPrdData[5].offset, lstPrdData[6].offset, lstPrdData[7].offset, lstPrdData[8].offset, lstPrdData[9].offset);
 
-            lbOffset1.Content = (inj_HoldingTime > inj_HoldingTimeBase) ? "+" + inj_HoldingTimeOffset : "-" + inj_HoldingTimeOffset;
             lbOffset2.Content = (carriageTime > carriageTimeBase) ? "+" + carriageTimeOffset : "-" + carriageTimeOffset;
             lbOffset3.Content = (cycleTime > cycleTimeBase) ? "+" + cycleTimeOffset : "-" + cycleTimeOffset;
             lbOffset4.Content = (VPPosition > VPPositionBase) ? "+" + VPPositionOffset : "-" + VPPositionOffset;

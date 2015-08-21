@@ -17,105 +17,124 @@ namespace nsVicoClient.ctrls
 {
     public partial class CurveCanves : UserControl
     {
-        private List<DrawingVisual> historyDv = new List<DrawingVisual>();
-        private DrawingVisual currentDv = new DrawingVisual();
+        private List<DrawingVisual> historyVisuals = new List<DrawingVisual>();
 
-        private int _historyCount = 10;
-        public int HistoryCount
-        {
-            set
-            {
-                _historyCount = value;
-            }
-        }
-        private double _height = 300;
+        /// <summary>
+        /// 历史曲线最大保留数
+        /// </summary>
+        public static int MaxHistoryVisualsCount = 10;
+        /// <summary>
+        /// 设置控件高度
+        /// </summary>
         public double SetHeight
         {
             set
             {
-                _height = value;
-                drawingSurface.Height = value;
-                this.Height = value;
+                double height = value;
+
+                cvsMain.Height = height;
+                History.Height = height;
+                Current.Height = height;
             }
         }
-        private double _width = 300;
+        /// <summary>
+        /// 设置控件宽度
+        /// </summary>
         public double SetWidth
         {
             set
             {
-                _width = value;
-                drawingSurface.Width = value;
-                this.Width = value;
+                double width = value;
+
+                cvsMain.Width = width;
+                History.Width = width;
+                Current.Width = width;
             }
         }
-
         private Pen _historyBrush = new Pen(Brushes.Black, 1);
+        /// <summary>
+        /// 设置历史曲线颜色
+        /// </summary>
         public Brush HistoryBrush
         {
             set
             {
                 _historyBrush.Brush = value;
+
+                ClearHistroyCurves();
             }
         }
         private Pen _currentBrush = new Pen(Brushes.Black, 1);
+        /// <summary>
+        /// 设置当前曲线颜色
+        /// </summary>
         public Brush CurrentBrush
         {
             set
             {
                 _currentBrush.Brush = value;
+                InitCurrentCurve();
             }
         }
+        /// <summary>
+        /// 当前曲线图形
+        /// </summary>
+        private PathFigure pfCurrent = new PathFigure();
 
         public CurveCanves()
         {
             InitializeComponent();
 
-            _historyBrush.DashCap = PenLineCap.Triangle;
-            DashStyle hDs = new DashStyle();
-            hDs.Dashes = new DoubleCollection { 5, 5 };
-            _historyBrush.DashStyle = hDs;
+            _historyBrush.DashStyle = new DashStyle(new DoubleCollection { 5, 5 }, 0);
+
         }
 
-        public void Clear()
+        private void InitCurrentCurve()
         {
-            foreach (DrawingVisual dv in historyDv)
-            {
-                drawingSurface.DeleteVisual(dv);
-            }
+            PathGeometry pg = new PathGeometry();
+            pg.Figures.Add(pfCurrent);
+            DrawingVisual dv = new DrawingVisual();
+            DrawGeometry(dv, pg, _currentBrush);
+            Current.AddVisual(dv);
+        }
 
-            if (currentDv != null)
+        public void ClearHistroyCurves()
+        {
+            foreach (DrawingVisual dv in historyVisuals)
             {
-                drawingSurface.DeleteVisual(currentDv);
+                History.DeleteVisual(dv);
             }
         }
 
-        public void SaveCurve(List<Point> Points)
+        public void NewHistroyCurve(List<Point> Points)
         {
             DrawingVisual dv = new DrawingVisual();
+            DrawGeometry(dv, getGeometry(Points), _historyBrush);
+            History.AddVisual(dv);
 
-            DrawHistoryGeometry(dv, getGeometry(Points));
-            drawingSurface.AddVisual(dv);
-            historyDv.Add(dv);
-
-            if (historyDv.Count > _historyCount)
+            historyVisuals.Add(dv);
+            while (historyVisuals.Count > MaxHistoryVisualsCount)
             {
-                drawingSurface.DeleteVisual(historyDv[0]);
-                historyDv.RemoveAt(0);
+                History.DeleteVisual(historyVisuals[0]);
+                historyVisuals.RemoveAt(0);
             }
         }
 
-        public void UpdateCurve(List<Point> Points)
+        public void RefushCurrrentCurve(List<Point> Points)
         {
-            if (currentDv != null)
+            pfCurrent.Segments.Clear();
+
+            for (int i = 0; i < Points.Count; i++)
             {
-                drawingSurface.DeleteVisual(currentDv);
+                if (i != 0)
+                {
+                    pfCurrent.Segments.Add(new LineSegment(getPoint(Points[i]), true));
+                }
+                else
+                {
+                    pfCurrent.StartPoint = getPoint(Points[i]);
+                }
             }
-
-            DrawingVisual dv = new DrawingVisual();
-
-            DrawCurrentGeometry(dv, getGeometry(Points));
-            drawingSurface.AddVisual(dv);
-            currentDv = dv;
         }
 
         private Geometry getGeometry(List<Point> points)
@@ -144,39 +163,14 @@ namespace nsVicoClient.ctrls
 
         private Point getPoint(Point p)
         {
-            if (p.X > 10000)
-            {
-                p.X = 10000;
-            }
-            if (p.X < 0)
-            {
-                p.X = 0;
-            }
-
-            if (p.Y > 10000)
-            {
-                p.Y = 10000;
-            }
-            if (p.Y < -1000)
-            {
-                p.Y = -1000;
-            }
-
-            return new Point(p.X / 10000 * _width, p.Y / 10000 * _height);
+            return new Point(p.X / 10000 * cvsMain.Width, p.Y / 10000 * cvsMain.Height);
         }
 
-        private void DrawHistoryGeometry(DrawingVisual visual,Geometry geo)
+        private void DrawGeometry(DrawingVisual visual,Geometry geo,Pen pen)
         {
             using (DrawingContext dc = visual.RenderOpen())
             {
-                dc.DrawGeometry(null, _historyBrush, geo);
-            }
-        }
-        private void DrawCurrentGeometry(DrawingVisual visual, Geometry geo)
-        {
-            using (DrawingContext dc = visual.RenderOpen())
-            {
-                dc.DrawGeometry(null, _currentBrush, geo);
+                dc.DrawGeometry(null, pen, geo);
             }
         }
     }

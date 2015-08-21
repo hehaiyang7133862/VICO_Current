@@ -22,6 +22,8 @@ using System.Runtime.InteropServices;
 using System.Windows.Controls.Primitives;
 using nsDataMgr;
 using log4net;
+using OpenHardwareMonitor;
+using OpenHardwareMonitor.Hardware;
 
 namespace nsVicoClient
 {
@@ -88,7 +90,7 @@ namespace nsVicoClient
         public static myMessageBox sMsgBox;
         public static numKeyCtrl SNumKeyPanel;
         public static charKeyCtrl SCharKeyPanel;
-        public static userCtrl SUserPanel;
+        public static UserCtrl SUserPanel;
         public static lockScreenCtrl SLockScreenPanel;
         public static sysExitCtrl SSysExitPanel;
         public static calcCtrl SCalcPanel;
@@ -260,6 +262,35 @@ namespace nsVicoClient
 
             lastEventTime = DateTime.Now;
             valmoWin.BackstageClockTick += ScreenSaverTimer;
+        }
+
+        public void getCpuTemp()
+        {
+            Computer thisComputer = new Computer() { CPUEnabled = true };
+            thisComputer.Open();
+
+            string temp = "";
+
+            foreach (var hardwareItem in thisComputer.Hardware)
+            {
+                if (hardwareItem.HardwareType == HardwareType.CPU)
+                {
+                    hardwareItem.Update();
+
+                    foreach (IHardware subHardware in hardwareItem.SubHardware)
+                    {
+                        subHardware.Update();
+                    }
+
+                    foreach (var sensor in hardwareItem.Sensors)
+                    {
+                        if (sensor.SensorType == SensorType.Temperature)
+                        {
+                            temp += (string.Format("{0} Temperature = {1} \r\n", sensor.Name, sensor.Value.HasValue ? sensor.Value.Value.ToString() : "no value"));
+                        }
+                    }
+                }
+            }
         }
 
         private void checkAccredit()
@@ -696,6 +727,7 @@ namespace nsVicoClient
                         topPanel.sendMsgToWinFunc(msg);
                         valmoWin.refresh();
                         //mainPanel.quitToNewPage();
+                        UserCtrl.LogOut();
                     }
                     break;
                 case WinMsgType.mwPidClear:

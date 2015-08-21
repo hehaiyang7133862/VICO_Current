@@ -71,6 +71,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="OpenHardwareMonitorLib">
+      <HintPath>C:\Users\Valmo\Desktop\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -98,17 +101,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ctrls\CurveControl.xaml.cs">
+      <DependentUpon>CurveControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ctrls\instructionsPage.xaml.cs">
       <DependentUpon>instructionsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ctrls\MachionActionCtrl.xaml.cs">
       <DependentUpon>MachionActionCtrl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ctrls\mainPanel\injection\injectionNewPage.xaml.cs">
+      <DependentUpon>injectionNewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ctrls\mainPanel\overView\eventRecord\AlarmHelpCtrl.xaml.cs">
       <DependentUpon>AlarmHelpCtrl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\Instructions.xaml.cs">
-      <DependentUpon>Instructions.xaml</DependentUpon>
     </Compile>
     <Compile Include="ctrls\mainPanel\setting\ConfigOutPut.xaml.cs">
       <DependentUpon>ConfigOutPut.xaml</DependentUpon>
@@ -143,9 +149,6 @@
     </Compile>
     <Compile Include="ctrls\mainPanel\carriage\Carriage_Main.xaml.cs">
       <DependentUpon>Carriage_Main.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\CurveControl.xaml.cs">
-      <DependentUpon>CurveControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ctrls\mainPanel\carriage\Injection_Nozzle.xaml.cs">
       <DependentUpon>Injection_Nozzle.xaml</DependentUpon>
@@ -280,6 +283,15 @@
     <Compile Include="ctrls\TopParamMonitor.xaml.cs">
       <DependentUpon>TopParamMonitor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ctrls\user\UserCreateCtrl.xaml.cs">
+      <DependentUpon>UserCreateCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\UserManageUnit.xaml.cs">
+      <DependentUpon>UserManageUnit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\user\UserCtrl.xaml.cs">
+      <DependentUpon>UserCtrl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ctrls\VicoLabel.xaml.cs">
       <DependentUpon>VicoLabel.xaml</DependentUpon>
     </Compile>
@@ -320,11 +332,19 @@
     <Compile Include="startWindow.xaml.cs">
       <DependentUpon>startWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="ctrls\CurveControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ctrls\instructionsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ctrls\MachionActionCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ctrls\mainPanel\injection\injectionNewPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -363,10 +383,6 @@
     <Page Include="ctrls\calCtrl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ctrls\Instructions.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ctrls\mainPanel\setting\ConfigOutPut.xaml">
       <SubType>Designer</SubType>
@@ -483,10 +499,6 @@
     <Page Include="ctrls\ctrlPanel\top\userBtn.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ctrls\CurveControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ctrls\fileCoveredAlarm.xaml">
       <SubType>Designer</SubType>
@@ -771,10 +783,6 @@
     <Page Include="ctrls\mainPanel\imgAlarmCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ctrls\mainPanel\injection\injectionNewPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="ctrls\mainPanel\interpretor\actStartSelectCtrl.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -1476,29 +1484,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ctrls\user\userCtrl.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ctrls\user\UserCreateCtrl.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ctrls\user\userMsg.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ctrls\user\UserManageUnit.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ctrls\user\userMsgAddSet.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ctrls\user\UserCtrl.xaml">
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ctrls\user\userMsgSet.xaml">
       <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ctrls\user\userOwnMsgSet.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ctrls\user\userSetPanelCtrl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="ctrls\mainPanel\setting\ViewIOPage.xaml">
       <SubType>Designer</SubType>
@@ -1822,9 +1818,6 @@
     </Compile>
     <Compile Include="ctrls\mainPanel\imgAlarmCtrl.xaml.cs">
       <DependentUpon>imgAlarmCtrl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\mainPanel\injection\injectionNewPage.xaml.cs">
-      <DependentUpon>injectionNewPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ctrls\mainPanel\interpretor\actStartSelectCtrl.xaml.cs">
       <DependentUpon>actStartSelectCtrl.xaml</DependentUpon>
@@ -2237,24 +2230,6 @@
     <Compile Include="ctrls\topPanel\topPanelCtrl.xaml.cs">
       <DependentUpon>topPanelCtrl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ctrls\user\userCtrl.xaml.cs">
-      <DependentUpon>userCtrl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\user\userMsg.xaml.cs">
-      <DependentUpon>userMsg.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\user\userMsgAddSet.xaml.cs">
-      <DependentUpon>userMsgAddSet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\user\userMsgSet.xaml.cs">
-      <DependentUpon>userMsgSet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\user\userOwnMsgSet.xaml.cs">
-      <DependentUpon>userOwnMsgSet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\user\userSetPanelCtrl.xaml.cs">
-      <DependentUpon>userSetPanelCtrl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ctrls\watchCtl.xaml.cs">
       <DependentUpon>watchCtl.xaml</DependentUpon>
     </Compile>
@@ -2274,6 +2249,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ctrls\numKeyCtrl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -3514,6 +3493,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="DataSource\kernel32.dll" />
+    <Resource Include="png\Sign\administrator_30.png" />
+    <Resource Include="png\Sign\anonymous_30.png" />
+    <Resource Include="png\Sign\operator2_30.png" />
+    <Resource Include="png\Sign\watchman_30.png" />
+    <Resource Include="png\blocks\Button-Back.png" />
+    <Resource Include="png\Sign\lock_open_40.png" />
     <Resource Include="png\Sign\Cammra-32.png" />
     <Resource Include="png\Sign\Monitor-32.png" />
     <Resource Include="png\Sign\Net-32.png" />
@@ -3760,7 +3745,9 @@
       <Isolated>False</Isolated>
     </COMReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

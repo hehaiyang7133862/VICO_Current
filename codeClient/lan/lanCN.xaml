@@ -2515,9 +2515,31 @@
     <sys:String x:Key="OI_SetReference">保存为基准</sys:String>
     <sys:String x:Key="OI_TurnOffReference">关闭基准</sys:String>
 	
+    <sys:String x:Key="OI_Lock">屏幕保护</sys:String>
+    <sys:String x:Key="OI_LogIn">登录</sys:String>
+    <sys:String x:Key="OI_LogOut">退出登录</sys:String>
     <sys:String x:Key="OI_KeyDisk">制作登录盘</sys:String>
-    <sys:String x:Key="OI_Exit">退出</sys:String>
-		
+    <sys:String x:Key="OI_Exit">关闭程序</sys:String>
+    <sys:String x:Key="OI_Switch">切换用户</sys:String>
+    <sys:String x:Key="OI_USB">创建</sys:String>
+    <sys:String x:Key="OI_Confirm">确定</sys:String>
+    <sys:String x:Key="OI_Delete">删除用户</sys:String>
+    <sys:String x:Key="OI_Username">用户名</sys:String>
+    <sys:String x:Key="OI_Password">密 码</sys:String>
+    <sys:String x:Key="OI_LogIn_Notice">用户登录</sys:String>
+    <sys:String x:Key="OI_LogIn_Notice2">输入用户名与密码获取操作授权</sys:String>
+    <sys:String x:Key="OI_LogIn_OK">用户已登录</sys:String>
+    <sys:String x:Key="OI_LogIn_Failed">帐号或密码错误，请重新输入。</sys:String>
+    <sys:String x:Key="OI_USB_Notice">创建可直接登录的USB盘</sys:String>
+    <sys:String x:Key="OI_UserManage">管理帐户</sys:String>
+    <sys:String x:Key="OI_User_Notice">创建新帐户，修改现有帐户，删除帐户等</sys:String>
+    <sys:String x:Key="OI_NewPassword">新密码</sys:String>
+    <sys:String x:Key="OI_NewPasswordConfirm">再次输入新密码</sys:String>
+    <sys:String x:Key="OI_Password_Error">两次输入的密码不同!</sys:String>
+    <sys:String x:Key="OI_CreateUser">创建新用户</sys:String>
+    <sys:String x:Key="OI_CreateUser_Error">创建用户失败！</sys:String>
+    <sys:String x:Key="OI_Level">授权等级</sys:String>
+	
     <sys:String x:Key="OI_SenSerType">J,K 热电偶选择</sys:String>
 	
     <sys:String x:Key="OI_MoldProtectPostion">模保位置</sys:String>

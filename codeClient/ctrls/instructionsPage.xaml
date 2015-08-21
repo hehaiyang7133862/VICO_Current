@@ -4,6 +4,6 @@
         Title="instructionsPage" Height="800" Width="1000"
         xmlns:my="clr-namespace:nsVicoClient.ctrls">
     <Grid>
-        <WindowsFormsHost Name="wfh" Height="800" Width="1000"/>
+        <WindowsFormsHost Name="wfh" Height="800" Width="984"/>
     </Grid>
 </Window>

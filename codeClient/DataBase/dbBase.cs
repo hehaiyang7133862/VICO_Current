@@ -1445,6 +1445,7 @@ namespace nsDataMgr
             lstItem.Add(new objUnit("Inj457", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P8"));
             lstItem.Add(new objUnit("Inj458", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_P9"));
             lstItem.Add(new objUnit("Inj459", UnitType.Prs_Mpa, "10000", "Inj189", "MainInjectionParameter1\\Injection1.sInj_PE"));
+            lstItem.Add(new objUnit("Inj461", UnitType.DgtType, "0", "1", "MainInjectionParameter1\\Injection1.sButtonState"));
 
             lstItem.Add(new objUnit("Tmp001", UnitType.DgtType, "noMin", "noMax", "BarrelControl1.sStandbyMode"));
             lstItem.Add(new objUnit("Tmp002", UnitType.Tm_minRD, "noMin", "noMax", "BarrelControl1.sStandbyTimeShow"));
@@ -1839,6 +1840,7 @@ namespace nsDataMgr
             lstItem.Add(new objUnit("Prd104", UnitType.Tm_s, "noMin", "noMax", "ProductCounter1.sREC_TempTimer"));
             lstItem.Add(new objUnit("Prd105", UnitType.DgtType, "noMin", "noMax", "ProductCounter1.sProduceDataAddr"));
             lstItem.Add(new objUnit("Prd106", UnitType.DgtType, "noMin", "noMax", "ProductCounter1.sLinesCount"));
+            lstItem.Add(new objUnit("Prd107", UnitType.DgtType, "noMin", "noMax", "Ram_ProdHistory.Data"));
             lstItem.Add(new objUnit("Prd109", UnitType.DgtType, "noMin", "noMax", "Brakedownlist1.sReflashCycle"));
             lstItem.Add(new objUnit("Prd171", UnitType.Tm_s, "500", "1010", "SPC_Collector1.sR_Cycletime"));
             lstItem.Add(new objUnit("Prd172", UnitType.Tm_s, "noMin", "noMax", "Brakedownlist1.sCycleTimeCool"));
@@ -1921,6 +1923,9 @@ namespace nsDataMgr
             lstItem.Add(new objUnit("Prd271", UnitType.DgtType, "noMin", "noMax", "TimeAnalayzer1.sReflashMe"));
             lstItem.Add(new objUnit("Prd272", UnitType.DgtType, "noMin", "noMax", "TimeAnalayzer1.sPauseIt"));
             lstItem.Add(new objUnit("Prd273", UnitType.DgtType, "noMin", "noMax", "TimeAnalayzer1.sPausePtr"));
+            lstItem.Add(new objUnit("Prd280", UnitType.DgtType, "noMin", "noMax", "ClampTonScope.sStart"));
+            lstItem.Add(new objUnit("Prd281", UnitType.DgtType, "noMin", "noMax", "ClampTonScope.ClassSvr"));
+            lstItem.Add(new objUnit("Prd282", UnitType.DgtType, "noMin", "noMax", "ClampTonScope.sNods"));
             lstItem.Add(new objUnit("Prd300", UnitType.DgtType, "0", "1", "Scheduler1.sUSE"));
             lstItem.Add(new objUnit("Prd301", UnitType.DgtType, "noMin", "noMax", "Scheduler1.sDayofWeak"));
             lstItem.Add(new objUnit("Prd302", UnitType.DgtType, "0", "2", "Scheduler1.sBHSchON"));

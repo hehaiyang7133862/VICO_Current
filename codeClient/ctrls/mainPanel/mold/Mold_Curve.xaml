@@ -193,7 +193,7 @@
                 <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
 
                 <Image Height="348" Width="459" Source="/Program;component/png/blocks/MoldClampCurve.png" Canvas.Top="157" Canvas.Left="547" />
-                <my:CurveControl x:Name="curveMoldClamp" CtrlHeight="245" CtrlWidth="400" IsCurverReverseY="True" Canvas.Left="589" Canvas.Top="234" />
+                <my:CurveControl x:Name="curveMoldClamp" CtrlHeight="245" CtrlWidth="400" Canvas.Left="589" Canvas.Top="234" />
                 <my:VicoParamDisplay Canvas.Left="135" Canvas.Top="60" objName="Mld180" Description="{DynamicResource lanKey230}" />
                 <my:VicoParamDisplay Canvas.Left="335" Canvas.Top="60" objName="Mld182" Description="{DynamicResource lanKey309}" />
                 <my:VicoParamDisplay Canvas.Left="535" Canvas.Top="60" objName="Mld181" Description="{DynamicResource LanKey1202}" />

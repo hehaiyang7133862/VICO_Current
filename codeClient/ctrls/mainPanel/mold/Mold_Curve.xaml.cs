@@ -56,10 +56,6 @@ namespace nsVicoClient.ctrls
         /// 模保时间
         /// </summary>
         private List<int> lst_Time_MoldClamp = new List<int>();
-        /// <summary>
-        /// 锁模力吨位时间曲线数据地址
-        /// </summary>
-        private uint blockAddr_Tonnage_Time_MoldClamp = 0;
 
         public Mold_Curve()
         {
@@ -68,34 +64,9 @@ namespace nsVicoClient.ctrls
             valmoWin.dv.MldPr[13].addHandle(handleMoldPr_13);
             valmoWin.dv.MldPr[26].addHandle(handleMoldPr_26);
 
-            valmoWin.dv.PrdPr[1184].addHandle(MoldClampStart);
-            valmoWin.dv.PrdPr[1235].addHandle(MoldClampRefush);
+            valmoWin.dv.PrdPr[282].addHandle(MoldClampRefush);
             valmoWin.dv.MldPr[225].addHandle(handleMldPr_225);
             valmoWin.dv.MldPr[150].addHandle(updateAutoMoldAdjustState);
-
-            valmoWin.lstStartUpInit.Add(startUpInit);
-        }
-
-        /// <summary>
-        /// 曲线数据地址初始化
-        /// </summary>
-        private void startUpInit()
-        {
-            blockAddr_Tonnage_Time_MoldClamp = (uint)valmoWin.dv.PrdPr[1236].valueNew;
-        }
-
-        /// <summary>
-        /// 锁模力曲线开始
-        /// </summary>
-        /// <param name="obj">Prd1184</param>
-        private void MoldClampStart(objUnit obj)
-        {
-            if (obj.value == 1)
-            {
-                curveMoldClamp.ClearCurve();
-
-                valmoWin.dv.PrdPr[1235].valueNew = 0;
-            }
         }
 
         private void handleMldPr_225(objUnit obj)
@@ -118,106 +89,31 @@ namespace nsVicoClient.ctrls
 
         }
 
-        /// <summary>
-        /// 锁模力曲线刷新
-        /// </summary>
-        /// <param name="obj">Prd1235</param>
         private void MoldClampRefush(objUnit obj)
         {
-            int count = obj.value & 0xff;
-            if (count > 0)
+            int maxMoldClamp = valmoWin.dv.MldPr[225].value;
+
+            if (maxMoldClamp > 0)
             {
-                int[] Data_Tonnage_Time_MoldClamp = new int[count];
-                Lasal32.GetData(Data_Tonnage_Time_MoldClamp, blockAddr_Tonnage_Time_MoldClamp, (int)Data_Tonnage_Time_MoldClamp.Length * 4);
-                DataAnalysis(Data_Tonnage_Time_MoldClamp, count, lst_Time_MoldClamp, lst_Tonnage_MoldClamp, 100, 1000);
-                curveMoldClamp.refushCurve(getPointlst(lst_Time_MoldClamp, lst_Tonnage_MoldClamp));
 
-                valmoWin.dv.PrdPr[1235].valueNew = 0;
-            }
-        }
-        private int getHigh_16(int raw)
-        {
-            int temp = (short)((raw >> 16) & 0xffff);
+                int count = obj.value;
 
-            if (temp > 10000)
-            {
-                temp = 10000;
-            }
+                int[] RawData = new int[count * 4];
+                Lasal32.GetData(RawData, (uint)valmoWin.dv.PrdPr[281].valueNew, count * 16);
 
-            if (temp < -10000)
-            {
-                temp = -10000;
-            }
-
-            return temp;
-        }
-
-        private int getLow_16(int raw)
-        {
-            int temp = (short)(raw & 0xffff);
-
-            if (temp > 10000)
-            {
-                temp = 10000;
-            }
-
-            if (temp < -10000)
-            {
-                temp = -10000;
-            }
-
-            return temp;
-        }
-
-        /// <summary>
-        /// 解析数据
-        /// </summary>
-        /// <param name="rawdata">原始数据</param>
-        /// <param name="count">数量</param>
-        /// <param name="data1">目标数据1</param>
-        /// <param name="data2">目标数据2</param>
-        private void DataAnalysis(int[] rawdata, int count, List<int> data1, List<int> data2, int staff1, int staff2)
-        {
-            int temp;
-            data1.Clear();
-            data2.Clear();
-
-            for (int i = 0; i < count && i < 30; i++)
-            {
-                temp = rawdata[i];
-                data1.Add(getHigh_16(temp) * 1000 / staff1);
-                data2.Add(getLow_16(temp) * 1000 / staff2);
-            }
-        }
-
-        /// <summary>
-        /// 返回曲线的点集
-        /// </summary>
-        /// <param name="data1">X</param>
-        /// <param name="data2">Y</param>
-        /// <returns>点集</returns>
-        private Point[] getPointlst(List<int> x, List<int> y)
-        {
-            Point[] Ps;
-            int count = 0;
-
-            if (x.Count == y.Count)
-            {
-                count = x.Count;
-                Ps = new Point[count];
+                List<Point> curveData_Time_Ton = new List<Point>();
 
                 for (int i = 0; i < count; i++)
                 {
-                    Ps[i] = new Point(x[i], y[i]);
-                }
-            }
-            else
-            {
-                Ps = new Point[0];
-            }
+                    double time = RawData[i * 4 + 3] * 1.0 / 1000 / 5 * 10000;
+                    double Ton = RawData[i * 4] * 1.0 / maxMoldClamp * 10000;
 
-            return Ps;
+                    curveData_Time_Ton.Add(new Point(time, 10000 - Ton));
+                }
+                curveMoldClamp.refushCurve(curveData_Time_Ton);
+            }
         }
+
         private void handleMoldPr_13(objUnit obj)
         {
             switch (obj.value)

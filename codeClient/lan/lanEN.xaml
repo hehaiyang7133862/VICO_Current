@@ -2564,6 +2564,8 @@
     <sys:String x:Key="CB_Schedule_SpareOutPutON_1">Turn On</sys:String>
     <sys:String x:Key="CB_Schedule_SpareOutPutOFF_0">No Operate</sys:String>
     <sys:String x:Key="CB_Schedule_SpareOutPutOFF_1">Turn Off</sys:String>
+    <sys:String x:Key="CB_LubPumpMode_0">Yellow</sys:String>
+    <sys:String x:Key="CB_LubPumpMode_1">Green</sys:String>
 	
     <sys:String x:Key="PT_OverView">OverView</sys:String>
     <sys:String x:Key="PT_OverView_QuickSetting">FastSet</sys:String>
@@ -3217,6 +3219,8 @@
     <sys:String x:Key="TP_Mld007">Mold Pos.</sys:String>
     <sys:String x:Key="TP_Mld008">Tonnage</sys:String>
     <sys:String x:Key="TP_Mld010">Close Time</sys:String>
+    <sys:String x:Key="TP_Mld100">Interval Delay</sys:String>
+    <sys:String x:Key="TP_Mld101">Lubrication Type</sys:String>
     <sys:String x:Key="TP_Mld102">Resolution Of Adj.Motor</sys:String>
     <sys:String x:Key="TP_Mld148">Use clamp sensor</sys:String>
     <sys:String x:Key="TP_Mld156">Inposition window </sys:String>

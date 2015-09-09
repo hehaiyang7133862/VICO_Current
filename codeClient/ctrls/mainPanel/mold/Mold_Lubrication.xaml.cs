@@ -20,8 +20,6 @@ namespace nsVicoClient.ctrls
     /// </summary>
     public partial class Mold_Lubrication : UserControl
     {
-        private bool _bIsMouseMove = false;
-
         public Mold_Lubrication()
         {
             InitializeComponent();
@@ -34,6 +32,20 @@ namespace nsVicoClient.ctrls
             valmoWin.dv.MldPr[050].addHandle(upadatprg3);
             valmoWin.dv.MldPr[097].addHandle(upadatprg4);
             valmoWin.dv.MldPr[057].addHandle(upadatprg4);
+
+            valmoWin.dv.MldPr[101].addHandle(RefushLubType);
+        }
+
+        private void RefushLubType(objUnit obj)
+        {
+            if (obj.value == 0)
+            {
+                lbLubType.SetResourceReference(Label.ContentProperty, "CB_LubPumpMode_0");
+            }
+            else
+            {
+                lbLubType.SetResourceReference(Label.ContentProperty, "CB_LubPumpMode_1");
+            }
         }
 
         private void upadatprg1(objUnit obj)

@@ -140,6 +140,15 @@ namespace nsVicoClient.ctrls
             {
                 tbMain.SelectedIndex = 1;
 
+                if (valmoWin.dv.users.curUser.accessLevel > 3)
+                {
+                    btnExit.IsEnabled = true;
+                }
+                else
+                {
+                    btnExit.IsEnabled = false;
+                }
+
                 lbUser.Content = valmoWin.dv.users.curUser.name;
                 UserInit();
             }
@@ -177,7 +186,16 @@ namespace nsVicoClient.ctrls
             if (valmoWin.dv.users.setCurUser(Username, Password))
             {
                 tbMain.SelectedIndex = 1;
-                
+
+                if (valmoWin.dv.users.curUser.accessLevel > 3)
+                {
+                    btnExit.IsEnabled = true;
+                }
+                else
+                {
+                    btnExit.IsEnabled = false;
+                }
+
                 UserInit();
                 lbUser.Content = valmoWin.dv.users.curUser.name;
             }

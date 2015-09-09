@@ -2454,6 +2454,8 @@
     <sys:String x:Key="CB_Schedule_SpareOutPutON_1">开启</sys:String>
     <sys:String x:Key="CB_Schedule_SpareOutPutOFF_0">无操作</sys:String>
     <sys:String x:Key="CB_Schedule_SpareOutPutOFF_1">关闭</sys:String>
+    <sys:String x:Key="CB_LubPumpMode_0">黄油</sys:String>
+    <sys:String x:Key="CB_LubPumpMode_1">绿油</sys:String>
 	
     <sys:String x:Key="PT_OverView">总览</sys:String>
     <sys:String x:Key="PT_OverView_QuickSetting">快速设定</sys:String>
@@ -3108,6 +3110,8 @@
     <sys:String x:Key="TP_Mld007">模板位置</sys:String>
     <sys:String x:Key="TP_Mld008">锁模力</sys:String>
     <sys:String x:Key="TP_Mld010">合模时间</sys:String>
+    <sys:String x:Key="TP_Mld100">间隔延迟</sys:String>
+    <sys:String x:Key="TP_Mld101">润滑油类型</sys:String>
     <sys:String x:Key="TP_Mld102">调模马达单圈增量</sys:String>
     <sys:String x:Key="TP_Mld148">使用合模到底电眼</sys:String>
     <sys:String x:Key="TP_Mld156">合模到底感应范围 </sys:String>

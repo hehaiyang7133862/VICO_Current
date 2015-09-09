@@ -112,7 +112,6 @@ namespace nsVicoClient.ctrls
             InitializeComponent();
 
             valmoWin.dv.MldPr[531].addHandle(MoldProtectState);
-
             valmoWin.dv.PrdPr[261].addHandle(MoldProtectStart);
 
             valmoWin.dv.MldPr[553].addHandle(setMoldProtectStart);
@@ -454,87 +453,6 @@ namespace nsVicoClient.ctrls
             curveCurrentOffset.refushCurve(curveData_Current);
             curvePositionOffset.refushCurve(curveData_Pos);
 
-        }
-
-        private int getHigh_16(int raw)
-        {
-            int temp = (short)((raw >> 16) & 0xffff);
-
-            if (temp > 10000)
-            {
-                temp = 10000;
-            }
-
-            if (temp < -10000)
-            {
-                temp = -10000;
-            }
-
-            return temp;
-        }
-        private int getLow_16(int raw)
-        {
-            int temp = (short)(raw & 0xffff);
-
-            if (temp > 10000)
-            {
-                temp = 10000;
-            }
-
-            if (temp < -10000)
-            {
-                temp = -10000;
-            }
-
-            return temp;
-        }
-        /// <summary>
-        /// 解析数据
-        /// </summary>
-        /// <param name="rawdata">原始数据</param>
-        /// <param name="count">数量</param>
-        /// <param name="data1">目标数据1</param>
-        /// <param name="data2">目标数据2</param>
-        private void DataAnalysis(int[] rawdata, int count, List<int> data1, List<int> data2, int staff1, int staff2)
-        {
-            int temp;
-            data1.Clear();
-            data2.Clear();
-
-            for (int i = 0; i < count && i < 30; i++)
-            {
-                temp = rawdata[i];
-                data1.Add(getHigh_16(temp) * 1000 / staff1);
-                data2.Add(getLow_16(temp) * 1000 / staff2);
-            }
-        }
-        /// <summary>
-        /// 返回曲线的点集
-        /// </summary>
-        /// <param name="data1">X</param>
-        /// <param name="data2">Y</param>
-        /// <returns>点集</returns>
-        private Point[] getPointlst(List<int> x, List<int> y)
-        {
-            Point[] Ps;
-            int count = 0;
-
-            if (x.Count == y.Count)
-            {
-                count = x.Count;
-                Ps = new Point[count];
-
-                for (int i = 0; i < count; i++)
-                {
-                    Ps[i] = new Point(x[i], y[i]);
-                }
-            }
-            else
-            {
-                Ps = new Point[0];
-            }
-
-            return Ps;
         }
 
         /// <summary>

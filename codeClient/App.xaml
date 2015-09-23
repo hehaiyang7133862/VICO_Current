@@ -114,6 +114,72 @@
             <BitmapImage x:Key="img62" UriSource="png/OBJ_27_52_tunetabel_neg.png" />
             <BitmapImage x:Key="img61" UriSource="png/OBJ_27_51_tunetabel_pos.png" />
 
+            <BitmapImage x:Key="MA00" UriSource="png/IprBlocks/ipr_op22_Moldclose.png" />
+            <BitmapImage x:Key="MA01" UriSource="png/IprBlocks/ipr_op21_Moldopen.png" />
+            <BitmapImage x:Key="MA02" UriSource="png/IprBlocks/ipr_op15_euromap.png" />
+            <BitmapImage x:Key="MA03" UriSource="png/IprBlocks/ipr_op26_OPEND.png" />
+            <BitmapImage x:Key="MA04" UriSource="png/IprBlocks/ipr_op28_MoldUnitFWD.png" />
+            <BitmapImage x:Key="MA05" UriSource="png/IprBlocks/ipr_op29_MoldUnitBWD.png" />
+            <BitmapImage x:Key="MA06" UriSource="png/IprBlocks/ipr_op2_ejectorfor.png" />
+            <BitmapImage x:Key="MA07" UriSource="png/IprBlocks/ipr_op1_ejectorback.png" />
+            <BitmapImage x:Key="MA08" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA09" UriSource="png/IprBlocks/ipr_op11_Rotate.png" />
+            <BitmapImage x:Key="MA10" UriSource="png/IprBlocks/ipr_op11_Rotate.png" />
+            <BitmapImage x:Key="MA11" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA12" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA13" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA14" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA15" UriSource="png/IprBlocks/ipr_op5_CarrriageFWD.png" />
+            <BitmapImage x:Key="MA16" UriSource="png/IprBlocks/ipr_op6_CarrriageBWD.png" />
+            <BitmapImage x:Key="MA17" UriSource="png/IprBlocks/ipr_op23_Injection.png" />
+            <BitmapImage x:Key="MA18" UriSource="png/IprBlocks/ipr_op8_Charge.png" />
+            <BitmapImage x:Key="MA19" UriSource="png/IprBlocks/ipr_op25_SUCKBACK.png" />
+            <BitmapImage x:Key="MA20" UriSource="png/IprBlocks/ipr_op24_SNOW.png" />
+            <BitmapImage x:Key="MA21" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA22" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA23" UriSource="png/IprBlocks/ipr_op32_AutoAdj.png" />
+            <BitmapImage x:Key="MA24" UriSource="png/IprBlocks/ipr_op30_AutoP.png" />
+            <BitmapImage x:Key="MA25" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA26" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA27" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA28" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA29" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA30" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA31" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+
+            <BitmapImage x:Key="MA32" UriSource="png/IprBlocks/ipr_op31_Lub.png" />
+			<BitmapImage x:Key="MA33" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA34" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA35" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA36" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA37" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA38" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA39" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA40" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA41" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA42" UriSource="png/IprBlocks/ipr_op10_Core.png" />
+            <BitmapImage x:Key="MA43" UriSource="png/IprBlocks/ipr_op31_Lub.png" />
+            <BitmapImage x:Key="MA44" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA45" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA46" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA47" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA48" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA49" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA50" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA51" UriSource="png/IprBlocks/ipr_op9_Air.png" />
+            <BitmapImage x:Key="MA52" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA53" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA54" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA55" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA56" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA57" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA58" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA59" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA60" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA61" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA62" UriSource="png/IprBlocks/ipr_op28_Other.png" />
+            <BitmapImage x:Key="MA63" UriSource="png/IprBlocks/ipr_op26_OPEND.png" />
+
             <BitmapImage x:Key="kMld007" UriSource="png/Marks/Mark_MoldPos_3_11.png"/>
             <BitmapImage x:Key="kMld001" UriSource="png/Marks/Mark_CrossPos_3_12.png"/>
             <BitmapImage x:Key="kMld002" UriSource="png/Marks/Mark_EjePos_3_12.png"/>

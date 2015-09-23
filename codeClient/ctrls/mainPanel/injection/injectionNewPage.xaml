@@ -87,15 +87,16 @@
                     <Label Canvas.Left="186" Canvas.Top="442" Content="{DynamicResource lanKey005}" FontSize="18" Foreground="#FF686868" />
                     <Label Canvas.Right="121" Canvas.Top="442" Content="{DynamicResource lanKey004}" FontSize="18" Foreground="#FF686868" />
 
-                    <Canvas Name="cvsCursor" Canvas.Left="557" Height="499" Width="100" Canvas.Top="1">
-                        <Line Y1="5" Y2="45" Stroke="#FF1D6C94" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True" />
-                        <Label Canvas.Left="3" Canvas.Top="-3" Name="lbCurScrewPos" Content="0.0" FontSize="22" FontFamily="CuprumFFU" Foreground="#FF1D6C94"/>
-                        <Line Canvas.Top="50" Y1="13" Y2="50" Stroke="#FF005A87" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
-                        <Line Canvas.Top="105" Y2="300" Stroke="#FF005A87" StrokeThickness="2" StrokeDashArray="1,1" ClipToBounds="True" SnapsToDevicePixels="True" />
-                        <Ellipse Stroke="#FF005A87" StrokeThickness="4" Height="7" Width="7" Canvas.Top="397" Canvas.Left="-3" />
-                        <Image Source="/Program;component/png/OBJ_26_17_ObBlueInactive_2.png" Canvas.Left="-7" Canvas.Top="93" />
-                    </Canvas>
                     <Canvas Name="cvsMap" Canvas.Left="558" Canvas.Top="404">
+                        <Canvas Name="cvsCursor" Canvas.Top="-400">
+                            <Line Canvas.Left="-1" Canvas.Top="5" Y2="40" Stroke="#FF1D6C94" StrokeThickness="2" SnapsToDevicePixels="True" ClipToBounds="True"/>
+                            <Label Name="lbCurScrewPos" Canvas.Left="3" Canvas.Top="-3" Content="0.0" FontSize="22" FontFamily="CuprumFFU" Foreground="#FF1D6C94"/>
+                            <Line Canvas.Top="50" Y1="13" Y2="50" Stroke="#FF005A87" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="-1" />
+                            <Line Canvas.Top="105" Y2="300" Stroke="#FF005A87" StrokeThickness="2" StrokeDashArray="1,1" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="-1" />
+                            <Ellipse Stroke="#FF005A87" StrokeThickness="4" Height="7" Width="7" Canvas.Top="396" Canvas.Left="-4" />
+                            <Image Source="/Program;component/png/OBJ_26_17_ObBlueInactive_2.png" Canvas.Left="-8" Canvas.Top="92" />
+                        </Canvas>
+                        
                         <my:CurveCanves x:Name="curve_Pos_Speed" SetHeight="300" SetWidth="400" Canvas.Bottom="0" Canvas.Left="0" HistoryBrush="#FF7DAAEC" />
                         <my:CurveCanves x:Name="curve_Pos_Pressure" SetHeight="300" SetWidth="400" Canvas.Bottom="0" Canvas.Left="0" HistoryBrush="#FFFF9DEE" />
                         <my:CurveCanves x:Name="curve_Pos_Current" SetHeight="300" SetWidth="400" Canvas.Bottom="0" Canvas.Left="0" HistoryBrush="#FF7DFFDF" />
@@ -146,48 +147,14 @@
                     <Label Canvas.Left="85" Canvas.Top="212" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
 
                     <Canvas Canvas.Left="138" Canvas.Top="80" Height="180" Name="cvsPanel" Width="897">
-                        <Border Canvas.Left="0" Canvas.Top="48"  Height="40" Width="81" Background="#FFDCDCDC" BorderBrush="Transparent"/>
-                        <Border Canvas.Left="800" Canvas.Top="48" Height="40" Width="81" Background="#FFDCDCDC" BorderBrush="Transparent"/>
-
-                        <Line Canvas.Left="0" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="881" />
-                        <Line Canvas.Left="40" Canvas.Top="126" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="801" />
-                        <Line Canvas.Left="40" Canvas.Top="165" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="801" />
-                        <Line Canvas.Left="0" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="80" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="160" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="240" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="320" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="400" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="480" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="560" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="640" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="720" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="800" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="880" Canvas.Top="0" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="88" />
-                        <Line Canvas.Left="40" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="120" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="200" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="280" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="360" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="440" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="520" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="600" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="680" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="760" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-                        <Line Canvas.Left="840" Canvas.Top="87" ClipToBounds="True" Stroke="#FFD4D4D4" StrokeThickness="2" Y2="79" />
-
-                        <Line X2="881" Stroke="#FFA4A4A4" StrokeThickness="8"  Canvas.Top="45" ClipToBounds="True" SnapsToDevicePixels="True" Canvas.Left="0" />
-                        <Line Name="imgInjPr_47_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="1"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_9_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="81"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_8_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="161"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_7_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="241"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_6_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="321"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_5_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="401"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_4_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="481"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_3_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="561"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_2_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="641"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_1_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="721"  ClipToBounds="True" SnapsToDevicePixels="True"/>
-                        <Line Name="imgInjPr_48_0_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="45" Canvas.Left="801"  ClipToBounds="True" SnapsToDevicePixels="True"/>
+                        <Image Height="166" Width="961" Source="/Program;component/png/blocks/InjMoveStep.png" Canvas.Left="-80" Canvas.Top="3" />
+                        <Line Name="imgInjPr_48_9_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="81"  ClipToBounds="True" SnapsToDevicePixels="True"/>
+                        <Line Name="imgInjPr_48_8_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="161"  ClipToBounds="True" SnapsToDevicePixels="True"/>
+                        <Line Name="imgInjPr_48_7_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="241"  ClipToBounds="True" SnapsToDevicePixels="True"/>
+                        <Line Name="imgInjPr_48_6_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="321"  ClipToBounds="True" SnapsToDevicePixels="True"/>
+                        <Line Name="imgInjPr_48_5_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="401"  ClipToBounds="True" SnapsToDevicePixels="True"/>
+                        <Line Name="imgInjPr_48_4_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="481"  ClipToBounds="True" SnapsToDevicePixels="True"/>
+                        <Line Name="imgInjPr_48_3_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="561"  ClipToBounds="True" SnapsToDevicePixels="True"/>
 
                         <my:VicoLabel Canvas.Left="0" Canvas.Top="48" x:Name="InjectionPosEnd" objName="Inj173" myHeight="40" myWidth="81" ReadOnly="True"/>
                         <my:VicoLabel Canvas.Left="80" Canvas.Top="48" x:Name="InjectionPos10" objName="Inj248" myHeight="40" myWidth="81" />
@@ -212,30 +179,18 @@
                         <my:VicoLabel Canvas.Left="680" Canvas.Top="87" x:Name="InjectionSpd2" objName="Inj057" myHeight="40" myWidth="81" />
                         <my:VicoLabel Canvas.Left="760" Canvas.Top="87" x:Name="InjectionSpd1" objName="Inj056" myHeight="40" myWidth="81" />
 
-                        <my:VicoLabel Canvas.Left="40" Canvas.Top="126" x:Name="InjectionPrs10" objName="Inj459" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="120" Canvas.Top="126" x:Name="InjectionPrs9" objName="Inj458" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="200" Canvas.Top="126" x:Name="InjectionPrs8" objName="Inj457" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="280" Canvas.Top="126" x:Name="InjectionPrs7" objName="Inj456" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="360" Canvas.Top="126" x:Name="InjectionPrs6" objName="Inj455" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="440" Canvas.Top="126" x:Name="InjectionPrs5" objName="Inj454" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="520" Canvas.Top="126" x:Name="InjectionPrs4" objName="Inj453" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="600" Canvas.Top="126" x:Name="InjectionPrs3" objName="Inj452" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="680" Canvas.Top="126" x:Name="InjectionPrs2" objName="Inj451" myHeight="40" myWidth="81" />
-                        <my:VicoLabel Canvas.Left="760" Canvas.Top="126" x:Name="InjectionPrs1" objName="Inj450" myHeight="40" myWidth="81" />
-                        
-                        <Label Content="End" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="0" Canvas.Top="0" Background="#FFDCDCDC" />
-                        <Label Content="10" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="80" Canvas.Top="0" MouseUp="lbInjPr_48_9_injection_MouseDown"/>
-                        <Label Content="9" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="160" Canvas.Top="0" MouseUp="lbInjPr_48_8_injection_MouseDown"/>
-                        <Label Content="8" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="240" Canvas.Top="0" MouseUp="lbInjPr_48_7_injection_MouseDown"/>
-                        <Label Content="7" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="320" Canvas.Top="0" MouseUp="lbInjPr_48_6_injection_MouseDown"/>
-                        <Label Content="6" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="400" Canvas.Top="0" MouseUp="lbInjPr_48_5_injection_MouseDown"/>
-                        <Label Content="5" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="480" Canvas.Top="0" MouseUp="lbInjPr_48_4_injection_MouseDown"/>
-                        <Label Content="4" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="80" Canvas.Left="560" Canvas.Top="0" MouseUp="lbInjPr_48_3_injection_MouseDown"/>
-                        <Label Content="3" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="79" Canvas.Left="641" Canvas.Top="0" Background="#FFDCDCDC"/>
-                        <Label Content="2" FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="79" Canvas.Left="721" Canvas.Top="0" Background="#FFDCDCDC"/>
-                        <Label Content="1"  FontFamily="Michroma" FontSize="14" Foreground="#FF727272" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="45" Width="79" Canvas.Left="801" Canvas.Top="0" Background="#FFDCDCDC"/>
+                        <my:VicoLabel Canvas.Left="40" Canvas.Top="127" x:Name="InjectionPrs10" objName="Inj459" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="120" Canvas.Top="127" x:Name="InjectionPrs9" objName="Inj458" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="200" Canvas.Top="127" x:Name="InjectionPrs8" objName="Inj457" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="280" Canvas.Top="127" x:Name="InjectionPrs7" objName="Inj456" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="360" Canvas.Top="127" x:Name="InjectionPrs6" objName="Inj455" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="440" Canvas.Top="127" x:Name="InjectionPrs5" objName="Inj454" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="520" Canvas.Top="127" x:Name="InjectionPrs4" objName="Inj453" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="600" Canvas.Top="127" x:Name="InjectionPrs3" objName="Inj452" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="680" Canvas.Top="127" x:Name="InjectionPrs2" objName="Inj451" myHeight="40" myWidth="81" />
+                        <my:VicoLabel Canvas.Left="760" Canvas.Top="127" x:Name="InjectionPrs1" objName="Inj450" myHeight="40" myWidth="81" />
 
-                        <Canvas Name="cvsPrs" Canvas.Left="40" Canvas.Top="126" Height="40" Width="801" Background="#FFDCDCDC" Visibility="Hidden">
+                        <Canvas Name="cvsPrs" Canvas.Left="40" Canvas.Top="127" Height="41" Width="801" Background="#FFDCDCDC" Visibility="Hidden">
                             <Label Canvas.Right="368" Canvas.Top="6" Content="{DynamicResource OI_InjectionPressureLimit}" FontSize="14" Foreground="#FF444444"/>
                             <my:VicoLabel Canvas.Left="640" Canvas.Top="5" objName="Inj046" myHeight="30" myWidth="81" UnitVisiable="Visible"/>
                         </Canvas>

@@ -370,8 +370,6 @@ namespace nsVicoClient.ctrls
                         {
                             strMachionState1 += "+" + valmoWin.dv.getCurDis("strIpr" + i.ToString().PadLeft(3, '0'));
                         }
-
-                        bmpMachionState1.Add((BitmapImage)App.Current.TryFindResource("picIpr001" + i.ToString().PadLeft(3, '0')));
                     }
                 }
             }
@@ -403,7 +401,6 @@ namespace nsVicoClient.ctrls
                             strMachionState2 += "+" + valmoWin.dv.getCurDis("strMachionState" + (i + 32).ToString());
                         }
 
-                        bmpMachionState2.Add((BitmapImage)App.Current.TryFindResource("bmpMachionState" + (i + 32).ToString()));
                     }
                 }
             }
@@ -420,32 +417,6 @@ namespace nsVicoClient.ctrls
             else
             {
                 lbCurFocus.Content = strMachionState2;
-            }
-
-            cvsCurFocus.Children.Clear();
-
-            int i = 0;
-            foreach (BitmapImage img in bmpMachionState1)
-            {
-                Image imgCtrl = new Image();
-                cvsCurFocus.Children.Add(imgCtrl);
-
-                Canvas.SetRight(imgCtrl,i++ * 50);
-                imgCtrl.Height = 46;
-                imgCtrl.Width = 46;
-                imgCtrl.Stretch = Stretch.Fill;
-                imgCtrl.Source = img;
-            }
-            foreach (BitmapImage img in bmpMachionState2)
-            {
-                Image imgCtrl = new Image();
-                cvsCurFocus.Children.Add(imgCtrl);
-
-                Canvas.SetRight(imgCtrl, i++ * 50);
-                imgCtrl.Height = 46;
-                imgCtrl.Width = 46;
-                imgCtrl.Stretch = Stretch.Fill;
-                imgCtrl.Source = img;
             }
         }
 

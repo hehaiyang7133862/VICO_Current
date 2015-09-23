@@ -21,11 +21,6 @@ namespace nsVicoClient
         static string plcIpAddr = "TCP:10.10.150.13";
         Lasal32.CB_RLADD_FUNCTYPE methptr;
 
-        objUnit objHeart ;
-        objUnit objHeartErr ;
-        objUnit objHeartTick ;
-        DispatcherTimer dtState = new DispatcherTimer();
-        DispatcherTimer dtLink = new DispatcherTimer();
         List<string> ipLst = new List<string>();
         List<int> lstIRlb = new List<int>();
 
@@ -34,87 +29,11 @@ namespace nsVicoClient
             plcIpAddr = "TCP:" + getIpAddr();
             methptr = new Lasal32.CB_RLADD_FUNCTYPE(RefListCallBack);
 
-            dtState.Tick += new EventHandler(dtState_Tick);
-            dtState.Interval = new TimeSpan(0, 0, 0, 0, 126);
-            dtLink.Tick += new EventHandler(dtLink_Tick);
-            dtLink.Interval = new TimeSpan(0, 0, 0, 0, 100);
         }
 
-        int errNr = 0;
-        int curLinkValue = 0;
-        int curTickValue = 0;
-        int curHeartValue = 0;
-        long linkErrTick = 0;
-        private void dtState_Tick(object obj, EventArgs e)
-        {
-            if (curLinkValue == dataBase.SysPr[7].value || curTickValue == objHeartTick.value)
-            {
-                if (linkErrTick == 0)
-                    linkErrTick = DateTime.Now.Ticks;
-                if ( DateTime.Now.Ticks - linkErrTick > new TimeSpan(0, 0, 0, 1).Ticks)
-                {
-                    vm.getTm("Link PLC Error,Stop to link PLC ......\t");
-                    dtState.Stop();
-
-                }
-                errNr++;
-                if (errNr >= 2)
-                {
-                    vm.getTm("link error!! Start to relink PLC : ");
-                    //valmoWin.heartError = true;
-                 
-                }
-            }
-            else
-            {
-                if (linkErrTick != 0)
-                    linkErrTick = 0;
-                curHeartValue++;
-                objHeart.valueNew = curHeartValue;
-
-                curTickValue = objHeartTick.value;
-                curLinkValue = dataBase.SysPr[7].value;
-                errNr = 0;
-                //valmoWin.heartError = false;
-            }
-        }
-        DateTime relinkInterval ;
-        TimeSpan diffTm = new TimeSpan(0, 0, 0, 0, 500);
-        private void dtLink_Tick(object obj, EventArgs e)
-        {
-            if (DateTime.Now - relinkInterval > diffTm)
-            {
-                if (checkLinkPlc())
-                {
-                    foreach (int iRlb in lstIRlb)
-                    {
-                        Lasal32.LslRefreshListDestroy(iRlb);
-                    }
-                    getLink();
-                    dtLink.Stop();
-                    valmoWin.execHandle(opeOrderType.winMsg, new WinMsg(WinMsgType.mwRelink));
-                    dataBase.IprPr[16].valueNew = 1;
-                    errNr = 0;
-                    vm.printLn("reLinkPlc......");
-                }
-                else
-                {
-                    valmoWin.execHandle(opeOrderType.winMsg, new WinMsg(WinMsgType.mwLinkPlcError));
-                }
-                relinkInterval = DateTime.Now;
-            }
-        }
         public void dataInit(dvBase db)
         {
             dataBase = db;
-            
-            objHeartTick = dataBase[0];
-            objHeart = dataBase[1];
-            objHeartErr = dataBase[2];
-
-            objHeartTick.addMap();
-            //objHeart.addMap();
-            //objHeartTick.addMap();
         }
         /// <summary>
         /// 创建回调list
@@ -247,10 +166,11 @@ namespace nsVicoClient
             {
                 if (dataBase[(int)dwVarID - 1] != null)
                     dataBase[(int)dwVarID - 1].refresh(nData);
-                if (!dtState.IsEnabled)
-                {
-                    dtState.Start();
-                }
+
+                //if (!dtState.IsEnabled)
+                //{
+                //    dtState.Start();
+                //}
             }
             catch
             {
@@ -258,36 +178,37 @@ namespace nsVicoClient
             }
         }
 
-        public void RefListHeartCallBack(uint dwCallbackData, uint dwAddr, uint dwVarID, int nData)
-        {
-            try
-            {
-                if (!dtState.IsEnabled)
-                {
-                    dtState.Start();
-                }
-                if (dwVarID == 888)
-                {
-                    if (!dtState.IsEnabled)
-                    {
-                        dtState.Start();
-                    }
-                    objHeart.refresh(nData);
-                }
-                else if (dwVarID == 111)
-                {
-                    objHeartErr.refresh(nData);
-                }
-                else if (dwVarID == 333)
-                {
-                    objHeartTick.refresh(nData);
-                }
-            }
-            catch
-            {
-                vm.perror("RefListHeartCallBack : " + dwVarID + " " + nData);
-            }
-        }
+        //public void RefListHeartCallBack(uint dwCallbackData, uint dwAddr, uint dwVarID, int nData)
+        //{
+        //    try
+        //    {
+        //        if (!dtState.IsEnabled)
+        //        {
+        //            dtState.Start();
+        //        }
+        //        if (dwVarID == 888)
+        //        {
+        //            if (!dtState.IsEnabled)
+        //            {
+        //                dtState.Start();
+        //            }
+        //            objHeart.refresh(nData);
+        //        }
+        //        else if (dwVarID == 111)
+        //        {
+        //            objHeartErr.refresh(nData);
+        //        }
+        //        else if (dwVarID == 333)
+        //        {
+        //            objHeartTick.refresh(nData);
+        //        }
+        //    }
+        //    catch
+        //    {
+        //        vm.perror("RefListHeartCallBack : " + dwVarID + " " + nData);
+        //    }
+        //}
+
         /// <summary>
         /// 启动list，开始数据通信
         /// </summary>

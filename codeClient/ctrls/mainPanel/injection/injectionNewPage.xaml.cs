@@ -21,10 +21,6 @@ namespace nsVicoClient.ctrls
     public partial class injectionNewPage : UserControl
     {
         /// <summary>
-        /// 注射最大行程
-        /// </summary>
-        private double dMaxInjStroke = 0;
-        /// <summary>
         /// 鼠标是否按下
         /// </summary>
         private bool _bIsMouseDown = false;
@@ -43,8 +39,6 @@ namespace nsVicoClient.ctrls
 
             cvsSet.Height = 0;
 
-            valmoWin.lstStartUpInit.Add(startUpInit);
-
             valmoWin.dv.InjPr[21].addHandle(handle_inj021);
             valmoWin.dv.InjPr[29].addHandle(handle_Inj029);
             valmoWin.dv.InjPr[36].addHandle(handleInjPr_36);
@@ -56,6 +50,7 @@ namespace nsVicoClient.ctrls
             valmoWin.dv.InjPr[42].addHandle(handleInjPr_042);
             valmoWin.dv.InjPr[43].addHandle(handleInjPr_043);
             valmoWin.dv.InjPr[44].addHandle(handleInjPr_044);
+            valmoWin.dv.InjPr[46].addHandle(handleInjPr_046);
             valmoWin.dv.InjPr[48].addHandle(handleInjPr_48);
             valmoWin.dv.InjPr[49].addHandle(handle_Inj049);
             valmoWin.dv.InjPr[50].addHandle(handle_Inj050);
@@ -275,7 +270,7 @@ namespace nsVicoClient.ctrls
                 for (int i = 0; i < count; i++)
                 {
                     double pos = objUnit.getDblValue(InjectionData[i * 4 + 3], UnitType.Len_mm) / AxisMaxPos_Injection * 10000;
-                    double current = objUnit.getDblValue(InjectionData[i * 4 + 2], UnitType.Per) / 1000 * 10000;
+                    double current = objUnit.getDblValue(InjectionData[i * 4 + 2], UnitType.Per) / 100 * 10000;
                     double speed = objUnit.getDblValue(Math.Abs(InjectionData[i * 4]), UnitType.Spd_mm) / AxisMaxSpeed * 10000;
                     double pressure = objUnit.getDblValue(InjectionData[i * 4 + 1], UnitType.Prs_Mpa) / AxisMaxPressure * 10000;
 
@@ -313,14 +308,6 @@ namespace nsVicoClient.ctrls
         }
 
         /// <summary>
-        /// 曲线数据地址初始化
-        /// </summary>
-        private void startUpInit()
-        {
-            dMaxInjStroke = valmoWin.dv.InjPr[049].vDbl;
-        }
-
-        /// <summary>
         /// 切换点容积
         /// </summary>
         private void refushVPosV()
@@ -351,12 +338,10 @@ namespace nsVicoClient.ctrls
 
         private void handle_inj021(objUnit obj)
         {
-            double ActInjExternPosition = obj.vDbl > 0 ? obj.vDbl : 0;
-
-            if (dMaxInjStroke > 0)
+            if (AxisMaxPos_Injection > 0)
             {
-                Canvas.SetLeft(cvsCursor, ActInjExternPosition / dMaxInjStroke * 363.6 + 557);
-                lbCurScrewPos.Content = ActInjExternPosition.ToString("0.00");
+                Canvas.SetLeft(cvsCursor, obj.vDbl / AxisMaxPos_Injection * 400);
+                lbCurScrewPos.Content = obj.vDblStr;
             }
         }
         private void handle_Inj189(objUnit obj)
@@ -1522,41 +1507,57 @@ namespace nsVicoClient.ctrls
             //    lstRInjSpd[22].Visibility = Visibility.Hidden;
             //}
 
-            int j = 0;
-            for (; j < InjectionSegment * 2 - 1; j++)
+            if (btnMS.Visibility == Visibility.Visible)
             {
-                lstLInjPrs[j].Visibility = Visibility.Visible;
-                if (PointsPos_Prs[j + 1].X >= PointsPos_Prs[j].X)
+                int j = 0;
+                for (; j < InjectionSegment * 2 - 1; j++)
                 {
-                    Canvas.SetLeft(lstLInjPrs[j], PointsPos_Prs[j].X);
-                }
-                else
-                {
-                    Canvas.SetLeft(lstLInjPrs[j], PointsPos_Prs[j + 1].X);
-                }
-                lstLInjPrs[j].X2 = Math.Abs(PointsPos_Prs[j + 1].X - PointsPos_Prs[j].X);
+                    lstLInjPrs[j].Visibility = Visibility.Visible;
+                    if (PointsPos_Prs[j + 1].X >= PointsPos_Prs[j].X)
+                    {
+                        Canvas.SetLeft(lstLInjPrs[j], PointsPos_Prs[j].X);
+                    }
+                    else
+                    {
+                        Canvas.SetLeft(lstLInjPrs[j], PointsPos_Prs[j + 1].X);
+                    }
+                    lstLInjPrs[j].X2 = Math.Abs(PointsPos_Prs[j + 1].X - PointsPos_Prs[j].X);
 
-                if (PointsPos_Prs[j + 1].Y <= PointsPos_Prs[j].Y)
-                {
-                    Canvas.SetBottom(lstLInjPrs[j], PointsPos_Prs[j + 1].Y);
+                    if (PointsPos_Prs[j + 1].Y <= PointsPos_Prs[j].Y)
+                    {
+                        Canvas.SetBottom(lstLInjPrs[j], PointsPos_Prs[j + 1].Y);
+                    }
+                    else
+                    {
+                        Canvas.SetBottom(lstLInjPrs[j], PointsPos_Prs[j].Y);
+                    }
+                    lstLInjPrs[j].Y2 = Math.Abs(PointsPos_Prs[j + 1].Y - PointsPos_Prs[j].Y);
                 }
-                else
+
+                for (int n = j; n < 19; n++)
                 {
-                    Canvas.SetBottom(lstLInjPrs[j], PointsPos_Prs[j].Y);
+                    lstLInjPrs[n].Visibility = Visibility.Hidden;
                 }
-                lstLInjPrs[j].Y2 = Math.Abs(PointsPos_Prs[j + 1].Y - PointsPos_Prs[j].Y);
+
+                lstLInjPrs[19].Visibility = Visibility.Visible;
+                Canvas.SetLeft(lstLInjPrs[19], 0);
+                Canvas.SetBottom(lstLInjPrs[19], PointsPos_Prs[InjectionSegment * 2 - 1].Y);
+                lstLInjPrs[19].X2 = Math.Abs(PointsPos_Prs[InjectionSegment * 2 - 1].X);
+                lstLInjPrs[19].Y2 = 0;
             }
-
-            for (int n = j; n < 19; n++)
+            else
             {
-                lstLInjPrs[n].Visibility = Visibility.Hidden;
-            }
+                for (int i = 0; i < 20; i++)
+                {
+                    lstLInjPrs[i].Visibility = Visibility.Hidden; ;
+                }
 
-            lstLInjPrs[19].Visibility = Visibility.Visible;
-            Canvas.SetLeft(lstLInjPrs[19], 0);
-            Canvas.SetBottom(lstLInjPrs[19], PointsPos_Prs[InjectionSegment * 2 - 1].Y);
-            lstLInjPrs[19].X2 = Math.Abs(PointsPos_Prs[InjectionSegment * 2 - 1].X);
-            lstLInjPrs[19].Y2 = 0;
+                lstLInjPrs[0].Visibility = Visibility.Visible;
+                Canvas.SetLeft(lstLInjPrs[0], 0);
+                Canvas.SetBottom(lstLInjPrs[0], Convert.ToInt32(valmoWin.dv.InjPr[46].vDbl / AxisMaxPressure * 300));
+                lstLInjPrs[0].X2 = 400;
+                lstLInjPrs[0].Y2 = 0;
+            }
         }
 
         #endregion
@@ -1804,7 +1805,7 @@ namespace nsVicoClient.ctrls
             cvsInjMonitor.Height = _bIsInjMonitorVisiable ? 500 : 50;
             cvsInjActionSet.Height = _bIsInjActionSetVisiable ? 160 : 50;
 
-            sPanelMain.Height = cvsInjParam.Height + cvsInjMonitor.Height + cvsInjActionSet.Height + 1000;
+            sPanelMain.Height = cvsInjParam.Height + cvsInjMonitor.Height + cvsInjActionSet.Height + 1080;
         }
 
         private bool _bIsInjParamVisiable = true;
@@ -1953,12 +1954,23 @@ namespace nsVicoClient.ctrls
             {
                 btnMS.Visibility = Visibility.Hidden;
                 cvsPrs.Visibility = Visibility.Visible;
+
+                valmoWin.dv.InjPr[461].valueNew = 0;
+                updateInjectionPrsSetMap();
             }
             else
             {
                 btnMS.Visibility = Visibility.Visible;
                 cvsPrs.Visibility = Visibility.Hidden;
+
+                valmoWin.dv.InjPr[461].valueNew = 1;
+                updateInjectionPrsSetMap();
             }
+        }
+
+        private void handleInjPr_046(objUnit obj)
+        {
+            updateInjectionPrsSetMap();
         }
     }
 }

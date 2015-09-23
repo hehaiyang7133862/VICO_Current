@@ -107,6 +107,9 @@
     <Compile Include="ctrls\instructionsPage.xaml.cs">
       <DependentUpon>instructionsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ctrls\lbCtrlUnit.xaml.cs">
+      <DependentUpon>lbCtrlUnit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ctrls\MachionActionCtrl.xaml.cs">
       <DependentUpon>MachionActionCtrl.xaml</DependentUpon>
     </Compile>
@@ -340,6 +343,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ctrls\lbCtrlUnit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ctrls\MachionActionCtrl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -532,10 +539,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ctrls\lbCtrlUnit.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ctrls\linkPlcCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -553,10 +556,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ctrls\lockScreenCtrl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ctrls\lockUnitMsgCtrl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1632,9 +1631,6 @@
     <Compile Include="ctrls\lbCtrl.xaml.cs">
       <DependentUpon>lbCtrl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ctrls\lbCtrlUnit.xaml.cs">
-      <DependentUpon>lbCtrlUnit.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ctrls\linkPlcCtrl.xaml.cs">
       <DependentUpon>linkPlcCtrl.xaml</DependentUpon>
     </Compile>
@@ -1646,9 +1642,6 @@
     </Compile>
     <Compile Include="ctrls\lockScreenCtrl.xaml.cs">
       <DependentUpon>lockScreenCtrl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ctrls\lockUnitMsgCtrl.xaml.cs">
-      <DependentUpon>lockUnitMsgCtrl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ctrls\mainPanel\btnAttentionCtrl.xaml.cs">
       <DependentUpon>btnAttentionCtrl.xaml</DependentUpon>
@@ -3493,6 +3486,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="DataSource\kernel32.dll" />
+    <Resource Include="png\blocks\InjMoveStep.png" />
+    <Resource Include="png\IprBlocks\ipr_op28_MoldUnitFWD.png" />
+    <Resource Include="png\IprBlocks\ipr_op29_MoldUnitBWD.png" />
+    <Resource Include="png\IprBlocks\ipr_op30_AutoP.png" />
+    <Resource Include="png\IprBlocks\ipr_op31_Lub.png" />
+    <Resource Include="png\IprBlocks\ipr_op32_AutoAdj.png" />
     <Resource Include="png\Sign\administrator_30.png" />
     <Resource Include="png\Sign\anonymous_30.png" />
     <Resource Include="png\Sign\operator2_30.png" />

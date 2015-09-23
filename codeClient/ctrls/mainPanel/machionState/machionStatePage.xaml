@@ -35,11 +35,11 @@
                 </TabControl>
                 <Label Content="{DynamicResource lanKey057}" Height="45" Name="_lbSys105" FontSize="18" VerticalContentAlignment="Center" Canvas.Left="187" Canvas.Top="6" Foreground="#FFA9A9A9"/>
                 <Label Content="{DynamicResource lanKey061}" Height="45" Name="lbSys105" FontSize="14" VerticalContentAlignment="Center" Canvas.Left="201" Canvas.Top="32" Foreground="#FF444444"/>
-                <Label Height="55"  Width="770"   Canvas.Left="292" Canvas.Top="12" Background="#FFEAEAEA" />
+                <Label Height="55" Width="770" Canvas.Left="292" Canvas.Top="12" Background="#FFEAEAEA" />
                 <my:VicoSetBar Canvas.Top="76" Canvas.Left="135" myWidth="450" Description="{DynamicResource Sys151}" objName="Sys151" objName2="Prd268" />
                 <my:VicoSetBar Canvas.Left="595" Canvas.Top="76" myWidth="450" Description="{DynamicResource Sys108}" objName="Sys108" objName2="Mld147" />
                 <Label Name="lbCurFocus" Canvas.Left="292" Canvas.Top="23" FontSize="18" Foreground="#FF444444" />
-                <Canvas Canvas.Left="760" Canvas.Top="17" Height="46" Name="cvsCurFocus" Width="300"></Canvas>
+                <my:MachionActionCtrl Canvas.Left="658" Canvas.Top="21" />
             </Canvas>
             <Canvas Canvas.Top="121" Height="2080" Width="1068" ClipToBounds="True">
                 <StackPanel Canvas.Top="0" Name="sPanel" Height="1965" Width="1068">

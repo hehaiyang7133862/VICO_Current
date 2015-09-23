@@ -402,7 +402,7 @@ namespace nsVicoClient.ctrls
 
         private void handleRefreshBlock(objUnit obj)
         {
-            if (obj.value == 1)
+            if ((obj.value == 1) && (valmoWin.dv.SysPr[11].value == 1))
             {
                 obj.valueNew = 0;
 
@@ -468,7 +468,7 @@ namespace nsVicoClient.ctrls
                             sblockBase.Active = blocksBase[i * 8 + 1];
                             sblockBase.Move = blocksBase[i * 8 + 2];
                             sblockBase.Name = (typeName)blocksBase[i * 8 + 3];
-                            sblockBase.tStart = Math.Round(valmoWin.dv.PrdPr[269].getDblValue(Convert.ToInt32(blocksBase[i * 8 + 4])),3);
+                            sblockBase.tStart = Math.Round(valmoWin.dv.PrdPr[269].getDblValue(Convert.ToInt32(blocksBase[i * 8 + 4])), 3);
                             sblockBase.tEnd = Math.Round(valmoWin.dv.PrdPr[269].getDblValue(Convert.ToInt32(blocksBase[i * 8 + 5])), 3);
                             sblockBase.seqStart = blocksBase[i * 8 + 6];
                             sblockBase.seqEnd = blocksBase[i * 8 + 7];

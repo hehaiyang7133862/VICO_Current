@@ -6,7 +6,7 @@
              xmlns:my="clr-namespace:nsVicoClient.ctrls" 
              mc:Ignorable="d"                                                    
              d:DesignHeight="1750" d:DesignWidth="1068">
-    <Canvas Height="17250" Width="1068" Name="cvsMain">
+    <Canvas Height="1750" Width="1068" Name="cvsMain">
         <TabControl Canvas.Top="157" Name="tbMain" SelectedIndex="0" Padding="0" BorderThickness="0" Height="1593" Width="1068" ClipToBounds="True" Background="#EAEAEA" >
             <TabItem Height="0" Padding="0" Margin="0">
                 <Canvas>

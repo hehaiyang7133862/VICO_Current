@@ -10,9 +10,6 @@ namespace nsDataMgr
         List<objUnit> lstItem = new List<objUnit>();
         public dbBase()
         {
-            lstItem.Add(new objUnit("Htk333", "PC_ConnectDignor1.sTimeTig"));
-            lstItem.Add(new objUnit("Hrt888", "PC_ConnectDignor1.sJump1"));
-            lstItem.Add(new objUnit("HEr111", "PC_ConnectDignor1.Error"));
             lstItem.Add(new objUnit("Abt001", "Ala_Safety.sAlarm"));
             lstItem.Add(new objUnit("Abt002", "Ala_Equipments.sAlarm"));
             lstItem.Add(new objUnit("Abt003", "Ala_BarrelHeat.sAlarm"));

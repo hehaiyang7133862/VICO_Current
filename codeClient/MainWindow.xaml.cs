@@ -165,7 +165,7 @@ namespace nsVicoClient
         private DateTime lastEventTime;
 
         public static SPCData ds = new SPCData();
-
+        
         public valmoWin()
         {
             try
@@ -219,6 +219,8 @@ namespace nsVicoClient
                 setUnitResources(objUnit.unitBase[UnitType.Prs_Mpa]);
                 setUnitResources(objUnit.unitBase[UnitType.Force_ton]);
 
+                valmoWin.dv.SysPr[5].addHandle(handle_sys005, plcLstSpd.lowSpdType);
+
                 vm.getTm("-------- 1 ------------");
                 if (dv.getLink())
                 {
@@ -262,6 +264,15 @@ namespace nsVicoClient
 
             lastEventTime = DateTime.Now;
             valmoWin.BackstageClockTick += ScreenSaverTimer;
+        }
+
+        int PLCJump = 0;
+        private void handle_sys005(objUnit obj)
+        {
+            this.Dispatcher.Invoke(DispatcherPriority.Send,(Action)delegate()
+            {
+                valmoWin.dv.SysPr[5].valueNew = PLCJump++;
+            });
         }
 
         public void getCpuTemp()
@@ -961,10 +972,7 @@ namespace nsVicoClient
         {
             lstSUnitChange.Add(handle);
         }
-        private void callbackObjLstInvoke(objUnit obj)
-        {
-            this.Dispatcher.BeginInvoke(new callBackObjEvent(callbackObjLstFunc), new object[] { obj });
-        }
+
         private void callbackObjLstFunc(objUnit obj)
         {
             try

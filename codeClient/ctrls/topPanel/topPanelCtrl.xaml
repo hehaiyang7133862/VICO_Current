@@ -12,7 +12,7 @@
         <my:ParamMonitor Canvas.Top="49" />
         <Canvas Height="60" Width="1080" ClipToBounds="True">
             <Image Height="79" Width="1080" Source="/Program;component/png/blocks/HeadLine-2015.png"></Image>
-            <my:MachionActionCtrl />
+            <my:MachionActionCtrl Canvas.Top="7" />
             
             <Label Name="lbIprFileName" Canvas.Right="345" Canvas.Top="-2" Content="{DynamicResource IprFileName}" FontSize="18" FontFamily="Verdana" Foreground="#444444" />
             <Label Name="lbUserName" Canvas.Right="349" Canvas.Top="21" Content="{DynamicResource CurUserName}" FontFamily="Verdana" FontSize="14" Foreground="#444444" />

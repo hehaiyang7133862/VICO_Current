@@ -723,6 +723,7 @@ namespace nsVicoClient
                         recUnit ergObj = new recUnit("LogIn", DateTime.Now, recType.logType);
                         valmoWin.eventMgr.msgSave(ergObj);
                         valmoWin.refresh();
+                        SUserPanel.LoginInit();
                         //if (dv.users.curUser.accessLevel >= 3)
                         //    mainPanel.interpretorPage1.getAccessFunc();
                         //Program.ctrls.mainPanel.interpretor.interpretorPage.loadOkHandle();

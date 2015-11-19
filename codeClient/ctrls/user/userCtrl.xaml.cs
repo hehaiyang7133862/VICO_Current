@@ -144,28 +144,7 @@ namespace nsVicoClient.ctrls
                 strTmp += "*";
             lbPassword.Content = strTmp;
 
-            if (valmoWin.dv.users.setCurUser(lbUsername.Content.ToString().Trim(), Password))
-            {
-                tbMain.SelectedIndex = 1;
-
-                if (valmoWin.dv.users.curUser.accessLevel > 3)
-                {
-                    btnExit.IsEnabled = true;
-                }
-                else
-                {
-                    btnExit.IsEnabled = false;
-                }
-
-                lbUser.Content = valmoWin.dv.users.curUser.name;
-                UserInit();
-            }
-            else
-            {
-                lbFailed.Visibility = Visibility.Visible;
-
-                dt.Start();
-            }
+            Login(lbUsername.Content.ToString().Trim(), Password);
         }
 
         private void lbUsername_MouseDown(object sender, MouseButtonEventArgs e)
@@ -185,21 +164,14 @@ namespace nsVicoClient.ctrls
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (valmoWin.dv.users.setCurUser(lbUsername.Content.ToString().Trim(), Password))
+            Login(lbUsername.Content.ToString().Trim(), Password);
+        }
+
+        private void Login(string UserName, string PassWord)
+        {
+            if (valmoWin.dv.users.setCurUser(UserName, PassWord))
             {
-                tbMain.SelectedIndex = 1;
-
-                if (valmoWin.dv.users.curUser.accessLevel > 2)
-                {
-                    btnExit.IsEnabled = true;
-                }
-                else
-                {
-                    btnExit.IsEnabled = false;
-                }
-
-                UserInit();
-                lbUser.Content = valmoWin.dv.users.curUser.name;
+                LoginInit();
             }
             else
             {
@@ -207,6 +179,24 @@ namespace nsVicoClient.ctrls
 
                 dt.Start();
             }
+        }
+
+        public void LoginInit()
+        {
+            tbMain.SelectedIndex = 1;
+
+            if (valmoWin.dv.users.curUser.accessLevel > 2)
+            {
+                btnExit.IsEnabled = true;
+            }
+            else
+            {
+                btnExit.IsEnabled = false;
+            }
+
+            UserInit();
+
+            lbUser.Content = valmoWin.dv.users.curUser.name;
         }
 
         private void cbUserName_SelectionChanged(object sender, SelectionChangedEventArgs e)

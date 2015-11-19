@@ -104,8 +104,19 @@ namespace nsVicoClient
         {
             if (checkUserNameAndPassword(name, password))
             {
-                this.curUser = userDb.getUserByName(name);
+                userClass tmpUser = userDb.getUserByName(name);
 
+                //if (tmpUser.accessLevel > 3)
+                //{
+                //    if (SuperDog.getInstance().checkDog() == false)
+                //    {
+                //        valmoWin.execHandle(opeOrderType.winMsg, new WinMsg(WinMsgType.mwNoDog));
+
+                //        return false;
+                //    }
+                //}
+
+                curUser = tmpUser;
                 valmoWin.execHandle(opeOrderType.winMsg, new WinMsg(WinMsgType.mwLogInOK));
                 return true;
             }

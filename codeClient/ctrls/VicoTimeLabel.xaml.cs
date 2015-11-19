@@ -137,14 +137,14 @@ namespace nsVicoClient.ctrls
 
             try
             {
-                dt = new DateTime(valmoWin.SysTime.Year, valmoWin.SysTime.Month, valmoWin.SysTime.Day,
+                dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day,
                     Convert.ToInt32((obj.value >> 24) & 0x000000ff),
                     Convert.ToInt32((obj.value >> 16) & 0x000000ff),
                     Convert.ToInt32((obj.value >> 8) & 0x000000ff));
             }
             catch
             {
-                dt = valmoWin.SysTime;
+                dt = DateTime.Now;
             }
 
             lbValue.Content = dt.Hour.ToString().PadLeft(2, '0') + ":" + dt.Minute.ToString().PadLeft(2, '0');

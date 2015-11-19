@@ -48,7 +48,7 @@ namespace nsVicoClient.ctrls
             tbMain.SelectedIndex = 0;
 
             lbPassword.Content = Password = "";
-            lbUsername.Content = Username = "";
+            lbUsername.Content = "";
         }
 
         void dt_Tick(object sender, EventArgs e)
@@ -117,6 +117,13 @@ namespace nsVicoClient.ctrls
         {
             lbUsername.BorderBrush = new SolidColorBrush(Colors.Transparent);
             lbPassword.BorderBrush = new SolidColorBrush(Colors.Transparent);
+
+            try
+            {
+                this.cbUserName.SelectedIndex = -1;
+            }
+            catch
+            { }
         }
 
         private void lbPassword_MouseDown(object sender, MouseButtonEventArgs e)
@@ -127,6 +134,7 @@ namespace nsVicoClient.ctrls
             valmoWin.SCharKeyPanel.dis = valmoWin.dv.getCurDis("Secret");
             valmoWin.SCharKeyPanel.init(true, "", setSecretFunc, Dispose, margin, lbPassword);
         }
+
         string Password;
         void setSecretFunc(string str)
         {
@@ -136,7 +144,7 @@ namespace nsVicoClient.ctrls
                 strTmp += "*";
             lbPassword.Content = strTmp;
 
-            if (valmoWin.dv.users.setCurUser(Username, Password))
+            if (valmoWin.dv.users.setCurUser(lbUsername.Content.ToString().Trim(), Password))
             {
                 tbMain.SelectedIndex = 1;
 
@@ -166,13 +174,7 @@ namespace nsVicoClient.ctrls
 
             Thickness margin = new Thickness(108, 600, 0, 0);
             valmoWin.SCharKeyPanel.dis = valmoWin.dv.getCurDis("UserName");
-            valmoWin.SCharKeyPanel.init(false, "", setUserName, Dispose, margin, lbUsername);
-        }
-        string Username;
-        void setUserName(string str)
-        {
-            Username = str.Trim();
-            lbUsername.Content = Username;
+            valmoWin.SCharKeyPanel.init(false, "", null, Dispose, margin, lbUsername);
         }
 
         private void btnlock_Click(object sender, RoutedEventArgs e)
@@ -183,11 +185,11 @@ namespace nsVicoClient.ctrls
         }
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if (valmoWin.dv.users.setCurUser(Username, Password))
+            if (valmoWin.dv.users.setCurUser(lbUsername.Content.ToString().Trim(), Password))
             {
                 tbMain.SelectedIndex = 1;
 
-                if (valmoWin.dv.users.curUser.accessLevel > 3)
+                if (valmoWin.dv.users.curUser.accessLevel > 2)
                 {
                     btnExit.IsEnabled = true;
                 }
@@ -211,8 +213,7 @@ namespace nsVicoClient.ctrls
         {
             ComboBoxItem cbi = (ComboBoxItem)(sender as ComboBox).SelectedItem;
 
-            Username = cbi.Content.ToString();
-            lbUsername.Content = Username;
+            lbUsername.Content = cbi.Content.ToString();
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)

@@ -38,7 +38,7 @@ namespace nsVicoClient.ctrls
         {
             cvsTimeSet.Visibility = Visibility.Visible;
 
-            DateTime dt = valmoWin.SysTime;
+            DateTime dt = DateTime.Now;
 
             lbTmYear.Content = dt.Year;
             lbTmMonth.Content = dt.Month;
@@ -48,6 +48,36 @@ namespace nsVicoClient.ctrls
             lbTmMin.Content = dt.Minute.ToString("00");
             lbTmSec.Content = dt.Second.ToString("00");
         }
+
+        private void lbTmSetOk_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SystemTime sysTime = new SystemTime();
+
+            DateTime dt;
+            try
+            {
+                dt = new DateTime(Convert.ToInt16(lbTmYear.Content), Convert.ToInt16(lbTmMonth.Content), Convert.ToInt16(lbTmDay.Content),
+                   Convert.ToInt16(lbTmHour.Content), Convert.ToInt16(lbTmMin.Content), Convert.ToInt16(lbTmSec.Content));
+            }
+            catch
+            {
+                MessageBox.Show("时间格式有误，请检查！");
+                return;
+            }
+
+            sysTime.wYear = Convert.ToUInt16(dt.Year);
+            sysTime.wMonth = Convert.ToUInt16(dt.Month);
+            sysTime.wDay = Convert.ToUInt16(dt.Day);
+            sysTime.wHour = Convert.ToUInt16(dt.Hour);
+            sysTime.wMinute = Convert.ToUInt16(dt.Minute);
+            sysTime.wSecond = Convert.ToUInt16(dt.Day);
+            sysTime.wMilliseconds = 0;
+            SetLocalTime(ref sysTime);
+
+            calCtrl1.refresh();
+            cvsTimeSet.Visibility = Visibility.Hidden;
+        }
+
         [StructLayout(LayoutKind.Sequential)]
         public struct SystemTime
         {
@@ -59,32 +89,12 @@ namespace nsVicoClient.ctrls
             public ushort wMinute;
             public ushort wSecond;
             public ushort wMilliseconds;
-        } 
-        [DllImport("kernel32.dll",SetLastError=true)]
+        }
+
+        [DllImport("kernel32.dll", SetLastError = true)]
         public static extern bool SetLocalTime(ref SystemTime st);
 
-        private void lbTmSetOk_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            int time = (Convert.ToInt32(lbTmHour.Content) << 24) | (Convert.ToInt32(lbTmMin.Content) << 16) | (Convert.ToInt32(lbTmSec.Content) << 8);
-            int date = (Convert.ToInt32(lbTmYear.Content) << 16) | (Convert.ToInt32(lbTmMonth.Content) << 12) | (Convert.ToInt32(lbTmDay.Content) << 4);
 
-            valmoWin.dv.SysPr[13].setValue(date);
-            valmoWin.dv.SysPr[14].setValue(time);
-
-            SystemTime newTm = new SystemTime();
-            newTm.wYear = Convert.ToUInt16(valmoWin.SysTime.Year);
-            newTm.wMonth = Convert.ToUInt16(valmoWin.SysTime.Month);
-            newTm.wDay = Convert.ToUInt16(valmoWin.SysTime.Day);
-            newTm.wHour = Convert.ToUInt16(valmoWin.SysTime.Hour);
-            newTm.wMinute = Convert.ToUInt16(valmoWin.SysTime.Minute);
-            newTm.wSecond = Convert.ToUInt16(valmoWin.SysTime.Day);
-            newTm.wMilliseconds = 0;
-
-            SetLocalTime(ref newTm);
-
-            calCtrl1.refresh();
-            cvsTimeSet.Visibility = Visibility.Hidden;
-        }
         private void lbTmSetCancle_MouseDown(object sender, MouseButtonEventArgs e)
         {
             cvsTimeSet.Visibility = Visibility.Hidden;

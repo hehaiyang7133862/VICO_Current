@@ -148,6 +148,15 @@
 
                     <Canvas Canvas.Left="138" Canvas.Top="80" Height="180" Name="cvsPanel" Width="897">
                         <Image Height="166" Width="961" Source="/Program;component/png/blocks/InjMoveStep.png" Canvas.Left="-80" Canvas.Top="3" />
+
+                        <Label Height="45" Width="80" Canvas.Left="80" Canvas.Top="0" MouseUp="lbInjPr_48_9_injection_MouseDown"/>
+                        <Label Height="45" Width="80" Canvas.Left="160" Canvas.Top="0" MouseUp="lbInjPr_48_8_injection_MouseDown"/>
+                        <Label Height="45" Width="80" Canvas.Left="240" Canvas.Top="0" MouseUp="lbInjPr_48_7_injection_MouseDown"/>
+                        <Label Height="45" Width="80" Canvas.Left="320" Canvas.Top="0" MouseUp="lbInjPr_48_6_injection_MouseDown"/>
+                        <Label Height="45" Width="80" Canvas.Left="400" Canvas.Top="0" MouseUp="lbInjPr_48_5_injection_MouseDown"/>
+                        <Label Height="45" Width="80" Canvas.Left="480" Canvas.Top="0" MouseUp="lbInjPr_48_4_injection_MouseDown"/>
+                        <Label Height="45" Width="80" Canvas.Left="560" Canvas.Top="0" MouseUp="lbInjPr_48_3_injection_MouseDown"/>
+                        
                         <Line Name="imgInjPr_48_9_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="81"  ClipToBounds="True" SnapsToDevicePixels="True"/>
                         <Line Name="imgInjPr_48_8_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="161"  ClipToBounds="True" SnapsToDevicePixels="True"/>
                         <Line Name="imgInjPr_48_7_1_injection" X2="79" Stroke="#FF00BFFF" StrokeThickness="8" Canvas.Top="44" Canvas.Left="241"  ClipToBounds="True" SnapsToDevicePixels="True"/>

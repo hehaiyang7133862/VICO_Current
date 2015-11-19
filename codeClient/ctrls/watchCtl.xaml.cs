@@ -71,7 +71,7 @@ namespace nsVicoClient.ctrls
         private void drawWatch()
         {
 
-            td = valmoWin.SysTime;
+            td = DateTime.Now;
             curSec = td.Second;
             curMin = td.Minute;
             curHour = (td.Hour * 5 + curMin / 12) % 60;
@@ -140,7 +140,7 @@ namespace nsVicoClient.ctrls
         }
         private void drawWatchDispatcher2()
         {
-            td = valmoWin.SysTime;
+            td = DateTime.Now;
             curSec = td.Second;
             curMin = td.Minute;
             curHour = (td.Hour * 5 + curMin / 12) % 60;

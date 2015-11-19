@@ -227,18 +227,6 @@ namespace nsVicoClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("00:20:00")]
-        public global::System.TimeSpan ScreenSaverTime {
-            get {
-                return ((global::System.TimeSpan)(this["ScreenSaverTime"]));
-            }
-            set {
-                this["ScreenSaverTime"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::System.Collections.Specialized.StringCollection topWinPos {
             get {
                 return ((global::System.Collections.Specialized.StringCollection)(this["topWinPos"]));
@@ -327,6 +315,18 @@ namespace nsVicoClient.Properties {
             }
             set {
                 this["test"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=VICO;Integrated Security=True;")]
+        public string connectionString {
+            get {
+                return ((string)(this["connectionString"]));
+            }
+            set {
+                this["connectionString"] = value;
             }
         }
     }

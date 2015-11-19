@@ -402,7 +402,7 @@ namespace nsVicoClient.ctrls
 
         private void handleRefreshBlock(objUnit obj)
         {
-            if ((obj.value == 1) && (valmoWin.dv.SysPr[11].value == 1))
+            if (obj.value == 1)
             {
                 obj.valueNew = 0;
 

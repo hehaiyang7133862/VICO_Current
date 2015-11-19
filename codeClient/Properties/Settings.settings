@@ -53,9 +53,6 @@
     <Setting Name="strLstNew" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ScreenSaverTime" Type="System.TimeSpan" Scope="User">
-      <Value Profile="(Default)">00:20:00</Value>
-    </Setting>
     <Setting Name="topWinPos" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
@@ -79,6 +76,9 @@
     </Setting>
     <Setting Name="test" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="connectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=.;Initial Catalog=VICO;Integrated Security=True;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -112,7 +112,6 @@ namespace nsVicoClient
         public static userBtn SUserSetPanel;
         public static loadFromUsbCtrl SLoadFromUsbPanel;
         public static RegistCtrl sRegistCtrl;
-        public static DateTime SysTime;
         public static SetTimeCtrl sSetTimeCtrl;
 
         public static nullEvent BackstageClockTick;
@@ -407,13 +406,9 @@ namespace nsVicoClient
         /// </summary>
         private void ScreenSaverTimer()
         {
-
-            TimeSpan ScreenSaverTime =
-                Properties.Settings.Default.ScreenSaverTime;
-
-            if (new TimeSpan(0, 0, Convert.ToInt32(GetLastInputTime() / 1000)) > ScreenSaverTime)
+            //时间 20×60 S
+            if (GetLastInputTime() / 1000 > 1200)
             {
-                valmoWin.dv.users.unload();
                 valmoWin.execHandle(opeOrderType.lockSysPanelShow);
             }
         }
@@ -581,7 +576,11 @@ namespace nsVicoClient
                 case opeOrderType.lockSysPanelShow:
                     #region 弹出系统锁定窗口
                     {
-                        valmoWin.dv.users.unload();
+                        if (valmoWin.dv.users.curUser.accessLevel > 2)
+                        {
+                            valmoWin.dv.users.unload();
+                        }
+
                         SLockScreenPanel.show();
                         break;
                     }
@@ -727,6 +726,11 @@ namespace nsVicoClient
                         //if (dv.users.curUser.accessLevel >= 3)
                         //    mainPanel.interpretorPage1.getAccessFunc();
                         //Program.ctrls.mainPanel.interpretor.interpretorPage.loadOkHandle();
+                    }
+                    break;
+                case WinMsgType.mwNoDog:
+                    {
+                        MessageBox.Show("请插入超级狗！");
                     }
                     break;
                 case WinMsgType.mwLogOut:
@@ -1147,6 +1151,7 @@ namespace nsVicoClient
     public enum WinMsgType : int
     {
         mwNull,             //空值
+        mwNoDog,
         //SysMsg
         msMainCtrlInitOK,    //主窗体初始化完成
         msLinkPlcState,     //执行连接plc 后的状态

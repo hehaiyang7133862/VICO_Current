@@ -229,25 +229,11 @@ namespace nsVicoClient.ctrls
 
         private void SystemClock()
         {
-            int sysDate = valmoWin.dv.SysPr[13].valueNew;
-            int sysTime = valmoWin.dv.SysPr[14].valueNew;
-
-            try
-            {
-                valmoWin.SysTime = new DateTime(Convert.ToInt32((sysDate >> 16) & 0x0fff), Convert.ToInt32((sysDate >> 12) & 0x0000f), Convert.ToInt32((sysDate >> 4) & 0x00000ff),
-                     Convert.ToInt32((sysTime >> 24) & 0x000000ff), Convert.ToInt32((sysTime >> 16) & 0x000000ff), Convert.ToInt32((sysTime >> 8) & 0x000000ff));
-            }
-            catch
-            {
-                return;
-            }
-
-            lbDate.Content = valmoWin.SysTime.Month.ToString().PadLeft(2, '0') + "-" + valmoWin.SysTime.Day.ToString().PadLeft(2, '0') + " " + valmoWin.SysTime.Year.ToString();
-            lbTime.Content = valmoWin.SysTime.Hour.ToString().PadLeft(2, '0') + " " + valmoWin.SysTime.Minute.ToString().PadLeft(2, '0');
-
+            lbDate.Content = DateTime.Now.ToString("MM-dd yyyy");
+            lbTime.Content = DateTime.Now.ToString("HH  mm");
             lbFlag.Visibility = lbFlag.Visibility == Visibility.Visible ? Visibility.Hidden : Visibility.Visible;
 
-            switch (valmoWin.SysTime.DayOfWeek)
+            switch (DateTime.Now.DayOfWeek)
             {
                 case DayOfWeek.Monday:
                     lbWeek.SetResourceReference(Label.ContentProperty, "Monday");

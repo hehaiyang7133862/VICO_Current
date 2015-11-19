@@ -67,6 +67,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="dog_net_windows, Version=1.0.1.28668, Culture=neutral, PublicKeyToken=56120be447701319, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\dog_net_windows.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\log4net.dll</HintPath>
@@ -231,6 +235,9 @@
     <Compile Include="ctrls\mainPanel\overView\QuickSettingPage.xaml.cs">
       <DependentUpon>QuickSettingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ctrls\NewMessageBox.xaml.cs">
+      <DependentUpon>NewMessageBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ctrls\NumericTouchpad.xaml.cs">
       <DependentUpon>NumericTouchpad.xaml</DependentUpon>
     </Compile>
@@ -320,9 +327,11 @@
     <Compile Include="DataBase\dataPlc\I_WR_SVRLIST_Stream.cs" />
     <Compile Include="DataBase\dataPlc\Lasal32.cs" />
     <Compile Include="DataBase\dbBase.cs" />
+    <Compile Include="DataBase\Dog.cs" />
     <Compile Include="DataBase\dvBase.cs" />
     <Compile Include="DataBase\dvClass.cs" />
     <Compile Include="DataBase\objUnit.cs" />
+    <Compile Include="DataBase\SqlHelper.cs" />
     <Compile Include="DataBase\vm.cs" />
     <Compile Include="DataSource\SPCData.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -1248,6 +1257,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ctrls\myTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ctrls\NewMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -3486,6 +3499,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="DataSource\kernel32.dll" />
+    <Resource Include="png\Sign\back-32.png" />
     <Resource Include="png\blocks\InjMoveStep.png" />
     <Resource Include="png\IprBlocks\ipr_op28_MoldUnitFWD.png" />
     <Resource Include="png\IprBlocks\ipr_op29_MoldUnitBWD.png" />

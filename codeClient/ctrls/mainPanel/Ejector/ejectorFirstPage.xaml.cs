@@ -203,26 +203,38 @@ namespace nsVicoClient.ctrls
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.MldPr[68].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.MldPr[68].setValue((valmoWin.dv.MldPr[68].value > 1) ? 1 : 2);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.MldPr[68].setValue((valmoWin.dv.MldPr[68].value > 1) ? 1 : 2);
+            }
         }
         private void lbMoldPr_68_2_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.MldPr[68].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.MldPr[68].setValue((valmoWin.dv.MldPr[68].value > 2) ? 2 : 3);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.MldPr[68].setValue((valmoWin.dv.MldPr[68].value > 2) ? 2 : 3);
+            }
         }
 
         private void lbMoldPr_75_1_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.MldPr[75].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.MldPr[75].setValue((valmoWin.dv.MldPr[75].value > 1) ? 1 : 2);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.MldPr[75].setValue((valmoWin.dv.MldPr[75].value > 1) ? 1 : 2);
+            }
         }
         private void lbMoldPr_75_2_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.MldPr[75].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.MldPr[75].setValue((valmoWin.dv.MldPr[75].value > 2) ? 2 : 3);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.MldPr[75].setValue((valmoWin.dv.MldPr[75].value > 2) ? 2 : 3);
+            }
         }
 
         private bool _bIsMouseDownMap = false;

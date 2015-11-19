@@ -76,7 +76,7 @@ namespace nsVicoClient.ctrls
                     }
                     break;
                 case 6:
-                    if (valmoWin.dv.checkAccesslevel(4))
+                    if (valmoWin.dv.checkAccesslevel(3))
                     {
                         tbl_Switch(6);
                         valmoWin.setPangetoNr(96);

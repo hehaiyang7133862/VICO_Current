@@ -559,7 +559,6 @@ namespace nsDataMgr
         /// 标记当前对象是否已经添加到回调list中
         /// </summary>
         public bool flagListAdded = false;
-        //int curLstAddCode = 0;
         public plcLstSpd lstSpdType = plcLstSpd.normalType;
         public string[] bitSers = new string[32];
 
@@ -1280,7 +1279,6 @@ namespace nsDataMgr
 
         public static double getDblValue(UnitType type, int value)
         {
-            //return vIntPlcToDblType(value, type);
             try
             {
                 double retDbl = 0;
@@ -2032,7 +2030,6 @@ namespace nsDataMgr
                 forceUnitBasic = UnitType.Force_USton;
             }
         }
-
     }
 
     public class callbackGrp

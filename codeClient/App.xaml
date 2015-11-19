@@ -40,7 +40,6 @@
                     </Setter.Value>
                 </Setter>
             </Style>
-            <sys:String x:Key="lan">EN</sys:String>
 
             <BitmapImage x:Key="BtnDownBg" UriSource="png/OBJ_13_0_ButtonbaseRelease_V1.2.png" />
             <BitmapImage x:Key="BtnConfirmBg" UriSource="png/OBJ_13_0_ButtonbaseRelease_V1.5.png" />

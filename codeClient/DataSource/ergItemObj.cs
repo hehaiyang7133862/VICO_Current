@@ -249,13 +249,13 @@ namespace nsVicoClient
         {
             string strReturn = null;
 
-            strReturn = serialNum + str + userName + str + dtStart.ToString("yyyy/MM/dd hh:mm:ss") + str + plateNums + str;
+            strReturn = serialNum + str + userName + str + dtStart.ToString("yyyy/MM/dd HH:mm:ss") + str + plateNums + str;
 
             if ((serialNum[0] == 'A') || (serialNum[0] == 'L'))
             {
                 if (dtEnd.Year != 1)
                 {
-                    strReturn += dtEnd.ToString("yyyy.MM.dd hh:mm:ss") + str;
+                    strReturn += dtEnd.ToString("yyyy.MM.dd HH:mm:ss") + str;
                 }
                 else
                 {

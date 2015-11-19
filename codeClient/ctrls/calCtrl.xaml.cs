@@ -177,7 +177,7 @@ namespace nsVicoClient.ctrls
         }
         public void refresh()
         {
-            curDate = valmoWin.SysTime;
+            curDate = DateTime.Now;
             lbYear.Content = curDate.Year;
             lbMonth.Content = curDate.Month;
             makeCalender();

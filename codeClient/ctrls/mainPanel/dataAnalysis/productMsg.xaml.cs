@@ -166,7 +166,7 @@ namespace nsVicoClient.ctrls
         /// </summary>
         private void reorder()
         {
-            cvsMonitor.Height = _bIsMonitorVisiable ? 560 : 50;
+            cvsMonitor.Height = _bIsMonitorVisiable ? 980 : 50;
             cvsCount.Height = _bIsCountVisiable ? 280 : 50;
 
             sPanelMain.Height = cvsMonitor.Height + cvsCount.Height + 580;
@@ -242,22 +242,6 @@ namespace nsVicoClient.ctrls
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.PrdPr[17].accessLevel))
                 return;
             valmoWin.dv.PrdPr[17].setValue(2);
-        }
-
-        private void lbSetBase_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            lbSetBase.Background = new SolidColorBrush(Colors.Transparent);
-        }
-
-        private void lbSetBase_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            lbSetBase.Background = new SolidColorBrush(Colors.White);
-            valmoWin.dv.PrdPr[18].setValue(1);
-        }
-
-        private void lbSetBase_MouseLeave(object sender, MouseEventArgs e)
-        {
-            lbSetBase.Background = new SolidColorBrush(Colors.White);
         }
     }
 }

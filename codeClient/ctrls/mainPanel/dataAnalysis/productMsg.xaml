@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-              d:DesignHeight="1420" d:DesignWidth="1068" xmlns:my="clr-namespace:nsVicoClient.ctrls">
-    <Canvas Name="cvsMain" Height="1420" Width="1068" MouseDown="cvsmain_MouseDown" MouseUp="cvsmain_MouseUp" MouseMove="cvsmain_MouseMove" MouseLeave="cvsmain_MouseLeave">
-        <StackPanel Canvas.Top="0" Height="1420" Name="sPanelMain" Width="1068" Background="White">
-            <Canvas Name="cvsPlan" Height="580"  Width="1068">
+              d:DesignHeight="1840" d:DesignWidth="1068" xmlns:my="clr-namespace:nsVicoClient.ctrls">
+    <Canvas Name="cvsMain" Height="1840" Width="1068" MouseDown="cvsmain_MouseDown" MouseUp="cvsmain_MouseUp" MouseMove="cvsmain_MouseMove" MouseLeave="cvsmain_MouseLeave">
+        <StackPanel Name="sPanelMain" Canvas.Top="0" Height="1840" Width="1068">
+            <Canvas Name="cvsPlan" Height="580" Width="1068">
                 <Canvas Name="cvsHeadPlan" Height="50" Width="1068" Background="White">
                     <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
                     <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
@@ -96,7 +96,7 @@
                     <my:VicoLabel objName="Prd019" Canvas.Left="166" Canvas.Top="494" myHeight="31" myWidth="100" myFontSize="14" myFontFamily="Verdana" ReadOnly="True"/>
                 </Canvas>
             </Canvas>
-            <Canvas Name="cvsMonitor" Height="560" Width="1068" ClipToBounds="True">
+            <Canvas Name="cvsMonitor" Height="980" Width="1068" ClipToBounds="True">
                 <Canvas Name="cvsHeadMonitor" Height="50" Width="1068" Background="White" MouseUp="cvsHeadMonitor_MouseUp">
                     <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True"/>
                     <Line X2="1068" Canvas.Top="49" Stroke="#FFBCBCBC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
@@ -111,33 +111,10 @@
                     <Image Canvas.Right="0" Canvas.Top="0" Name="imgZipedMonitor" Height="50" Width="55" Source="/Program;component/png/blocks/Ziped_Size_2_2_V00.png" Visibility="Hidden"/>
                     <Image Canvas.Right="0" Canvas.Top="0" Name="imgUnzipedMonitor" Height="50" Width="55" Source="/Program;component/png/blocks/Unziped_Size_2_3_V00.png"/>
                 </Canvas>
-                <Canvas Name="cvsBodyMonitor" Canvas.Top="50" Height="510" Width="1068" Background="#FFEAEAEA">
+                <Canvas Name="cvsBodyMonitor" Canvas.Top="50" Height="930" Width="1068" Background="#FFEAEAEA">
                     <Line X2="1068" Canvas.Top="0" Stroke="#FFD4D4D4" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                     <Line X2="1068" Canvas.Top="1" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
                     <Line X2="1068" Canvas.Bottom="0" Stroke="#FFDCDCDC" StrokeThickness="2" ClipToBounds="True" SnapsToDevicePixels="True" />
-                    <Line Canvas.Top="98" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeDashArray="0.5,0.5" StrokeThickness="4" X2="1068"/>
-                    <Line Canvas.Left="0" Canvas.Top="163" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="201" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="239" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="277" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="315" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="353" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="391" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="429" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Left="0" Canvas.Top="467" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
-                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="8" Canvas.Left="267"/>
-                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="329"/>
-                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="462"/>
-                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="595"/>
-                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="728"/>
-                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="861"/>
-                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="994"/>
-                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="335"/>
-                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="468"/>
-                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="601"/>
-                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="734"/>
-                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="867"/>
-                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="1000"/>
 
                     <Label Canvas.Left="79" Canvas.Top="16" Content="{DynamicResource lanKey415}" FontSize="14" Foreground="#FF444444" />
                     <my:VicoLabel objName="Prd016" Canvas.Left="307" Canvas.Top="16" myBorderBrush="#FFD4D4D4" myFontFamily="Verdana" />
@@ -145,113 +122,204 @@
                     <Label Canvas.Left="553" Canvas.Top="16" Content="{DynamicResource lanKey416}" FontSize="14" Foreground="#FF444444" />
                     <my:VicoLabel Canvas.Left="782" Canvas.Top="16" objName="Prd014" myBorderBrush="#FFD4D4D4" myFontFamily="Verdana" />
                     <Label Canvas.Left="887" Canvas.Top="16" Content="{DynamicResource lanKey437}" FontSize="14" Foreground="#FF444444" />
-                    <Label Canvas.Left="286" Canvas.Top="66" Content="{DynamicResource lanKey418}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
-                    <Label Name="lbSetBase" Canvas.Left="398" Canvas.Top="66" Content="{DynamicResource lanKey419}" FontSize="14" Foreground="#FF444444" Width="140" HorizontalContentAlignment="Center" Background="White" BorderBrush="#FFD4D4D4" BorderThickness="1,1,1,1" 
-                           MouseDown="lbSetBase_MouseDown" MouseUp="lbSetBase_MouseUp" MouseLeave="lbSetBase_MouseLeave"/>
-                    <Label Canvas.Left="549" Canvas.Top="66" Content="{DynamicResource lanKey420}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
-                    <Label Canvas.Left="684" Canvas.Top="66" Content="{DynamicResource lanKey421}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
-                    <Label Canvas.Left="818" Canvas.Top="66" Content="{DynamicResource lanKey422}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
+                    
+                    <Line Canvas.Top="98" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeDashArray="0.5,0.5" StrokeThickness="4" X2="1068"/>
+                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="8" Canvas.Left="267"/>
+                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="394"/>
+                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="554"/>
+                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="714"/>
+                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="874"/>
+                    <Line Canvas.Top="95" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="16" X2="13" Canvas.Left="994"/>
+                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="400"/>
+                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="560"/>
+                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="720"/>
+                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="880"/>
+                    <Line Canvas.Top="107" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FF8C8C8C" StrokeThickness="2" Y2="19" Canvas.Left="1000"/>
+
+                    <Label Canvas.Left="350" Canvas.Top="66" Content="{DynamicResource lanKey421}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
+                    <Label Canvas.Left="510" Canvas.Top="66" Content="{DynamicResource lanKey418}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
+                    <Label Canvas.Left="670" Canvas.Top="66" Content="{DynamicResource lanKey422}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
+                    <Label Canvas.Left="830" Canvas.Top="66" Content="超限次数" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
                     <Label Canvas.Left="950" Canvas.Top="66" Content="{DynamicResource lanKey423}" FontSize="14" Foreground="#FF444444" Width="100" HorizontalContentAlignment="Center"/>
 
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="131" objName ="Prd031" />
-                    <Label Canvas.Left="17" Canvas.Top="131" Content="{DynamicResource lanKey424}" FontSize="14" Foreground="#FF444444"  Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="257" Canvas.Top="129" Content="[s]" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="286" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd026" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="421" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd027" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="554" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd028" myFontFamily="Verdana" ReadOnly="True"  />
-                    <my:VicoLabel Canvas.Left="686" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd029" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="820" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd030" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="125" x:Name="checkBoxCtrl1" objName="Prd025"  bitNr="0"/>
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="169" objName ="Prd038" />
-                    <Label Canvas.Left="17" Canvas.Top="169" Content="{DynamicResource lanKey2922}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="257" Canvas.Top="166" Content="[s]" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="167" objName="Prd033" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="421" Canvas.Top="167" objName="Prd034" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="167" objName="Prd035" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True"/>
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="167" objName="Prd036" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="167" objName="Prd037" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="163" x:Name="checkBoxCtrl2" objName="Prd032" bitNr="1"/>
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="207" objName ="Prd052" />
-                    <Label Canvas.Left="17" Canvas.Top="207" Content="{DynamicResource lanKey425}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="237" Canvas.Top="204" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="205" objName="Prd047" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True"/>
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="205" objName="Prd048" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="205" objName="Prd049" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="205" objName="Prd050" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="205" objName="Prd051" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="200" x:Name="checkBoxCtrl3" bitNr="3" objName="Prd046" />
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="245" objName ="Prd059" />
-                    <Label Canvas.Left="17" Canvas.Top="245" Content="{DynamicResource lanKey426}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="233" Canvas.Top="243" Content="[Mpa]" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="243" objName="Prd054" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="243" objName="Prd055" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="243" objName="Prd056" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="243" objName="Prd057" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="243" objName="Prd058" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="238" x:Name="checkBoxCtrl4" bitNr="4" objName="Prd053" />
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="283" objName ="Prd066" />
-                    <Label Canvas.Left="17" Canvas.Top="283" Content="{DynamicResource TP_Inj029}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="256" Canvas.Top="281" Content="[s]" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="281" objName="Prd061" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="281" objName="Prd062" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="281" objName="Prd063" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="281" objName="Prd064" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="281" objName="Prd065" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="276" x:Name="checkBoxCtrl5" bitNr="5" objName="Prd060" />
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="321" objName ="Prd073" />
-                    <Label Canvas.Left="17" Canvas.Top="321" Content="{DynamicResource lanKey428}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="237" Canvas.Top="320" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="319" objName="Prd068" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="319" objName="Prd069" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="319" objName="Prd070" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="319" objName="Prd071" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="319" objName="Prd072" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="314" x:Name="checkBoxCtrl6" bitNr="6" objName="Prd067" />
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="359" objName ="Prd080" />
-                    <Label Canvas.Left="17" Canvas.Top="359" Content="{DynamicResource lanKey429}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="237" Canvas.Top="358" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="357" objName="Prd075" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="357" objName="Prd076" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="357" objName="Prd077" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="357" objName="Prd078" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="357" objName="Prd079" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="352" x:Name="checkBoxCtrl7" bitNr="7" objName="Prd074" />
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="397" objName ="Prd087" />
-                    <Label Canvas.Left="17" Canvas.Top="397" Content="{DynamicResource lanKey430}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="237" Canvas.Top="396" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="395" objName="Prd082" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="395" objName="Prd083" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="395" objName="Prd084" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="395" objName="Prd085" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="395" objName="Prd086" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="390" x:Name="checkBoxCtrl8" bitNr="8" objName="Prd081" />
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="435" objName ="Prd094" />
-                    <Label Canvas.Left="17" Canvas.Top="435" Content="{DynamicResource lanKey431}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="233" Canvas.Top="434" Content="[Mpa]" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="433" objName="Prd089" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="433" objName="Prd090" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="433" objName="Prd091" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="433" objName="Prd092" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="433" objName="Prd093" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="428" x:Name="checkBoxCtrl9" bitNr="9" objName="Prd088" />
-
-                    <my:lightLinkStateCtrl Canvas.Left="30" Canvas.Top="472" objName ="Prd045" />
-                    <Label Canvas.Left="17" Canvas.Top="472" Content="{DynamicResource lanKey432}" FontSize="14" Foreground="#FF444444"  Width="200" HorizontalContentAlignment="Right"/>
-                    <Label Canvas.Left="257" Canvas.Top="473" Content="[s]" FontSize="14" Foreground="#FF444444" />
-                    <my:VicoLabel Canvas.Left="285" Canvas.Top="471" objName="Prd040" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="420" Canvas.Top="471" objName="Prd041" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="553" Canvas.Top="471" objName="Prd042" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" ReadOnly="True" />
-                    <my:VicoLabel Canvas.Left="685" Canvas.Top="471" objName="Prd043" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:VicoLabel Canvas.Left="819" Canvas.Top="471" objName="Prd044" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" myFontFamily="Verdana" />
-                    <my:checkBoxCtrl Canvas.Left="979" Canvas.Top="466" x:Name="checkBoxCtrl10" bitNr="2" objName="Prd039" />
+                    <Label Canvas.Left="17" Canvas.Top="131" Content="{DynamicResource TP_Prd026}" FontSize="14" Foreground="#FF444444" Width="200" HorizontalContentAlignment="Right"/>
+                    <Label Canvas.Left="257" Canvas.Top="131" Content="[s]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd027" myFontFamily="Verdana" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd026" myFontFamily="Verdana" ReadOnly="True" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd028" myFontFamily="Verdana" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="130" myHeight="31" myWidth="100" myFontSize="14" myFontWeight="Bold" objName="Prd029" myFontFamily="Verdana" ReadOnly="True" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="125" objName="Prd025" />
+                    <Line Canvas.Left="0" Canvas.Top="165" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="171" Content="{DynamicResource TP_Prd031}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="171" Content="[s]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="170" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd032" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="170" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd031" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="170" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd033" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="170" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd034" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="165" objName="Prd030" />
+                    <Line Canvas.Left="0" Canvas.Top="205" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="211" Content="{DynamicResource TP_Prd036}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="211" Content="[s]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="210" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd037" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="210" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd036" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="210" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd038" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="210" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd39" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="205" objName="Prd035" />
+                    <Line Canvas.Left="0" Canvas.Top="245" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="251" Content="{DynamicResource TP_Prd041}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="251" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="250" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd042" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="250" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd41" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="250" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd043" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="250" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd44" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="245" objName="Prd040" />
+                    <Line Canvas.Left="0" Canvas.Top="285" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="291" Content="{DynamicResource TP_Prd046}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="291" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="290" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd047" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="290" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd046" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="290" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd048" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="290" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd049" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="285" objName="Prd045" />
+                    <Line Canvas.Left="0" Canvas.Top="325" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="331" Content="{DynamicResource TP_Prd051}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="331" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="330" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd052" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="330" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd051" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="330" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd053" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="330" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd054" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="325" objName="Prd050" />
+                    <Line Canvas.Left="0" Canvas.Top="365" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="371" Content="{DynamicResource TP_Prd056}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="371" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="370" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd057" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="370" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd056" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="370" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd058" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="370" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd059" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="365" objName="Prd055" />
+                    <Line Canvas.Left="0" Canvas.Top="405" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="411" Content="{DynamicResource TP_Prd061}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="411" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="410" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd062" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="410" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd061" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="410" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd063" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="410" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd064" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="405" objName="Prd060" />
+                    <Line Canvas.Left="0" Canvas.Top="445" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="451" Content="{DynamicResource TP_Prd066}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="451" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="450" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd067" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="450" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd066" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="450" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd068" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="450" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd069" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="445" objName="Prd065" />
+                    <Line Canvas.Left="0" Canvas.Top="485" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="491" Content="{DynamicResource TP_Prd071}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="491" Content="{DynamicResource lenUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="490" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd072" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="490" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd071" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="490" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd073" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="490" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd074" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="485" objName="Prd070" />
+                    <Line Canvas.Left="0" Canvas.Top="525" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="531" Content="{DynamicResource TP_Prd076}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="531" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="530" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd077" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="530" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd076" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="530" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd078" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="530" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd079" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="525" objName="Prd075" />
+                    <Line Canvas.Left="0" Canvas.Top="565" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="571" Content="{DynamicResource TP_Prd081}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="571" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="570" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd082" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="570" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd081" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="570" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd083" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="570" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd084" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="565" objName="Prd080" />
+                    <Line Canvas.Left="0" Canvas.Top="605" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="611" Content="{DynamicResource TP_Prd086}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="611" Content="{DynamicResource pressUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="610" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd087" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="610" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd086" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="610" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd088" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="610" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd089" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="605" objName="Prd085" />
+                    <Line Canvas.Left="0" Canvas.Top="645" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="651" Content="{DynamicResource TP_Prd091}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="651" Content="{DynamicResource speedUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="650" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd092" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="650" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd091" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="650" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd093" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="650" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd094" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="645" objName="Prd090" />
+                    <Line Canvas.Left="0" Canvas.Top="685" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="691" Content="{DynamicResource TP_Prd101}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="691" Content="[s]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="690" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd102" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="690" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd101" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="690" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd103" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="690" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd110" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="685" objName="Prd100" />
+                    <Line Canvas.Left="0" Canvas.Top="725" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="731" Content="{DynamicResource TP_Prd112}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="731" Content="[RPM]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="730" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd113" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="730" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd112" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="730" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd114" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="730" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd115" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="725" objName="Prd111" />
+                    <Line Canvas.Left="0" Canvas.Top="765" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="771" Content="{DynamicResource TP_Prd117}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="771" Content="[s]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="770" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd118" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="770" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd117" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="770" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd119" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="770" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd120" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="765" objName="Prd116" />
+                    <Line Canvas.Left="0" Canvas.Top="805" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="811" Content="{DynamicResource TP_Prd122}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="811" Content="{DynamicResource forceUnitKey}" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="810" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd123" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="810" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd122" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="810" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd124" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="810" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd125" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="805" objName="Prd121" />
+                    <Line Canvas.Left="0" Canvas.Top="845" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="851" Content="{DynamicResource TP_Prd127}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="851" Content="[s]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="850" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd128" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="850" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd127" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="850" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd129" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="850" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd130" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="845" objName="Prd126" />
+                    <Line Canvas.Left="0" Canvas.Top="885" ClipToBounds="True" SnapsToDevicePixels="True" Stroke="#FFD4D4D4" StrokeThickness="2" X2="1068" />
+                    
+                    <Label Canvas.Left="17" Canvas.Top="891" Content="{DynamicResource TP_Prd132}" FontSize="14" Foreground="#FF444444" HorizontalContentAlignment="Right" Width="200" />
+                    <Label Canvas.Left="257" Canvas.Top="891" Content="[s]" FontSize="14" Foreground="#FF444444" />
+                    <my:VicoLabel Canvas.Left="350" Canvas.Top="890" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd133" />
+                    <my:VicoLabel Canvas.Left="510" Canvas.Top="890" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd132" />
+                    <my:VicoLabel Canvas.Left="670" Canvas.Top="890" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd134" />
+                    <my:VicoLabel Canvas.Left="830" Canvas.Top="890" ReadOnly="True" myFontFamily="Verdana" myFontSize="14" myFontWeight="Bold" myHeight="31" myWidth="100" objName="Prd135" />
+                    <my:checkBoxCtrl Canvas.Left="980" Canvas.Top="885" objName="Prd131" />
                 </Canvas>
             </Canvas>
             <Canvas Name="cvsCount" Height="280" Width="1068" ClipToBounds="True">

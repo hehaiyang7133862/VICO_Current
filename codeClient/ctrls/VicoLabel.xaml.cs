@@ -336,25 +336,10 @@ namespace nsVicoClient.ctrls
 
                         lbValue.BorderBrush = new SolidColorBrush(Color.FromArgb(0xff, 0x00, 0xb4, 0xe1));
 
-                        string desc = string.Empty;
+                        string desc = getDescription(_curObj.serialNum);
 
-                        if (_Description.Length > 0)
-                        {
-                            desc = _Description;
-                        }
-                        else
-                        {
-                            object ObjDesc = TryFindResource(_curObj.serialNum);
-                            if (ObjDesc == null)
-                            {
-                                desc = _curObj.serialNum;
-                            }
-                            else
-                            {
-                                desc = ObjDesc.ToString();
-                            }
-                        }
                         PreValue = _curObj.vDbl;
+
                         valmoWin.SNumInput.init(_curObj, desc, numkeyDisposeFunc, confirmFunc, true);
                     }
                     else
@@ -365,6 +350,28 @@ namespace nsVicoClient.ctrls
                 bIsMouseDown = false;
             }
         }
+
+        private string getDescription(string SerialNum)
+        {
+            if (Description.Length > 0)
+            {
+                return Description;
+            }
+
+            object obj = TryFindResource("TP_" + SerialNum);
+            if (obj != null)
+            {
+                return obj.ToString();
+            }
+
+            object obj2 = TryFindResource(SerialNum);
+            if (obj2 != null)
+            {
+                return obj2.ToString();
+            }
+            return SerialNum + " Undefined!";
+        }
+
         private void lbValue_MouseLeave(object sender, MouseEventArgs e)
         {
             bIsMouseDown = false;

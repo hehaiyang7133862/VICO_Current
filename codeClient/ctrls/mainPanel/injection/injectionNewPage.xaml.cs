@@ -1664,64 +1664,97 @@ namespace nsVicoClient.ctrls
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[36].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[36].setValue((valmoWin.dv.InjPr[36].value > 1) ? 1 : 2);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[36].setValue((valmoWin.dv.InjPr[36].value > 1) ? 1 : 2);
+            }
 
         }
         private void lbInjPr_36_3_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[36].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[36].setValue((valmoWin.dv.InjPr[36].valueNew > 2) ? 2 : 3);
-
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[36].setValue((valmoWin.dv.InjPr[36].valueNew > 2) ? 2 : 3);
+            }
         }
         private void lbInjPr_36_4_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[36].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[36].setValue((valmoWin.dv.InjPr[36].valueNew > 3) ? 3 : 4);
+
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[36].setValue((valmoWin.dv.InjPr[36].valueNew > 3) ? 3 : 4);
+            }
 
         }
         private void lbInjPr_48_3_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[48].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 3) ? 3 : 4);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 3) ? 3 : 4);
+            }
         }
         private void lbInjPr_48_4_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[48].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 4) ? 4 : 5);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 4) ? 4 : 5);
+            }
         }
         private void lbInjPr_48_5_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[48].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 5) ? 5 : 6);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 5) ? 5 : 6);
+            }
         }
         private void lbInjPr_48_6_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[48].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 6) ? 6 : 7);
+
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 6) ? 6 : 7);
+            }
         }
         private void lbInjPr_48_7_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[48].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 7) ? 7 : 8);
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 7) ? 7 : 8);
+            }
         }
         private void lbInjPr_48_8_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[48].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 8) ? 8 : 9);
+
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 8) ? 8 : 9);
+            }
         }
         private void lbInjPr_48_9_injection_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (!valmoWin.dv.checkAccesslevel(valmoWin.dv.InjPr[48].accessLevel) || _bIsMouseMove)
                 return;
-            valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 9) ? 9 : 10);
+
+            if (NewMessageBox.Show() == true)
+            {
+                valmoWin.dv.InjPr[48].setValue((valmoWin.dv.InjPr[48].valueNew > 9) ? 9 : 10);
+            }
         }
 
         private void lbPos_MouseDown(object sender, MouseButtonEventArgs e)

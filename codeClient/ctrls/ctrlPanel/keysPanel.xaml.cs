@@ -59,11 +59,7 @@ namespace nsVicoClient.ctrls
             cvsMenuBtn.Height = 65;
             lmenu.Opacity = 1;
 
-            imgDown.Opacity = 1;
-            imgUp.Opacity = 0;
-
             valmoWin.MainPanelHeight = 1170;
-            productMessageList.refushH();
         }
 
         /// <summary>
@@ -75,12 +71,8 @@ namespace nsVicoClient.ctrls
             cvsCnt.Height = 0;
             cvsMenuBtn.Height = 0;
             lmenu.Opacity = 0;
-            imgDown.Opacity = 0;
-            imgUp.Opacity = 1;
 
             valmoWin.MainPanelHeight = 1580;
-
-            productMessageList.refushH();
         }
 
         private bool bIsFold = false;

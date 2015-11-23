@@ -406,10 +406,18 @@ namespace nsVicoClient
         /// </summary>
         private void ScreenSaverTimer()
         {
-            //时间 20×60 S
+            //10分钟进入休眠，20分钟触发屏保，等级3以上自动退出
             if (GetLastInputTime() / 1000 > 1200)
             {
                 valmoWin.execHandle(opeOrderType.lockSysPanelShow);
+            }
+            else if (GetLastInputTime() / 1000 > 600)
+            {
+                valmoWin.execHandle(opeOrderType.userSleep);
+            }
+            else 
+            {
+                valmoWin.execHandle(opeOrderType.userUnSleep);
             }
         }
 

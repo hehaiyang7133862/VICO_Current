@@ -20,7 +20,6 @@ namespace nsVicoClient.ctrls
     /// </summary>
     public partial class userBtn : UserControl
     {
-        DispatcherTimer dtExit = new DispatcherTimer();
         //DispatcherTimer dtUserUnload = new DispatcherTimer();
         DateTime tmExit;
         long intervalTm = 15000000;//new TimeSpan(0, 0, 0, 1, 500).Ticks;
@@ -33,59 +32,20 @@ namespace nsVicoClient.ctrls
         public userBtn()
         {
             InitializeComponent();
-            dtExit.Interval = new TimeSpan(0, 0, 0, 0, 500);
-            dtExit.Tick += new EventHandler(dtExit_Tick);
 
             valmoWin.SUserSetPanel = this;
         }
 
-        bool isSleeping = false;
-        void dtExit_Tick(object sender, EventArgs e)
-        {
-            DateTime tmNow = DateTime.Now;
-            
-            if (isMousedown)
-            {
-                vm.printLn("[dtExit_Tick] " + (tmNow.Ticks - tmExit.Ticks - intervalTm));
-                if (tmNow.Ticks - tmExit.Ticks > intervalTm)
-                {
-                    if (valmoWin.dv.users.curUser.accessLevel >= 4)
-                    {
-                    }
-                    intervalTm = long.MaxValue;
-                    vm.printLn("[dtExit_Tick] valmoWin.SSysExitPanel.show");
-
-                }
-            }
-            if (!isSleeping && tmNow - valmoWin.tmUserLoad > userUnloadInterval - userUnloadSleepTm && valmoWin.UsbAcc == 0)
-            {
-                isSleeping = true;
-                valmoWin.execHandle(opeOrderType.userSleep);
-            }
-            if (isSleeping && tmNow - valmoWin.tmUserLoad < userUnloadInterval - userUnloadSleepTm && valmoWin.UsbAcc == 0)
-            {
-                isSleeping = false;
-                valmoWin.execHandle(opeOrderType.userUnSleep);
-            }
-            if (tmNow - valmoWin.tmUserLoad > userUnloadInterval && valmoWin.UsbAcc == 0)
-            {
-                dtExit.Stop();
-                valmoWin.dv.users.unload();
-                isSleeping = false;
-            }
-        }
         public void setUserState()
         {
             if(valmoWin.dv.users.curUser.accessLevel > 0)
             {
                 state = userLoadState.USERLOAD;
                 valmoWin.tmUserLoad = DateTime.Now;
-                dtExit.Start();
             }
             else
             {
                 state = userLoadState.USERNULL;
-                dtExit.Stop();
             }
 
             lbAccLevel.Content = valmoWin.dv.users.curUser.accessLevel;
